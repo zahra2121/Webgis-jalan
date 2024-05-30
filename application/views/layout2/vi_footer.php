@@ -1,5 +1,5 @@
         <!-- Footer-->
-        <footer class="footer-distributed bg-dark ce">
+        <footer class="footer-distributed bg-dark">
 			<div class="footer-center text-white">
 				<h2 class="footer-company-about text-white-50 mb-0 ">
 					<span>Kontak</span>
