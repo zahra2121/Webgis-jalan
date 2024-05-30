@@ -5,7 +5,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Laporfpdf extends CI_Controller {
     function __construct(){
-        parent::__construct();  
+       // parent::__construct();  
         $this->load->library('session');
         $this->load->library(array('form_validation'));
       	$this->load->helper(array('url','form'));
