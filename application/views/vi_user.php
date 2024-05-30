@@ -1,9 +1,9 @@
 <!-- CHART GRAFIK USER-->
         <section class="card-responsive">
-            <div class="card-responsive mx-12 px-5 my-3">
+            <div class="card-body mx-12 px-5 my-3">
 		        <?php foreach ($countkasus as $value) {?>
         	    <div class= "stretch-card responsive">
-                        <div class="col-lg-2 mx-4 px-2 py-1 grid-margin stretch-card">
+                        <div class="col-lg-2 mx-4 px-2 py-1 grid-margin card-responsive">
 							<div class="card" style="background: rgba(0, 99, 132, 0.1)">
 								<div class="card-body">
                                     <h3 class="card-title mb-1 text-dark">DATA KASUS</h3><br>
@@ -15,7 +15,7 @@
 						</div>
                         <?php }?>
                         <?php foreach ($countblack as $key => $value) {?>
-                            <div class="col-lg-2 px-2 mx-4 py-1 grid-margin stretch-card">
+                            <div class="col-lg-2 px-2 mx-4 py-1 grid-margin card-responsive">
 							<div class="card" style="background: rgba(0, 99, 132, 0.1)">
 								<div class="card-body">
                                     <h3 class="card-title mb-1 text-dark">DATA JALAN</h3><br>
