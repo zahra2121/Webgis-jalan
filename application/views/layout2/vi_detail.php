@@ -175,13 +175,13 @@
                             </Tr>
                     
                             <Tr>
-                                <th class="text-dark"><h4>KASUS</h4></th>
+                                <th class="text-dark"><h4>KORBAN</h4></th>
                                 <Td><h3>
                                     <?php 
                                         echo "<label class='badge badge-success'>LUKA RINGAN : $detail->luka_ringan</label>&nbsp";
-                                        echo "<label class='badge badge-success'>LUKA BERAT : $detail->luka_berat</label><br>";
-                                        echo "<label class='badge badge-danger'>MENINGGAL : $detail->meninggal</label><br>";
-                                        echo "<label class='badge badge-dark'>KERUGIAN MATERIL : $detail->rugi</label>";
+                                        echo "<label class='badge badge-success'>LUKA BERAT : $detail->luka_berat</label>&nbsp";
+                                        echo "<label class='badge badge-danger'>MENINGGAL : $detail->meninggal</label>&nbsp";
+                                        echo "<label class='badge badge-dark'>KERUGIAN MATERIL : $detail->rugi</label>&nbsp";
                                     ?>
                                 </h3></Td>
                             </Tr>
