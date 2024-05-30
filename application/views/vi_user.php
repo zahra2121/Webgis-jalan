@@ -36,7 +36,7 @@
                 <li>
                         <?php foreach ($countrawan as $value) {?>
                         <div class="col-lg-auto mx-2 px-2 py-1">
-							<div class="card" style="background: rgba(0, 99, 132, 0.1); width:auto; height">
+							<div class="card" style="background: rgba(0, 99, 132, 0.1);">
 								<div class="card-body">
                                     <h3 class="card-title mb-1 text-dark">STATUS DAERAH RAWAN KECELAKAAN</h3>
 									<div class="d-flex align-items-center justify-content-between">
