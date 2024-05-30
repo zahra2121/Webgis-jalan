@@ -3,7 +3,7 @@
 <section>
     <div>
         <div class="card-body">
-            <ul style="display:grid; list-style-type:none; grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);">
+            <ul style="display:grid; list-style-type:none;">
                 <li>
                     <div class="card col-lg-auto mx-3 px-3 py-3">
                     <!-- MAPS DETAIL -->
@@ -45,7 +45,7 @@
                         var map = L.map('map', {
                             center: [<?= $detail->pusat_lat ?>, <?= $detail->pusat_long ?>],
                             zoom: 18,
-                            layers: [peta2]
+                            layers: [peta5]
                         });
 
                         var baseLayers = {

@@ -45,7 +45,7 @@
                         var map = L.map('map', {
                             center: [<?= $detailadmin->pusat_lat ?>, <?= $detailadmin->pusat_long ?>],
                             zoom: 18,
-                            layers: [peta2]
+                            layers: [peta5]
                         });
 
                         var baseLayers = {
