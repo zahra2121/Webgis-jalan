@@ -1,7 +1,7 @@
 <?php echo form_open('user/detail/'. $detail->idkasus)?>
 <!-- Content section-->
 <section>
-    <div>
+    <div class="container">
         <div class="card-responsive">
                     <div class="card col-lg-auto mx-3 px-3 py-3">
                     <!-- MAPS DETAIL -->
