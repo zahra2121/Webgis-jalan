@@ -12,7 +12,7 @@
                         <div class="col-lg-auto mx-3 px-2 py-1">
 							<div class="card">
 								<div class="card-body">
-                                    <h3 class="card-title mb-1 text-dark">DATA KASUS</h3><br>
+                                    <h3 class="card-title mb-1 text-dark">DATA KASUS</h3>
 									<div class="d-flex align-items-center justify-content-between">
 										<br><h2 class="text-dark font-weight-bold"><b><?Php echo $value->total_kasus?></b></h2>
 									</div>
@@ -27,7 +27,7 @@
                             <div class="col-lg-auto px-2 mx-3 py-1">
 							<div class="card">
 								<div class="card-body">
-                                    <h3 class="card-title mb-1 text-dark">DATA JALAN</h3><br>
+                                    <h3 class="card-title mb-1 text-dark">DATA JALAN</h3>
 									<div class="d-flex align-items-center justify-content-between">
 										<br><h2 class="text-dark font-weight-bold"><b><?Php echo $value->total_jalan?></b></h2>
 									</div>
@@ -71,10 +71,10 @@
                 </li>
                 <li>
                     <?php foreach ($countproses as $key => $value) {?>
-                        <div class="col-lg-auto px-2 mx-3 py-1">
+                        <div class="col-lg-auto px-1 mx-2 py-1">
 							<div class="card">
 								<div class="card-body">
-                                    <h3 class="card-title mb-1 text-dark">STATUS PROSES DATA</h3><br>
+                                    <h3 class="card-title mb-1 text-dark">STATUS PROSES DATA</h3>
 									<div class="d-flex align-items-center justify-content-between">
 										<br><h2 class="text-warning font-weight-bold"><b><?Php echo $value->tot_proses?></b></h2>
 									</div>
