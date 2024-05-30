@@ -2,7 +2,7 @@
         <section class="stretch-card card-responsive">
             <div class="card-body mx-12 px-5 my-3">
 		        <?php foreach ($countkasus as $value) {?>
-        	    <div class= "responsive">
+        	    <div class= "stretch-card responsive">
                         <div class="col-lg-2 mx-4 px-2 py-1 grid-margin stretch-card">
 							<div class="card" style="background: rgba(0, 99, 132, 0.1)">
 								<div class="card-body">
