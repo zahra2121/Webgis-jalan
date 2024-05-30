@@ -51,9 +51,8 @@
             ?>
             <br>
                 <center><div class="col-md-10 col-sm-4 mx-auto">
-                    <h4 class="fw-bolder text-secondary"> <?= $detail->daerah_jalan ?></h4>
+                    <h4 class="fw-bolder text-secondary"> <?= $detail->daerah_jalan ?></h4><br>
                     <h4 class="fw-bolder text-danger">
-                        STATUS JALAN : 
                         <?php
                             if($detail->status == '0' and $detail->aek > $detail->ucl){
                                 echo "<label class='badge badge-danger' name='$detail->status' id='$detail->status'>DAERAH RAWAN</label>";
@@ -161,24 +160,6 @@
 
             <div>
                 <!-- TABEL DETAIL -->
-                <br>
-                <div class="col-md-10 col-sm-4 mx-auto">
-                    <h4 class="fw-bolder text-secondary">ALAMAT : <?= $detail->daerah_jalan ?></h4>
-                    <h5 class="fw-bolder text-secondary">LATITIDE : <?= $detail->pusat_lat ?></h5>
-                    <h4 class="fw-bolder text-danger">
-                        STATUS JALAN : 
-                        <?php
-                            if($detail->status == '0' and $detail->aek > $detail->ucl){
-                                echo "<label class='badge badge-danger' name='$detail->status' id='$detail->status'>DAERAH RAWAN</label>";
-                            }
-                            elseif($detail->status == '1' and $detail->aek < $detail->ucl){
-                                echo "<label class='badge badge-success' name='$detail->status' id='$detail->status'>BUKAN DAERAH RAWAN</label>";
-                            }else{
-                                echo "<label class='badge badge-warning' name='$detail->status' id='$detail->status'>PROSES</label>";
-                            }
-                        ?>
-                    </h4>
-                </div> 
                 <div class="col-md-10 col-sm-4 mx-auto">
                     <div class="table-responsive">
                         <table class="table" id="dataTable" width="50%">
