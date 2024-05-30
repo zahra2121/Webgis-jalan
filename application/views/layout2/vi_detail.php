@@ -4,6 +4,7 @@
     <div class="container">
         <div class="card-body">
         <div class="card col-lg-auto mx-3 px-3 py-3">
+            <br><br>
             <?php
                 echo "<center><h1 class='fs-3 fw-bolder'>TANGGAL ". date('d ', strtotime($detail->tanggal));
                 $month = date('F', strtotime($detail->tanggal));
@@ -51,7 +52,7 @@
             <br>
 
         <!-- MAPS DETAIL -->
-        <div class="card-column" id="map" style="width: auto; height: 500px;"></div>
+        <div class="card-column" id="map" style="width: auto; height: 400px;"></div>
         <script>
             var peta1 = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFyZGFsaXVzIiwiYSI6ImNsZnVtbDdtZzAyYjMzdXRhdDN6djY5cWoifQ.Xqtyqa7hvGhQla2oAwpG_Q', {
                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -146,7 +147,8 @@
                 <!-- TABEL DETAIL -->
                 <br>
                 <div class="col-md-10 col-sm-4 mx-auto">
-                    <h4 class="fw-bolder text-secondary"> <?= $detail->daerah_jalan ?></h4>
+                    <h4 class="fw-bolder text-secondary">ALAMAT : <?= $detail->daerah_jalan ?></h4>
+                    <h5 class="fw-bolder text-secondary">LATITIDE : <?= $detail->pusat_lat ?></h5>
                     <h4 class="fw-bolder text-danger">
                         STATUS JALAN : 
                         <?php
