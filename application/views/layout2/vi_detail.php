@@ -170,10 +170,26 @@
                                 <th class="text-dark"><h4>KORBAN</h4></th>
                                 <Td><h3>
                                     <?php 
-                                        echo "<label class='badge badge-secondary'>LUKA RINGAN : $detail->luka_ringan</label>&nbsp";
-                                        echo "<label class='badge badge-secondary'>LUKA BERAT : $detail->luka_berat</label>&nbsp";
-                                        echo "<label class='badge badge-danger'>MENINGGAL : $detail->meninggal</label>&nbsp";
-                                        echo "<label class='badge badge-secondary'>KERUGIAN MATERIL : $detail->rugi</label>&nbsp";
+                                        if($detail->luka_ringan == 0){
+                                            echo "<label class='badge badge-secondary'>LUKA RINGAN: $detail->luka_ringan</label>&nbsp";
+                                        }else{
+                                            echo "<label class='badge badge-danger'>LUKA RINGAN: $detail->luka_ringan</label>&nbsp";
+                                        }
+                                        if($detail->luka_berat == 0){
+                                            echo "<label class='badge badge-secondary'>LUKA BERAT: $detail->luka_berat</label>&nbsp";
+                                        }else{
+                                            echo "<label class='badge badge-danger'>LUKA BERAT: $detail->luka_berat</label>&nbsp";
+                                        }
+                                        if($detail->meninggal == 0){
+                                            echo "<label class='badge badge-secondary'>MENINGGAL: $detail->meninggal</label>&nbsp";
+                                        }else{
+                                            echo "<label class='badge badge-danger'>MENINGGAL: $detail->meninggal</label>&nbsp";
+                                        }
+                                        if($detail->luka_ringan == 0){
+                                            echo "<label class='badge badge-secondary'>KERUGIAN MATERIL: $detail->rugi</label>&nbsp";
+                                        }else{
+                                            echo "<label class='badge badge-danger'>KERUGIAN MATERIL: $detail->rugi</label>&nbsp";
+                                        }
                                     ?>
                                 </h3></Td>
                             </Tr>
