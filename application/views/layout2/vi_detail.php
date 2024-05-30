@@ -3,8 +3,6 @@
 <section>
     <div>
         <div class="card-responsive">
-            <ul style="display:grid; list-style-type:none; card-responsive">
-                <li>
                     <div class="card col-lg-auto mx-3 px-3 py-3">
                     <!-- MAPS DETAIL -->
                     <div class="card-column" id="map" style="width: auto; height: 500px;"></div>
@@ -115,8 +113,7 @@
                             </h4><br>
                         </div>             
                     </div>
-                </li>
-                <li>
+
                     <div class="card col-lg-auto mx-3 px-3 py-3 my-3">
                         <div class="card-column"><br>
                         <?php
@@ -220,9 +217,7 @@
                                 </div>
                             </div>
                         </div>
-                </li>
                 <?php  ?>
-            </ul>
     </div>
 
 </section>
