@@ -170,10 +170,10 @@
                                 <th class="text-dark"><h4>KORBAN</h4></th>
                                 <Td><h3>
                                     <?php 
-                                        echo "<label class='badge badge-success'>LUKA RINGAN : $detail->luka_ringan</label>&nbsp";
-                                        echo "<label class='badge badge-success'>LUKA BERAT : $detail->luka_berat</label>&nbsp";
+                                        echo "<label class='badge badge-secondary'>LUKA RINGAN : $detail->luka_ringan</label>&nbsp";
+                                        echo "<label class='badge badge-secondary'>LUKA BERAT : $detail->luka_berat</label>&nbsp";
                                         echo "<label class='badge badge-danger'>MENINGGAL : $detail->meninggal</label>&nbsp";
-                                        echo "<label class='badge badge-success'>KERUGIAN MATERIL : $detail->rugi</label>&nbsp";
+                                        echo "<label class='badge badge-secondary'>KERUGIAN MATERIL : $detail->rugi</label>&nbsp";
                                     ?>
                                 </h3></Td>
                             </Tr>
