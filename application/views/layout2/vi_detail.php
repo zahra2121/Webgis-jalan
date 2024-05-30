@@ -162,7 +162,7 @@
                 <!-- TABEL DETAIL -->
                 <div class="col-md-10 col-sm-4 mx-auto">
                     <div class="table-responsive">
-                        <table class="table" id="dataTable" width="50%">
+                        <table class="table" id="dataTable" width="70%">
                         <tbody>
                             <Tr>
                                 <th class="text-dark">Latitude</th>
