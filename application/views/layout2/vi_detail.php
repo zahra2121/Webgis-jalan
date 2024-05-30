@@ -61,7 +61,7 @@
                             elseif($detail->status == '1' and $detail->aek < $detail->ucl){
                                 echo "<label class='badge bg-warning text-dark' name='$detail->status' id='$detail->status'>BUKAN DAERAH RAWAN</label>";
                             }else{
-                                echo "<label class='badge bg-success text-white' name='$detail->status' id='$detail->status'>PROSES</label>";
+                                echo "<label class='badge bg-success text-white' name='$detail->status' id='$detail->status'>PROSES DATA</label>";
                             }
                         ?>
                     </h3>
@@ -164,7 +164,7 @@
                         <tbody>
                             <Tr>
                                 <th class="text-dark"><h4>LATITUDE, LONGITUDE</h4></th>
-                                <Td><h3><b><?php echo "<label class='badge bg-dark text-white'>$detail->pusat_lat, $detail->pusat_long</label>"?></b></h3></Td>
+                                <Td><h3><b><?php echo "<label class='badge bg-secondary text-white'>$detail->pusat_lat, $detail->pusat_long</label>"?></b></h3></Td>
                             </Tr>
                             <Tr>
                                 <th class="text-dark"><h4>KORBAN</h4></th>

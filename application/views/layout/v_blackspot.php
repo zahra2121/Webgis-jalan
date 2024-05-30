@@ -237,7 +237,7 @@
                                         $sql = "UPDATE blackspot SET status = '$status' WHERE idblack = '$value->idblack'";
                                         $query = $this->db->query($sql);
                                         
-                                        echo "<label class='badge bg-success text-white' name='$value->status' id='$value->status'>PROSES</label>";
+                                        echo "<label class='badge bg-success text-white' name='$value->status' id='$value->status'>PROSES DATA</label>";
                                       }
                                     ?>
                                   
