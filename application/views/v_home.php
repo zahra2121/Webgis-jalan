@@ -224,9 +224,9 @@
                 <div class="row">
                     <center><h1 class="card-title mb-2 text-dark center">PETA PEMETAAN TITIK BLACKSPOT KECELAKAAN LALU LINTAS DI KABUPATEN BANTUL</h1></center><br>
                     <center><div class="mx-2 px-4 py-4 my-2">
-                        <p> 🔴 : <label class='badge badge-danger' >DAERAH RAWAN</label>
-                            🟢 : <label class='badge badge-success'>BUKAN DAERAH RAWAN </label>
-                            🟡 : <label class='badge badge-warning'>PROSES</label></p>
+                        <p> 🔴 : <label class='badge bg-danger text-white' >DAERAH RAWAN</label>
+                            🟡 : <label class='badge bg-warning text-dark'>BUKAN DAERAH RAWAN </label>
+                            🟢 : <label class='badge badge-success'>PROSES</label></p>
                     </div></center>
                     <br><br>
                     <div id="map" style="width: 100%; height: 680px;"></div>
@@ -317,7 +317,7 @@
                         var layerControl = L.control.layers(baseLayers).addTo(map);
 
                         // CIRCLE BLACK SPOT
-                        <?php foreach ($black as $value) {?>
+                        <?php foreach ($blackspot as $value) {?>
                             var circle = L.circle([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
                                     <?php
                                         if($value->status == '0' and $value->aek > $value->ucl){
@@ -327,13 +327,13 @@
                                             radius: 100";
                                         }
                                         elseif($value->status == '1' and $value->aek < $value->ucl){
-                                            echo "color: 'green',
-                                            fillColor: '#008000',
+                                            echo "color: 'yellow',
+                                            fillColor: '#FFFF00',
                                             fillOpacity: 0.7,
                                             radius: 50";
                                         }else{
-                                            echo "color: 'yellow',
-                                            fillColor: '#FFFF00',
+                                            echo "color: 'green',
+                                            fillColor: '#008000',
                                             fillOpacity: 0.7,
                                             radius: 50";
                                         }
@@ -341,12 +341,12 @@
                             })
                             .bindPopup("<h5><b> Daerah Jalan<br><br><?= $value->daerah_jalan?></b><br><br> Kecamatan : <?= $value->kecamatan?><br><br> Status Jalan : <?php
                                     if($value->status == '0' and $value->aek > $value->ucl){
-                                        echo "<label class='badge badge-danger' name='$value->status' id='$value->status'>DAERAH RAWAN</label>";
+                                        echo "<label class='badge bg-danger text-white' name='$value->status' id='$value->status'>DAERAH RAWAN</label>";
                                     }
                                     elseif($value->status == '1' and $value->aek < $value->ucl){
-                                        echo "<label class='badge badge-success' name='$value->status' id='$value->status'>BUKAN DAERAH RAWAN</label>";
+                                        echo "<label class='badge bg-warning text-dark' name='$value->status' id='$value->status'>BUKAN DAERAH RAWAN</label>";
                                     }else{
-                                        echo "<label class='badge badge-warning' name='$value->status' id='$value->status'>PROSES</label>";
+                                        echo "<label class='badge badge-success' name='$value->status' id='$value->status'>PROSES</label>";
                                     }
                                
                                 ?><br><br></h5>")

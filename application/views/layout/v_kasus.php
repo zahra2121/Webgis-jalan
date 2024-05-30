@@ -178,16 +178,16 @@
                             <Td><?Php echo $Row->luka_berat ?></Td>
                             <Td><?Php echo $Row->meninggal ?></Td>
                             <Td><?Php echo $Row->rugi ?></Td>
-                            <Td><?php 
-                                if($Row->status == '0' and $Row->aek > $Row->ucl){
-                                  echo "<label class='badge badge-danger' name='$Row->status' id='$Row->status'>DAERAH RAWAN</label>";
-                                }
-                                elseif($Row->status == '1' and $Row->aek < $Row->ucl){
-                                    echo "<label class='badge badge-success' name='$Row->status' id='$Row->status'>BUKAN DAERAH RAWAN</label>";
-                                }else{
-                                    echo "<label class='badge badge-warning' name='$Row->status' id='$Row->status'>PROSES</label>";
-                                }
-                            ?></Td>
+                            <Td><?Php
+                                  if($Row->status == '0' or $Row->aek > $Row->ucl){
+                                    echo "<label class='badge bg-danger text-white' name='0'>DAERAH RAWAN</label>";
+                                  }
+                                  elseif($Row->status == '1' or $Row->aek < $Row->ucl){
+                                    echo "<label class='badge bg-warning text-dark' name='1'>BUKAN DAERAH RAWAN</label>";
+                                  }else{
+                                    echo "<label class='badge badge-success' name='2'>HATI-HATI</label>";
+                                  }
+                                ?></Td>
                             
                         </Tr>                    
                           <?Php } ?>

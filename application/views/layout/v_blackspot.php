@@ -10,8 +10,8 @@
                         <center><h2 class="card-title mb-2 text-dark center">GRAFIK NILAI AEK, BCA, DAN UCL BERDASARKAN DATA BLACKSPOT DALAM PENENTUAN DAERAH RAWAN KECELAKAAN LALU LINTAS</h2></center><br>
                         <div class="card mx-2 px-4 py-4 my-2" style="width: 500px; height:300px;">
                           <p><b>Penetuan Daerah Rawan</b></p>
-                          <p>︙ EAK ﹥ UCL  ⭢ <label class='badge badge-danger' >DAERAH RAWAN</label></p>
-                          <p>︙ EAK ﹤ UCL  ⭢ <label class='badge badge-success'>BUKAN DAERAH RAWAN </label></p>
+                          <p>︙ EAK ﹥ UCL  ⭢ <label class='badge bg-danger text-white' >DAERAH RAWAN</label></p>
+                          <p>︙ EAK ﹤ UCL  ⭢ <label class='badge bg-warning text-dark'>BUKAN DAERAH RAWAN </label></p>
                           <p>︙ BCA ⭢ Batasan yang ada pada tingkat kecelakaan</p>
                           
                           <br>
@@ -223,21 +223,21 @@
                                         $sql = "UPDATE blackspot SET status = '$status' WHERE idblack = '$value->idblack'";
                                         $query = $this->db->query($sql);
                                         
-                                        echo "<label class='badge badge-danger' name='$value->status' id='$value->status'>DAERAH RAWAN</label>";
+                                        echo "<label class='badge bg-danger text-white' name='$value->status' id='$value->status'>DAERAH RAWAN</label>";
                                       }
                                       elseif($value->aek < $value->ucl){
                                         $status = 1;
                                         $sql = "UPDATE blackspot SET status = '$status' WHERE idblack = '$value->idblack'";
                                         $query = $this->db->query($sql);
                                         
-                                        echo "<label class='badge badge-success' name='$value->status' id='$value->status'>BUKAN DAERAH RAWAN</label>";
+                                        echo "<label class='badge bg-warning text-dark' name='$value->status' id='$value->status'>BUKAN DAERAH RAWAN</label>";
                                       }
                                       else{
                                         $status = 2;
                                         $sql = "UPDATE blackspot SET status = '$status' WHERE idblack = '$value->idblack'";
                                         $query = $this->db->query($sql);
                                         
-                                        echo "<label class='badge badge-warning' name='$value->status' id='$value->status'>PROSES</label>";
+                                        echo "<label class='badge badge-success' name='$value->status' id='$value->status'>PROSES</label>";
                                       }
                                     ?>
                                   
