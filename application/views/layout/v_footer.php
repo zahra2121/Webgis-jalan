@@ -1,30 +1,26 @@
-				<!-- partial:partials/_footer.html -->
-				<footer class="footer-wrap bg-dark">
-            <div class="footer-distributed">
-              <div class="footer-left text-white">
-                <h2 class="footer-company-about text-white-50 mb-0">
-                  <span>Kontak</span>
-                  <i class="mdi mdi-phone menu-icon"></i>
-                    (0274) 367570
-                </h2>
-              </div>
+				<!-- Footer-->
+        <footer class="footer-distributed bg-dark">
+          <div class="footer-center">
+            <h2 class="footer-company-about text-white-50 mb-0 ">
+              <span>Kontak</span>
+              (0274) 367570
+            </h2>
+          </div>
 
-              <div class="footer-center text-white">
-                <h2 class="footer-company-about text-white-50 mb-0">
-                  <span>Alamat Polres Bantul</span>
-                  Jalan Jend. Sudirman No.202 <br>Bejen, Bantul, <br>Kec. Bantul, Kabupaten Bantul <br>Daerah Istimewa Yogyakarta 55711 <br>Indonesia
-                </h2>
-              </div>
-			      
-              <div class="footer-right text-white">
-				        <h2 class="footer-company-about text-white-50 mb-0">
-					        <span>About System</span>
-					        Sistem Informasi Geografis Pemetaan Titik Lokasi Daerah Rawan Kecelakaan Lalu Lintas yang terjadi di Kabupaten Bantul, D I Yogyakarta
-					        <br>© 2000018180
-                </h2>
-				        <br><br><a href="<?= base_url() ?>index.php/login/logout"><button type="button" class="btn btn-light btn-rounded btn-fw">LOGOUT</button></a>
-			        </div>
-            </div>
+          <div class="footer-center">
+                    <h2 class="footer-company-about text-white-50 mb-0">
+              <span>Alamat Polres Bantul</span>
+              Jalan Jend. Sudirman No.202 <br>Bejen, Bantul, <br>Kec. Bantul, Kabupaten Bantul <br>Daerah Istimewa Yogyakarta 55711 <br>Indonesia
+            </h2>
+          </div>
+          <div class="footer-center">
+            <h2 class="footer-company-about text-white-50 mb-0 ">
+              <span>About System</span>
+              Sistem Informasi Geografis Pemetaan <br> Titik Lokasi Daerah Rawan Kecelakaan Lalu Lintas <br>yang terjadi di Kabupaten Bantul,<br> D I Yogyakarta
+              <br>© 2000018180
+                    </h2>
+            <br><a href="<?= base_url() ?>index.php/login/logout"><button type="button" class="btn btn-light btn-rounded btn-fw">LOGOUT</button></a>
+          </div>
         </footer>
 				<!-- partial -->
 			</div>
