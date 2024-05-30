@@ -5,9 +5,11 @@
 <!-- CHART GRAFIK ADMIN-->
         <section class="card-body responsive">
             <div class="mx-5 px-3 my-3">
+            <ul style="display:grid; list-style-type:none; grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);">
+                <li>
 		        <?php foreach ($countkasus as $value) {?>
-        	    <div class= "stretch-card">
-                        <div class="col-lg-2 mx-3 px-2 py-1 grid-margin stretch-card">
+        	    <div class= "responsive">
+                        <div class="col-lg-2 mx-3 px-2 py-1">
 							<div class="card">
 								<div class="card-body">
                                     <h3 class="card-title mb-1 text-dark">DATA KASUS</h3><br>
@@ -19,8 +21,10 @@
 							</div>
 						</div>
                         <?php }?>
+                </li>
+                <li>
                         <?php foreach ($countblack as $key => $value) {?>
-                            <div class="col-lg-2 px-2 mx-3 py-1 grid-margin stretch-card">
+                            <div class="col-lg-2 px-2 mx-3 py-1">
 							<div class="card">
 								<div class="card-body">
                                     <h3 class="card-title mb-1 text-dark">DATA JALAN</h3><br>
@@ -32,6 +36,10 @@
 							</div>
 						</div>
                         <?php }?>
+                </li>
+            </ul>
+            <ul style="display:grid; list-style-type:none; grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);">
+                <li>
                         <?php foreach ($countrawan as $value) {?>
                         <div class="col-lg-2 px-2 mx-2 py-1 grid-margin stretch-card">
 							<div class="card">
@@ -45,6 +53,8 @@
 							</div>
 						</div>
                         <?php }?>
+                </li>
+                <li>
                         <?php foreach ($countaman as $key => $value) {?>
                         <div class="col-lg-2 px-1 mx-2 py-1 grid-margin stretch-card">
 							<div class="card">
@@ -58,6 +68,8 @@
 							</div>
 						</div>
                         <?php }?>
+                </li>
+            </ul>
                         <?php foreach ($countproses as $key => $value) {?>
                         <div class="col-lg-2 px-2 mx-3 py-1 grid-margin stretch-card">
 							<div class="card">
