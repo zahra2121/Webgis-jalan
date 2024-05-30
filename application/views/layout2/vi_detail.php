@@ -175,7 +175,7 @@
                                 <Td><?php echo $detail->kecamatan?></Td>
                             </Tr>
                             <Tr>
-                                <th><class="text-dark"><h4>KABUPATEN</h4></th>
+                                <th class="text-dark"><h4>KABUPATEN</h4></th>
                                 <Td><?php echo $detail->kabupaten?></Td>
                             </Tr>
                     
