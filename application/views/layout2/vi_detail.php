@@ -162,14 +162,9 @@
                         <table class="table" id="dataTable" width="70%">
                         <tbody>
                             <Tr>
-                                <th class="text-dark"><h4>LATITUDE</h4></th>
-                                <Td><?php echo $detail->pusat_lat?></Td>
+                                <th class="text-dark"><GIT>LATITUDE, LONGITUDE</h4></th>
+                                <Td><?php echo "<label class='badge badge-info'>'$detail->pusat_lat', ' $detail->pusat_long'</label>"?></Td>
                             </Tr>
-                            <Tr>
-                                <th class="text-dark"><h4>LONGITUDE</h4></th>
-                                <Td><?php echo $detail->pusat_long?></Td>
-                            </Tr>
-                            
                             <Tr>
                                 <th class="text-dark"><h4>KECAMATAN</h4></th>
                                 <Td><?php echo $detail->kecamatan?></Td>
