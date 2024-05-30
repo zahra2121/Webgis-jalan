@@ -175,26 +175,16 @@
                             </Tr>
                     
                             <Tr>
-                                <th class="text-dark"><h4>LUKA RINGAN</h4></th>
+                                <th class="text-dark"><h4>KASUS</h4></th>
                                 <Td><h3>
                                     <?php 
-                                        echo "<label class='badge badge-dark'>$detail->luka_ringan</label>"
+                                        echo "<label class='badge badge-dark'>LUKA RINGAN : $detail->luka_ringan</label>";
+                                        echo "<label class='badge badge-warning'>LUKA BERAT : $detail->luka_berat</label>";
+                                        echo "<label class='badge badge-danger'>MENINGGAL : $detail->meninggal</label>";
+                                        echo "<label class='badge badge-dark'>KERUGIAN MATERIL : $detail->rugi</label>";
                                     ?>
                                 </h3></Td>
                             </Tr>
-                            <Tr>
-                                <th class="text-dark"><h4>LUKA BERAT</h4></th>
-                                <Td><?php echo $detail->luka_berat?></Td>
-                            </Tr>
-                            <Tr>
-                                <th class="text-dark"><h4>MENINGGAL</h4></th>
-                                <Td><?php echo $detail->meninggal?></Td>
-                            </Tr>
-                            <Tr>
-                                <th class="text-dark"><h4>KERUGIAN MATERIL</h4></th>
-                                <Td><?php echo $detail->rugi?></Td>
-                            </Tr>
-                        
                         </tbody>
                         </table>
                         <br>
