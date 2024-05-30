@@ -1,6 +1,6 @@
         <!-- Footer-->
-        <footer class="footer-center bg-dark">
-			<div class="footer-left text-white">
+        <footer class="footer-distributed bg-dark ce">
+			<div class="footer-center text-white">
 				<h2 class="footer-company-about text-white-50 mb-0 ">
 					<span>Kontak</span>
 					<i class="mdi mdi-phone menu-icon"></i>
