@@ -98,22 +98,6 @@
                         
                     </script><br>
 
-                        <div class="col-md-10 col-sm-4 mx-auto">
-                            <h4 class="fw-bolder text-secondary"> <?= $detail->daerah_jalan ?></h4><br>
-                            <h4 class="fw-bolder text-danger">
-                                STATUS JALAN : 
-                                <?php
-                                    if($detail->status == '0' and $detail->aek > $detail->ucl){
-                                        echo "<label class='badge badge-danger' name='$detail->status' id='$detail->status'>DAERAH RAWAN</label>";
-                                    }
-                                    elseif($detail->status == '1' and $detail->aek < $detail->ucl){
-                                        echo "<label class='badge badge-success' name='$detail->status' id='$detail->status'>BUKAN DAERAH RAWAN</label>";
-                                    }else{
-                                        echo "<label class='badge badge-warning' name='$detail->status' id='$detail->status'>PROSES</label>";
-                                    }
-                                ?>
-                            </h4><br>
-                        </div> 
                         <div>
                         <?php
                             echo "<center><h1 class='fs-3 fw-bolder'>TANGGAL ". date('d ', strtotime($detail->tanggal));
@@ -160,7 +144,23 @@
                             echo "<center><h4 class='fw-bolder'>PUKUL " . date('H.i', strtotime($detail->jam)).  " WIB</h4></center>"; 
                         ?>
                             <!-- TABEL DETAIL -->
-                            <br><br>
+                            <br>
+                            <div class="col-md-10 col-sm-4 mx-auto">
+                                <h4 class="fw-bolder text-secondary"> <?= $detail->daerah_jalan ?></h4><br>
+                                <h4 class="fw-bolder text-danger">
+                                    STATUS JALAN : 
+                                    <?php
+                                        if($detail->status == '0' and $detail->aek > $detail->ucl){
+                                            echo "<label class='badge badge-danger' name='$detail->status' id='$detail->status'>DAERAH RAWAN</label>";
+                                        }
+                                        elseif($detail->status == '1' and $detail->aek < $detail->ucl){
+                                            echo "<label class='badge badge-success' name='$detail->status' id='$detail->status'>BUKAN DAERAH RAWAN</label>";
+                                        }else{
+                                            echo "<label class='badge badge-warning' name='$detail->status' id='$detail->status'>PROSES</label>";
+                                        }
+                                    ?>
+                                </h4><br>
+                            </div> 
                             <div class="col-md-10 col-sm-4 mx-auto">
                                 <div class="table-responsive">
                                     <table class="table" id="dataTable" width="50%">
@@ -173,15 +173,7 @@
                                             <th class="text-dark">Longitude</th>
                                             <Td><?php echo $detail->pusat_long?></Td>
                                         </Tr>
-                                        <Tr>
-                                            <th class="text-dark">Alamat</th>
-                                            <Td>
-                                                <?php 
-                                                    $num_char = 50;
-                                                    echo substr($detail->daerah_jalan, 0, $num_char) . '...';
-                                                ?>
-                                            </Td>
-                                        </Tr>
+                                        
                                         <Tr>
                                             <th class="text-dark">Kecamatan</th>
                                             <Td><?php echo $detail->kecamatan?></Td>
