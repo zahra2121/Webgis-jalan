@@ -3,7 +3,7 @@
 <section>
     <div>
         <div class="card-body">
-            <ul style="display:grid; list-style-type:none; grid-template-columns: 70% auto; grid-template-rows: repeat(2, auto);">
+            <ul style="display:grid; list-style-type:none; grid-template-columns: 60% auto; grid-template-rows: repeat(2, auto);">
                 <li>
                     <div class="card col-lg-auto mx-3 px-3 py-3">
                     <!-- MAPS DETAIL -->
@@ -113,7 +113,109 @@
                                     }
                                 ?>
                             </h4><br>
-                        </div>             
+                        </div> 
+                        <div>
+                        <?php
+                            echo "<center><h1 class='fs-3 fw-bolder'>TANGGAL ". date('d ', strtotime($detail->tanggal));
+                            $month = date('F', strtotime($detail->tanggal));
+                            switch ($month) {
+                                case 'January':
+                                    echo "JANUARI ";
+                                    break;
+                                case 'February':
+                                    echo "FEBRUARI "; 
+                                    break;
+                                case 'March':
+                                    echo "MARET ";
+                                    break;
+                                case 'April':
+                                    echo "APRIL ";
+                                    break;
+                                case 'May':
+                                    echo "MEI ";
+                                    break;
+                                case 'June':
+                                    echo "JUNI ";
+                                    break;
+                                case 'July':
+                                    echo "JULI ";
+                                    break;
+                                case 'August':
+                                    echo "AGUSTUS ";
+                                    break;
+                                case 'September':
+                                    echo "SEPTEMBER ";
+                                    break;
+                                case 'October':
+                                    echo "OKTOBER ";
+                                    break;
+                                case 'November':
+                                    echo "NOVEMBER ";
+                                    break;
+                                default:
+                                    echo "DESEMBER ";
+                            }
+                            echo date(' Y', strtotime($detail->tanggal))." </h1></center>";
+                            
+                            echo "<center><h4 class='fw-bolder'>PUKUL " . date('H.i', strtotime($detail->jam)).  " WIB</h4></center>"; 
+                        ?>
+                            <!-- TABEL DETAIL -->
+                            <br><br>
+                            <div class="col-md-10 col-sm-4 mx-auto">
+                                <div class="table-responsive">
+                                    <table class="table" id="dataTable" width="50%">
+                                    <tbody>
+                                        <Tr>
+                                            <th class="text-dark">Latitude</th>
+                                            <Td><?php echo $detail->pusat_lat?></Td>
+                                        </Tr>
+                                        <Tr>
+                                            <th class="text-dark">Longitude</th>
+                                            <Td><?php echo $detail->pusat_long?></Td>
+                                        </Tr>
+                                        <Tr>
+                                            <th class="text-dark">Alamat</th>
+                                            <Td>
+                                                <?php 
+                                                    $num_char = 50;
+                                                    echo substr($detail->daerah_jalan, 0, $num_char) . '...';
+                                                ?>
+                                            </Td>
+                                        </Tr>
+                                        <Tr>
+                                            <th class="text-dark">Kecamatan</th>
+                                            <Td><?php echo $detail->kecamatan?></Td>
+                                        </Tr>
+                                        <Tr>
+                                            <th class="text-dark">Kabupaten</th>
+                                            <Td><?php echo $detail->kabupaten?></Td>
+                                        </Tr>
+                                
+                                        <Tr>
+                                            <th class="text-dark">Luka Ringan</th>
+                                            <Td><?php echo $detail->luka_ringan?></Td>
+                                        </Tr>
+                                        <Tr>
+                                            <th class="text-dark">Luka Berat</th>
+                                            <Td><?php echo $detail->luka_berat?></Td>
+                                        </Tr>
+                                        <Tr>
+                                            <th class="text-dark">Meninggal</th>
+                                            <Td><?php echo $detail->meninggal?></Td>
+                                        </Tr>
+                                        <Tr>
+                                            <th class="text-dark">Kerugian Material</th>
+                                            <Td><?php echo $detail->rugi?></Td>
+                                        </Tr>
+                                    
+                                    </tbody>
+                                    </table>
+                                    <br>
+                                    <a href="<?= base_url() ?>index.php/user/tabelsemua"><button type="button" class="btn btn-dark">Back</button></a>
+                                    <br><br>
+                                </div>
+                            </div>
+                        </div>            
                     </div>
                 </li>
                 <li>
