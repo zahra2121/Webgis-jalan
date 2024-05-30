@@ -3,16 +3,14 @@
 </script>
 
 <!-- CHART GRAFIK ADMIN-->
-        <section class="container">
-            <div class="card-body mx-5 px-3 my-3">
-            <ul style="display:grid; list-style-type:none; grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);">
-                <li>
+        <section>
+            <div class="mx-5 px-3 my-3">
 		        <?php foreach ($countkasus as $value) {?>
-        	    <div class= "responsive">
-                        <div class="col-lg-auto mx-3 px-2 py-1">
+        	    <div class= "stretch-card">
+                        <div class="col-lg-2 mx-3 px-2 py-1 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
-                                    <h3 class="card-title mb-1 text-dark">DATA KASUS</h3>
+                                    <h3 class="card-title mb-1 text-dark">DATA KASUS</h3><br>
 									<div class="d-flex align-items-center justify-content-between">
 										<br><h2 class="text-dark font-weight-bold"><b><?Php echo $value->total_kasus?></b></h2>
 									</div>
@@ -21,13 +19,11 @@
 							</div>
 						</div>
                         <?php }?>
-                </li>
-                <li>
                         <?php foreach ($countblack as $key => $value) {?>
-                            <div class="col-lg-auto px-2 mx-3 py-1">
+                            <div class="col-lg-2 px-2 mx-3 py-1 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
-                                    <h3 class="card-title mb-1 text-dark">DATA JALAN</h3>
+                                    <h3 class="card-title mb-1 text-dark">DATA JALAN</h3><br>
 									<div class="d-flex align-items-center justify-content-between">
 										<br><h2 class="text-dark font-weight-bold"><b><?Php echo $value->total_jalan?></b></h2>
 									</div>
@@ -36,12 +32,8 @@
 							</div>
 						</div>
                         <?php }?>
-                </li>
-            </ul>
-            <ul style="display:grid; list-style-type:none; grid-template-columns: 33% 33% 33%; grid-template-rows: repeat(3, auto);">
-                <li>
                         <?php foreach ($countrawan as $value) {?>
-                        <div class="col-lg-auto px-2 mx-2 py-1">
+                        <div class="col-lg-2 px-2 mx-2 py-1 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
                                     <h3 class="card-title mb-1 text-dark">STATUS DAERAH RAWAN KECELAKAAN</h3>
@@ -53,10 +45,8 @@
 							</div>
 						</div>
                         <?php }?>
-                </li>
-                <li>
                         <?php foreach ($countaman as $key => $value) {?>
-                        <div class="col-lg-auto px-1 mx-2 py-1">
+                        <div class="col-lg-2 px-1 mx-2 py-1 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
                                     <h3 class="card-title mb-1 text-dark">STATUS BUKAN DAERAH RAWAN KECELAKAAN</h3>
@@ -68,13 +58,11 @@
 							</div>
 						</div>
                         <?php }?>
-                </li>
-                <li>
-                    <?php foreach ($countproses as $key => $value) {?>
-                        <div class="col-lg-auto px-1 mx-2 py-1">
+                        <?php foreach ($countproses as $key => $value) {?>
+                        <div class="col-lg-2 px-2 mx-3 py-1 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
-                                    <h3 class="card-title mb-1 text-dark">STATUS PROSES DATA</h3>
+                                    <h3 class="card-title mb-1 text-dark">STATUS PROSES DATA</h3><br>
 									<div class="d-flex align-items-center justify-content-between">
 										<br><h2 class="text-warning font-weight-bold"><b><?Php echo $value->tot_proses?></b></h2>
 									</div>
@@ -82,9 +70,7 @@
                                 <canvas id="allProducts" style="width: 100%; height: 30px;"></canvas>
 							</div>
 						</div>
-			        <?php }?>
-                </li>
-            </ul>
+			    <?php }?>
         	    </div>
             </div>
         </section>
