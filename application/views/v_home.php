@@ -226,7 +226,7 @@
                     <center><div class="mx-2 px-4 py-4 my-2">
                         <p> 🔴 : <label class='badge bg-danger text-white' >DAERAH RAWAN</label>
                             🟡 : <label class='badge bg-warning text-dark'>BUKAN DAERAH RAWAN </label>
-                            🟢 : <label class='badge badge-success'>PROSES DATA</label></p>
+                            🟢 : <label class='badge bg-success text-white'>PROSES DATA</label></p>
                     </div></center>
                     <br><br>
 
