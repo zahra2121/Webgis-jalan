@@ -30,7 +30,7 @@
 
 
                         var peta4 = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-                            maxZoom: 18,
+                            maxZoom: 20,
                             id: 'mapbox/outdoors-v11',
                             tileSize: 512,
                             zoomOffset: -1,
@@ -39,6 +39,7 @@
 
                         
                         var peta5 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            maxZoom: 20,
                             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         });
 
