@@ -58,28 +58,28 @@
                         var layerControl = L.control.layers(baseLayers).addTo(map);
 
                         // CIRCLE BLACK SPOT
-                        var circle = L.circle([<?= $detailadmin->pusat_lat ?>, <?=$detailadmin->pusat_long ?>], {
+                        var circle = L.circle([<?= $detail->pusat_lat ?>, <?=$detail->pusat_long ?>], {
                             <?php
-                                if($detailadmin->status == '0' and $detailadmin->aek > $detailadmin->ucl){
+                                if($detail->status == '0' and $detail->aek > $detail->ucl){
                                     echo "color: 'red',
                                     fillColor: '#FF0000',
                                     fillOpacity: 0.3,
                                     radius: 30";
                                 }
-                                elseif($detailadmin->status == '1' and $detailadmin->aek < $detailadmin->ucl){
-                                    echo "color: 'green',
-                                    fillColor: '#008000',
+                                elseif($detail->status == '1' and $detail->aek < $detail->ucl){
+                                    echo "color: 'yellow',
+                                    fillColor: '#FFFF00',
                                     fillOpacity: 0.3,
                                     radius: 30";
                                 }else{
-                                    echo "color: 'yellow',
-                                    fillColor: '#FFFF00',
+                                    echo "color: 'green',
+                                    fillColor: '#008000',
                                     fillOpacity: 0.3,
                                     radius: 30";
                                 }
                             ?>
                         }).addTo(map)
-                        .bindPopup("<h5><b> Daerah Jalan<br><br><?= $detailadmin->daerah_jalan?></b><br><br> Latitude : <?= $detailadmin->pusat_lat?><br><br> Longitude : <?= $detailadmin->pusat_long?><br><br></h5>");
+                        .bindPopup("<h5><b> Daerah Jalan<br><br><?= $detail->daerah_jalan?></b><br><br> Latitude : <?= $detail->pusat_lat?><br><br> Longitude : <?= $detail->pusat_long?><br><br></h5>");
                         
                         vpup = L.popup()
                         .setLatLng([<?= $detailadmin->pusat_lat ?>, <?= $detailadmin->pusat_long ?>])
