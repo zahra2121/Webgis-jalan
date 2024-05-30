@@ -1,8 +1,10 @@
 <?php echo form_open('user/detail/'. $detail->idkasus)?>
 <!-- Content section-->
 <section>
-    <div class="container">
-        <div class="card-responsive">
+    <div>
+        <div class="card-body">
+            <ul style="display:grid; list-style-type:none; grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);">
+                <li>
                     <div class="card col-lg-auto mx-3 px-3 py-3">
                     <!-- MAPS DETAIL -->
                     <div class="card-column" id="map" style="width: auto; height: 500px;"></div>
@@ -113,7 +115,8 @@
                             </h4><br>
                         </div>             
                     </div>
-
+                </li>
+                <li>
                     <div class="card col-lg-auto mx-3 px-3 py-3 my-3">
                         <div class="card-column"><br>
                         <?php
@@ -217,7 +220,9 @@
                                 </div>
                             </div>
                         </div>
+                </li>
                 <?php  ?>
+            </ul>
     </div>
 
 </section>
