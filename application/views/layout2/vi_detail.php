@@ -3,7 +3,7 @@
 <section>
     <div>
         <div class="card-body">
-            <ul style="display:grid; list-style-type:none; grid-template-columns: 50% 50%; grid-template-rows: repeat(1, auto);">
+            <ul style="display:grid; list-style-type:none; grid-template-columns: 70% auto; grid-template-rows: repeat(2, auto);">
                 <li>
                     <div class="card col-lg-auto mx-3 px-3 py-3">
                     <!-- MAPS DETAIL -->
