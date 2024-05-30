@@ -162,8 +162,8 @@
                         <table class="table" id="dataTable" width="70%">
                         <tbody>
                             <Tr>
-                                <th class="text-dark"><GIT>LATITUDE, LONGITUDE</h4></th>
-                                <Td><?php echo "<label class='badge badge-info'>'$detail->pusat_lat', ' $detail->pusat_long'</label>"?></Td>
+                                <th class="text-dark"><h4>LATITUDE, LONGITUDE</h4></th>
+                                <Td><h3><?php echo "<label class='badge badge-info'>'$detail->pusat_lat', ' $detail->pusat_long'</label>"?></h3></Td>
                             </Tr>
                             <Tr>
                                 <th class="text-dark"><h4>KECAMATAN</h4></th>
@@ -176,7 +176,11 @@
                     
                             <Tr>
                                 <th class="text-dark"><h4>LUKA RINGAN</h4></th>
-                                <Td><?php echo $detail->luka_ringan?></Td>
+                                <Td><h3>
+                                    <?php 
+                                        echo "<label class='badge badge-dark'>$detail->luka_ringan</label>"
+                                    ?>
+                                </h3></Td>
                             </Tr>
                             <Tr>
                                 <th class="text-dark"><h4>LUKA BERAT</h4></th>
