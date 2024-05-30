@@ -1,5 +1,5 @@
 <!-- CHART GRAFIK USER-->
-        <section class="stretch-card card-responsive">
+        <section class="card-responsive">
             <div class="card-body mx-12 px-5 my-3">
 		        <?php foreach ($countkasus as $value) {?>
         	    <div class= "stretch-card responsive">
