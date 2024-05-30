@@ -1,4 +1,4 @@
-<nav class="button-navbar" id="navbarSupportedContent">
+<nav class="button-navbar">
         <div class="container">
             <ul class="nav page-navigation">
               <li class="nav-item">
