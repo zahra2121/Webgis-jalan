@@ -50,9 +50,25 @@
                 echo "<center><h4 class='fw-bolder'>PUKUL " . date('H.i', strtotime($detail->jam)).  " WIB</h4></center>"; 
             ?>
             <br>
+                <center><div class="col-md-10 col-sm-4 mx-auto">
+                    <h4 class="fw-bolder text-secondary"> <?= $detail->daerah_jalan ?></h4>
+                    <h4 class="fw-bolder text-danger">
+                        STATUS JALAN : 
+                        <?php
+                            if($detail->status == '0' and $detail->aek > $detail->ucl){
+                                echo "<label class='badge badge-danger' name='$detail->status' id='$detail->status'>DAERAH RAWAN</label>";
+                            }
+                            elseif($detail->status == '1' and $detail->aek < $detail->ucl){
+                                echo "<label class='badge badge-success' name='$detail->status' id='$detail->status'>BUKAN DAERAH RAWAN</label>";
+                            }else{
+                                echo "<label class='badge badge-warning' name='$detail->status' id='$detail->status'>PROSES</label>";
+                            }
+                        ?>
+                    </h4>
+                </div></center>
 
         <!-- MAPS DETAIL -->
-        <div class="card-column" id="map" style="width: auto; height: 400px;"></div>
+        <div class="card-column" id="map" style="width: auto; height: 500px;"></div>
         <script>
             var peta1 = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFyZGFsaXVzIiwiYSI6ImNsZnVtbDdtZzAyYjMzdXRhdDN6djY5cWoifQ.Xqtyqa7hvGhQla2oAwpG_Q', {
                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
