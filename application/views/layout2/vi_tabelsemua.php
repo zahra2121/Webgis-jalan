@@ -16,7 +16,7 @@
                     <i class="mdi mdi-printer btn-icon-append"></i>                                                                              
                   </button></a>
                   
-                  <div class="demo-table-responsive"><br>
+                  <div class="table-responsive"><br>
                     <table class="table" id="dataTable" width="100%" cellspacing="0">
                       <thead class="bg-dark text-white">
                         <tr>
