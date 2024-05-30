@@ -11,8 +11,8 @@ class M_user extends CI_model
 
     public function get_all_black(){
         $this->db->select('*');
+        $this->db->order_by('tahun', 'DESC');
         $this->db->from('blackspot');
-        $this->db->order_by('tahun', SORT_DESC);
         return $this->db->get()->result();
     }
 
