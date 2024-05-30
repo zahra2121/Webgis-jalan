@@ -99,12 +99,12 @@
                                 STATUS JALAN : 
                                 <?php
                                     if($detailadmin->status == '0' and $detailadmin->aek > $detailadmin->ucl){
-                                        echo "<label class='badge badge-danger' name='$detailadmin->status' id='$detailadmin->status'>DAERAH RAWAN</label>";
+                                        echo "<label class='badge bg-danger text-white' name='$detailadmin->status' id='$detailadmin->status'>DAERAH RAWAN</label>";
                                     }
                                     elseif($detailadmin->status == '1' and $detailadmin->aek < $detailadmin->ucl){
-                                        echo "<label class='badge badge-success' name='$detailadmin->status' id='$detailadmin->status'>BUKAN DAERAH RAWAN</label>";
+                                        echo "<label class='badge bg-warning text-dark' name='$detailadmin->status' id='$detailadmin->status'>BUKAN DAERAH RAWAN</label>";
                                     }else{
-                                        echo "<label class='badge badge-warning' name='$detailadmin->status' id='$detailadmin->status'>PROSES</label>";
+                                        echo "<label class='badge bg-success text-white' name='$detailadmin->status' id='$detailadmin->status'>PROSES</label>";
                                     }
                                 ?>
                             </h4><br>

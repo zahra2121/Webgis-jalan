@@ -56,12 +56,12 @@
                     <h3 class="fw-bolder text-danger">
                         <?php
                             if($detail->status == '0' and $detail->aek > $detail->ucl){
-                                echo "<label class='badge badge-danger' name='$detail->status' id='$detail->status'>DAERAH RAWAN</label>";
+                                echo "<label class='badge bg-danger text-white' name='$detail->status' id='$detail->status'>DAERAH RAWAN</label>";
                             }
                             elseif($detail->status == '1' and $detail->aek < $detail->ucl){
-                                echo "<label class='badge badge-success' name='$detail->status' id='$detail->status'>BUKAN DAERAH RAWAN</label>";
+                                echo "<label class='badge bg-warning text-dark' name='$detail->status' id='$detail->status'>BUKAN DAERAH RAWAN</label>";
                             }else{
-                                echo "<label class='badge badge-warning' name='$detail->status' id='$detail->status'>PROSES</label>";
+                                echo "<label class='badge bg-success text-white' name='$detail->status' id='$detail->status'>PROSES</label>";
                             }
                         ?>
                     </h3>
@@ -128,13 +128,13 @@
                         radius: 30";
                     }
                     elseif($detail->status == '1' and $detail->aek < $detail->ucl){
-                        echo "color: 'green',
-                        fillColor: '#008000',
+                        echo "color: 'yellow',
+                        fillColor: '#FFFF00',
                         fillOpacity: 0.3,
                         radius: 30";
                     }else{
-                        echo "color: 'yellow',
-                        fillColor: '#FFFF00',
+                        echo "color: 'green',
+                        fillColor: '#008000',
                         fillOpacity: 0.3,
                         radius: 30";
                     }
@@ -164,7 +164,7 @@
                         <tbody>
                             <Tr>
                                 <th class="text-dark"><h4>LATITUDE, LONGITUDE</h4></th>
-                                <Td><h3><b><?php echo "<label class='badge bg-warning text-dark'>$detail->pusat_lat, $detail->pusat_long</label>"?></b></h3></Td>
+                                <Td><h3><b><?php echo "<label class='badge bg-dark text-white'>$detail->pusat_lat, $detail->pusat_long</label>"?></b></h3></Td>
                             </Tr>
                             <Tr>
                                 <th class="text-dark"><h4>KORBAN</h4></th>

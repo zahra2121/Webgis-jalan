@@ -185,7 +185,7 @@
                                   elseif($Row->status == '1' or $Row->aek < $Row->ucl){
                                     echo "<label class='badge bg-warning text-dark' name='1'>BUKAN DAERAH RAWAN</label>";
                                   }else{
-                                    echo "<label class='badge badge-success' name='2'>HATI-HATI</label>";
+                                    echo "<label class='badge bg-success text-white' name='2'>HATI-HATI</label>";
                                   }
                                 ?></Td>
                             

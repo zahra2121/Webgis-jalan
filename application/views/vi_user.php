@@ -54,7 +54,7 @@
 								<div class="card-body">
                                     <h3 class="card-title mb-1 text-dark">STATUS BUKAN DAERAH RAWAN KECELAKAAN</h3>
 									<div class="d-flex align-items-center justify-content-between">
-										<br><h2 class="text-success font-weight-bold"><b><?Php echo $value->tot_aman?></b></h2>
+										<br><h2 class="text-warning font-weight-bold"><b><?Php echo $value->tot_aman?></b></h2>
 									</div>
 								</div>
 							</div>
@@ -74,7 +74,7 @@
                     <center><div class="mx-2 px-4 py-4 my-2">
                         <p> 🔴 : <label class='badge bg-danger text-white' >DAERAH RAWAN</label>
                             🟡 : <label class='badge bg-warning text-dark'>BUKAN DAERAH RAWAN </label>
-                            🟢 : <label class='badge badge-success'>PROSES</label></p>
+                            🟢 : <label class='badge bg-success text-white'>PROSES</label></p>
                     </div></center>
                     <br><br>
 
@@ -195,7 +195,7 @@
                                     elseif($value->status == '1' and $value->aek < $value->ucl){
                                         echo "<label class='badge bg-warning text-dark' name='$value->status' id='$value->status'>BUKAN DAERAH RAWAN</label>";
                                     }else{
-                                        echo "<label class='badge badge-success' name='$value->status' id='$value->status'>PROSES</label>";
+                                        echo "<label class='badge bg-success text-white' name='$value->status' id='$value->status'>PROSES</label>";
                                     }
                                
                                 ?><br><br></h5>")

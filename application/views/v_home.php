@@ -51,7 +51,7 @@
 								<div class="card-body">
                                     <h3 class="card-title mb-1 text-dark">STATUS BUKAN DAERAH RAWAN KECELAKAAN</h3>
 									<div class="d-flex align-items-center justify-content-between">
-										<br><h2 class="text-success font-weight-bold"><b><?Php echo $value->tot_aman?></b></h2>
+										<br><h2 class="text-warning font-weight-bold"><b><?Php echo $value->tot_aman?></b></h2>
 									</div>
 								</div>
                                 <canvas id="invoices" style="width: 100%; height: 30px;"></canvas>
@@ -64,7 +64,7 @@
 								<div class="card-body">
                                     <h3 class="card-title mb-1 text-dark">STATUS PROSES DATA</h3><br>
 									<div class="d-flex align-items-center justify-content-between">
-										<br><h2 class="text-warning font-weight-bold"><b><?Php echo $value->tot_proses?></b></h2>
+										<br><h2 class="text-success font-weight-bold"><b><?Php echo $value->tot_proses?></b></h2>
 									</div>
 								</div>
                                 <canvas id="allProducts" style="width: 100%; height: 30px;"></canvas>
