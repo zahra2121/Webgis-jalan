@@ -27,7 +27,7 @@
 						</div>
                         <?php }?>
                         <?php foreach ($countrawan as $value) {?>
-                        <div class="col-lg-2 px-2 mx-4 py-1 card-responsive">
+                        <div class="col-lg-2 px-2 mx-4 py-1 grid-margin 50% stretch-card">
 							<div class="card" style="background: rgba(0, 99, 132, 0.1)">
 								<div class="card-body">
                                     <h3 class="card-title mb-1 text-dark">STATUS DAERAH RAWAN KECELAKAAN</h3>
@@ -39,7 +39,7 @@
 						</div>
                         <?php }?>
                         <?php foreach ($countaman as $key => $value) {?>
-                        <div class="col-lg-2 px-1 mx-4 py-1 card-responsive">
+                        <div class="col-lg-2 px-1 mx-4 py-1 grid-margin 50% stretch-card">
 							<div class="card" style="background: rgba(0, 99, 132, 0.1)">
 								<div class="card-body">
                                     <h3 class="card-title mb-1 text-dark">STATUS BUKAN DAERAH RAWAN KECELAKAAN</h3>
