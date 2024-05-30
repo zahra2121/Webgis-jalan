@@ -160,7 +160,7 @@
                 <!-- TABEL DETAIL -->
                 <div class="col-md-10 col-sm-4 mx-auto">
                     <div class="table-responsive">
-                        <table class="table" id="dataTable" width="70%">
+                        <table class="table borderless" id="dataTable" width="70%">
                         <tbody>
                             <Tr>
                                 <th class="text-dark"><h4>LATITUDE, LONGITUDE</h4></th>
