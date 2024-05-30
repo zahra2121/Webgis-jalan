@@ -3,7 +3,7 @@
 </script>
 
 <!-- CHART GRAFIK ADMIN-->
-        <section class="card-body">
+        <section class="card-body responsive">
             <div class="mx-5 px-3 my-3">
 		        <?php foreach ($countkasus as $value) {?>
         	    <div class= "stretch-card">
