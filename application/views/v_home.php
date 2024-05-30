@@ -229,8 +229,8 @@
                             🟢 : <label class='badge badge-success'>PROSES</label></p>
                     </div></center>
                     <br><br>
-                    <div id="map" style="width: 100%; height: 680px;"></div>
 
+                    <div id="map" style="width: 100%; height: 680px;"></div>
                     <script>
                         var peta1 = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFyZGFsaXVzIiwiYSI6ImNsZnVtbDdtZzAyYjMzdXRhdDN6djY5cWoifQ.Xqtyqa7hvGhQla2oAwpG_Q', {
                             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -262,6 +262,7 @@
 
 
                         var peta5 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            maxZoom: 18,
                             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         });
 
@@ -331,7 +332,8 @@
                                             fillColor: '#FFFF00',
                                             fillOpacity: 0.7,
                                             radius: 50";
-                                        }else{
+                                        }
+                                        else{
                                             echo "color: 'green',
                                             fillColor: '#008000',
                                             fillOpacity: 0.7,
@@ -365,17 +367,11 @@
                         }
                         map.on('click', onMapClick);
 
+                       // STATE MAPS                       
+                        $.getJSON('<?= base_url() ?>administrasi-bantul.geojson',function(data) {
+                           var geoLayer = new L.geoJSON(data).addTo(map);
+                        });
 
-                        // STATE MAPS
-                        $.getJSON("<?= base_url('administrasi-bantul.geojson')?>", function(data) {
-                            var geoLayer = L.geoJSON(data, {
-                                style: function(feature) {
-                                    return {
-                                        color: 'green',
-                                    }
-                                }
-                            }).addTo(map);
-                        });                    
                         
                     </script>
                 </div>

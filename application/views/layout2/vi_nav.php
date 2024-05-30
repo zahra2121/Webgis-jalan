@@ -3,7 +3,7 @@
             <div class="text-center my-5" >
                 <h1 class="text-white fs-3 fw-bolder">SISTEM INFORMASI GEOGRAFIS</h1>
                 <h3 class="text-white fs-3 fw-bolder">PEMETAAN TITIK LOKASI DAERAH RAWAN KECELAKAAN LALU LINTAS</h3>
-                <h4 class="text-white-50 mb-0 fw-bolder">Kabupaten Bantul, Daerah Istimewa Yogyakarta</h4>
+                <h4 class="text-white-20 mb-0 fw-bolder">Kabupaten Bantul, Daerah Istimewa Yogyakarta</h4>
             </div>
             <div class="text-center">
                 <div class="card-body">
