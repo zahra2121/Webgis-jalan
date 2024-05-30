@@ -14,7 +14,7 @@
 					Jalan Jend. Sudirman No.202 <br>Bejen, Bantul, <br>Kec. Bantul, Kabupaten Bantul <br>Daerah Istimewa Yogyakarta 55711 <br>Indonesia
 				</h2>
 			</div>
-			<div class="footer-right">
+			<div class="footer-center">
 				<h2 class="footer-company-about text-white-50 mb-0 ">
 					<span>About System</span>
 					Sistem Informasi Geografis Pemetaan <br> Titik Lokasi Daerah Rawan Kecelakaan Lalu Lintas <br>yang terjadi di Kabupaten Bantul,<br> D I Yogyakarta
