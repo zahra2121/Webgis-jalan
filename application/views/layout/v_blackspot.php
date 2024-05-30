@@ -8,18 +8,6 @@
                   <div class="card px-4 center grid-margin stretch-card" style="width: 100%; height:1100;">
                     <div class="card-body"> 
                         <center><h2 class="card-title mb-2 text-dark center">GRAFIK NILAI AEK, BCA, DAN UCL BERDASARKAN DATA BLACKSPOT DALAM PENENTUAN DAERAH RAWAN KECELAKAAN LALU LINTAS</h2></center><br>
-                        <div class="card mx-2 px-4 py-4 my-2" style="width: 500px; height:300px;">
-                          <p><b>Penetuan Daerah Rawan</b></p>
-                          <p>︙ EAK ﹥ UCL  ⭢ <label class='badge bg-danger text-white' >DAERAH RAWAN</label></p>
-                          <p>︙ EAK ﹤ UCL  ⭢ <label class='badge bg-warning text-dark'>BUKAN DAERAH RAWAN </label></p>
-                          <p>︙ BCA ⭢ Batasan yang ada pada tingkat kecelakaan</p>
-                          
-                          <br>
-                          <p><b>Dimana </b></p>
-                          <p>︙EAK = Angka Ekivalen Kecelakaan</p>
-                          <p>︙BCA = Batas Kontrol Atas</p>
-                          <p>︙UCL = Upper Control Limit</p>
-                        </div>
                         
                         <div style="width: 100%;"><canvas id="myChart1"></canvas>
                         <?php
@@ -102,6 +90,19 @@
                             });
 
                         </script>
+                        
+                        <div class="card mx-2 px-4 py-4 my-2" style="width: 500px; height:300px;">
+                          <p><b>Penetuan Daerah Rawan</b></p>
+                          <p>︙ EAK ﹥ UCL  ⭢ <label class='badge bg-danger text-white' >DAERAH RAWAN</label></p>
+                          <p>︙ EAK ﹤ UCL  ⭢ <label class='badge bg-warning text-dark'>BUKAN DAERAH RAWAN </label></p>
+                          <p>︙ BCA ⭢ Batasan yang ada pada tingkat kecelakaan</p>
+                          
+                          <br>
+                          <p><b>Dimana </b></p>
+                          <p>︙EAK = Angka Ekivalen Kecelakaan</p>
+                          <p>︙BCA = Batas Kontrol Atas</p>
+                          <p>︙UCL = Upper Control Limit</p>
+                        </div>
                         </div>
                     </div>
                   </div>

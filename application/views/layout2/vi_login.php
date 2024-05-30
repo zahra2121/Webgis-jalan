@@ -67,10 +67,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <form class="pt-3">
                   <div class="form-group">
+                    <p>Username:</p>
                     <input type="username" class="form-control form-control-lg" name="username" id="username" placeholder="Username" value="<?php echo set_value('username'); ?>">
                     <span class="error"><?php echo $usernameErr; ?></span>
                   </div>
                   <div class="form-group">
+                    <p>Password:</p>
                     <input type="password" class="form-control form-control-lg" name="password" id="password" placeholder="Password" value="<?php echo set_value('password'); ?>">
                     <span class="error"><?php echo $passwordErr; ?></span>
                   </div>
