@@ -2,7 +2,7 @@
         <section class="card-responsive">
             <div class="card-body mx-12 px-5 my-3">
 		        <?php foreach ($countkasus as $value) {?>
-        	    <div class= "card-responsive">
+        	    <div class= "stretch-card">
                         <div class="col-lg-2 mx-4 px-2 py-1 card-responsive">
 							<div class="card" style="background: rgba(0, 99, 132, 0.1)">
 								<div class="card-body">
@@ -45,18 +45,6 @@
                                     <h3 class="card-title mb-1 text-dark">STATUS BUKAN DAERAH RAWAN KECELAKAAN</h3>
 									<div class="d-flex align-items-center justify-content-between">
 										<br><h2 class="text-success font-weight-bold"><b><?Php echo $value->tot_aman?></b></h2>
-									</div>
-								</div>
-							</div>
-						</div>
-                        <?php }?>
-                        <?php foreach ($countproses as $key => $value) {?>
-                        <div class="col-lg-2 px-2 mx-4 py-1 card-responsive">
-							<div class="card" style="background: rgba(0, 99, 132, 0.1)">
-								<div class="card-body">
-                                    <h3 class="card-title mb-1 text-dark">STATUS PROSES DATA</h3>
-									<div class="d-flex align-items-center justify-content-between">
-										<br><h2 class="text-warning font-weight-bold"><b><?Php echo $value->tot_proses?></b></h2>
 									</div>
 								</div>
 							</div>
