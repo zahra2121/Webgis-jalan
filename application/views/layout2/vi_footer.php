@@ -3,7 +3,7 @@
 			<div class="footer-center">
 				<h2 class="footer-company-about text-white-50 mb-0 ">
 					<span>Kontak</span>
-					<i class="mdi mdi-phone"></i>
+					<i class="mdi mdi-handphone menu-icon"></i>
 					(0274) 367570
 				</h2>
 			</div>
