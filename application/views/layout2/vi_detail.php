@@ -141,7 +141,7 @@
             .bindPopup("<h5><b> Daerah Jalan<br><br><?= $detail->daerah_jalan?></b><br><br> Latitude : <?= $detail->pusat_lat?><br><br> Longitude : <?= $detail->pusat_long?><br><br></h5>");
             
             vpup = L.popup()
-            .setLatLng([<?= $detail->pusat_lat ?>, <?= $detail->pusat_long ?>])
+            .setLatLng([<?= $detail->pusat_lat ?>, <?= $detail->pusat_long ?>]);
 
             function onMapClick(e) {
                 popup
@@ -151,10 +151,6 @@
             }
             map.on('click', onMapClick);
 
-            // STATE MAPS                       
-            $.getJSON('<?=base_url()?>administrasi-bantul.geojson',function(data) {
-                var geoLayer = new L.geoJSON(data).addTo(map);
-            });
             
         </script><br>
 
