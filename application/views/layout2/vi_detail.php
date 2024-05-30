@@ -185,7 +185,7 @@
                                         }else{
                                             echo "<label class='badge badge-danger'>MENINGGAL: $detail->meninggal</label>&nbsp";
                                         }
-                                        if($detail->luka_ringan == 0){
+                                        if($detail->rugi == 0){
                                             echo "<label class='badge badge-secondary'>KERUGIAN MATERIL: $detail->rugi</label>&nbsp";
                                         }else{
                                             echo "<label class='badge badge-danger'>KERUGIAN MATERIL: $detail->rugi</label>&nbsp";
