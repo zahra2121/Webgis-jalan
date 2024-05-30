@@ -4,7 +4,7 @@
 
 <!-- CHART GRAFIK ADMIN-->
         <section>
-            <div class="mx-5 px-3 my-3">
+            <div class="card-body mx-5 px-3 my-3">
 		        <?php foreach ($countkasus as $value) {?>
         	    <div class= "stretch-card">
                         <div class="col-lg-2 mx-3 px-2 py-1 grid-margin stretch-card">
