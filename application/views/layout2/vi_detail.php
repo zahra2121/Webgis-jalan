@@ -3,7 +3,7 @@
 <section>
     <div class="container">
         <div class="card-body">
-        <div class="card col-lg-auto mx-3 px-3 py-3">
+        <div class="col-lg-auto mx-3 px-3 py-3">
             <br><br>
             <?php
                 echo "<center><h1 class='fs-3 fw-bolder'>TANGGAL ". date('d ', strtotime($detail->tanggal));
@@ -52,7 +52,7 @@
             <br>
                 <center><div class="col-md-10 col-sm-4 mx-auto">
                     <h4 class="fw-bolder text-secondary"> <?= $detail->daerah_jalan ?></h4><br>
-                    <h4 class="fw-bolder text-danger">
+                    <h3 class="fw-bolder text-danger">
                         <?php
                             if($detail->status == '0' and $detail->aek > $detail->ucl){
                                 echo "<label class='badge badge-danger' name='$detail->status' id='$detail->status'>DAERAH RAWAN</label>";
@@ -63,7 +63,7 @@
                                 echo "<label class='badge badge-warning' name='$detail->status' id='$detail->status'>PROSES</label>";
                             }
                         ?>
-                    </h4>
+                    </h3>
                 </div></center>
 
         <!-- MAPS DETAIL -->
