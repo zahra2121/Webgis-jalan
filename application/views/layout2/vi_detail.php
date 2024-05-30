@@ -51,7 +51,7 @@
             ?>
             <br>
                 <center><div class="col-md-10 col-sm-4 mx-auto">
-                    <h4 class="fw-bolder text-secondary"> <?= $detail->daerah_jalan ?></h4><br>
+                    <h4 class="fw-bolder text-secondary"> <?= $detail->daerah_jalan ?></h4>
                     <h4 class="fw-bolder text-secondary"><?= $detail->kecamatan ?>, <?= $detail->kabupaten?></h4><br>
                     <h3 class="fw-bolder text-danger">
                         <?php
@@ -164,7 +164,7 @@
                         <tbody>
                             <Tr>
                                 <th class="text-dark"><h4>LATITUDE, LONGITUDE</h4></th>
-                                <Td><h3><b><?php echo "<label class='badge badge-success'>$detail->pusat_lat, $detail->pusat_long</label>"?></b></h3></Td>
+                                <Td><h3><b><?php echo "<label class='badge bg-warning text-dark'>$detail->pusat_lat, $detail->pusat_long</label>"?></b></h3></Td>
                             </Tr>
                             <Tr>
                                 <th class="text-dark"><h4>KORBAN</h4></th>
