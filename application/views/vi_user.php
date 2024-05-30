@@ -3,10 +3,10 @@
             <div class="card-body mx-12 px-5 my-3">
 		        <?php foreach ($countkasus as $value) {?>
         	    <div class= "stretch-card responsive">
-                        <div class="col-lg-2 mx-4 px-2 py-1 grid-margin card-responsive">
+                        <div class="col-lg-2 mx-4 px-2 py-1 card-responsive">
 							<div class="card" style="background: rgba(0, 99, 132, 0.1)">
 								<div class="card-body">
-                                    <h3 class="card-title mb-1 text-dark">DATA KASUS</h3><br>
+                                    <h3 class="card-title mb-1 text-dark">DATA KASUS</h3>
 									<div class="d-flex align-items-center justify-content-between">
 										<br><h2 class="text-dark font-weight-bold"><b><?Php echo $value->total_kasus?></b></h2>
 									</div>
@@ -18,7 +18,7 @@
                             <div class="col-lg-2 px-2 mx-4 py-1 card-responsive">
 							<div class="card" style="background: rgba(0, 99, 132, 0.1)">
 								<div class="card-body">
-                                    <h3 class="card-title mb-1 text-dark">DATA JALAN</h3><br>
+                                    <h3 class="card-title mb-1 text-dark">DATA JALAN</h3>
 									<div class="d-flex align-items-center justify-content-between">
 										<br><h2 class="text-dark font-weight-bold"><b><?Php echo $value->total_jalan?></b></h2>
 									</div>
