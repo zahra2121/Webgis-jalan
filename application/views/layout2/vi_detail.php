@@ -162,7 +162,7 @@
                         <table class="table" id="dataTable" width="70%">
                         <tbody>
                             <Tr>
-                                <th class="text-dark">Latitude</th>
+                                <th class="text-dark"><h4>Latitude</h4></th>
                                 <Td><?php echo $detail->pusat_lat?></Td>
                             </Tr>
                             <Tr>
