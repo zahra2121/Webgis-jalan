@@ -113,7 +113,7 @@
                         </div>
                       </div>
                       <div class="col-md-12">
-                        <label>Upload Dokumentasi Lokasi </label><br><br>
+                        <label>Upload Foto Lokasi (.jpg/.png/.jpeg)</label><br><br>
                         <input type="file" name="foto" id="foto" class="file-upload-default">
                       </div>        
                     </div><br><br>

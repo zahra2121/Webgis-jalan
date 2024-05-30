@@ -82,7 +82,7 @@ class Home extends CI_Controller {
                 
                 $file_name = 'item-'.date('ymd').'-'.substr(md5(rand()),0,10);
                 $config['upload_path']          = FCPATH.'/assets/user_lapor/';
-                $config['allowed_types']        = 'gif|jpg|jpeg|png|JPG|JPEG|PNG';
+                $config['allowed_types']        = 'jpg|jpeg|png|JPG|JPEG|PNG';
                 $config['file_name']            = $file_name;
                 $config['overwrite']            = true;
                 $config['max_size']             = 4096; // 4MB
