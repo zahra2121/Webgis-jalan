@@ -3,8 +3,8 @@
 </script>
 
 <!-- CHART GRAFIK ADMIN-->
-        <section class="card-body responsive">
-            <div class="mx-5 px-3 my-3">
+        <section class="container">
+            <div class="card-body mx-5 px-3 my-3">
             <ul style="display:grid; list-style-type:none; grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);">
                 <li>
 		        <?php foreach ($countkasus as $value) {?>
