@@ -5,21 +5,21 @@ class User extends CI_Controller {
 	
 	function __construct(){
 		//parent::__construct();
-        $this->CI =& get_instance();
-        $this->load->model('m_user');
+        //$this->CI =& get_instance();
+        $this->load->model('M_user');
 	}
  
 	public function index(){
 		$data = array(
             'title' => 'user',
-            'blackspot' => $this->m_user->get_all_black(),
-            'countkasus' => $this->m_user->count_kasus(),
-            'countblack' => $this->m_user->count_black(),
-            'countrawan' => $this->m_user->count_status(),
-            'countaman' => $this->m_user->count_aman(),
-            'countproses' => $this->m_user->count_proses(),
-            'allkecamatan' => $this->m_user->count_kecamatan(),
-            'alltahun' => $this->m_user->count_tahun(),
+            'blackspot' => $this->M_user->get_all_black(),
+            'countkasus' => $this->M_user->count_kasus(),
+            'countblack' => $this->M_user->count_black(),
+            'countrawan' => $this->M_user->count_status(),
+            'countaman' => $this->M_user->count_aman(),
+            'countproses' => $this->M_user->count_proses(),
+            'allkecamatan' => $this->M_user->count_kecamatan(),
+            'alltahun' => $this->M_user->count_tahun(),
             'isi' => 'vi_user'
         );
         $this->load->view('layout2/vi_wrapper', $data, FALSE);
@@ -28,7 +28,7 @@ class User extends CI_Controller {
     public function kasus(){
 		$data = array(
             'title' => 'kasus',
-            'kasus' => $this->m_user->get_all_kasus(),
+            'kasus' => $this->M_user->get_all_kasus(),
             'isi' => 'layout2/vi_detail'
         );
         $this->load->view('layout2/vi_wrapper', $data, FALSE);
@@ -37,7 +37,7 @@ class User extends CI_Controller {
     public function lapor(){
 		$data = array(
             'title' => 'lapor',
-            'lapor' => $this->m_user->get_all_lapor(),
+            'lapor' => $this->M_user->get_all_lapor(),
             'isi' => 'layout2/vi_tabellapor'
         );
         $this->load->view('layout2/vi_wrapper', $data, FALSE);
@@ -55,7 +55,7 @@ class User extends CI_Controller {
     public function tabelsemua(){
 		$data = array(
             'title' => 'tabelsemua',
-            'tabelsemua' => $this->m_user->kasus_black(),
+            'tabelsemua' => $this->M_user->kasus_black(),
             'isi' => 'layout2/vi_tabelsemua'
         );
         $this->load->view('layout2/vi_wrapper', $data, FALSE);
@@ -64,7 +64,7 @@ class User extends CI_Controller {
     public function blackspot(){
 		$data = array(
             'title' => 'blackspot',
-            'blackspot' => $this->m_user->get_all_black(),
+            'blackspot' => $this->M_user->get_all_black(),
             'isi' => 'vi_user'
         );
         $this->load->view('layout2/vi_wrapper', $data, FALSE);
@@ -73,7 +73,7 @@ class User extends CI_Controller {
     public function detail($data){
         $data = array(
             'title' => 'detail',
-            'detail' => $this->m_user->detail($data),
+            'detail' => $this->M_user->detail($data),
             'isi' => 'layout2/vi_detail'
         );
         $this->load->view('layout2/vi_wrapper', $data, FALSE);
@@ -99,7 +99,7 @@ class User extends CI_Controller {
     public function tabelsemua_kasus(){
 		$data = array(
             'title' => 'tabelkasus',
-            'tabelkasus' => $this->m_user->get_all_kasus(),
+            'tabelkasus' => $this->M_user->get_all_kasus(),
             'isi' => 'layout2/vi_tabelsemua'
         );
         $this->load->view('layout2/vi_wrapper', $data, FALSE);
@@ -108,7 +108,7 @@ class User extends CI_Controller {
     public function detailkasus($data){
         $data1 = array(
             'title' => 'detailkasus',
-            'detailjalan' => $this->m_user->detail($data),
+            'detailjalan' => $this->M_user->detail($data),
             'isi' => 'layout2/vi_detail',
         );
         $this->load->view('layout2/vi_wrapper', $data1, FALSE); 
@@ -131,7 +131,7 @@ class User extends CI_Controller {
        // Load all views as normal
        $data = array(
         'title' => 'Data Titik Lokasi Daerah Rawan Kecelakaan Lalu Lintas di Kab. Bantul',
-        'printmarker' => $this->m_user->printmarker(),
+        'printmarker' => $this->M_user->printmarker(),
         'isi' => 'layout2/vi_printmarker'
        );
 
