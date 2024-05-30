@@ -1,6 +1,6 @@
 <!-- CHART GRAFIK USER-->
         <div class="card-responsive">
-            <div class="card-body mx-12 px-5 my-3">
+            <div class="card-body mx-4 px-5 my-3">
             <ul style="display:grid; list-style-type:none; grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);">
                 <li>
 		        <?php foreach ($countkasus as $value) {?>
