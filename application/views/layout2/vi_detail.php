@@ -162,37 +162,37 @@
                         <table class="table" id="dataTable" width="70%">
                         <tbody>
                             <Tr>
-                                <th class="text-dark"><h4>Latitude</h4></th>
+                                <th class="text-dark"><h4>LATITUDE</h4></th>
                                 <Td><?php echo $detail->pusat_lat?></Td>
                             </Tr>
                             <Tr>
-                                <th class="text-dark">Longitude</th>
+                                <th class="text-dark"><h4>LONGITUDE</h4></th>
                                 <Td><?php echo $detail->pusat_long?></Td>
                             </Tr>
                             
                             <Tr>
-                                <th class="text-dark">Kecamatan</th>
+                                <th class="text-dark"><h4>KECAMATAN</h4></th>
                                 <Td><?php echo $detail->kecamatan?></Td>
                             </Tr>
                             <Tr>
-                                <th class="text-dark">Kabupaten</th>
+                                <th><class="text-dark"><h4>KABUPATEN</h4></th>
                                 <Td><?php echo $detail->kabupaten?></Td>
                             </Tr>
                     
                             <Tr>
-                                <th class="text-dark">Luka Ringan</th>
+                                <th class="text-dark"><h4>LUKA RINGAN</h4></th>
                                 <Td><?php echo $detail->luka_ringan?></Td>
                             </Tr>
                             <Tr>
-                                <th class="text-dark">Luka Berat</th>
+                                <th class="text-dark"><h4>LUKA BERAT</h4></th>
                                 <Td><?php echo $detail->luka_berat?></Td>
                             </Tr>
                             <Tr>
-                                <th class="text-dark">Meninggal</th>
+                                <th class="text-dark"><h4>MENINGGAL</h4></th>
                                 <Td><?php echo $detail->meninggal?></Td>
                             </Tr>
                             <Tr>
-                                <th class="text-dark">Kerugian Material</th>
+                                <th class="text-dark"><h4>KERUGIAN MATERIL</h4></th>
                                 <Td><?php echo $detail->rugi?></Td>
                             </Tr>
                         
