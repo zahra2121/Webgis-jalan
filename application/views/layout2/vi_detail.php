@@ -163,7 +163,7 @@
                         <tbody>
                             <Tr>
                                 <th class="text-dark"><h4>LATITUDE, LONGITUDE</h4></th>
-                                <Td><h3><b><?php echo "<label class='badge badge-dark'>$detail->pusat_lat, $detail->pusat_long</label>"?></b></h3></Td>
+                                <Td><h3><b><?php echo "<label class='badge badge-success'>$detail->pusat_lat, $detail->pusat_long</label>"?></b></h3></Td>
                             </Tr>
                             <Tr>
                                 <th class="text-dark"><h4>KECAMATAN</h4></th>
@@ -181,7 +181,7 @@
                                         echo "<label class='badge badge-success'>LUKA RINGAN : $detail->luka_ringan</label>&nbsp";
                                         echo "<label class='badge badge-success'>LUKA BERAT : $detail->luka_berat</label>&nbsp";
                                         echo "<label class='badge badge-danger'>MENINGGAL : $detail->meninggal</label>&nbsp";
-                                        echo "<label class='badge badge-dark'>KERUGIAN MATERIL : $detail->rugi</label>&nbsp";
+                                        echo "<label class='badge badge-success'>KERUGIAN MATERIL : $detail->rugi</label>&nbsp";
                                     ?>
                                 </h3></Td>
                             </Tr>
