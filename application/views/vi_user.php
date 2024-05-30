@@ -1,11 +1,11 @@
 <!-- CHART GRAFIK USER-->
         <div class="card-responsive">
             <div class="card-body mx-12 px-5 my-3">
-            <ul style="display:grid; list-style-type:none; grid-template-columns: 25% 25% 25% 25%; grid-template-rows: repeat(4, auto);">
+            <ul style="display:grid; list-style-type:none; grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);">
                 <li>
 		        <?php foreach ($countkasus as $value) {?>
         	    <div class= "responsive">
-                        <div class="col-lg-auto mx-4 px-2 py-1">
+                        <div class="col-lg-auto mx-2 px-2 py-1">
 							<div class="card" style="background: rgba(0, 99, 132, 0.1)">
 								<div class="card-body">
                                     <h3 class="card-title mb-1 text-dark">DATA KASUS</h3>
@@ -19,7 +19,7 @@
                 </li>
                 <li>
                         <?php foreach ($countblack as $key => $value) {?>
-                            <div class="col-lg-auto px-2 mx-4 py-1">
+                            <div class="col-lg-auto mx-2 px-2 py-1">
 							<div class="card" style="background: rgba(0, 99, 132, 0.1)">
 								<div class="card-body">
                                     <h3 class="card-title mb-1 text-dark">DATA JALAN</h3>
@@ -31,10 +31,12 @@
 						</div>
                         <?php }?>
                 </li>
+            </ul>
+            <ul style="display:grid; list-style-type:none; grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);">
                 <li>
                         <?php foreach ($countrawan as $value) {?>
-                        <div class="col-lg-auto px-2 mx-4 py-1 ">
-							<div class="card" style="background: rgba(0, 99, 132, 0.1)">
+                        <div class="col-lg-auto mx-2 px-2 py-1">
+							<div class="card" style="background: rgba(0, 99, 132, 0.1); width:auto; height">
 								<div class="card-body">
                                     <h3 class="card-title mb-1 text-dark">STATUS DAERAH RAWAN KECELAKAAN</h3>
 									<div class="d-flex align-items-center justify-content-between">
@@ -47,7 +49,7 @@
                 </li>
                 <li>
                         <?php foreach ($countaman as $key => $value) {?>
-                        <div class="col-lg-auto px-1 mx-4 py-1">
+                        <div class="col-lg-auto mx-2 px-2 py-1">
 							<div class="card" style="background: rgba(0, 99, 132, 0.1)">
 								<div class="card-body">
                                     <h3 class="card-title mb-1 text-dark">STATUS BUKAN DAERAH RAWAN KECELAKAAN</h3>
