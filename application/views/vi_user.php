@@ -149,10 +149,12 @@
                             attribution: 'Map data &copy; <a href="https://www.google.com/maps">Google Maps</a>'
                         });
 
+                        var data = L.geoJSON(bambanglipuro);
+
                         var map = L.map('map', {
                             center: [-7.847007587128045, 110.35543035070813],
                             zoom: 12,
-                            layers: [peta2],
+                            layers: [peta7, bambanglipuro],
                         });
 
                         var baseLayers = {
@@ -167,7 +169,6 @@
 
                         var layerControl = L.control.layers(baseLayers).addTo(map);
 
-                        var data = L.geoJSON(bambanglipuro).addTo(map);
 
                         // CIRCLE BLACK SPOT
                         <?php foreach ($blackspot as $value) {?>
