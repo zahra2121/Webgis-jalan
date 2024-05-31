@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<?php echo form_open('lupa_password');?>
+<?php echo form_open('lupa_password/'. $message);?>
 
 <!DOCTYPE html>
 <html lang="en">

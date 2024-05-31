@@ -42,12 +42,11 @@ class Lupa_password extends CI_Controller
             );
             $this->load->view('layout2/vi_wrapper', $data, FALSE);
 
-            echo "<center>
-                <h3 class='font-weight-light'><b>Token Password</b></h3>
-                <p>". $message. "</p>
-            </center><br><br>";
+            // echo "<center>
+            //     <h3 class='font-weight-light'><b>Token Password</b></h3>
+            //     <p>". $message. "</p>
+            // </center><br><br>";
 
-            //echo $message; //send this through mail  
             exit;
 
         }
