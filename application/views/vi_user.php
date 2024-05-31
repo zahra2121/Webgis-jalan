@@ -196,6 +196,13 @@
                                 }
                             }
                         }).addTo(map);
+                        // Menambahkan keterangan nama pada polygon
+                        bambanglipuro.bindTooltip("Nama Area: Bambang Lipuro", {
+                            permanent: true,
+                            direction: 'center',
+                            className: 'polygon-label'
+                        }).openTooltip();
+
                         L.geoJSON(banguntapan, {
                             style: function(feature) {
                                 return{
@@ -329,7 +336,7 @@
 
                         // CIRCLE BLACK SPOT
                         <?php foreach ($blackspot as $value) {?>
-                            var circle = L.marker([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
+                            var circle = L.circle([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
                                     <?php
                                         if($value->status == '0' and $value->aek > $value->ucl){
                                             echo "color: 'red',
