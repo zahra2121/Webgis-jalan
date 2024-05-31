@@ -79,7 +79,7 @@
                     <br><br>
 
                     <div id="map" style="width: 100%; height: 680px;"></div>
-                    <script src="kecamatan/bantul.js"></script>
+                    <script src="kecamatan/bambanglipuro.js"></script>
 
 
                     <script>
@@ -169,7 +169,7 @@
 
                         var layerControl = L.control.layers(baseLayers).addTo(map);
 
-                        L.geoJSON(bambanglipuro).addTo(map);
+                        var geoJSON = L.geoJSON(bambanglipuro).addTo(map);
 
 
                         // CIRCLE BLACK SPOT
