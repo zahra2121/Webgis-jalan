@@ -519,6 +519,18 @@
                         <?php }?>
                         
 
+                        //OnClick
+                        var popup = L.popup()
+                        .setLatLng([-7.889995974115885, 110.34488101173861]);
+
+                        function onMapClick(e) {
+                            popup
+                            .setLatLng(e.latlng)
+                            .setContent('Titik Latitude dan Longitude : <br>' + e.latlng.toString())
+                            .openOn(map);
+                        }
+                        map.on('click', onMapClick);
+
                     </script>
                 </div>
             </div>
