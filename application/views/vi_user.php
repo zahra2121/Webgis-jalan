@@ -200,7 +200,7 @@
                         bambanglipuro.bindTooltip("Nama Area: Bambang Lipuro", {
                             permanent: true,
                             direction: 'center',
-                            className: 'polygon-label'
+                            className: 'kecamatan'
                         }).openTooltip();
 
                         L.geoJSON(banguntapan, {
