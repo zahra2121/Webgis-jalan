@@ -69,7 +69,7 @@
         <!-- MAPS ADMIN -->
         <section class="card mx-3 px-4 my-3">
             <div class="card-body">
-                <div class="row">
+                < class="row">
                     <center><h1 class="card-title mb-2 text-dark center">PETA PEMETAAN TITIK BLACKSPOT KECELAKAAN LALU LINTAS DI KABUPATEN BANTUL</h1></center><br>
                     <center><div class="mx-2 px-4 py-4 my-2">
                         <p> 🔴 : <label class='badge bg-danger text-white' >DAERAH RAWAN</label>
@@ -206,7 +206,13 @@
                             .addTo(map);
                                 
                         <?php }?>
+                        
+                        //STATE
+                        L.geoJSON(bambanglipuro).addTo(map);
+                        L.geoJSON(banguntapan).addTo(map);
+                        
 
+                        //OnClick
                         var popup = L.popup()
                         .setLatLng([-7.889995974115885, 110.34488101173861]);
 
@@ -222,8 +228,7 @@
                         // $.getJSON("kecamatan/bambanglipuro.js", function(bambanglipuro) {
                         //    geoLayer = new L.geoJSON(bambanglipuro).addTo(map);
                         // });
-                        L.geoJSON(bambanglipuro).addTo(map);
-                        L.geoJSON(banguntapan).addTo(map);
+
 
                         // map.createPane("pane_bataskecamatan");
                         // map.getPane("pane_bataskecamatan").style.zIndex = 302;
