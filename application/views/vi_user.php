@@ -154,7 +154,7 @@
                         var map = L.map('map', {
                             center: [-7.847007587128045, 110.35543035070813],
                             zoom: 12,
-                            layers: [peta7],
+                            layers: [peta2],
                         });
 
                         var baseLayers = {
@@ -186,7 +186,7 @@
                                             echo "color: 'yellow',
                                             fillColor: '#FFFF00',
                                             fillOpacity: 0.7,
-                                            radius: 50";
+                                            radius: 100";
                                         }else{
                                             echo "color: 'green',
                                             fillColor: '#008000',
@@ -222,9 +222,9 @@
                         map.on('click', onMapClick);
 
                         // STATE MAPS                       
-                        // $.getJSON("<?= base_url() ?> assets/mapp.geojson", function(data) {
-                        //    geoLayer = L.geoJSON(data).addTo(map);
-                        // });
+                        $.getJSON("<?= base_url() ?> kecamatan/bambanglipuro.js", function(bambanglipuro) {
+                           geoLayer = new L.geoJSON(bambanglipuro).addTo(map);
+                        });
                     </script>
                 </div>
             </div>
