@@ -149,12 +149,12 @@
                             attribution: 'Map data &copy; <a href="https://www.google.com/maps">Google Maps</a>'
                         });
 
-                        var data = L.geoJSON(bambanglipuro);
+                        var geoLayer = L.geoJSON(bambanglipuro);
 
                         var map = L.map('map', {
                             center: [-7.847007587128045, 110.35543035070813],
                             zoom: 12,
-                            layers: [peta7, bambanglipuro],
+                            layers: [peta7][geoLayer],
                         });
 
                         var baseLayers = {
