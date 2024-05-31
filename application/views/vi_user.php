@@ -169,7 +169,7 @@
 
                         var layerControl = L.control.layers(baseLayers).addTo(map);
 
-                        var geoLayer = L.geoJSON(bambanglipuro).addTo(map);
+                        L.geoJSON(bambanglipuro).addTo(map);
 
 
                         // CIRCLE BLACK SPOT
@@ -222,9 +222,9 @@
                         map.on('click', onMapClick);
 
                         // STATE MAPS                       
-                        $.getJSON('<?= base_url()?>kecamatan/bambanglipuro.js', function(bambanglipuro) {
-                           geoLayer = new L.geoJSON(bambanglipuro).addTo(map);
-                        });
+                        // $.getJSON('<?= base_url()?>kecamatan/bambanglipuro.js', function(bambanglipuro) {
+                        //    geoLayer = new L.geoJSON(bambanglipuro).addTo(map);
+                        // });
                     </script>
                 </div>
             </div>
