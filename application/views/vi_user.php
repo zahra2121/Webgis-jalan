@@ -191,7 +191,7 @@
                             style: function(feature) {
                                 return{
                                     color: 'rgba(0, 99, 132, 0.6)',
-                                    fillOpacity: 0.5,
+                                    fillOpacity: 0.3,
                                     properties: 'kecamatan',
                                 }
                             }
@@ -200,7 +200,7 @@
                             style: function(feature) {
                                 return{
                                     color: 'rgba(30, 99, 132, 0.6)',
-                                    fillOpacity: 0.5,
+                                    fillOpacity: 0.3,
                                 }
                             }
                         }).addTo(map);
@@ -208,7 +208,7 @@
                             style: function(feature) {
                                 return{
                                     color: 'rgba(60, 99, 132, 0.6)',
-                                    fillOpacity: 0.5,
+                                    fillOpacity: 0.3,
                                 }
                             }
                         }).addTo(map);
@@ -216,7 +216,7 @@
                             style: function(feature) {
                                 return{
                                     color: 'rgba(90, 99, 132, 0.6)',
-                                    fillOpacity: 0.5,
+                                    fillOpacity: 0.3,
                                 }
                             }
                         }).addTo(map);
@@ -224,7 +224,7 @@
                             style: function(feature) {
                                 return{
                                     color: 'rgba(120, 99, 132, 0.6)',
-                                    fillOpacity: 0.5,
+                                    fillOpacity: 0.3,
                                 }
                             }
                         }).addTo(map);
@@ -232,7 +232,7 @@
                             style: function(feature) {
                                 return{
                                     color: 'rgba(150, 99, 132, 0.6)',
-                                    fillOpacity: 0.5,
+                                    fillOpacity: 0.3,
                                 }
                             }
                         }).addTo(map);
@@ -240,7 +240,7 @@
                             style: function(feature) {
                                 return{
                                     color: 'rgba(180, 99, 132, 0.6)',
-                                    fillOpacity: 0.5,
+                                    fillOpacity: 0.3,
                                 }
                             }
                         }).addTo(map);
@@ -248,7 +248,7 @@
                             style: function(feature) {
                                 return{
                                     color: 'rgba(210, 99, 132, 0.6)',
-                                    fillOpacity: 0.5,
+                                    fillOpacity: 0.3,
                                 }
                             }
                         }).addTo(map);
@@ -256,7 +256,7 @@
                             style: function(feature) {
                                 return{
                                     color: 'rgba(240, 99, 132, 0.6)',
-                                    fillOpacity: 0.5,
+                                    fillOpacity: 0.3,
                                 }
                             }
                         }).addTo(map);
@@ -264,7 +264,7 @@
                             style: function(feature) {
                                 return{
                                     color: 'rgba(0, 99, 132, 0.6)',
-                                    fillOpacity: 0.5,
+                                    fillOpacity: 0.3,
                                 }
                             }
                         }).addTo(map);
@@ -272,7 +272,7 @@
                             style: function(feature) {
                                 return{
                                     color: 'rgba(210, 99, 132, 0.6)',
-                                    fillOpacity: 0.5,
+                                    fillOpacity: 0.3,
                                 }
                             }
                         }).addTo(map);
@@ -280,7 +280,7 @@
                             style: function(feature) {
                                 return{
                                     color: 'rgba(180, 99, 132, 0.6)',
-                                    fillOpacity: 0.5,
+                                    fillOpacity: 0.3,
                                 }
                             }
                         }).addTo(map);
@@ -288,7 +288,7 @@
                             style: function(feature) {
                                 return{
                                     color: 'rgba(150, 99, 132, 0.6)',
-                                    fillOpacity: 0.5,
+                                    fillOpacity: 0.3,
                                 }
                             }
                         }).addTo(map);
@@ -296,7 +296,7 @@
                             style: function(feature) {
                                 return{
                                     color: 'rgba(120, 99, 132, 0.6)',
-                                    fillOpacity: 0.5,
+                                    fillOpacity: 0.3,
                                 }
                             }
                         }).addTo(map);
@@ -304,7 +304,7 @@
                             style: function(feature) {
                                 return{
                                     color: 'rgba(90, 99, 132, 0.6)',
-                                    fillOpacity: 0.5,
+                                    fillOpacity: 0.3,
                                 }
                             }
                         }).addTo(map);
@@ -312,7 +312,7 @@
                             style: function(feature) {
                                 return{
                                     color: 'rgba(60, 99, 132, 0.6)',
-                                    fillOpacity: 0.5,
+                                    fillOpacity: 0.3,
                                 }
                             }
                         }).addTo(map);
@@ -320,7 +320,7 @@
                             style: function(feature) {
                                 return{
                                     color: 'rgba(30, 99, 132, 0.6)',
-                                    fillOpacity: 0.5,
+                                    fillOpacity: 0.3,
                                 }
                             }
                         }).addTo(map);
@@ -329,7 +329,7 @@
 
                         // CIRCLE BLACK SPOT
                         <?php foreach ($blackspot as $value) {?>
-                            var circle = L.circle([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
+                            var circle = L.marker([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
                                     <?php
                                         if($value->status == '0' and $value->aek > $value->ucl){
                                             echo "color: 'red',
