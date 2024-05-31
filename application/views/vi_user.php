@@ -195,13 +195,12 @@
                                     properties: 'kecamatan',
                                 }
                             }
+                            bindTooltip("Nama Area: Bambang Lipuro", {
+                                permanent: true,
+                                direction: 'center',
+                                className: 'polygon-label'
+                            }).openTooltip();
                         }).addTo(map);
-                        // Menambahkan keterangan nama pada polygon
-                        bambanglipuro.bindTooltip("Nama Area: Bambang Lipuro", {
-                            permanent: true,
-                            direction: 'center',
-                            className: 'polygon-label'
-                        }).openTooltip();
 
                         L.geoJSON(banguntapan, {
                             style: function(feature) {
