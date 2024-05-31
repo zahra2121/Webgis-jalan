@@ -680,12 +680,6 @@
                             .openOn(map);
                         }
                         map.on('click', onMapClick);
-
-                       // STATE MAPS                       
-                        $.getJSON('<?= base_url() ?>administrasi-bantul.geojson',function(data) {
-                           var geoLayer = new L.geoJSON(data).addTo(map);
-                        });
-
                         
                     </script>
                 </div>
