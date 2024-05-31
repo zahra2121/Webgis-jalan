@@ -116,7 +116,7 @@
                 background: none;
                 border: none;
                 box-shadow: none;
-                color: darkslategray;
+                color: purple;
             }
         </style>
             
