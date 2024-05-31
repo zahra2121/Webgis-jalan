@@ -167,12 +167,11 @@
 
                         var layerControl = L.control.layers(baseLayers).addTo(map);
 
-                        L.geoJSON(bambanglipuro).addTo(map);
+                        var geoLayer = L.geoJSON(bambanglipuro).addTo(map);
 
 
                         // CIRCLE BLACK SPOT
                         <?php foreach ($blackspot as $value) {?>
-                            var geoLayer = L.geoJSON().addTo(map);
                             var circle = L.circle([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
                                     <?php
                                         if($value->status == '0' and $value->aek > $value->ucl){
