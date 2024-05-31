@@ -218,7 +218,7 @@
                         
 
                        // STATE MAPS                       
-                        $.getJSON('<?= base_url() ?>administrasi-bantul.geojson',function(data) {
+                        $.getJSON('<?= base_url() ?>assets/result.json',function(data) {
                            var geoLayer = new L.geoJSON(data).addTo(map);
                         });
 
