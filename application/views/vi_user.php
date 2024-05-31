@@ -152,7 +152,7 @@
                         var map = L.map('map', {
                             center: [-7.847007587128045, 110.35543035070813],
                             zoom: 12,
-                            layers: [peta7, geoLayer],
+                            layers: [peta7],
                         });
 
                         var baseLayers = {
