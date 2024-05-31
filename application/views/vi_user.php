@@ -186,7 +186,7 @@
                         var layerControl = L.control.layers(baseLayers).addTo(map);
 
 
-                        //STATE
+                        //STATE POLYGON MAPS
                         L.geoJSON(bambanglipuro, {
                             style: function(feature) {
                                 return{
@@ -211,6 +211,15 @@
                                     color: 'rgba(30, 99, 132, 0.6)',
                                     fillOpacity: 0.3,
                                 }
+                            },
+                            onEachFeature: function(feature, layer) {
+                                if (feature.properties && feature.properties.kecamatan) {
+                                    layer.bindTooltip(feature.properties.kecamatan, {
+                                        permanent: true,
+                                        direction: 'center',
+                                        className: 'polygon-label'
+                                    }).openTooltip();
+                                }
                             }
                         }).addTo(map);
                         L.geoJSON(bantul, {
@@ -218,6 +227,15 @@
                                 return{
                                     color: 'rgba(60, 99, 132, 0.6)',
                                     fillOpacity: 0.3,
+                                }
+                            },
+                            onEachFeature: function(feature, layer) {
+                                if (feature.properties && feature.properties.kecamatan) {
+                                    layer.bindTooltip(feature.properties.kecamatan, {
+                                        permanent: true,
+                                        direction: 'center',
+                                        className: 'polygon-label'
+                                    }).openTooltip();
                                 }
                             }
                         }).addTo(map);
@@ -227,6 +245,15 @@
                                     color: 'rgba(90, 99, 132, 0.6)',
                                     fillOpacity: 0.3,
                                 }
+                            },
+                            onEachFeature: function(feature, layer) {
+                                if (feature.properties && feature.properties.kecamatan) {
+                                    layer.bindTooltip(feature.properties.kecamatan, {
+                                        permanent: true,
+                                        direction: 'center',
+                                        className: 'polygon-label'
+                                    }).openTooltip();
+                                }
                             }
                         }).addTo(map);
                         L.geoJSON(imogiri, {
@@ -234,6 +261,15 @@
                                 return{
                                     color: 'rgba(120, 99, 132, 0.6)',
                                     fillOpacity: 0.3,
+                                }
+                            },
+                            onEachFeature: function(feature, layer) {
+                                if (feature.properties && feature.properties.kecamatan) {
+                                    layer.bindTooltip(feature.properties.kecamatan, {
+                                        permanent: true,
+                                        direction: 'center',
+                                        className: 'polygon-label'
+                                    }).openTooltip();
                                 }
                             }
                         }).addTo(map);
@@ -243,6 +279,15 @@
                                     color: 'rgba(150, 99, 132, 0.6)',
                                     fillOpacity: 0.3,
                                 }
+                            },
+                            onEachFeature: function(feature, layer) {
+                                if (feature.properties && feature.properties.kecamatan) {
+                                    layer.bindTooltip(feature.properties.kecamatan, {
+                                        permanent: true,
+                                        direction: 'center',
+                                        className: 'polygon-label'
+                                    }).openTooltip();
+                                }
                             }
                         }).addTo(map);
                         L.geoJSON(kasihan, {
@@ -250,6 +295,15 @@
                                 return{
                                     color: 'rgba(180, 99, 132, 0.6)',
                                     fillOpacity: 0.3,
+                                }
+                            },
+                            onEachFeature: function(feature, layer) {
+                                if (feature.properties && feature.properties.kecamatan) {
+                                    layer.bindTooltip(feature.properties.kecamatan, {
+                                        permanent: true,
+                                        direction: 'center',
+                                        className: 'polygon-label'
+                                    }).openTooltip();
                                 }
                             }
                         }).addTo(map);
@@ -259,6 +313,15 @@
                                     color: 'rgba(210, 99, 132, 0.6)',
                                     fillOpacity: 0.3,
                                 }
+                            },
+                            onEachFeature: function(feature, layer) {
+                                if (feature.properties && feature.properties.kecamatan) {
+                                    layer.bindTooltip(feature.properties.kecamatan, {
+                                        permanent: true,
+                                        direction: 'center',
+                                        className: 'polygon-label'
+                                    }).openTooltip();
+                                }
                             }
                         }).addTo(map);
                         L.geoJSON(pajangan, {
@@ -266,6 +329,15 @@
                                 return{
                                     color: 'rgba(240, 99, 132, 0.6)',
                                     fillOpacity: 0.3,
+                                }
+                            },
+                            onEachFeature: function(feature, layer) {
+                                if (feature.properties && feature.properties.kecamatan) {
+                                    layer.bindTooltip(feature.properties.kecamatan, {
+                                        permanent: true,
+                                        direction: 'center',
+                                        className: 'polygon-label'
+                                    }).openTooltip();
                                 }
                             }
                         }).addTo(map);
@@ -275,6 +347,15 @@
                                     color: 'rgba(0, 99, 132, 0.6)',
                                     fillOpacity: 0.3,
                                 }
+                            },
+                            onEachFeature: function(feature, layer) {
+                                if (feature.properties && feature.properties.kecamatan) {
+                                    layer.bindTooltip(feature.properties.kecamatan, {
+                                        permanent: true,
+                                        direction: 'center',
+                                        className: 'polygon-label'
+                                    }).openTooltip();
+                                }
                             }
                         }).addTo(map);
                         L.geoJSON(piyungan, {
@@ -282,6 +363,15 @@
                                 return{
                                     color: 'rgba(210, 99, 132, 0.6)',
                                     fillOpacity: 0.3,
+                                }
+                            },
+                            onEachFeature: function(feature, layer) {
+                                if (feature.properties && feature.properties.kecamatan) {
+                                    layer.bindTooltip(feature.properties.kecamatan, {
+                                        permanent: true,
+                                        direction: 'center',
+                                        className: 'polygon-label'
+                                    }).openTooltip();
                                 }
                             }
                         }).addTo(map);
@@ -291,6 +381,15 @@
                                     color: 'rgba(180, 99, 132, 0.6)',
                                     fillOpacity: 0.3,
                                 }
+                            },
+                            onEachFeature: function(feature, layer) {
+                                if (feature.properties && feature.properties.kecamatan) {
+                                    layer.bindTooltip(feature.properties.kecamatan, {
+                                        permanent: true,
+                                        direction: 'center',
+                                        className: 'polygon-label'
+                                    }).openTooltip();
+                                }
                             }
                         }).addTo(map);
                         L.geoJSON(pundong, {
@@ -298,6 +397,15 @@
                                 return{
                                     color: 'rgba(150, 99, 132, 0.6)',
                                     fillOpacity: 0.3,
+                                }
+                            },
+                            onEachFeature: function(feature, layer) {
+                                if (feature.properties && feature.properties.kecamatan) {
+                                    layer.bindTooltip(feature.properties.kecamatan, {
+                                        permanent: true,
+                                        direction: 'center',
+                                        className: 'polygon-label'
+                                    }).openTooltip();
                                 }
                             }
                         }).addTo(map);
@@ -307,6 +415,15 @@
                                     color: 'rgba(120, 99, 132, 0.6)',
                                     fillOpacity: 0.3,
                                 }
+                            },
+                            onEachFeature: function(feature, layer) {
+                                if (feature.properties && feature.properties.kecamatan) {
+                                    layer.bindTooltip(feature.properties.kecamatan, {
+                                        permanent: true,
+                                        direction: 'center',
+                                        className: 'polygon-label'
+                                    }).openTooltip();
+                                }
                             }
                         }).addTo(map);
                         L.geoJSON(sedayu, {
@@ -314,6 +431,15 @@
                                 return{
                                     color: 'rgba(90, 99, 132, 0.6)',
                                     fillOpacity: 0.3,
+                                }
+                            },
+                            onEachFeature: function(feature, layer) {
+                                if (feature.properties && feature.properties.kecamatan) {
+                                    layer.bindTooltip(feature.properties.kecamatan, {
+                                        permanent: true,
+                                        direction: 'center',
+                                        className: 'polygon-label'
+                                    }).openTooltip();
                                 }
                             }
                         }).addTo(map);
@@ -323,6 +449,15 @@
                                     color: 'rgba(60, 99, 132, 0.6)',
                                     fillOpacity: 0.3,
                                 }
+                            },
+                            onEachFeature: function(feature, layer) {
+                                if (feature.properties && feature.properties.kecamatan) {
+                                    layer.bindTooltip(feature.properties.kecamatan, {
+                                        permanent: true,
+                                        direction: 'center',
+                                        className: 'polygon-label'
+                                    }).openTooltip();
+                                }
                             }
                         }).addTo(map);
                         L.geoJSON(sradakan, {
@@ -330,6 +465,15 @@
                                 return{
                                     color: 'rgba(30, 99, 132, 0.6)',
                                     fillOpacity: 0.3,
+                                }
+                            },
+                            onEachFeature: function(feature, layer) {
+                                if (feature.properties && feature.properties.kecamatan) {
+                                    layer.bindTooltip(feature.properties.kecamatan, {
+                                        permanent: true,
+                                        direction: 'center',
+                                        className: 'polygon-label'
+                                    }).openTooltip();
                                 }
                             }
                         }).addTo(map);
