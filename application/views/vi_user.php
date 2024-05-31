@@ -218,7 +218,7 @@
                         map.on('click', onMapClick);
 
                         // STATE MAPS                       
-                        $.getJSON("<?= base_url()?>'assets/mapp.geojson'", function(data) {
+                        $.getJSON("<?= base_url()?>assets/mapp.geojson", function(data) {
                            geoLayer = L.geoJSON(data).addTo(map);
                         });
                     </script>
