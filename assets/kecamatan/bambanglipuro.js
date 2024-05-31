@@ -1,5 +1,6 @@
 var bambanglipuro = {
     "type": "FeatureCollection",
+    "name": "bambanglipuro",
     "features": [
         {
             "type": "Feature",
