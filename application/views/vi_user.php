@@ -80,7 +80,7 @@
 
                     <div id="map" style="width: 100%; height: 680px;"></div>
                     <script src="kecamatan/bambanglipuro.js"></script>
-
+                    <script src="kecamatan/banguntapan.js"></script>
 
                     <script>
                         var peta1 = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFyZGFsaXVzIiwiYSI6ImNsZnVtbDdtZzAyYjMzdXRhdDN6djY5cWoifQ.Xqtyqa7hvGhQla2oAwpG_Q', {
@@ -222,34 +222,35 @@
                         // $.getJSON("kecamatan/bambanglipuro.js", function(bambanglipuro) {
                         //    geoLayer = new L.geoJSON(bambanglipuro).addTo(map);
                         // });
-                        //L.geoJSON(bambanglipuro).addTo(map);
+                        L.geoJSON(bambanglipuro).addTo(map);
+                        L.geoJSON(banguntapan).addTo(map);
 
-                        map.createPane("pane_bataskecamatan");
-                        map.getPane("pane_bataskecamatan").style.zIndex = 302;
-                        var bataskecamatan = L.geoJson(null, {
-                            pane: "pane_bataskecamatan",
-                            style: function (feature) {
-                                return {
-                                fillOpacity: 0,
-                                color: "yellow",
-                                weight: 3,
-                                opacity: 1,
-                                interactive: false
-                                };
-                            },
-                            onEachFeature: function (feature, layer) {
-                                var content = 'Kec. ' + layer.feature.properties.Kecamatan.toString();
-                                layer.bindTooltip(content, {
-                                direction: 'center',
-                                permanent: true,
-                                className: 'styleLabelKecamatan'
-                                });
-                            }  
-                        });
-                        $.getJSON("kecamatan/bataskecamatan.geojson", function (data) {
-                            bataskecamatan.addData(data);
-                            map.addLayer(bataskecamatan);
-                        });
+                        // map.createPane("pane_bataskecamatan");
+                        // map.getPane("pane_bataskecamatan").style.zIndex = 302;
+                        // var bataskecamatan = L.geoJson(null, {
+                        //     pane: "pane_bataskecamatan",
+                        //     style: function (feature) {
+                        //         return {
+                        //         fillOpacity: 0,
+                        //         color: "yellow",
+                        //         weight: 3,
+                        //         opacity: 1,
+                        //         interactive: false
+                        //         };
+                        //     },
+                        //     onEachFeature: function (feature, layer) {
+                        //         var content = 'Kec. ' + layer.feature.properties.Kecamatan.toString();
+                        //         layer.bindTooltip(content, {
+                        //         direction: 'center',
+                        //         permanent: true,
+                        //         className: 'styleLabelKecamatan'
+                        //         });
+                        //     }  
+                        // });
+                        // $.getJSON("kecamatan/bataskecamatan.geojson", function (data) {
+                        //     bataskecamatan.addData(data);
+                        //     map.addLayer(bataskecamatan);
+                        // });
                     </script>
                 </div>
             </div>
