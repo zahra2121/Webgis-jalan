@@ -222,9 +222,9 @@
                         map.on('click', onMapClick);
 
                         // STATE MAPS                       
-                        // $.getJSON('<?= base_url()?>kecamatan/bambanglipuro.js', function(bambanglipuro) {
-                        //    geoLayer = new L.geoJSON(bambanglipuro).addTo(map);
-                        // });
+                        $.getJSON("kecamatan/bambanglipuro.js", function(bambanglipuro) {
+                           geoLayer = new L.geoJSON(bambanglipuro).addTo(map);
+                        });
 
                         map.createPane("pane_bataskecamatan");
                         map.getPane("pane_bataskecamatan").style.zIndex = 302;
@@ -248,10 +248,10 @@
                                 });
                             }  
                         });
-                        $.getJSON("kecamatan/bambanglipuro.js", function (data) {
-                            bataskecamatan.addData(data);
-                            map.addLayer(bataskecamatan);
-                        });
+                        // $.getJSON("kecamatan/bambanglipuro.js", function (data) {
+                        //     bataskecamatan.addData(data);
+                        //     map.addLayer(bataskecamatan);
+                        // });
                     </script>
                 </div>
             </div>
