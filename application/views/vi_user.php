@@ -77,7 +77,8 @@
                             🟢 : <label class='badge bg-success text-white'>PROSES DATA</label></p>
                     </div></center>
                     <br><br>
-
+                    
+                    <!-- Add Peta, Polygon Kecamatan -->
                     <div id="map" style="width: 100%; height: 680px;"></div>
                     <script src="<?= base_url()?>assets/kecamatan/bambanglipuro.js"></script>
                     <script src="<?= base_url()?>assets/kecamatan/banguntapan.js"></script>
@@ -184,6 +185,147 @@
 
                         var layerControl = L.control.layers(baseLayers).addTo(map);
 
+
+                        //STATE
+                        L.geoJSON(bambanglipuro, {
+                            style: function(feature) {
+                                return{
+                                    color: 'rgba(0, 99, 132, 0.6)',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
+                        L.geoJSON(banguntapan, {
+                            style: function(feature) {
+                                return{
+                                    color: 'rgba(30, 99, 132, 0.6)',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
+                        L.geoJSON(bantul, {
+                            style: function(feature) {
+                                return{
+                                    color: 'rgba(60, 99, 132, 0.6)',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
+                        L.geoJSON(dlingo, {
+                            style: function(feature) {
+                                return{
+                                    color: 'rgba(90, 99, 132, 0.6)',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
+                        L.geoJSON(imogiri, {
+                            style: function(feature) {
+                                return{
+                                    color: 'rgba(120, 99, 132, 0.6)',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
+                        L.geoJSON(jetis, {
+                            style: function(feature) {
+                                return{
+                                    color: 'rgba(150, 99, 132, 0.6)',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
+                        L.geoJSON(kasihan, {
+                            style: function(feature) {
+                                return{
+                                    color: 'rgba(180, 99, 132, 0.6)',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
+                        L.geoJSON(kretek, {
+                            style: function(feature) {
+                                return{
+                                    color: 'rgba(210, 99, 132, 0.6)',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
+                        L.geoJSON(pajangan, {
+                            style: function(feature) {
+                                return{
+                                    color: 'rgba(240, 99, 132, 0.6)',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
+                        L.geoJSON(pandak, {
+                            style: function(feature) {
+                                return{
+                                    color: 'rgba(240, 99, 132, 0.6)',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
+                        L.geoJSON(piyungan, {
+                            style: function(feature) {
+                                return{
+                                    color: 'rgba(210, 99, 132, 0.6)',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
+                        L.geoJSON(pleret, {
+                            style: function(feature) {
+                                return{
+                                    color: 'rgba(180, 99, 132, 0.6)',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
+                        L.geoJSON(pundong, {
+                            style: function(feature) {
+                                return{
+                                    color: 'rgba(150, 99, 132, 0.6)',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
+                        L.geoJSON(sanden, {
+                            style: function(feature) {
+                                return{
+                                    color: 'rgba(120, 99, 132, 0.6)',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
+                        L.geoJSON(sedayu, {
+                            style: function(feature) {
+                                return{
+                                    color: 'rgba(90, 99, 132, 0.6)',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
+                        L.geoJSON(sewon, {
+                            style: function(feature) {
+                                return{
+                                    color: 'rgba(60, 99, 132, 0.6)',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
+                        L.geoJSON(sradakan, {
+                            style: function(feature) {
+                                return{
+                                    color: 'rgba(30, 99, 132, 0.6)',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
+                        
+                        
+
                         // CIRCLE BLACK SPOT
                         <?php foreach ($blackspot as $value) {?>
                             var circle = L.circle([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
@@ -221,25 +363,6 @@
                             .addTo(map);
                                 
                         <?php }?>
-                        
-                        //STATE
-                        L.geoJSON(bambanglipuro, {
-                            style: function(feature) {
-                                return{
-                                    color: 'red',
-                                    fillOpacity: 0.5,
-                                }
-                            }
-                        }).addTo(map);
-                        L.geoJSON(banguntapan).addTo(map);
-                        L.geoJSON(bantul).addTo(map);
-                        L.geoJSON(dlingo).addTo(map);
-                        L.geoJSON(imogiri).addTo(map);
-                        L.geoJSON(jetis).addTo(map);
-                        L.geoJSON(kasihan).addTo(map);
-                        L.geoJSON(pajangan).addTo(map);
-                        L.geoJSON(pandak).addTo(map);
-                        L.geoJSON(piyungan).addTo(map);
                         
 
                         //OnClick
