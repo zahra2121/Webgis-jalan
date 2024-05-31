@@ -167,7 +167,7 @@
 
                         var layerControl = L.control.layers(baseLayers).addTo(map);
 
-                        L.geoJSON('<?=base_url()?>assets/result.js').addTo(map); 
+                        L.geoJSON(polygon).addTo(map); 
 
                         // CIRCLE BLACK SPOT
                         <?php foreach ($blackspot as $value) {?>
@@ -219,9 +219,9 @@
                         map.on('click', onMapClick);
 
                         // STATE MAPS                       
-                        // $.getJSON("<?= base_url() ?>assets/result.json",function(data) {
-                        //    var geoLayer = new L.geoJSON(data).addTo(map);
-                        // });
+                        $.getJSON("<?= base_url() ?>assets/result.js",function(data) {
+                           var geoLayer = new L.geoJSON(data).addTo(map);
+                        });
                     </script>
                 </div>
             </div>
