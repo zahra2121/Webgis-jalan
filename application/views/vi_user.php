@@ -169,7 +169,7 @@
 
                         var layerControl = L.control.layers(baseLayers).addTo(map);
 
-                        var layerControl = L.geoJSON.layers(bambanglipuro).addTo(map);
+                        var getJSON = L.geoJSON(bambanglipuro).addTo(map);
 
 
                         // CIRCLE BLACK SPOT
