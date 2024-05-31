@@ -192,16 +192,18 @@
                                 return{
                                     color: 'rgba(0, 99, 132, 0.6)',
                                     fillOpacity: 0.3,
-                                    properties: 'kecamatan',
+                                }
+                            },
+                            onEachFeature: function(feature, layer) {
+                                if (feature.properties && feature.properties.kecamatan) {
+                                    layer.bindTooltip(feature.properties.kecamatan, {
+                                        permanent: true,
+                                        direction: 'center',
+                                        className: 'polygon-label'
+                                    }).openTooltip();
                                 }
                             }
                         }).addTo(map);
-                        // Menambahkan keterangan nama pada polygon
-                        bambanglipuro.bindTooltip("Nama Area: Bambang Lipuro", {
-                            permanent: true,
-                            direction: 'center',
-                            className: 'kecamatan'
-                        }).openTooltip();
 
                         L.geoJSON(banguntapan, {
                             style: function(feature) {
