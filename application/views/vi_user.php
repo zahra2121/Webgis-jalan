@@ -220,9 +220,9 @@
                         map.on('click', onMapClick);
 
                         // STATE MAPS                       
-                        // $.getJSON("assets/result.json",function(polygon) {
-                        //    var geoLayer = L.geoJSON(polygon).addTo(map);
-                        // });
+                        $.getJSON("assets/mapp.geojson",function(polygon) {
+                           var geoLayer = L.geoJSON(polygon).addTo(map);
+                        });
                     </script>
                 </div>
             </div>
