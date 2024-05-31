@@ -79,7 +79,7 @@
                     <br><br>
 
                     <div id="map" style="width: 100%; height: 680px;"></div>
-                    <script src="kecamatan/bambanglipuro.js"></script>
+                    <script src="kecamatan/bambanglipuro.json"></script>
 
 
                     <script>
