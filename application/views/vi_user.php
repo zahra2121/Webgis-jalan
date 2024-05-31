@@ -170,7 +170,7 @@
                         var map = L.map('map', {
                             center: [-7.847007587128045, 110.35543035070813],
                             zoom: 12,
-                            layers: [peta5],
+                            layers: [peta8],
                         });
 
                         var baseLayers = {
@@ -192,7 +192,7 @@
                                 return{
                                     color: 'rgba(0, 99, 132, 0.6)',
                                     fillOpacity: 0.5,
-                                    name: 'kecamatan'
+                                    name: 'kecamatan',
                                 }
                             }
                         }).addTo(map);
@@ -263,7 +263,7 @@
                         L.geoJSON(pandak, {
                             style: function(feature) {
                                 return{
-                                    color: 'rgba(240, 99, 132, 0.6)',
+                                    color: 'rgba(0, 99, 132, 0.6)',
                                     fillOpacity: 0.5,
                                 }
                             }
