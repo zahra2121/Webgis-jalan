@@ -8236,11 +8236,3 @@ var bambanglipuro = {
           }
     ]
 }
-
-document.getElementById("3").addEventListener("change", function(){
-  if (document.getElementById(this.id).checked == true){
-  geojsonLayer.addTo(map);
-} else {
-  geojsonLayer.remove(map);
-}
-});
