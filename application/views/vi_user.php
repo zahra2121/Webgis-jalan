@@ -192,6 +192,7 @@
                                 return{
                                     color: 'rgba(0, 99, 132, 0.6)',
                                     fillOpacity: 0.5,
+                                    name: 'kecamatan'
                                 }
                             }
                         }).addTo(map);
