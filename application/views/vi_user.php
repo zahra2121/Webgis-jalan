@@ -334,18 +334,18 @@
                                         if($value->status == '0' and $value->aek > $value->ucl){
                                             echo "color: 'red',
                                             fillColor: '#FF0000',
-                                            fillOpacity: 0.7,
+                                            fillOpacity: 0.9,
                                             radius: 100";
                                         }
                                         elseif($value->status == '1' and $value->aek < $value->ucl){
                                             echo "color: 'yellow',
                                             fillColor: '#FFFF00',
-                                            fillOpacity: 0.7,
+                                            fillOpacity: 0.9,
                                             radius: 70";
                                         }else{
                                             echo "color: 'green',
                                             fillColor: '#008000',
-                                            fillOpacity: 0.7,
+                                            fillOpacity: 0.9,
                                             radius: 50";
                                         }
                                     ?>
