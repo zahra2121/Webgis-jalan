@@ -79,7 +79,7 @@
                     <br><br>
 
                     <div id="map" style="width: 100%; height: 680px;"></div>
-                    <script src="assets/mapp.geojson"></script>
+                    <script src="<?=base_url()?>assets/mapp.geojson"></script>
                     <script>
                         var peta1 = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFyZGFsaXVzIiwiYSI6ImNsZnVtbDdtZzAyYjMzdXRhdDN6djY5cWoifQ.Xqtyqa7hvGhQla2oAwpG_Q', {
                             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -218,9 +218,11 @@
                         map.on('click', onMapClick);
 
                         // STATE MAPS                       
-                        $.getJSON("<?= base_url()?>assets/mapp.geojson", function(data) {
+                        $.getJSON('<?= base_url() ?> assets/mapp.geojson', function(data) {
                            geoLayer = L.geoJSON(data).addTo(map);
                         });
+
+                        L.geoJSON(data).addTo(map);
                     </script>
                 </div>
             </div>
