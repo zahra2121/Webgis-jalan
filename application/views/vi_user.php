@@ -79,7 +79,7 @@
                     <br><br>
 
                     <div id="map" style="width: 100%; height: 680px;"></div>
-                    <script src="<?= base_url()?>kecamatan/bambanglipuro.js"></script>
+                    <script src="<?= base_url('kecamatan/bambanglipuro.js')?>"></script>
                     <script>
                         var peta1 = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFyZGFsaXVzIiwiYSI6ImNsZnVtbDdtZzAyYjMzdXRhdDN6djY5cWoifQ.Xqtyqa7hvGhQla2oAwpG_Q', {
                             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -149,12 +149,10 @@
                             attribution: 'Map data &copy; <a href="https://www.google.com/maps">Google Maps</a>'
                         });
 
-                        var geoLayer = L.geoJSON(bambanglipuro);
-
                         var map = L.map('map', {
                             center: [-7.847007587128045, 110.35543035070813],
                             zoom: 12,
-                            layers: [peta7][geoLayer],
+                            layers: [peta7],
                         });
 
                         var baseLayers = {
@@ -168,6 +166,8 @@
                         };
 
                         var layerControl = L.control.layers(baseLayers).addTo(map);
+
+                        L.geoJSON(bambanglipuro).addTo(map);
 
 
                         // CIRCLE BLACK SPOT
