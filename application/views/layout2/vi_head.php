@@ -116,7 +116,7 @@
                 background: none;
                 border: none;
                 box-shadow: none;
-                color: darkgreen;
+                color: darkslategray;
             }
         </style>
             
