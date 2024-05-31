@@ -169,9 +169,6 @@
 
                         var layerControl = L.control.layers(baseLayers).addTo(map);
 
-                        //L.geoJSON(bambanglipuro).addTo(map);
-
-
                         // CIRCLE BLACK SPOT
                         <?php foreach ($blackspot as $value) {?>
                             var circle = L.circle([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
@@ -222,9 +219,10 @@
                         map.on('click', onMapClick);
 
                         // STATE MAPS                       
-                        $.getJSON("kecamatan/bambanglipuro.js", function(bambanglipuro) {
-                           geoLayer = new L.geoJSON(bambanglipuro).addTo(map);
-                        });
+                        // $.getJSON("kecamatan/bambanglipuro.js", function(bambanglipuro) {
+                        //    geoLayer = new L.geoJSON(bambanglipuro).addTo(map);
+                        // });
+                        L.geoJSON(bambanglipuro).addTo(map);
 
                         map.createPane("pane_bataskecamatan");
                         map.getPane("pane_bataskecamatan").style.zIndex = 302;
