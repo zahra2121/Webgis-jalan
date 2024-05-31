@@ -79,7 +79,7 @@
                     <br><br>
 
                     <div id="map" style="width: 100%; height: 680px;"></div>
-                    <script src="assets/result.json"></script>
+                    <script src="assets/mapp.geojson"></script>
                     <script>
                         var peta1 = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFyZGFsaXVzIiwiYSI6ImNsZnVtbDdtZzAyYjMzdXRhdDN6djY5cWoifQ.Xqtyqa7hvGhQla2oAwpG_Q', {
                             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -167,8 +167,6 @@
 
                         var layerControl = L.control.layers(baseLayers).addTo(map);
 
-                        var geoLayer = L.geoJSON().addTo(map); 
-
                         // CIRCLE BLACK SPOT
                         <?php foreach ($blackspot as $value) {?>
                             var geoLayer = L.geoJSON().addTo(map);
@@ -220,7 +218,7 @@
                         map.on('click', onMapClick);
 
                         // STATE MAPS                       
-                        $.getJSON("assets/mapp.geojson",function(polygon) {
+                        $.getJSON("<?= base_url()?>assets/mapp.geojson",function(polygon) {
                            var geoLayer = L.geoJSON(polygon).addTo(map);
                         });
                     </script>
