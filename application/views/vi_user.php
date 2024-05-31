@@ -225,6 +225,33 @@
                         // $.getJSON('<?= base_url()?>kecamatan/bambanglipuro.js', function(bambanglipuro) {
                         //    geoLayer = new L.geoJSON(bambanglipuro).addTo(map);
                         // });
+
+                        map.createPane("pane_bataskecamatan");
+                        map.getPane("pane_bataskecamatan").style.zIndex = 302;
+                        var bataskecamatan = L.geoJson(null, {
+                        pane: "pane_bataskecamatan",
+                        style: function (feature) {
+                            return {
+                            fillOpacity: 0,
+                            color: "yellow",
+                            weight: 3,
+                            opacity: 1,
+                            interactive: false
+                            };
+                        },
+                        onEachFeature: function (feature, layer) {
+                            var content = 'Kec. ' + layer.feature.properties.Kecamatan.toString();
+                            layer.bindTooltip(content, {
+                            direction: 'center',
+                            permanent: true,
+                            className: 'styleLabelKecamatan'
+                            });
+                        }  
+                        });
+                        $.getJSON("kecamatan/bataskecamatan.geojson", function (data) {
+                        bataskecamatan.addData(data);
+                        map.addLayer(bataskecamatan);
+                        });
                     </script>
                 </div>
             </div>
