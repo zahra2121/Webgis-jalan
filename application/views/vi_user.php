@@ -154,7 +154,7 @@
                         var map = L.map('map', {
                             center: [-7.847007587128045, 110.35543035070813],
                             zoom: 12,
-                            layers: [peta2],
+                            layers: [peta2]
                         });
 
                         var baseLayers = {
@@ -164,7 +164,7 @@
                             'Light': peta7,
                             'ArcGIS': peta8,
                             'Satelite GMaps': peta9,
-                            'GMaps2': peta10
+                            'GMaps2': peta10,
                         };
 
                         var layerControl = L.control.layers(baseLayers).addTo(map);
