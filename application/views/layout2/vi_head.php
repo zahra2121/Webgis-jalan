@@ -111,12 +111,12 @@
             }
 
             .polygon-label {
-                font-size: 14px;
+                font-size: 20px;
                 font-weight: bold;
                 background: none;
                 border: none;
                 box-shadow: none;
-                color: skyblue;
+                color: darkgreen;
             }
         </style>
             
