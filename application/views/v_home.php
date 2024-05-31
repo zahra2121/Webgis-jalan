@@ -331,8 +331,6 @@
                             'Street': peta5,
                             'Light': peta7,
                             'ArcGIS': peta8,
-                            'Satelite GMaps': peta9,
-                            'GMaps2': peta10,
                         };
 
                         var layerControl = L.control.layers(baseLayers).addTo(map);
