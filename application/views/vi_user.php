@@ -222,7 +222,7 @@
                         map.on('click', onMapClick);
 
                         // STATE MAPS                       
-                        $.getJSON("<?= base_url() ?> kecamatan/bambanglipuro.js", function(bambanglipuro) {
+                        $.getJSON("<?= base_url('kecamatan/bambanglipuro.js')?>", function(bambanglipuro) {
                            geoLayer = new L.geoJSON(bambanglipuro).addTo(map);
                         });
                     </script>
