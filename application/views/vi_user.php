@@ -215,14 +215,12 @@
                         }
                         map.on('click', onMapClick);
 
-                        
-
-                       // STATE MAPS                       
-                        $.getJSON('<?= base_url() ?>assets/result.json',function(data) {
+                        // STATE MAPS                       
+                        $.getJSON("<?= base_url() ?>assets/result.json",function(data) {
                            var geoLayer = new L.geoJSON(data).addTo(map);
                         });
 
-                        
+
                     </script>
                 </div>
             </div>
