@@ -80,7 +80,22 @@
 
                     <div id="map" style="width: 100%; height: 680px;"></div>
                     <script src="<?= base_url()?>assets/kecamatan/bambanglipuro.js"></script>
-                    <script src="assets/kecamatan/banguntapan.js"></script>
+                    <script src="<?= base_url()?>assets/kecamatan/banguntapan.js"></script>
+                    <script src="<?= base_url()?>assets/kecamatan/bantul.js"></script>
+                    <script src="<?= base_url()?>assets/kecamatan/dlingo.js"></script>
+                    <script src="<?= base_url()?>assets/kecamatan/imogiri.js"></script>
+                    <script src="<?= base_url()?>assets/kecamatan/jetis.js"></script>
+                    <script src="<?= base_url()?>assets/kecamatan/kasihan.js"></script>
+                    <script src="<?= base_url()?>assets/kecamatan/kretek.js"></script>
+                    <script src="<?= base_url()?>assets/kecamatan/pajangan.js"></script>
+                    <script src="<?= base_url()?>assets/kecamatan/pandak.js"></script>
+                    <script src="<?= base_url()?>assets/kecamatan/piyungan.js"></script>
+                    <script src="<?= base_url()?>assets/kecamatan/pleret.js"></script>
+                    <script src="<?= base_url()?>assets/kecamatan/pundong.js"></script>
+                    <script src="<?= base_url()?>assets/kecamatan/sanden.js"></script>
+                    <script src="<?= base_url()?>assets/kecamatan/sedayu.js"></script>
+                    <script src="<?= base_url()?>assets/kecamatan/sewon.js"></script>
+                    <script src="<?= base_url()?>assets/kecamatan/sradakan.js"></script>
 
                     <script>
                         var peta1 = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFyZGFsaXVzIiwiYSI6ImNsZnVtbDdtZzAyYjMzdXRhdDN6djY5cWoifQ.Xqtyqa7hvGhQla2oAwpG_Q', {
@@ -208,8 +223,23 @@
                         <?php }?>
                         
                         //STATE
-                        L.geoJSON(bambanglipuro).addTo(map);
+                        L.geoJSON(bambanglipuro, {
+                            style: function(feature) {
+                                return{
+                                    color: 'red',
+                                    fillOpacity: 0.5,
+                                }
+                            }
+                        }).addTo(map);
                         L.geoJSON(banguntapan).addTo(map);
+                        L.geoJSON(bantul).addTo(map);
+                        L.geoJSON(dlingo).addTo(map);
+                        L.geoJSON(imogiri).addTo(map);
+                        L.geoJSON(jetis).addTo(map);
+                        L.geoJSON(kasihan).addTo(map);
+                        L.geoJSON(pajangan).addTo(map);
+                        L.geoJSON(pandak).addTo(map);
+                        L.geoJSON(piyungan).addTo(map);
                         
 
                         //OnClick
@@ -224,38 +254,6 @@
                         }
                         map.on('click', onMapClick);
 
-                        // STATE MAPS                       
-                        // $.getJSON("kecamatan/bambanglipuro.js", function(bambanglipuro) {
-                        //    geoLayer = new L.geoJSON(bambanglipuro).addTo(map);
-                        // });
-
-
-                        // map.createPane("pane_bataskecamatan");
-                        // map.getPane("pane_bataskecamatan").style.zIndex = 302;
-                        // var bataskecamatan = L.geoJson(null, {
-                        //     pane: "pane_bataskecamatan",
-                        //     style: function (feature) {
-                        //         return {
-                        //         fillOpacity: 0,
-                        //         color: "yellow",
-                        //         weight: 3,
-                        //         opacity: 1,
-                        //         interactive: false
-                        //         };
-                        //     },
-                        //     onEachFeature: function (feature, layer) {
-                        //         var content = 'Kec. ' + layer.feature.properties.Kecamatan.toString();
-                        //         layer.bindTooltip(content, {
-                        //         direction: 'center',
-                        //         permanent: true,
-                        //         className: 'styleLabelKecamatan'
-                        //         });
-                        //     }  
-                        // });
-                        // $.getJSON("kecamatan/bataskecamatan.geojson", function (data) {
-                        //     bataskecamatan.addData(data);
-                        //     map.addLayer(bataskecamatan);
-                        // });
                     </script>
                 </div>
             </div>
