@@ -35,17 +35,11 @@ class Lupa_password extends CI_Controller
             $message .= '<strong>Terimakasih telah menghubungi kami. Untuk mengatur ulang kata sandi, klik tautan dibawah ini.</strong><br>';
             $message .= '<strong>Silakan klik link ini:</strong> ' . $link;
 
-            $data = array(
-                'title' => 'message',
-                'message' => $message,
-                'isi' => 'layout2/vi_tokens'
-            );
-            $this->load->view('layout2/vi_wrapper', $data, FALSE);
 
-            // echo "<center>
-            //     <h3 class='font-weight-light'><b>Reset Password</b></h3>
-            //     <p>". $message. "</p>
-            // </center><br><br>";
+            echo "<center>
+                <h3 class='font-weight-light'><b>Reset Password</b></h3>
+                <p>". $message. "</p>
+            </center><br><br>";
 
             exit;
 
