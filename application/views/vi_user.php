@@ -149,10 +149,12 @@
                             attribution: 'Map data &copy; <a href="https://www.google.com/maps">Google Maps</a>'
                         });
 
+                        var polygon = L.geoJSON(data).addTo(map);
+
                         var map = L.map('map', {
                             center: [-7.847007587128045, 110.35543035070813],
                             zoom: 12,
-                            layers: [peta2],
+                            layers: [peta2, polygon],
                         });
 
                         var baseLayers = {
@@ -221,8 +223,6 @@
                         $.getJSON('<?= base_url() ?> assets/mapp.geojson', function(data) {
                            geoLayer = L.geoJSON(data).addTo(map);
                         });
-
-                        L.geoJSON(data).addTo(map);
                     </script>
                 </div>
             </div>
