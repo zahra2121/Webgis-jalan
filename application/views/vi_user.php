@@ -508,7 +508,7 @@
                                     elseif($value->status == '1' and $value->aek < $value->ucl){
                                         echo "<label class='badge bg-warning text-dark' name='$value->status' id='$value->status'>BUKAN DAERAH RAWAN</label>";
                                     }else{
-                                        echo "<label class='badge bg-success text-white' name='$value->status' id='$value->status'>PROSES</label>";
+                                        echo "<label class='badge bg-success text-white' name='$value->status' id='$value->status'>PROSES DATA</label>";
                                     }
                                
                                 ?><br><br></h5>")
