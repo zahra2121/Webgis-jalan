@@ -492,7 +492,7 @@
                                             echo "color: 'yellow',
                                             fillColor: '#FFFF00',
                                             fillOpacity: 0.5,
-                                            radius: 150";
+                                            radius: 200";
                                         }else{
                                             echo "color: 'green',
                                             fillColor: '#008000',
