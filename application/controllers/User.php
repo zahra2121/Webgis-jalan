@@ -12,7 +12,7 @@ class User extends CI_Controller {
 	public function index(){
 		$data = array(
             'title' => 'user',
-            'blackspot' => $this->M_user->get_all_black(),
+            'blackspot' => $this->M_user->all_black(),
             'countkasus' => $this->M_user->count_kasus(),
             'countblack' => $this->M_user->count_black(),
             'countrawan' => $this->M_user->count_status(),
