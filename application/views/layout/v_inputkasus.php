@@ -20,6 +20,7 @@
                           <label class="col-sm-3 col-form-label">Pilih Alamat</label>
                           <div class="col-sm-12">
                             <select class="form-control" id="daerah_jalan" name="id">
+                              <option value="" >- Pilih Alamat-</option>
                               <?php
                                 foreach($input_id as $key => $value){
                               ?>
