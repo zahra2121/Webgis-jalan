@@ -20,21 +20,21 @@ class Register extends CI_Controller {
 
 	public function input_user(){
 		//validasi form
-        $this->form_validation->set_rules('nama', 'Nama', 'required', [
-            'required' => '%s Wajib Diisi'
-        ]);
-        $this->form_validation->set_rules('email', 'Email', 'required', [
-            'required' => '%s Wajib Diisi'
-        ]);
-        $this->form_validation->set_rules('username', 'Username', 'required', [
-            'required' => '%s Wajib Diisi'
-        ]);
-        $this->form_validation->set_rules('password', 'Password', 'required', [
-            'required' => '%s Wajib Diisi'
-        ]);
-        $this->form_validation->set_rules('no_hp', 'No_hp', 'required', [
-            'required' => '%s Wajib Diisi'
-        ]);
+        // $this->form_validation->set_rules('nama', 'Nama', 'required', [
+        //     'required' => '%s Wajib Diisi'
+        // ]);
+        // $this->form_validation->set_rules('email', 'Email', 'required', [
+        //     'required' => '%s Wajib Diisi'
+        // ]);
+        // $this->form_validation->set_rules('username', 'Username', 'required', [
+        //     'required' => '%s Wajib Diisi'
+        // ]);
+        // $this->form_validation->set_rules('password', 'Password', 'required', [
+        //     'required' => '%s Wajib Diisi'
+        // ]);
+        // $this->form_validation->set_rules('no_hp', 'No_hp', 'required', [
+        //     'required' => '%s Wajib Diisi'
+        // ]);
 
         if($this->form_validation->run() == FALSE) {
             //jika validasi gagal atau tidak lolos validasi
