@@ -121,7 +121,7 @@ class M_dataset extends CI_model
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id', 'left',$data);
         $this->db->group_by('kasus.id');
-        return $this->db->get()->row();
+        return $this->db->get()->result();
     }
 
     public function detailadmin($data) {

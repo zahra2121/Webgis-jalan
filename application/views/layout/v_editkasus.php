@@ -24,7 +24,7 @@
                               <?php
                                 foreach($update_id as $key => $value){
                               ?>
-                                <option value="<?= $value->id ?>" <?= $value->daerah_jalan == $value->id ? 'selected' : ''?>><?= $value->daerah_jalan ?></option>
+                                <option value="<?= $value->id ?>" <?= $value->id == $value->daerah_jalan  ? 'selected' : ''?>><?= $value->daerah_jalan ?></option>
                               <?php } ?>
                             </select>
                           </div>
