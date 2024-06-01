@@ -58,7 +58,7 @@
                             if($detailadmin->status == '0' and $detailadmin->aek > $detailadmin->ucl){
                                 echo "<label class='badge bg-danger text-white' name='$detailadmin->status' id='$detailadmin->status'>DAERAH RAWAN</label>";
                             }
-                            elseif($detailadmin->status == '1' and $detailadmin->aek < $detailadmin>ucl){
+                            elseif($detailadmin->status == '1' and $detailadmin->aek < $detailadmin->ucl){
                                 echo "<label class='badge bg-warning text-dark' name='$detailadmin->status' id='$detailadmin->status'>BUKAN DAERAH RAWAN</label>";
                             }else{
                                 echo "<label class='badge bg-success text-white' name='$detailadmin->status' id='$detailadmin->status'>PROSES DATA</label>";
