@@ -479,7 +479,7 @@ class Home extends CI_Controller {
                 'title' => 'editkasus',
                 'kasus' => $this->M_dataset->detail_kasus($data),
                 'blackspot' => $this->M_dataset->detail_black($data),
-                'update_id' => $this->M_dataset->all_updatekasus(),
+                'update_id' => $this->M_dataset->all_updatekasus($data),
                 'isi' => 'layout/v_editkasus'
             );
             $this->load->view('layout/v_wrapper', $data, FALSE);

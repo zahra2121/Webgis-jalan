@@ -116,9 +116,10 @@ class M_dataset extends CI_model
         return $this->db->get()->result();
     }
 
-    public function all_updatekasus(){
+    public function all_updatekasus($data){
         $this->db->select('kasus.*, blackspot.*, blackspot.daerah_jalan, blackspot.idblack');
         $this->db->from('blackspot');
+        $this->db->where('kasus.id', $data);
         $this->db->join('kasus', 'blackspot.idblack = kasus.id', 'left');
         $this->db->group_by('kasus.id');
         return $this->db->get()->result();
