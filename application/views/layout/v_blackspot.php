@@ -153,7 +153,7 @@
                           <tbody>
                                 <?Php
                                   foreach ($countblack as $key => $value) {
-                                    $rataan = $value->totalsemua_aek/$value->total_data;
+                                    $rataan = $value->totalsemua_aek/$value->total_data; //total aek/data black
 
                                     $kali = 3*sqrt($rataan);
                                     $bca = $rataan + $kali;

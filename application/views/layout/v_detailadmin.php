@@ -51,7 +51,7 @@
             <br>
                 <center><div class="col-md-10 col-sm-4 mx-auto">
                     <h4 class="fw-bolder text-secondary"> <?= $detailadmin->daerah_jalan ?></h4>
-                    <h4 class="fw-bolder text-secondary"><?= $detailadmin->kecamatan ?>, <?= $detailadmin->kabupaten?></h4><br>
+                    <h4 class="fw-bolder text-secondary">Kecamatan <?= $detailadmin->kecamatan ?>, Kabupaten <?= $detailadmin->kabupaten?></h4><br>
                     <h3 class="fw-bolder text-danger">
                         <?php
                             if($detailadmin->status == '0' and $detailadmin->aek > $detailadmin->ucl){
