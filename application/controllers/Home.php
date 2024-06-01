@@ -500,7 +500,7 @@ class Home extends CI_Controller {
             $this->M_dataset->update_kasus($data);
             $this->session->set_flashdata('pesan', 'Data Kasus Berhasil di Perbaharui !!');
             
-            redirect('home/detailadmin/');
+            redirect('home/detailadmin/'.$data);
         }
 	}
 
