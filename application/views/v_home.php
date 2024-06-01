@@ -636,19 +636,19 @@
                                             echo "color: 'red',
                                             fillColor: '#FF0000',
                                             fillOpacity: 0.7,
-                                            radius: 100";
+                                            radius: 200";
                                         }
                                         elseif($value->status == '1' and $value->aek < $value->ucl){
                                             echo "color: 'yellow',
                                             fillColor: '#FFFF00',
                                             fillOpacity: 0.7,
-                                            radius: 50";
+                                            radius: 150";
                                         }
                                         else{
                                             echo "color: 'green',
                                             fillColor: '#008000',
                                             fillOpacity: 0.7,
-                                            radius: 50";
+                                            radius: 150";
                                         }
                                     ?>
                             })
