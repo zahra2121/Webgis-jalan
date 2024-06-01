@@ -70,7 +70,7 @@
         <section class="card mx-3 px-4 my-3">
             <div class="card-body">
                 <div class="row">
-                    <center><h1 class="card-title mb-2 text-dark center">PETA PEMETAAN TITIK BLACKSPOT KECELAKAAN LALU LINTAS DI KABUPATEN BANTUL</h1></center><br>
+                    <center><h1 class="card-title mb-2 text-dark center">PETA PEMETAAN TITIK LOKASI KECELAKAAN LALU LINTAS DI KABUPATEN BANTUL</h1></center><br>
                     <center><div class="mx-2 px-4 py-4 my-2">
                         <p> 🔴 : <label class='badge bg-danger text-white' >DAERAH RAWAN</label><br>
                             🟡 : <label class='badge bg-warning text-dark'>BUKAN DAERAH RAWAN </label><br>

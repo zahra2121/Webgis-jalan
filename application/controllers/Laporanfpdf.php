@@ -24,7 +24,7 @@ class Laporanfpdf extends CI_Controller {
 
         $pdf->Cell(10,15,'',0,1);
         $pdf->SetFont('Times','B',14);
-        $pdf->Cell(0,7,'A. Daftar Titik Blackspot Kecelakaan Lalu Lintas Di Kabupaten Bantul',0,1);
+        $pdf->Cell(0,7,'A. Daftar Titik Lokasi Kecelakaan Lalu Lintas Di Kabupaten Bantul',0,1);
 
         $pdf->Cell(10,7,'',0,1);
         $pdf->SetFont('Arial','B',10);

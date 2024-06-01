@@ -6,7 +6,7 @@
                 <div class="card-body">
                   <a href="<?= base_url() ?>index.php/laporanfpdf">
                   <button type="button" class="btn btn-dark btn-icon-text float-right">
-                    Print Blackspot
+                    Print Alamat
                     <i class="mdi mdi-printer btn-icon-append"></i>                                                                              
                   </button></a>
 
