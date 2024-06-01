@@ -118,7 +118,7 @@ class Home extends CI_Controller {
                     $this->M_dataset->insert_lapor($data);
 
                     if($this->db->affected_rows() > 0) {
-                        $this->session->set_flashdata('pesan', 'Data Laporan Berhasil di Tambahkan !!');
+                        $this->session->set_flashdata('pesan', 'Laporan Berhasil ditambahkan, Menunggu Proses Verifikasi Data');
                                             
                     }
                     redirect('user/lapor');
