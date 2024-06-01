@@ -3,8 +3,7 @@
 <section>
     <div class="container">
         <div class="card-body">
-        <div class="col-lg-auto mx-3 px-3">
-            <br><br>
+        <div class="col-lg-auto mx-3 px-3 py-3">
             <?php
                 echo "<center><h1 class='fs-3 fw-bolder'>TANGGAL ". date('d ', strtotime($detailadmin->tanggal));
                 $month = date('F', strtotime($detailadmin->tanggal));
