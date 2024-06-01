@@ -20,7 +20,6 @@ class M_dataset extends CI_model
 
     public function all_black(){
         $this->db->select('blackspot.*, kasus.*, blackspot.tahun as tahun_black, SUM(blackspot.aek) as totalsemua_aek, COUNT(blackspot.idblack) as total_data, COUNT(kasus.id) as total_idkasus, COUNT(blackspot.aek) as total_kasus, SUM(kasus.luka_ringan) as lr_aek, SUM(kasus.luka_berat) as lb_aek, SUM(kasus.meninggal) as m_aek, SUM(kasus.rugi) as r_aek');
-        $this->db->order_by('blackspot.tahun', 'DESC');
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id', 'left');
         $this->db->group_by('kasus.id');
@@ -105,7 +104,6 @@ class M_dataset extends CI_model
 
     public function all_kasus(){
         $this->db->select('kasus.*, blackspot.*, blackspot.daerah_jalan, blackspot.idblack');
-        $this->db->order_by('blackspot.tahun', 'DESC');
         $this->db->from('kasus');
         $this->db->join('blackspot', 'kasus.id = blackspot.idblack');
         return $this->db->get()->result();
