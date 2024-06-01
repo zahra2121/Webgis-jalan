@@ -4,12 +4,13 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Riwayat Laporan Kejadian Kecelakaan Lalu Lintas</h4>
+                  <p class="card-description">Anda dapat menambah data laporan kecelakaan lalu lintas terbaru di Kabupaten Bantul</p>
 
                     <div class="card-body">
 
                     <a href="<?= base_url() ?>index.php/user/userlapor">
                     <button type="button" class="btn btn-success btn-icon-text">
-                    Tambah Data
+                    Tambah Laporan
                     <i class="mdi mdi-file-check btn-icon-append"></i>                                                                              
                   </button></a>
 
