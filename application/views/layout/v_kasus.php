@@ -122,7 +122,7 @@
                                   $Count = $Count + 1;
                             ?>
                         <Tr>
-                            <Td><?Php echo $Row->idkasus?></Td>
+                            <Td><?Php echo $Count?></Td>
                             <Td>
                                 <a href="<?= base_url('index.php/home/detailadmin/' . $Row->idkasus)?>"><button type="button" class="btn btn-warning">Detail</button></a>
                                 <input type="hidden" name="idkasus" value="<?=$Row->idkasus;?>">

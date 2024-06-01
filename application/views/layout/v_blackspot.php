@@ -162,10 +162,12 @@
                                     $query = $this->db->query($sql);
 
                                   }
+                                  $Count = 0;
                                   foreach ($blackspot as $value) {
+                                    $Count++;
                                 ?>
                             <Tr>
-                                <Td><?Php echo $value->idblack?></Td>
+                                <Td><?Php echo $Count?></Td>
                                 <Td><?Php echo $value->total_idkasus ?></Td>
                                 <Td><?Php echo $value->tahun_black?></Td>
                                 <Td><?Php echo $value->kecamatan?></Td>
