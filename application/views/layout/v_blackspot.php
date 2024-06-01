@@ -166,7 +166,7 @@
                                 ?>
                             <Tr>
                                 <Td><?Php echo $value->idblack?></Td>
-                                <Td><?Php echo $value->total_data ?></Td>
+                                <Td><?Php echo $value->total_idkasus ?></Td>
                                 <Td><?Php echo $value->tahun_black?></Td>
                                 <Td><?Php echo $value->kecamatan?></Td>
                                 <Td>
