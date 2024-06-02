@@ -8,6 +8,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="<?= base_url() ?>index.php/user">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="<?= base_url() ?>index.php/user/tabelsemua">Data Kasus</a></li>
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="<?= base_url() ?>index.php/user/lapor">Laporkan Kecelakaan</a></li>
                     </ul>
                 </div>

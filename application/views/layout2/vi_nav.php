@@ -10,6 +10,7 @@
                   <div class="template-demo">
                         <a href="<?= base_url() ?>index.php/user"><button type="button" class="btn btn-primary">Peta</button></a>
                         <a href="<?= base_url() ?>index.php/user/tabelsemua"><button type="button" class="btn btn-dark">Data Kasus</button></a>
+                        <a href="<?= base_url() ?>index.php/user/lapor"><button type="button" class="btn btn-dark">Laporan Kecelakaan</button></a>
                   </div>
                 </div>
             </div>
