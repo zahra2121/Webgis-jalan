@@ -88,7 +88,7 @@
                     foreach ($counttahun as $item){
                         $jur=$item->tahun;
                         $nama_status .= "'$jur'". ", ";
-                        $jum= $item->total_data;
+                        $jum= $item->total_idkasus;
                         $jumlah .= "$jum". ", ";
                     }
 
