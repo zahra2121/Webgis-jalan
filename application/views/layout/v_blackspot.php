@@ -143,10 +143,10 @@
 
                             var dataFirst = {
                               label: "Status Rawan ",
-                              borderColor: 'rgba(0,0,255,1)',
+                              borderColor: 'rgb(255,0,0)',
                               backgroundColor: 'transparent',
-                              pointBorderColor: 'blue',
-                              pointBackgroundColor: 'rgba(0,0,255,1)',
+                              pointBorderColor: 'red',
+                              pointBackgroundColor: 'rgb(255,0,0)',
                               pointRadius: 5,
                               pointHoverRadius: 10,
                               pointHitRadius: 30,
