@@ -122,7 +122,7 @@
                             data: {
                                 labels: [<?php echo $nama_status; ?>],
                                 datasets: [{
-                                    label:'Jumlah Data (/'.<?php echo $jumlah; ?>. ' kasus)',
+                                    label:'Jumlah Data (/'.<?php echo $jum; ?>. ' kasus)',
                                     borderDash: [5, 5],
                                     borderColor: ['rgb(255,165,0)'],
                                     backgroundColor: 'transparent',
