@@ -154,8 +154,8 @@
                                 <?Php
                                   foreach ($countblack as $key => $value) {
                                     $rataan = $value->totalsemua_aek/$value->total_data; //total aek/data black
-                                    echo $value->totalsemua_aek;
-                                    echo $value->total_data;
+                                    echo $value->totalsemua_aek. "<br>";
+                                    echo $value->total_data. "<br>";
                                     echo $rataan;
                                     
 
