@@ -120,19 +120,23 @@
                         $jum2=null;
                         $jum3=null;
                        
-                        foreach ($count_kategori as $item){
+                        foreach ($count_kat_rawan as $item){
                             $jur=$item->tahun;
                             $nama_status .= "'$jur'". ", ";
                             // AEK
                             $jum_aek= $item->tot_rawan;
                             $jum .= "$jum_aek". ", ";
+                        }
+                        foreach ($count_kat_aman as $item){
                             // BCA
                             $jum_bca= $item->tot_aman;
                             $jum2 .= "$jum_bca". ", ";
-                            // UCL
-                            $jum_ucl= $item->tot_proses;
-                            $jum3 .= "$jum_ucl". ", ";
                         }
+                        foreach ($count_kat_proses as $item){
+                          // UCL
+                          $jum_ucl= $item->tot_proses;
+                          $jum3 .= "$jum_ucl". ", ";
+                      }
                         ?>
                         <script>
                             var ctx = document.getElementById('myChart2').getContext('2d');
