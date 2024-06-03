@@ -92,28 +92,28 @@
                         $jumlah .= "$jum". ", ";
                     }
 
-                    //Inisialisasi nilai variabel awal
-                    $jum=null;
-                    $jum2=null;
-                    $jum3=null;
+                    // //Inisialisasi nilai variabel awal
+                    // $jum=null;
+                    // $jum2=null;
+                    // $jum3=null;
                     
-                    foreach ($count_kat_rawan as $item){
-                        // daerah rawan
-                        $jum_rawan= $item->tot_rawan;
-                        $jum .= "$jum_rawan". ", ";
-                    }
-                    foreach ($count_kat_aman as $item){
-                        // daerah bukan rawan
-                        $jum_aman= $item->tot_aman;
-                        $jum2 .= "$jum_aman". ", ";
-                    }
-                    foreach ($count_kat_proses as $item){
-                        // proses data
-                        $jum_proses= $item->tot_proses;
-                        $jum3 .= "$jum_proses". ", ";
-                    }
+                    // foreach ($count_kat_rawan as $item){
+                    //     // daerah rawan
+                    //     $jum_rawan= $item->tot_rawan;
+                    //     $jum .= "$jum_rawan". ", ";
+                    // }
+                    // foreach ($count_kat_aman as $item){
+                    //     // daerah bukan rawan
+                    //     $jum_aman= $item->tot_aman;
+                    //     $jum2 .= "$jum_aman". ", ";
+                    // }
+                    // foreach ($count_kat_proses as $item){
+                    //     // proses data
+                    //     $jum_proses= $item->tot_proses;
+                    //     $jum3 .= "$jum_proses". ", ";
+                    // }
                     ?>
-                    <!-- <script>
+                    <script>
                         var ctx = document.getElementById('myChart1').getContext('2d');
                         var chart = new Chart(ctx, {
                             // The type of chart we want to create
@@ -147,80 +147,6 @@
                                 }
                             }
                         });
-                    </script> -->
-                    <script>
-                        var ctx = document.getElementById('myChart1').getContext('2d');
-
-                        var dataFirst = {
-                            label: "Status Rawan ",
-                            borderColor: 'rgb(255,0,0)',
-                            backgroundColor: 'transparent',
-                            pointBorderColor: 'red',
-                            pointBackgroundColor: 'rgb(255,0,0)',
-                            pointRadius: 5,
-                            pointHoverRadius: 10,
-                            pointHitRadius: 30,
-                            pointBorderWidth: 2,
-                            pointStyle: 'rectRounded',
-                            data: [<?php echo $jum; ?>],
-                            lineTension: 0.3,
-                            // Set More Options 
-                        };
-                            
-                        var dataSecond = {
-                            label: "Status Bukan Rawan",
-                            borderColor: ['rgb(255,165,0)'],
-                            backgroundColor: 'transparent',
-                            pointBorderColor: 'orange',
-                            pointBackgroundColor: 'rgb(255,165,0)',
-                            pointRadius: 5,
-                            pointHoverRadius: 10,
-                            pointHitRadius: 30,
-                            pointBorderWidth: 2,
-                            pointStyle: 'rectRounded',
-                            data: [<?php echo $jum2; ?>],
-                            // Set More Options 
-                        };
-
-                        var dataThird = {
-                            label: "Status Proses ",
-                            borderColor: 'rgb(0,128,0)',
-                            backgroundColor: 'transparent',
-                            pointBorderColor: 'green',
-                            pointBackgroundColor: 'rgb(0,128,0)',
-                            pointRadius: 5,
-                            pointHoverRadius: 10,
-                            pointHitRadius: 30,
-                            pointBorderWidth: 2,
-                            pointStyle: 'rectRounded',
-                            data: [<?php echo $jum3; ?>],
-                            // Set More Options 
-                        };
-
-                        var dataFour = {
-                            label:'Jumlah Data (kasus) ',
-                            borderDash: [5, 5],
-                            borderColor: 'rgba(0,0,255,1)',
-                            backgroundColor: 'transparent',
-                            pointBorderColor: 'blue',
-                            pointBackgroundColor: 'rgba(0,0,255,1)',
-                            pointRadius: 5,
-                            pointHoverRadius: 10,
-                            pointHitRadius: 30,
-                            pointBorderWidth: 2,
-                            pointStyle: 'rectRounded',
-                            data: [<?php echo $jumlah; ?>]
-                        };
-                            
-                        var speedData = {
-                            labels: [<?php echo $nama_status; ?>],
-                            datasets: [dataFirst, dataSecond, dataThird, dataFour]
-                        };
-                        var lineChart = new Chart(ctx, {
-                            type: 'line',
-                            data: speedData
-                        });
-
                     </script>
                     </div>
                 </div>
