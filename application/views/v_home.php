@@ -91,6 +91,9 @@
                         $jum= $item->total_idkasus;
                         $jumlah .= "$jum". ", ";
                     }
+                    foreach ($countkasus as $item){
+                        $kasus=$item->total_kasus;
+                    }
 
                     // //Inisialisasi nilai variabel awal
                     // $jum=null;
@@ -122,7 +125,7 @@
                             data: {
                                 labels: [<?php echo $nama_status; ?>],
                                 datasets: [{
-                                    label:'Jumlah Data (/'.<?php echo $jum; ?>. ' kasus)',
+                                    label:'Jumlah Data (/'.<?= $kasus; ?>. ' kasus)',
                                     borderDash: [5, 5],
                                     borderColor: ['rgb(255,165,0)'],
                                     backgroundColor: 'transparent',
