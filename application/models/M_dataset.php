@@ -44,9 +44,9 @@ class M_dataset extends CI_model
 
     public function counting(){
         $this->db->select('*, SUM(blackspot.ucl) as totalsemua_ucl, SUM(blackspot.aek) as totalsemua_aek, COUNT(blackspot.daerah_jalan) as total_jalan, COUNT(blackspot.idblack) as total_data');
+        $this->db->order_by('blackspot.idblack', 'DESC');
         $this->db->from('blackspot');
         $this->db->group_by('blackspot.idblack');
-        $this->db->order_by('blackspot.idblack', SORT_DESC);
         $query=$this->db->get();
         return $query->result(); 
     }
@@ -80,6 +80,15 @@ class M_dataset extends CI_model
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
         $this->db->group_by('blackspot.tahun');
+        $query=$this->db->get();
+        return $query->result();
+    }
+
+    public function count_kategori(){
+        $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.idblack) as total_data, COUNT(kasus.id) as total_idkasus');
+        $this->db->from('blackspot');
+        $this->db->join('kasus', 'blackspot.idblack = kasus.id');
+        $this->db->group_by('blackspot.status');
         $query=$this->db->get();
         return $query->result();
     }
