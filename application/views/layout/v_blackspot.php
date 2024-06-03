@@ -107,6 +107,109 @@
                     </div>
                   </div>
 
+                  <!-- GRAFIK KATEGORI KECELAKAAN PER TAHUN -->
+                  <div class="card px-4 center grid-margin stretch-card" style="width: 100%; height:1100;">
+                    <div class="card-body"> 
+                        <center><h2 class="card-title mb-2 text-dark center">GRAFIK KATEGORI KECELAKAAN BERDASARKAN TAHUN</h2></center><br>
+                        
+                        <div style="width: 100%;"><canvas id="myChart1"></canvas>
+                        <?php
+                        //Inisialisasi nilai variabel awal
+                        $nama_status= "";
+                        $jum=null;
+                        $jum2=null;
+                        $jum3=null;
+                       
+                        foreach ($count_kategori as $item){
+                            $jur=$item->tahun;
+                            $nama_status .= "'$jur'". ", ";
+                            // AEK
+                            $jum_aek= $item->tot_rawan;
+                            $jum .= "$jum_aek". ", ";
+                            // BCA
+                            $jum_bca= $item->tot_aman;
+                            $jum2 .= "$jum_bca". ", ";
+                            // UCL
+                            $jum_ucl= $item->tot_proses;
+                            $jum3 .= "$jum_ucl". ", ";
+                        }
+                        ?>
+                        <script>
+                            var ctx = document.getElementById('myChart1').getContext('2d');
+
+                            var dataFirst = {
+                              label: "Status Rawan ",
+                              borderColor: 'rgba(0,0,255,1)',
+                              backgroundColor: 'transparent',
+                              pointBorderColor: 'blue',
+                              pointBackgroundColor: 'rgba(0,0,255,1)',
+                              pointRadius: 5,
+                              pointHoverRadius: 10,
+                              pointHitRadius: 30,
+                              pointBorderWidth: 2,
+                              pointStyle: 'rectRounded',
+                              data: [<?php echo $jum; ?>],
+                              lineTension: 0.3,
+                              // Set More Options 
+                            };
+                              
+                            var dataSecond = {
+                              label: "Status Bukan Rawan",
+                              borderColor: ['rgb(255,165,0)'],
+                              backgroundColor: 'transparent',
+                              pointBorderColor: 'orange',
+                              pointBackgroundColor: 'rgb(255,165,0)',
+                              pointRadius: 5,
+                              pointHoverRadius: 10,
+                              pointHitRadius: 30,
+                              pointBorderWidth: 2,
+                              pointStyle: 'rectRounded',
+                              data: [<?php echo $jum2; ?>],
+                              // Set More Options 
+                            };
+
+                            var dataThird = {
+                              label: "Status Proses ",
+                              borderColor: 'rgb(0,128,0)',
+                              backgroundColor: 'transparent',
+                              pointBorderColor: 'green',
+                              pointBackgroundColor: 'rgb(0,128,0)',
+                              pointRadius: 5,
+                              pointHoverRadius: 10,
+                              pointHitRadius: 30,
+                              pointBorderWidth: 2,
+                              pointStyle: 'rectRounded',
+                              data: [<?php echo $jum3; ?>],
+                              // Set More Options 
+                            };
+                              
+                            var speedData = {
+                              labels: [<?php echo $nama_status; ?>],
+                              datasets: [dataFirst, dataSecond, dataThird]
+                            };
+                            var lineChart = new Chart(ctx, {
+                              type: 'line',
+                              data: speedData
+                            });
+
+                        </script>
+                        
+                        <div class="card mx-2 px-4 py-4 my-2" style="width: 500px; height:300px;">
+                          <p><b>Penetuan Daerah Rawan</b></p>
+                          <p>︙ EAK ﹥ UCL  ⭢ <label class='badge bg-danger text-white' >DAERAH RAWAN</label></p>
+                          <p>︙ EAK ﹤ UCL  ⭢ <label class='badge bg-warning text-dark'>BUKAN DAERAH RAWAN </label></p>
+                          <p>︙ BCA ⭢ Batasan yang ada pada tingkat kecelakaan</p>
+                          
+                          <br>
+                          <p><b>Dimana </b></p>
+                          <p>︙EAK = Angka Ekivalen Kecelakaan</p>
+                          <p>︙BCA = Batas Kontrol Atas</p>
+                          <p>︙UCL = Upper Control Limit</p>
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+
                   <h4 class="card-title">TABEL BLACK SPOT</h4>
                   <p class="card-description">Area Daerah Rawan Kecelakaan Lalu Lintas di Kabupaten Bantul</p>
 

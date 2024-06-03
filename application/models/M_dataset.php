@@ -85,10 +85,9 @@ class M_dataset extends CI_model
     }
 
     public function count_kategori(){
-        $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.idblack) as total_data, COUNT(kasus.id) as total_idkasus');
+        $this->db->select('*, COUNT(blackspot.status = "0") as tot_rawan, COUNT(blackspot.status = "1") as tot_aman, COUNT(blackspot.status = "0") as tot_proses');
         $this->db->from('blackspot');
-        $this->db->join('kasus', 'blackspot.idblack = kasus.id');
-        $this->db->group_by('blackspot.status');
+        $this->db->group_by('blackspot.tahun');
         $query=$this->db->get();
         return $query->result();
     }
