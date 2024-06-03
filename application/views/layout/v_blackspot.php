@@ -133,10 +133,10 @@
                             $jum2 .= "$jum_bca". ", ";
                         }
                         foreach ($count_kat_proses as $item){
-                          // UCL
-                          $jum_ucl= $item->tot_proses;
-                          $jum3 .= "$jum_ucl". ", ";
-                      }
+                            // UCL
+                            $jum_ucl= $item->tot_proses;
+                            $jum3 .= "$jum_ucl". ", ";
+                        }
                         ?>
                         <script>
                             var ctx = document.getElementById('myChart2').getContext('2d');
