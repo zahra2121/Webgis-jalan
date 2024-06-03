@@ -222,6 +222,9 @@ class Home extends CI_Controller {
             'countblack' => $this->M_dataset->count_black(),
             'counting' => $this->M_dataset->counting(),
             'count_kategori' => $this->M_dataset->count_kategori(),
+            'countrawan' => $this->M_dataset->count_status(),
+            'countaman' => $this->M_dataset->count_aman(),
+            'countproses' => $this->M_dataset->count_proses(),
             'isi' => 'layout/v_blackspot'
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);
