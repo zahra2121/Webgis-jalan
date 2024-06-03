@@ -112,7 +112,7 @@
                     <div class="card-body"> 
                         <center><h2 class="card-title mb-2 text-dark center">GRAFIK KATEGORI KECELAKAAN BERDASARKAN TAHUN</h2></center><br>
                         
-                        <div style="width: 100%;"><canvas id="myChart1"></canvas>
+                        <div style="width: 100%;"><canvas id="myChart2"></canvas>
                         <?php
                         //Inisialisasi nilai variabel awal
                         $nama_status= "";
@@ -135,7 +135,7 @@
                         }
                         ?>
                         <script>
-                            var ctx = document.getElementById('myChart1').getContext('2d');
+                            var ctx = document.getElementById('myChart2').getContext('2d');
 
                             var dataFirst = {
                               label: "Status Rawan ",
