@@ -154,14 +154,14 @@
                                 <?Php
                                   foreach ($countblack as $key => $value) {
                                     $rataan = $value->totalsemua_aek/$value->total_data; //total aek/data black
-                                    echo $value->totalsemua_aek. "<br>"; //total aek = 1731
-                                    echo $value->total_data. "<br>"; // total data = 97
-                                    echo $rataan. "<br>"; // 1731/97 = 17.845
+                                    //total aek = 1731
+                                    // total data = 97
+                                    // rataan = 1731/97 = 17.84
                                     
 
                                     $kali = 3*sqrt($rataan);
-
-                                    echo $kali; // kali = 
+                                    // BCA = C + 3 akar C 
+                                   // kali = 12.67
                                     $bca = $rataan + $kali;
                                     $nilai_bca = round($bca,3);
                                     $sql = "UPDATE blackspot SET bca = '$nilai_bca'";
