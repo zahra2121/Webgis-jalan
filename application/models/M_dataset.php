@@ -44,7 +44,6 @@ class M_dataset extends CI_model
 
     public function counting(){
         $this->db->select('*, SUM(blackspot.ucl) as totalsemua_ucl, SUM(blackspot.aek) as totalsemua_aek, COUNT(blackspot.daerah_jalan) as total_jalan, COUNT(blackspot.idblack) as total_data');
-        $this->db->order_by('blackspot.idblack', 'DESC');
         $this->db->from('blackspot');
         $this->db->group_by('blackspot.idblack');
         $query=$this->db->get();
