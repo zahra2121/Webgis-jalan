@@ -76,11 +76,11 @@
         </section>
         
         <!-- GRAFIK ADMIN -->
-        <section class="col-lg-6 px-4 center grid-margin stretch-card" style="grid-template-columns: 33% 33% 33%; grid-template-rows: repeat(3, auto);">
+        <section class="col-lg-6 px-4 center grid-margin stretch-card" style="grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);">
             <div class="card mx-2 px-4 center grid-margin stretch-card">
                 <div class="card-body"> 
                     <center><h3 class="card-title mb-2 text-dark center">GRAFIK JUMLAH DATA KASUS KECELAKAAN BERDASARKAN TAHUN KEJADIAN</h3></center><br>
-                    <div style="grid-template-columns: 33% 33% 33%; grid-template-rows: repeat(3, auto);"><canvas id="myChart1"></canvas>
+                    <div style="grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);"><canvas id="myChart1"></canvas>
                     <?php
                     //Inisialisasi nilai variabel awal
                     $nama_status= "";
@@ -156,7 +156,7 @@
             <div class="card mx-3 px-4 center grid-margin stretch-card">
                 <div class="card-body"> 
                     <center><h3 class="card-title mb-2 text-dark center">GRAFIK JUMLAH DATA KASUS KECELAKAAN BERDASARKAN KECAMATAN</h3></center><br>
-                    <div style="grid-template-columns: 33% 33% 33%; grid-template-rows: repeat(3, auto);"><canvas id="myChart"></canvas>
+                    <div style="grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);"><canvas id="myChart"></canvas>
                     <?php
                     //Inisialisasi nilai variabel awal
                    
