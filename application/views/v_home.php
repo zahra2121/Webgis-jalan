@@ -92,9 +92,6 @@
                         $jum= $item->total_idkasus;
                         $jumlah .= "$jum". ", ";
                     }
-                    foreach ($countkasus as $item){
-                        $kasus=$item->total_kasus;
-                    }
 
                     // //Inisialisasi nilai variabel awal
                     // $jum=null;
