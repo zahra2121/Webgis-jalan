@@ -85,6 +85,7 @@
                     //Inisialisasi nilai variabel awal
                     $nama_status= "";
                     $jumlah=null;
+                    $kasus=null;
                     foreach ($counttahun as $item){
                         $jur=$item->tahun;
                         $nama_status .= "'$jur'". ", ";
