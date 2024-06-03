@@ -108,7 +108,7 @@
                   </div>
 
                   <!-- GRAFIK KATEGORI KECELAKAAN PER TAHUN -->
-                  <div class="card px-4 center grid-margin stretch-card" style="width: 100%; height:1100;">
+                  <div class="card px-4 center grid-margin stretch-card" style="width: 100%; height:500px;">
                     <div class="card-body"> 
                         <center><h2 class="card-title mb-2 text-dark center">GRAFIK KATEGORI KECELAKAAN BERDASARKAN TAHUN</h2></center><br>
                         
