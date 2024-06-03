@@ -88,7 +88,7 @@
                     foreach ($counttahun as $item){
                         $jur=$item->tahun;
                         $nama_status .= "'$jur'". ", ";
-                        $jum= $item->total_data;
+                        $jum= $item->total_idkasus;
                         $jumlah .= "$jum". ", ";
                     }
 
@@ -122,7 +122,7 @@
                             data: {
                                 labels: [<?php echo $nama_status; ?>],
                                 datasets: [{
-                                    label:'Jumlah Data (kasus) ',
+                                    label:'Jumlah Data (/'.<?php echo $jumlah; ?>. ' kasus)',
                                     borderDash: [5, 5],
                                     borderColor: ['rgb(255,165,0)'],
                                     backgroundColor: 'transparent',
