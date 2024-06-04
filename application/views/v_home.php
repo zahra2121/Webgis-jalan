@@ -93,26 +93,6 @@
                         $jumlah .= "$jum". ", ";
                     }
 
-                    // //Inisialisasi nilai variabel awal
-                    // $jum=null;
-                    // $jum2=null;
-                    // $jum3=null;
-                    
-                    // foreach ($count_kat_rawan as $item){
-                    //     // daerah rawan
-                    //     $jum_rawan= $item->tot_rawan;
-                    //     $jum .= "$jum_rawan". ", ";
-                    // }
-                    // foreach ($count_kat_aman as $item){
-                    //     // daerah bukan rawan
-                    //     $jum_aman= $item->tot_aman;
-                    //     $jum2 .= "$jum_aman". ", ";
-                    // }
-                    // foreach ($count_kat_proses as $item){
-                    //     // proses data
-                    //     $jum_proses= $item->tot_proses;
-                    //     $jum3 .= "$jum_proses". ", ";
-                    // }
                     ?>
                     <script>
                         var ctx = document.getElementById('myChart1').getContext('2d');

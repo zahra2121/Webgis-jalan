@@ -175,7 +175,7 @@
                             <Tr>
                                 <Td><?Php echo $Count?></Td>
                                 <Td><?Php echo $value->total_idkasus ?></Td>
-                                <Td><?Php echo $value->tahun_black?></Td>
+                                <Td><?Php echo $value->tahun?></Td>
                                 <Td><?Php echo $value->kecamatan?></Td>
                                 <Td>
                                   <?Php echo $value->daerah_jalan. 
