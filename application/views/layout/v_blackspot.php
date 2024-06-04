@@ -153,20 +153,20 @@
                           <tbody>
                                 <?Php
                                   foreach ($countblacktahun as $key => $value) {
-                                    $rataan = $value->totalsemua_aek/$value->total_data; //total aek/data black
+                                    //$rataan = $value->totalsemua_aek/$value->total_data; //total aek/data black
                                     echo $value->totalsemua_aek;
                                     //total aek = 1731
                                     // total data = 97
                                     // rataan = 1731/97 = 17.84
                                     
 
-                                    $kali = 3*sqrt($rataan);
-                                    // BCA = C + 3 akar C 
-                                   // kali = 12.67
-                                    $bca = $rataan + $kali;
-                                    $nilai_bca = round($bca,3);
-                                    $sql = "UPDATE blackspot SET bca = '$nilai_bca'";
-                                    $query = $this->db->query($sql);
+                                  //   $kali = 3*sqrt($rataan);
+                                  //   // BCA = C + 3 akar C 
+                                  //  // kali = 12.67
+                                  //   $bca = $rataan + $kali;
+                                  //   $nilai_bca = round($bca,3);
+                                  //   $sql = "UPDATE blackspot SET bca = '$nilai_bca'";
+                                  //   $query = $this->db->query($sql);
 
                                   }
                                   $Count = 0;
