@@ -219,8 +219,9 @@ class Home extends CI_Controller {
             'title' => 'blackspot',
             'blackspot' => $this->M_dataset->all_black(),
             'countkasus' => $this->M_dataset->count_kasus(),
-            'countblack' => $this->M_dataset->count_black_tahun(),
+            'countblack' => $this->M_dataset->count_black(),
             'counting' => $this->M_dataset->counting(),
+            'countblacktahun' => $this->M_dataset->count_tahun(),
             'isi' => 'layout/v_blackspot'
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);
