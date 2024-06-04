@@ -75,7 +75,7 @@ class M_dataset extends CI_model
     }
 
     public function count_tahun(){
-        $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.idblack) as total_data, COUNT(kasus.id) as total_idkasus, SUM(blackspot.aek) as totalsemua_aek, SUM(blackspot.ucl) as totalsemua_ucl');
+        $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.idblack) as total_data, COUNT(kasus.id) as total_idkasus');
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
         $this->db->group_by('blackspot.tahun');
