@@ -92,10 +92,9 @@ class M_dataset extends CI_model
         return $query->result(); 
     }
 
-    public function count_kat_aman(){
-        $this->db->select('*, COUNT(blackspot.status) as tot_aman');
+    public function count_kat_tahun(){
+        $this->db->select('*, COUNT(blackspot.status) as tot_aman, SUM(blackspot.aek) as totalsemua_aek, SUM(blackspot.ucl) as totalsemua_ucl');
         $this->db->from('blackspot');
-        $this->db->where('blackspot.status = "1"');
         $this->db->group_by('blackspot.tahun'); 
         $query=$this->db->get();
         return $query->result(); 
