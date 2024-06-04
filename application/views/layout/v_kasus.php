@@ -136,43 +136,43 @@
                                   switch ($month) {
                                     case 'January':
                                       echo "Januari ";
-                                        break;
-                                      case 'February':
-                                        echo "Februari ";
-                                        break;
-                                      case 'March':
-                                        echo "Maret ";
-                                        break;
-                                      case 'April':
-                                        echo "April ";
-                                        break;
-                                      case 'May':
-                                        echo "Mei ";
-                                        break;
-                                      case 'June':
-                                        echo "Juni ";
-                                        break;
-                                      case 'July':
-                                        echo "Juli ";
-                                        break;
-                                      case 'August':
-                                        echo "Agustus ";
-                                        break;
-                                      case 'September':
-                                        echo "September ";
-                                        break;
-                                      case 'October':
-                                        echo "Oktober ";
-                                        break;
-                                      case 'November':
-                                        echo "November ";
-                                        break;
-                                      default:
-                                        echo "Desember ";
-                                    }
-                                    echo date(' Y', strtotime($Row->tanggal));
-                                    echo "<br> Pukul ". date('H:i', strtotime($Row->jam))
-                                    ?>
+                                      break;
+                                    case 'February':
+                                      echo "Februari ";
+                                      break;
+                                    case 'March':
+                                      echo "Maret ";
+                                      break;
+                                    case 'April':
+                                      echo "April ";
+                                      break;
+                                    case 'May':
+                                      echo "Mei ";
+                                      break;
+                                    case 'June':
+                                      echo "Juni ";
+                                      break;
+                                    case 'July':
+                                      echo "Juli ";
+                                      break;
+                                    case 'August':
+                                      echo "Agustus ";
+                                      break;
+                                    case 'September':
+                                      echo "September ";
+                                      break;
+                                    case 'October':
+                                      echo "Oktober ";
+                                      break;
+                                    case 'November':
+                                      echo "November ";
+                                      break;
+                                    default:
+                                      echo "Desember ";
+                                  }
+                                  echo date(' Y', strtotime($Row->tanggal));
+                                  echo "<br> Pukul ". date('H:i', strtotime($Row->jam))
+                                  ?>
                             </Td>
                             <Td><?Php echo $Row->luka_ringan ?></Td>
                             <Td><?Php echo $Row->luka_berat ?></Td>

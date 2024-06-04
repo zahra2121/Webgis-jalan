@@ -24,9 +24,6 @@ class Home extends CI_Controller {
             'countproses' => $this->M_dataset->count_proses(),
             'counttahun' => $this->M_dataset->count_tahun(),
             'countkec' => $this->M_dataset->count_kecamatan(),
-            'count_kat_rawan' => $this->M_dataset->count_kat_status(),
-            'count_kat_aman' => $this->M_dataset->count_kat_aman(),
-            'count_kat_proses' => $this->M_dataset->count_kat_proses(),
             'isi' => 'v_home'
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);
@@ -222,7 +219,7 @@ class Home extends CI_Controller {
             'title' => 'blackspot',
             'blackspot' => $this->M_dataset->all_black(),
             'countkasus' => $this->M_dataset->count_kasus(),
-            'countblack' => $this->M_dataset->count_black(),
+            'countblack' => $this->M_dataset->count_black_tahun(),
             'counting' => $this->M_dataset->counting(),
             'isi' => 'layout/v_blackspot'
         );
