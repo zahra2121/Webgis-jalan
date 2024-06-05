@@ -491,12 +491,12 @@
                                         elseif($value->status == '1' and $value->aek < $value->bca){
                                             echo "color: 'yellow',
                                             fillColor: '#FFFF00',
-                                            fillOpacity: 0.5,
+                                            fillOpacity: 0.3,
                                             radius: 200";
                                         }else{
                                             echo "color: 'green',
                                             fillColor: '#008000',
-                                            fillOpacity: 0.5,
+                                            fillOpacity: 0.3,
                                             radius: 150";
                                         }
                                     ?>
