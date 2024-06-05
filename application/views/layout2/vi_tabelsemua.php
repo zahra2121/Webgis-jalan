@@ -4,7 +4,7 @@
               <div class="card">
                 <div class="card-body">
 
-                <!-- GRAFIK ADMIN -->
+              <!-- GRAFIK ADMIN
               <center><section class="col-lg-6 px-4 center grid-margin stretch-card" style="grid-template-columns: 70% 30%; grid-template-rows: repeat(2, auto);">
                   <div class="card mx-2 px-4 center grid-margin stretch-card">
                       <div class="card-body"> 
@@ -98,7 +98,7 @@
                           </div>
                       </div>
                   </div>
-            </section></center>
+            </section></center> -->
 
                 <div class="card-body">
                   <a href="<?= base_url() ?>index.php/laporanfpdf">
