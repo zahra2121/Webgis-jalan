@@ -5,12 +5,12 @@
                 <div class="card-body">
 
                 <!-- GRAFIK ADMIN -->
-              <center><section class="col-lg-6 px-4 center grid-margin stretch-card" style="grid-template-columns: 70% 30%; grid-template-rows: repeat(2, auto);">
+              <center><section class="col-lg-6 px-4 center grid-margin stretch-card" style="width: 70%;">
                   <div class="card mx-2 px-4 center grid-margin stretch-card">
                       <div class="card-body"> 
                       <center><h2 class="card-title mb-2 text-dark center">GRAFIK STATUS JALAN BERDASARKAN TAHUN TERJADI KECELAKAAN LALU LINTAS</h2></center><br>
                         
-                        <div style="width: 100%;"><canvas id="myChart1"></canvas>
+                        <div style="width: 70%;"><canvas id="myChart1"></canvas>
                         <?php
                         //Inisialisasi nilai variabel awal
                         $nama_status= "";
@@ -44,7 +44,7 @@
                               borderColor: 'rgb(255,0,0)',
                               backgroundColor: 'transparent',
                               pointBorderColor: 'red',
-                              pointBackgroundColor: 'rgb(255,0,0))',
+                              pointBackgroundColor: 'rgb(255,0,0)',
                               pointRadius: 5,
                               pointHoverRadius: 10,
                               pointHitRadius: 30,
