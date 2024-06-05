@@ -482,13 +482,13 @@
                         <?php foreach ($blackspot as $value) {?>
                             var circle = L.circle([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
                                     <?php
-                                        if($value->status == '0' and $value->aek > $value->ucl){
+                                        if($value->status == '0' and $value->aek > $value->bca){
                                             echo "color: 'red',
                                             fillColor: '#FF0000',
                                             fillOpacity: 0.7,
                                             radius: 200";
                                         }
-                                        elseif($value->status == '1' and $value->aek < $value->ucl){
+                                        elseif($value->status == '1' and $value->aek < $value->bca){
                                             echo "color: 'yellow',
                                             fillColor: '#FFFF00',
                                             fillOpacity: 0.5,
@@ -507,7 +507,8 @@
                                     }
                                     elseif($value->status == '1' and $value->aek < $value->bca){
                                         echo "<label class='badge bg-warning text-dark' name='$value->status' id='$value->status'>BUKAN DAERAH RAWAN</label>";
-                                    }else{
+                                    }
+                                    else{
                                         echo "<label class='badge bg-success text-white' name='$value->status' id='$value->status'>PROSES DATA</label>";
                                     }
                                
