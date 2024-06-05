@@ -19,7 +19,7 @@
                         $jum3=null;
                        
                         foreach ($jumrawan as $item){
-                            $jur=$item->idblack;
+                            $jur=$item->tahun;
                             $nama_status .= "'$jur'". ", ";
                             // status rawan
                             $jum_rawan= $item->tot_rawan;
