@@ -10,7 +10,7 @@
                       <div class="card-body"> 
                       <center><h2 class="card-title mb-2 text-dark center">GRAFIK STATUS JALAN BERDASARKAN TAHUN TERJADI KECELAKAAN LALU LINTAS</h2></center><br>
                         
-                        <div style="width: 70%;"><canvas id="myChart1"></canvas>
+                        <div style="width: 60%;"><canvas id="myChart1"></canvas>
                         <?php
                         //Inisialisasi nilai variabel awal
                         $nama_status= "";
