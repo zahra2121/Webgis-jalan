@@ -228,14 +228,14 @@
                                 </Td>
                                 <Td>
                                     <?Php
-                                      if($value->aek > $value->ucl){
+                                      if($value->aek > $value->ucl and $value->aek > $value->bca){
                                         $status = 0;
                                         $sql = "UPDATE blackspot SET status = '$status' WHERE idblack = '$value->idblack'";
                                         $query = $this->db->query($sql);
                                         
                                         echo "<label class='badge bg-danger text-white' name='$value->status' id='$value->status'>DAERAH RAWAN</label>";
                                       }
-                                      elseif($value->aek < $value->ucl){
+                                      elseif($value->aek < $value->ucl and $value->aek < $value->bca){
                                         $status = 1;
                                         $sql = "UPDATE blackspot SET status = '$status' WHERE idblack = '$value->idblack'";
                                         $query = $this->db->query($sql);
