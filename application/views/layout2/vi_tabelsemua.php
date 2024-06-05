@@ -5,10 +5,10 @@
                 <div class="card-body">
 
                 <!-- GRAFIK ADMIN -->
-              <center><section class="col-lg-6 px-4 center grid-margin stretch-card" style="grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);">
+              <center><section class="col-lg-6 px-4 center grid-margin stretch-card" style="grid-template-columns: 70% 30%; grid-template-rows: repeat(2, auto);">
                   <div class="card mx-2 px-4 center grid-margin stretch-card">
                       <div class="card-body"> 
-                      <center><h2 class="card-title mb-2 text-dark center">GRAFIK STATUS JALAN BERDASARKAN TAHUN TERJADI KECELAKAAN LALU LINTAS</h2></center><br>
+                      <center><h3 class="card-title mb-2 text-dark center">GRAFIK STATUS JALAN BERDASARKAN TAHUN TERJADI KECELAKAAN LALU LINTAS</h3></center><br>
                         
                         <div style="width: 100%;"><canvas id="myChart1"></canvas>
                         <?php
