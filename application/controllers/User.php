@@ -29,9 +29,6 @@ class User extends CI_Controller {
 		$data = array(
             'title' => 'kasus',
             'kasus' => $this->M_user->get_all_kasus(),
-            'jumrawan' => $this->M_user->count_kat_status(),
-            'jumaman' => $this->M_user->count_kat_aman(),
-            'jumproses' => $this->M_user->count_kat_proses(),
             'isi' => 'layout2/vi_detail'
         );
         $this->load->view('layout2/vi_wrapper', $data, FALSE);
@@ -59,6 +56,9 @@ class User extends CI_Controller {
 		$data = array(
             'title' => 'tabelsemua',
             'tabelsemua' => $this->M_user->kasus_black(),
+            'jumrawan' => $this->M_user->count_kat_status(),
+            'jumaman' => $this->M_user->count_kat_aman(),
+            'jumproses' => $this->M_user->count_kat_proses(),
             'isi' => 'layout2/vi_tabelsemua'
         );
         $this->load->view('layout2/vi_wrapper', $data, FALSE);
