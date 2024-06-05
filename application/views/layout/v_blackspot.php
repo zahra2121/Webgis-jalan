@@ -235,7 +235,7 @@
                                         
                                         echo "<label class='badge bg-danger text-white' name='$value->status' id='$value->status'>DAERAH RAWAN</label>";
                                       }
-                                      elseif($value->aek < $value->ucl and $value->aek < $value->bca){
+                                      elseif($value->aek < $value->ucl and $value->aek < $value->bca or $value->aek > $value->ucl and $value->aek < $value->bca){
                                         $status = 1;
                                         $sql = "UPDATE blackspot SET status = '$status' WHERE idblack = '$value->idblack'";
                                         $query = $this->db->query($sql);
