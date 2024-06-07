@@ -69,7 +69,7 @@
                         </div>
                       </div>
                       <div class="col-md-6">
-                        <p class="card-description"><b>Pusat Black Spot</b></p>
+                        <p class="card-description"><b>Pusat Black Spot (Latitude, Longitude)</b></p>
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Titik Latitude</label>
                           <div class="col-sm-9">
