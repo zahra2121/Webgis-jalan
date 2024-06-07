@@ -165,7 +165,7 @@
                         <tbody>
                             <Tr>
                                 <th class="text-dark"><h4>LATITUDE, LONGITUDE</h4></th>
-                                <Td><h3><b><?php echo "<label class='badge bg-secondary text-white'>$detailadmin->pusat_lat,$detailadmin->pusat_long</label>"?></b></h3></Td>
+                                <Td><h3><b><?php echo "<label class='badge bg-secondary text-white'>$detailadmin->pusat_lat, $detailadmin->pusat_long</label>"?></b></h3></Td>
                             </Tr>
                             <Tr>
                                 <th class="text-dark"><h4>KORBAN</h4></th>
