@@ -132,7 +132,8 @@
                         fillColor: '#FFFF00',
                         fillOpacity: 0.3,
                         radius: 30";
-                    }else{
+                    }
+                    elseif($detailadmin->status == '2' and $detailadmin->aek == 0){
                         echo "color: 'green',
                         fillColor: '#008000',
                         fillOpacity: 0.3,
