@@ -122,13 +122,13 @@
             // CIRCLE BLACK SPOT
             var circle = L.circle([<?= $detail->pusat_lat ?>, <?=$detail->pusat_long ?>], {
                 <?php
-                    if($detail->status == '0' and $detail->aek > $detail->ucl){
+                    if($detail->status == '0' and $detail->aek > $detail->bca){
                         echo "color: 'red',
                         fillColor: '#FF0000',
                         fillOpacity: 0.3,
                         radius: 30";
                     }
-                    elseif($detail->status == '1' and $detail->aek < $detail->ucl){
+                    elseif($detail->status == '1' and $detail->aek < $detail->bca){
                         echo "color: 'yellow',
                         fillColor: '#FFFF00',
                         fillOpacity: 0.3,
