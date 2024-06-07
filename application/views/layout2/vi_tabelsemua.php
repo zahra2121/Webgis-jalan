@@ -143,7 +143,8 @@
                                   }
                                   elseif($Row->status == '1' or $Row->aek < $Row->ucl){
                                     echo "<label class='badge bg-warning text-dark' name='1'>BUKAN DAERAH RAWAN</label>";
-                                  }else{
+                                  }
+                                  elseif($value->status == '2' and $value->aek == 0){
                                     echo "<label class='badge bg-success text-white' name='2'>PROSES DATA</label>";
                                   }
                                 ?>

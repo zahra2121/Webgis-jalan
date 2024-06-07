@@ -494,7 +494,8 @@
                                             fillOpacity: 0.3,
                                             borderOpacity: 0.5,
                                             radius: 200";
-                                        }else{
+                                        }
+                                        elseif($value->status == '2' and $value->aek == 0){
                                             echo "color: 'green',
                                             fillColor: '#008000',
                                             fillOpacity: 0.3,
