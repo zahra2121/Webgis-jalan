@@ -54,10 +54,10 @@
                     <h4 class="fw-bolder text-secondary">Kecamatan <?= $detailadmin->kecamatan ?>, Kabupaten <?= $detailadmin->kabupaten?></h4><br>
                     <h3 class="fw-bolder text-danger">
                         <?php
-                            if($detailadmin->status == '0' and $detailadmin->aek > $detailadmin->ucl){
+                            if($detailadmin->status == '0' and $detailadmin->aek > $detailadmin->bca){
                                 echo "<label class='badge bg-danger text-white' name='$detailadmin->status' id='$detailadmin->status'>DAERAH RAWAN</label>";
                             }
-                            elseif($detailadmin->status == '1' and $detailadmin->aek < $detailadmin->ucl){
+                            elseif($detailadmin->status == '1' and $detailadmin->aek < $detailadmin->bca){
                                 echo "<label class='badge bg-warning text-dark' name='$detailadmin->status' id='$detailadmin->status'>BUKAN DAERAH RAWAN</label>";
                             }
                             elseif($detailadmin->status == '2' and $detailadmin->aek == 0){

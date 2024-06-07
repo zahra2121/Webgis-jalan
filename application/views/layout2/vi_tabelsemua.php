@@ -138,13 +138,13 @@
                             <Td><?Php echo $Row->daerah_jalan ?></Td>
                             <Td>
                                 <?Php
-                                  if($Row->status == '0' or $Row->aek > $Row->ucl){
+                                  if($Row->status == '0' or $Row->aek > $Row->bca){
                                     echo "<label class='badge bg-danger text-white' name='0'>DAERAH RAWAN</label>";
                                   }
-                                  elseif($Row->status == '1' or $Row->aek < $Row->ucl){
+                                  elseif($Row->status == '1' or $Row->aek < $Row->bca){
                                     echo "<label class='badge bg-warning text-dark' name='1'>BUKAN DAERAH RAWAN</label>";
                                   }
-                                  elseif($value->status == '2' and $value->aek == 0){
+                                  elseif($Row->status == '2' and $Row->aek == 0){
                                     echo "<label class='badge bg-success text-white' name='2'>PROSES DATA</label>";
                                   }
                                 ?>
