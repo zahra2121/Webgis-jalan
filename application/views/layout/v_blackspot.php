@@ -95,13 +95,12 @@
                           <p><b>Penetuan Daerah Rawan</b></p>
                           <p>︙ EAK ﹥ UCL & BCA ⭢ <label class='badge bg-danger text-white' >DAERAH RAWAN</label></p>
                           <p>︙ EAK ﹤ UCL & BCA ⭢ <label class='badge bg-warning text-dark'>BUKAN DAERAH RAWAN </label></p>
-                          <p>︙ BCA ⭢ Batasan yang ada pada tingkat kecelakaan</p>
                           
                           <br>
                           <p><b>Dimana </b></p>
-                          <p>︙EAK = Angka Ekivalen Kecelakaan</p>
-                          <p>︙BCA = Batas Kontrol Atas</p>
-                          <p>︙UCL = Upper Control Limit</p>
+                          <p>︙EAK = Angka Ekivalen Kecelakaan (Pembobotan angka kecelakaan setiap titik jalan)</p>
+                          <p>︙BCA = Batas Kontrol Atas (Batasan tingkat rata-rata dari seluruh kecelakaan)</p>
+                          <p>︙UCL = Upper Control Limit (Penentuan daerah rawan kecelakaan setiap titik jalan)</p>
                         </div>
                         </div>
                     </div>
