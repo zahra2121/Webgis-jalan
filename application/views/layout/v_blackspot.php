@@ -242,7 +242,7 @@
                                         
                                         echo "<label class='badge bg-warning text-dark' name='$value->status' id='$value->status'>BUKAN DAERAH RAWAN</label>";
                                       }
-                                      else{
+                                      else if ($value->aek = 0){
                                         $status = 2;
                                         $sql = "UPDATE blackspot SET status = '$status' WHERE idblack = '$value->idblack'";
                                         $query = $this->db->query($sql);
