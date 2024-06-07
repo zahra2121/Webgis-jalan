@@ -116,7 +116,7 @@ class M_user extends CI_model
     public function count_kat_proses(){     
         $this->db->select('*, COUNT(blackspot.status) as tot_proses');
         $this->db->from('blackspot');
-        $this->db->where('blackspot.status = "2"');
+        $this->db->where('blackspot.status = "1"');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
         $this->db->group_by('blackspot.tahun');
         $query=$this->db->get();
