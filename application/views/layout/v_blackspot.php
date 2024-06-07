@@ -91,16 +91,16 @@
 
                         </script>
                         
-                        <div class="card mx-2 px-4 py-4 my-2" style="width: 500px; height:400px;">
+                        <div class="card mx-2 px-4 py-4 my-2" style="width: 700px; height:300px;">
                           <p><b>Penetuan Daerah Rawan</b></p>
                           <p>︙ EAK ﹥ UCL & BCA ⭢ <label class='badge bg-danger text-white' >DAERAH RAWAN</label></p>
                           <p>︙ EAK ﹤ UCL & BCA ⭢ <label class='badge bg-warning text-dark'>BUKAN DAERAH RAWAN </label></p>
                           
                           <br>
                           <p><b>Dimana </b></p>
-                          <p>︙EAK = Angka Ekivalen Kecelakaan <br> (Pembobotan angka kecelakaan setiap titik jalan)</p>
-                          <p>︙BCA = Batas Kontrol Atas <br> (Batasan tingkat rata-rata dari seluruh kecelakaan)</p>
-                          <p>︙UCL = Upper Control Limit <br> (Penentuan daerah rawan kecelakaan setiap titik jalan)</p>
+                          <p>︙EAK = Angka Ekivalen Kecelakaan (Pembobotan angka kecelakaan setiap titik jalan)</p>
+                          <p>︙BCA = Batas Kontrol Atas (Batasan tingkat rata-rata dari seluruh kecelakaan)</p>
+                          <p>︙UCL = Upper Control Limit (Penentuan daerah rawan kecelakaan setiap titik jalan)</p>
                         </div>
                         </div>
                     </div>
