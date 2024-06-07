@@ -93,8 +93,8 @@
                         
                         <div class="card mx-2 px-4 py-4 my-2" style="width: 500px; height:300px;">
                           <p><b>Penetuan Daerah Rawan</b></p>
-                          <p>︙ EAK ﹥ UCL  ⭢ <label class='badge bg-danger text-white' >DAERAH RAWAN</label></p>
-                          <p>︙ EAK ﹤ UCL  ⭢ <label class='badge bg-warning text-dark'>BUKAN DAERAH RAWAN </label></p>
+                          <p>︙ EAK ﹥ UCL & BCA ⭢ <label class='badge bg-danger text-white' >DAERAH RAWAN</label></p>
+                          <p>︙ EAK ﹤ UCL & BCA ⭢ <label class='badge bg-warning text-dark'>BUKAN DAERAH RAWAN </label></p>
                           <p>︙ BCA ⭢ Batasan yang ada pada tingkat kecelakaan</p>
                           
                           <br>
