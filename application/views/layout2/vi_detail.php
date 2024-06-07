@@ -61,7 +61,7 @@
                             elseif($detail->status == '1' and $detail->aek < $detail->ucl){
                                 echo "<label class='badge bg-warning text-dark' name='$detail->status' id='$detail->status'>BUKAN DAERAH RAWAN</label>";
                             }
-                            elseif($value->status == '2' and $value->aek == 0){
+                            elseif($detail->status == '2' and $detail->aek == 0){
                                 echo "<label class='badge bg-success text-white' name='$detail->status' id='$detail->status'>PROSES DATA</label>";
                             }
                         ?>
