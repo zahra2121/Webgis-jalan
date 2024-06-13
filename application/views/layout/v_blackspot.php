@@ -152,6 +152,7 @@
                           <tbody>
                                 <?Php
                                   foreach ($countblack as $key => $value) {
+                                    // hitung rata"
                                     $rataan = $value->totalsemua_aek/$value->total_data; //total aek/data black
                                    // echo $value->total_data;
                                     //total aek = 1731
