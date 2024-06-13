@@ -1,6 +1,6 @@
 <?php
 
-// CETAK DATA BLACKSPOT DATA
+// CETAK DATA RIWAYAT LAPORAN DATA
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Laporfpdf extends CI_Controller {
