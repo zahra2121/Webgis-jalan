@@ -257,7 +257,7 @@
                                 <Td>
                                     <a href="<?= base_url('index.php/home/edit_blackspot/' . $value->idblack)?>"><button type="button" class="btn btn-warning">Edit</button></a>
                                     <input type="hidden" name="idblack" value="<?=$value->idblack;?>">
-                                    <a href="<?= base_url('index.php/home/hapus_black/' . $value->idblack)?>" onclick="return confirm('Apakah Anda yakin ingin Menghapus Data <?=$value->tahun;?>, beralamat <?=$value->daerah_jalan;?> ?')"><button type="button" class="btn btn-danger">Hapus</button>
+                                    <a href="<?= base_url('index.php/home/hapus_black/' . $value->idblack)?>" onclick="return confirm('Apakah Anda yakin ingin Menghapus Data <?=$value->tahun;?>, beralamat <?=$value->daerah_jalan;?> ?')"><button type="button" class="btn btn-danger">Hapus</button></a>
                                 </Td>  
                             </Tr> 
                                                 

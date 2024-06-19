@@ -129,27 +129,6 @@ class User extends CI_Controller {
         );  
         
 	}
-
-    public function printmarker(){
-       // Load all views as normal
-       $data = array(
-        'title' => 'Data Titik Lokasi Daerah Rawan Kecelakaan Lalu Lintas di Kab. Bantul',
-        'printmarker' => $this->M_user->printmarker(),
-        'isi' => 'layout2/vi_printmarker'
-       );
-
-       $this->load->view('cetakmarker', $data);
-       // Get output html
-       $html = $this->output->get_output();
-   
-       // Load library
-       $this->load->library('dompdf_gen');
-   
-       // Convert to PDF
-       $this->dompdf->load_html($html);
-       $this->dompdf->render();
-       $this->dompdf->stream("cetakmarker" . ".pdf", array ('Attachment' => 0));
-    }
 }
 
 ?>

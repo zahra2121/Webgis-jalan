@@ -69,7 +69,7 @@
                             <Td>
                                 <a href="<?= base_url('index.php/home/edit_user/' . $Row->iduser)?>"><button type="button" class="btn btn-warning">Edit</button></a>
                                 <input type="hidden" name="iduser" value="<?=$Row->iduser;?>">
-                                <a href="<?= base_url('index.php/home/hapus_user/' . $Row->iduser)?>" onclick="return confirm('Apakah Anda yakin ingin Menghapus Data <?=$Row->username;?> ?')"><button type="button" class="btn btn-danger">Hapus</button>
+                                <a href="<?= base_url('index.php/home/hapus_user/' . $Row->iduser)?>" onclick="return confirm('Apakah Anda yakin ingin Menghapus Data <?=$Row->username;?> ?')"><button type="button" class="btn btn-danger">Hapus</button></a>
                             </Td> 
                         </Tr> 
                         <?Php   

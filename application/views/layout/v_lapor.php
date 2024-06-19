@@ -129,7 +129,7 @@
                             <Td>
                                 <a href="<?= base_url('index.php/home/edit_lapor/' . $Row->idlapor)?>"><button type="button" class="btn btn-warning">Edit</button></a>
                                 <input type="hidden" name="idlapor" value="<?=$Row->idlapor;?>">
-                                <a href="<?= base_url('index.php/home/hapus_lapor/' . $Row->idlapor)?>" onclick="return confirm('Apakah Anda yakin ingin Menghapus Data <?=$Row->tgl_kejadian;?>, beralamat <?=$Row->alamat;?> ?')"><button type="button" class="btn btn-danger">Hapus</button>
+                                <a href="<?= base_url('index.php/home/hapus_lapor/' . $Row->idlapor)?>" onclick="return confirm('Apakah Anda yakin ingin Menghapus Data <?=$Row->tgl_kejadian;?>, beralamat <?=$Row->alamat;?> ?')"><button type="button" class="btn btn-danger">Hapus</button></a>
                             </Td> 
                         </Tr> 
                         <?Php   
