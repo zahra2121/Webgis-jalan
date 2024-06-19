@@ -51,7 +51,7 @@
                             };
                               
                             var dataSecond = {
-                              label: "Nilai BCA ",
+                              label: "Nilai BKA ",
                               borderColor: ['rgb(255,165,0)'],
                               backgroundColor: 'transparent',
                               pointBorderColor: 'orange',
