@@ -40,7 +40,7 @@ class User extends CI_Controller {
             'lapor' => $this->M_user->get_all_lapor(),
             'isi' => 'layout2/vi_tabellapor'
         );
-        $this->load->view('layout2/vi_wrapper', $data, FALSE);
+        $this->load->view('layout2/vii_wrapper', $data, FALSE);
 	}
 
     public function userlapor(){
@@ -48,7 +48,7 @@ class User extends CI_Controller {
             'title' => 'userlapor',
             'isi' => 'layout2/vi_userlapor'
         );
-        $this->load->view('layout/v_wrapper', $data, FALSE);
+        $this->load->view('layout2/vi_wrapper', $data, FALSE);
 	}
 
     // BLACK SPOT
