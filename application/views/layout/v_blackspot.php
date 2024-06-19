@@ -7,7 +7,7 @@
                   <!-- GRAFIK NILAI AEK - BCA - UCL -->
                   <div class="card px-4 center grid-margin stretch-card" style="width: 100%; height:1100;">
                     <div class="card-body"> 
-                        <center><h2 class="card-title mb-2 text-dark center">GRAFIK NILAI AEK, BCA, DAN UCL BERDASARKAN DATA BLACKSPOT DALAM PENENTUAN DAERAH RAWAN KECELAKAAN LALU LINTAS</h2></center><br>
+                        <center><h2 class="card-title mb-2 text-dark center">GRAFIK NILAI AEK, BKA, DAN UCL BERDASARKAN DATA BLACKSPOT DALAM PENENTUAN DAERAH RAWAN KECELAKAAN LALU LINTAS</h2></center><br>
                         
                         <div style="width: 100%;"><canvas id="myChart1"></canvas>
                         <?php
@@ -93,13 +93,13 @@
                         
                         <div class="card mx-2 px-4 py-4 my-2" style="width: 700px; height:300px;">
                           <p><b>Penetuan Daerah Rawan</b></p>
-                          <p>︙ EAK ﹥ UCL & BCA ⭢ <label class='badge bg-danger text-white' >DAERAH RAWAN</label></p>
-                          <p>︙ EAK ﹤ UCL & BCA ⭢ <label class='badge bg-warning text-dark'>BUKAN DAERAH RAWAN </label></p>
+                          <p>︙ EAK ﹥ UCL & BKA ⭢ <label class='badge bg-danger text-white' >DAERAH RAWAN</label></p>
+                          <p>︙ EAK ﹤ UCL & BKA ⭢ <label class='badge bg-warning text-dark'>BUKAN DAERAH RAWAN </label></p>
                           
                           <br>
                           <p><b>Dimana </b></p>
                           <p>︙EAK = Angka Ekivalen Kecelakaan ⤏ Pembobotan angka kecelakaan setiap titik jalan</p>
-                          <p>︙BCA = Batas Kontrol Atas ⤏ Batasan tingkat rata-rata dari seluruh kecelakaan</p>
+                          <p>︙BKA = Batas Kontrol Atas ⤏ Batasan tingkat rata-rata dari seluruh kecelakaan</p>
                           <p>︙UCL = Upper Control Limit ⤏ Penentuan daerah rawan kecelakaan setiap titik jalan</p>
                         </div>
                         </div>
@@ -143,7 +143,7 @@
                               <th>Kecamatan</th>
                               <th>Daerah Jalan</th>
                               <th>EAK</th>
-                              <th>BCA</th>
+                              <th>BKA</th>
                               <th>UCL</th>
                               <th>Status Hasil</th>
                               <th>Opsi</th>
