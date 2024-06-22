@@ -251,8 +251,8 @@
                                       }
                                     ?>
                                   
-                                      <!-- EAK > UCL Rawan
-                                      EAK < UCL Tidak Rawan -->
+                                      <!-- EAK > UCL, BKA Rawan
+                                      EAK < UCL, BKA Tidak Rawan -->
                                 </Td>
                                 <Td>
                                     <a href="<?= base_url('index.php/home/edit_blackspot/' . $value->idblack)?>"><button type="button" class="btn btn-warning">Edit</button></a>
