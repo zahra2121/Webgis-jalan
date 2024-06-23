@@ -19,7 +19,7 @@
 					Sistem Informasi Geografis Pemetaan <br> Titik Lokasi Daerah Rawan Kecelakaan Lalu Lintas <br>yang terjadi di Kabupaten Bantul,<br> D I Yogyakarta
 					<br>© 2000018180
                 </h2>
-				<br><a href="<?= base_url() ?>index.php/login"><button type="button" class="btn btn-light btn-rounded btn-fw">LOGIN</button></a>
+				<!-- <br><a href="<?= base_url() ?>index.php/login"><button type="button" class="btn btn-light btn-rounded btn-fw">LOGIN</button></a> -->
 			</div>
 		</footer>
         <!-- Bootstrap core JS-->
