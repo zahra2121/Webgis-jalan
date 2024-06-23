@@ -4,7 +4,8 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Riwayat Laporan Kejadian Kecelakaan Lalu Lintas</h4>
-                  <p class="card-description">Anda dapat menambah data laporan kecelakaan lalu lintas terbaru di Kabupaten Bantul</p>
+                  <p class="card-description">Selamat Datang, Anda Login sebagai <?php echo ucfirst($this->session->userdata('nama')); ?></p>
+                  <p>Anda dapat menambah data laporan kecelakaan lalu lintas terbaru di Kabupaten Bantul</p>
 
                     <div class="card-body">
 
