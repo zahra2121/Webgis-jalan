@@ -147,6 +147,7 @@
                     $jum3 = null;
 
                     foreach ($countkec as $value){
+                        //jumlah kasus/kecamatan
                         $jur=$value->kecamatan;
                         $nama_status .= "'$jur'". ", ";
                         $jum= $value->total_data;
@@ -167,52 +168,32 @@
                     <script>
                         var ctx = document.getElementById('myChart').getContext('2d');
                         var densityData = {
-                            label: 'Jumlah Data (kasus)',
-                            data: [<?php echo $jumlah; ?>],
+                            label: 'Daerah Rawan',
+                            data: [<?php echo $jum2; ?>],
                             backgroundColor: [
-                                'rgba(0, 99, 132, 0.6)',
-                                'rgba(30, 99, 132, 0.6)',
-                                'rgba(60, 99, 132, 0.6)',
-                                'rgba(90, 99, 132, 0.6)',
-                                'rgba(120, 99, 132, 0.6)',
-                                'rgba(150, 99, 132, 0.6)',
-                                'rgba(180, 99, 132, 0.6)',
-                                'rgba(210, 99, 132, 0.6)',
-                                'rgba(240, 99, 132, 0.6)',
-                                'rgba(240, 99, 132, 0.6)',
-                                'rgba(210, 99, 132, 0.6)',
-                                'rgba(180, 99, 132, 0.6)',
-                                'rgba(150, 99, 132, 0.6)',
-                                'rgba(120, 99, 132, 0.6)',
-                                'rgba(90, 99, 132, 0.6)',
-                                'rgba(60, 99, 132, 0.6)',
-                                'rgba(30, 99, 132, 0.6)',
+                                'rgba(240, 99, 132, 0.6)'
+                            ],
+                            borderColor: [
+                                'rgba(240, 99, 132, 1)'
+                            ],
+                            borderWidth: 2,
+                            hoverBorderWidth: 0
+                        };
+
+                        var densityData2 = {
+                            label: 'Daerah Bukan Rawan',
+                            data: [<?php echo $jum3; ?>],
+                            backgroundColor: [
                                 'rgba(0, 99, 132, 0.6)'
                             ],
                             borderColor: [
-                                'rgba(0, 99, 132, 1)',
-                                'rgba(30, 99, 132, 1)',
-                                'rgba(60, 99, 132, 1)',
-                                'rgba(90, 99, 132, 1)',
-                                'rgba(120, 99, 132, 1)',
-                                'rgba(150, 99, 132, 1)',
-                                'rgba(180, 99, 132, 1)',
-                                'rgba(210, 99, 132, 1)',
-                                'rgba(240, 99, 132, 1)',
-                                'rgba(240, 99, 132, 1)',
-                                'rgba(210, 99, 132, 1)',
-                                'rgba(180, 99, 132, 1)',
-                                'rgba(150, 99, 132, 1)',
-                                'rgba(120, 99, 132, 1)',
-                                'rgba(90, 99, 132, 1)',
-                                'rgba(60, 99, 132, 1)',
-                                'rgba(30, 99, 132, 1)',
                                 'rgba(0, 99, 132, 1)'
                                 
                             ],
                             borderWidth: 2,
                             hoverBorderWidth: 0
                         };
+
                         var chartOptions = {
                         scales: {
                             yAxes: [{
@@ -255,18 +236,18 @@
                         type: 'bar',
                         data: {
                             labels: [<?php echo $nama_status; ?>],
-                            datasets: [densityData],
+                            datasets: [densityData, densityData2],
                         },
                         options: chartOptions
                         });
 
-                        var lineChart = new Chart(ctx, {
-                        type: 'line',
-                        data: {
-                            labels: [<?php echo $nama_status; ?>],
-                            datasets: [dataSecond, dataThird],
-                        }
-                        });
+                        // var lineChart = new Chart(ctx, {
+                        // type: 'line',
+                        // data: {
+                        //     labels: [<?php echo $nama_status; ?>],
+                        //     datasets: [dataSecond, dataThird],
+                        // }
+                        // });
                         
                     </script>
                     </div>
