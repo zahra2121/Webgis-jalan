@@ -153,7 +153,7 @@
                         $jumlah .= "$jum". ", ";
                     }
                     
-                    foreach ($countkatstatus as $item){
+                    foreach ($countkatrawan as $item){
                         // status rawan/kecamatan
                         $jum_status= $item->tot_rawan;
                         $jum2 .= "$jum_status". ", ";
@@ -223,10 +223,10 @@
                               
                         var dataSecond = {
                             label: "Daerah Rawan ",
-                            borderColor: ['rgb(255,165,0)'],
+                            borderColor: ['rgb(255,0,0)'],
                             backgroundColor: 'transparent',
-                            pointBorderColor: 'orange',
-                            pointBackgroundColor: 'rgb(255,165,0)',
+                            pointBorderColor: 'red',
+                            pointBackgroundColor: 'rgb(255,0,0)',
                             pointRadius: 5,
                             pointHoverRadius: 10,
                             pointHitRadius: 30,
@@ -238,10 +238,10 @@
 
                         var dataThird = {
                             label: "Daerah Bukan Rawan ",
-                            borderColor: 'rgb(0,128,0)',
+                            borderColor: 'rgb(255,165,0)',
                             backgroundColor: 'transparent',
-                            pointBorderColor: 'green',
-                            pointBackgroundColor: 'rgb(0,128,0)',
+                            pointBorderColor: 'orange',
+                            pointBackgroundColor: 'rgb(255,165,0)',
                             pointRadius: 5,
                             pointHoverRadius: 10,
                             pointHitRadius: 30,
@@ -263,7 +263,6 @@
                         var barChart = new Chart(ctx, {
                         type: 'line',
                         data: {
-                            labels: [<?php echo $nama_status; ?>],
                             datasets: [dataSecond, dataThird],
                         }
                         });
