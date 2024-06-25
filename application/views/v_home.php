@@ -216,8 +216,8 @@
                             label: 'Daerah Bukan Rawan',
                             data: [<?php echo $jum3; ?>],
                             backgroundColor: [
-                                'rgba(0, 99, 132, 0.6)',
-                                'rgba(0, 99, 132, 0.6)',
+                                'rgba(255, 99, 132, 0.6)',
+                                'rgba(255, 99, 132, 0.6)',
                                 'rgba(0, 99, 132, 0.6)',
                                 'rgba(0, 99, 132, 0.6)',
                                 'rgba(0, 99, 132, 0.6)',
