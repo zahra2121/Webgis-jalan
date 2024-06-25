@@ -142,6 +142,7 @@
                     //Inisialisasi nilai variabel awal
                    
                     $nama_status= "";
+                    $status= "";
                     $jumlah=null;
                     $jum2 = null;
                     $jum3 = null;
@@ -155,7 +156,7 @@
                     
                     foreach ($countkatrawan as $item){
                         $jur=$item->kecamatan;
-                        $nama_status .= "'$jur'". ", ";
+                        $status .= "'$jur'". ", ";
                         // status rawan/kecamatan
                         $jum_status= $item->tot_rawan;
                         $jum2 .= "$jum_status". ", ";
@@ -265,7 +266,7 @@
                         var barChart = new Chart(ctx, {
                         type: 'line',
                         data: {
-                            labels: [<?php echo $nama_status; ?>],
+                            labels: [<?php echo $status; ?>],
                             datasets: [dataSecond, dataThird],
                         }
                         });
