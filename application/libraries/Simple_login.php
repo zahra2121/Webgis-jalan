@@ -25,11 +25,15 @@ class Simple_login {
           $row  = $this->CI->db->query('SELECT * FROM user where username = "'.$username.'"');
           $admin = $row->row();
           $iduser   = $admin->iduser;
+          $email = $admin->email;
+          $namapengguna = $admin->nama;
 
           //set session user
           $this->CI->session->set_userdata('username', $username);
           $this->CI->session->set_userdata('id_login', uniqid(rand()));
           $this->CI->session->set_userdata('iduser', $iduser);
+          $this->CI->session->set_userdata('email', $email);
+          $this->CI->session->set_userdata('nama', $namapengguna);
 
 
                 if($row->num_rows() > 0){
@@ -39,18 +43,27 @@ class Simple_login {
                         $this->CI->session->set_userdata('username',$username);
                         $id=$x['iduser'];
                         if($x['level']=='1'){ //Admin
-                            $nama = $x['username'];
+                            $user = $x['username'];
+                            $ema = $x['email'];
+                            $nama = $x['nama'];
+
                             $this->CI->session->set_userdata('access','Admin');
                             $this->CI->session->set_userdata('iduser',$id);
+                            $this->CI->session->set_userdata('username',$user);
+                            $this->CI->session->set_userdata('email',$ema);
                             $this->CI->session->set_userdata('nama',$nama);
                              
                             //redirect ke halaman dashboard
                             redirect(site_url('home'));
 
                         }else if($x['level']=='2'){ //User lapor
-                            $nama = $x['username'];
+                            $user = $x['username'];
+                            $ema = $x['email'];
+                            $nama = $x['nama'];
                             $this->CI->session->set_userdata('access','User Lapor');
                             $this->CI->session->set_userdata('id',$id);
+                            $this->CI->session->set_userdata('username',$user);
+                            $this->CI->session->set_userdata('email',$ema);
                             $this->CI->session->set_userdata('nama',$nama);
                             
                             //redirect ke halaman lapor
@@ -112,6 +125,8 @@ class Simple_login {
     $this->CI->session->set_flashdata('sukses','Anda berhasil logout');
     $this->CI->session->sess_destroy();
     $this->CI->session->unset_userdata('username');
+    $this->CI->session->unset_userdata('email');
+    $this->CI->session->unset_userdata('name');
     $this->CI->session->unset_userdata('id_login');
     $this->CI->session->unset_userdata('id');
     redirect(site_url('login'));
