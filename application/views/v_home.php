@@ -155,7 +155,7 @@
                     
                     foreach ($countkatstatus as $item){
                         // status rawan/kecamatan
-                        $jum_status= $item->tot_status;
+                        $jum_status= $item->tot_rawan;
                         $jum2 .= "$jum_status". ", ";
                     }
                     foreach ($countkataman as $item){
@@ -167,51 +167,51 @@
                     <script>
                         var ctx = document.getElementById('myChart').getContext('2d');
                         var densityData = {
-                        label: 'Jumlah Data (kasus)',
-                        data: [<?php echo $jumlah; ?>],
-                        backgroundColor: [
-                            'rgba(0, 99, 132, 0.6)',
-                            'rgba(30, 99, 132, 0.6)',
-                            'rgba(60, 99, 132, 0.6)',
-                            'rgba(90, 99, 132, 0.6)',
-                            'rgba(120, 99, 132, 0.6)',
-                            'rgba(150, 99, 132, 0.6)',
-                            'rgba(180, 99, 132, 0.6)',
-                            'rgba(210, 99, 132, 0.6)',
-                            'rgba(240, 99, 132, 0.6)',
-                            'rgba(240, 99, 132, 0.6)',
-                            'rgba(210, 99, 132, 0.6)',
-                            'rgba(180, 99, 132, 0.6)',
-                            'rgba(150, 99, 132, 0.6)',
-                            'rgba(120, 99, 132, 0.6)',
-                            'rgba(90, 99, 132, 0.6)',
-                            'rgba(60, 99, 132, 0.6)',
-                            'rgba(30, 99, 132, 0.6)',
-                            'rgba(0, 99, 132, 0.6)'
-                        ],
-                        borderColor: [
-                            'rgba(0, 99, 132, 1)',
-                            'rgba(30, 99, 132, 1)',
-                            'rgba(60, 99, 132, 1)',
-                            'rgba(90, 99, 132, 1)',
-                            'rgba(120, 99, 132, 1)',
-                            'rgba(150, 99, 132, 1)',
-                            'rgba(180, 99, 132, 1)',
-                            'rgba(210, 99, 132, 1)',
-                            'rgba(240, 99, 132, 1)',
-                            'rgba(240, 99, 132, 1)',
-                            'rgba(210, 99, 132, 1)',
-                            'rgba(180, 99, 132, 1)',
-                            'rgba(150, 99, 132, 1)',
-                            'rgba(120, 99, 132, 1)',
-                            'rgba(90, 99, 132, 1)',
-                            'rgba(60, 99, 132, 1)',
-                            'rgba(30, 99, 132, 1)',
-                            'rgba(0, 99, 132, 1)'
-                            
-                        ],
-                        borderWidth: 2,
-                        hoverBorderWidth: 0
+                            label: 'Jumlah Data (kasus)',
+                            data: [<?php echo $jumlah; ?>],
+                            backgroundColor: [
+                                'rgba(0, 99, 132, 0.6)',
+                                'rgba(30, 99, 132, 0.6)',
+                                'rgba(60, 99, 132, 0.6)',
+                                'rgba(90, 99, 132, 0.6)',
+                                'rgba(120, 99, 132, 0.6)',
+                                'rgba(150, 99, 132, 0.6)',
+                                'rgba(180, 99, 132, 0.6)',
+                                'rgba(210, 99, 132, 0.6)',
+                                'rgba(240, 99, 132, 0.6)',
+                                'rgba(240, 99, 132, 0.6)',
+                                'rgba(210, 99, 132, 0.6)',
+                                'rgba(180, 99, 132, 0.6)',
+                                'rgba(150, 99, 132, 0.6)',
+                                'rgba(120, 99, 132, 0.6)',
+                                'rgba(90, 99, 132, 0.6)',
+                                'rgba(60, 99, 132, 0.6)',
+                                'rgba(30, 99, 132, 0.6)',
+                                'rgba(0, 99, 132, 0.6)'
+                            ],
+                            borderColor: [
+                                'rgba(0, 99, 132, 1)',
+                                'rgba(30, 99, 132, 1)',
+                                'rgba(60, 99, 132, 1)',
+                                'rgba(90, 99, 132, 1)',
+                                'rgba(120, 99, 132, 1)',
+                                'rgba(150, 99, 132, 1)',
+                                'rgba(180, 99, 132, 1)',
+                                'rgba(210, 99, 132, 1)',
+                                'rgba(240, 99, 132, 1)',
+                                'rgba(240, 99, 132, 1)',
+                                'rgba(210, 99, 132, 1)',
+                                'rgba(180, 99, 132, 1)',
+                                'rgba(150, 99, 132, 1)',
+                                'rgba(120, 99, 132, 1)',
+                                'rgba(90, 99, 132, 1)',
+                                'rgba(60, 99, 132, 1)',
+                                'rgba(30, 99, 132, 1)',
+                                'rgba(0, 99, 132, 1)'
+                                
+                            ],
+                            borderWidth: 2,
+                            hoverBorderWidth: 0
                         };
                         var chartOptions = {
                         scales: {
@@ -220,14 +220,6 @@
                             }]
                         },
                         };
-                        var barChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: {
-                            labels: [<?php echo $nama_status; ?>],
-                            datasets: [densityData],
-                        },
-                        options: chartOptions
-                        });
                               
                         var dataSecond = {
                             label: "Daerah Rawan ",
@@ -258,15 +250,24 @@
                             data: [<?php echo $jum3; ?>],
                             // Set More Options 
                         };
-                            
-                        var speedData = {
+
+                        var barChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
                             labels: [<?php echo $nama_status; ?>],
-                            datasets: [dataSecond, dataThird]
-                        };
-                        var lineChart = new Chart(ctx, {
-                            type: 'line',
-                            data: speedData
+                            datasets: [densityData],
+                        },
+                        options: chartOptions
                         });
+
+                        var barChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: [<?php echo $nama_status; ?>],
+                            datasets: [dataSecond, dataThird],
+                        }
+                        });
+                        
                     </script>
                     </div>
                 </div>
