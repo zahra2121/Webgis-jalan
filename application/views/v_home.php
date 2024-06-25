@@ -233,7 +233,7 @@
                         };
 
                         var barChart = new Chart(ctx, {
-                        type: 'bar',
+                        type: 'line',
                         data: {
                             labels: [<?php echo $nama_status; ?>],
                             datasets: [densityData, densityData2],
