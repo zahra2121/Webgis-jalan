@@ -147,7 +147,7 @@
                     $jum3 = null;
 
                     foreach ($countkec as $value){
-                        $jur=$item->kecamatan;
+                        $jur=$value->kecamatan;
                         $nama_status .= "'$jur'". ", ";
                         //jumlah kasus/kecamatan
                         $jum= $value->total_data;
