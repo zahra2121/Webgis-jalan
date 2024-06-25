@@ -295,22 +295,22 @@
                             // Set More Options 
                         };
 
-                        // var barChart = new Chart(ctx, {
-                        // type: 'bar',
-                        // data: {
-                        //     labels: [<?php echo $nama_status; ?>],
-                        //     datasets: [densityData, densityData2],
-                        // },
-                        // options: chartOptions
-                        // });
-
-                        var lineChart = new Chart(ctx, {
-                        type: 'line',
+                        var barChart = new Chart(ctx, {
+                        type: 'bar',
                         data: {
                             labels: [<?php echo $nama_status; ?>],
-                            datasets: [dataSecond, dataThird],
-                        }
+                            datasets: [densityData, densityData2],
+                        },
+                        options: chartOptions
                         });
+
+                        // var lineChart = new Chart(ctx, {
+                        // type: 'line',
+                        // data: {
+                        //     labels: [<?php echo $nama_status; ?>],
+                        //     datasets: [dataSecond, dataThird],
+                        // }
+                        // });
                         
                     </script>
                     </div>
