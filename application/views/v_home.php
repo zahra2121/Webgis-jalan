@@ -143,11 +143,25 @@
                    
                     $nama_status= "";
                     $jumlah=null;
+                    $jum2 = null;
+                    $jum3 = null;
+
                     foreach ($countkec as $value){
                         $jur=$value->kecamatan;
                         $nama_status .= "'$jur'". ", ";
                         $jum= $value->total_data;
                         $jumlah .= "$jum". ", ";
+                    }
+                    
+                    foreach ($countkatstatus as $item){
+                        // status rawan/kecamatan
+                        $jum_status= $item->tot_status;
+                        $jum2 .= "$jum_status". ", ";
+                    }
+                    foreach ($countkataman as $item){
+                        // status bukan rawan/kecamatan
+                        $jum_aman= $item->tot_aman;
+                        $jum3 .= "$jum_aman". ", ";
                     }
                     ?>
                     <script>
@@ -213,6 +227,45 @@
                             datasets: [densityData],
                         },
                         options: chartOptions
+                        });
+                              
+                        var dataSecond = {
+                            label: "Daerah Rawan ",
+                            borderColor: ['rgb(255,165,0)'],
+                            backgroundColor: 'transparent',
+                            pointBorderColor: 'orange',
+                            pointBackgroundColor: 'rgb(255,165,0)',
+                            pointRadius: 5,
+                            pointHoverRadius: 10,
+                            pointHitRadius: 30,
+                            pointBorderWidth: 2,
+                            pointStyle: 'rectRounded',
+                            data: [<?php echo $jum2; ?>],
+                            // Set More Options 
+                        };
+
+                        var dataThird = {
+                            label: "Daerah Bukan Rawan ",
+                            borderColor: 'rgb(0,128,0)',
+                            backgroundColor: 'transparent',
+                            pointBorderColor: 'green',
+                            pointBackgroundColor: 'rgb(0,128,0)',
+                            pointRadius: 5,
+                            pointHoverRadius: 10,
+                            pointHitRadius: 30,
+                            pointBorderWidth: 2,
+                            pointStyle: 'rectRounded',
+                            data: [<?php echo $jum3; ?>],
+                            // Set More Options 
+                        };
+                            
+                        var speedData = {
+                            labels: [<?php echo $nama_status; ?>],
+                            datasets: [dataSecond, dataThird]
+                        };
+                        var lineChart = new Chart(ctx, {
+                            type: 'line',
+                            data: speedData
                         });
                     </script>
                     </div>
