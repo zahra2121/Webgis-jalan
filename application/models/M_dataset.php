@@ -75,7 +75,7 @@ class M_dataset extends CI_model
     }
 
     public function count_tahun(){
-        $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.idblack) as total_data, COUNT(kasus.id) as total_idkasus');
+        $this->db->select('blackspot.*, kasus.*, blackspot.kecamatan, COUNT(blackspot.idblack) as total_data, COUNT(kasus.id) as total_idkasus');
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
         $this->db->group_by('blackspot.tahun');
@@ -84,7 +84,7 @@ class M_dataset extends CI_model
     }
 
     public function count_kat_status(){
-        $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.status) as tot_rawan');
+        $this->db->select('blackspot.*, kasus.*, blackspot.kecamatan, COUNT(blackspot.status) as tot_rawan');
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
         $this->db->where('blackspot.status = "0"');
