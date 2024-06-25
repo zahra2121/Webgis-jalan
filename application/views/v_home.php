@@ -260,9 +260,10 @@
                         options: chartOptions
                         });
 
-                        var barChart = new Chart(ctx, {
+                        var lineChart = new Chart(ctx, {
                         type: 'line',
                         data: {
+                            labels: [<?php echo $nama_status; ?>],
                             datasets: [dataSecond, dataThird],
                         }
                         });
