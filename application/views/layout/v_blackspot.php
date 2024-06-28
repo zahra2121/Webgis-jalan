@@ -98,7 +98,7 @@
                           
                           <br>
                           <p><b>Dimana </b></p>
-                          <p>︙EAK = Angka Ekivalen Kecelakaan ⤏ Pembobotan angka kecelakaan setiap titik jalan</p>
+                          <p>︙EAK = Angka Ekivalen Kecelakaan ⤏ Pembobotan angka kecelakaan setiap titik kasus kecelakaan</p>
                           <p>︙BKA = Batas Kontrol Atas ⤏ Batasan tingkat rata-rata dari seluruh kecelakaan</p>
                           <p>︙UCL = Upper Control Limit ⤏ Penentuan daerah rawan kecelakaan setiap titik jalan</p>
                         </div>
