@@ -9,6 +9,7 @@ class M_dataset extends CI_model
     public function all_lapor(){
         $this->db->select('*');
         $this->db->from('lapor');
+        $this->db->join('user', 'lapor.iduser = user.iduser', 'left');
         return $this->db->get()->result();
     }
 
