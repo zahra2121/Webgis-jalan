@@ -88,7 +88,7 @@ class M_dataset extends CI_model
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
         $this->db->group_by('blackspot.kecamatan');
-        $this->db->where('blackspot.status = 0');
+        $this->db->where('blackspot.status = "0"');
         $query=$this->db->get();
         return $query->result(); 
     }
@@ -98,7 +98,7 @@ class M_dataset extends CI_model
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
         $this->db->group_by('blackspot.kecamatan');
-        $this->db->where('blackspot.status = 1');
+        $this->db->where('blackspot.status = "1"');
         $query=$this->db->get();
         return $query->result(); 
     }
@@ -108,7 +108,7 @@ class M_dataset extends CI_model
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
         $this->db->group_by('blackspot.kecamatan');
-        $this->db->where('blackspot.status = 2');
+        $this->db->where('blackspot.status = "2"');
         $query=$this->db->get();
         return $query->result(); 
     }
