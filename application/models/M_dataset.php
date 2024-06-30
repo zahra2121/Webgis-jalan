@@ -87,7 +87,7 @@ class M_dataset extends CI_model
         $this->db->select('blackspot.*, kasus.*, blackspot.kecamatan, COUNT(blackspot.status) as tot_rawan');
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
-       // $this->db->group_by('blackspot.kecamatan');
+        $this->db->group_by('blackspot.kecamatan');
         $this->db->where('blackspot.status = "0"');
         $query=$this->db->get();
         return $query->result(); 
@@ -97,7 +97,7 @@ class M_dataset extends CI_model
         $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.status) as tot_aman, SUM(blackspot.aek) as totalsemua_aek, SUM(blackspot.ucl) as totalsemua_ucl');
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
-       // $this->db->group_by('blackspot.kecamatan');
+        $this->db->group_by('blackspot.kecamatan');
         $this->db->where('blackspot.status = "1"');
         $query=$this->db->get();
         return $query->result(); 
@@ -107,7 +107,7 @@ class M_dataset extends CI_model
         $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.status) as tot_proses');
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
-        //$this->db->group_by('blackspot.kecamatan');
+        $this->db->group_by('blackspot.kecamatan');
         $this->db->where('blackspot.status = "2"');
         $query=$this->db->get();
         return $query->result(); 
