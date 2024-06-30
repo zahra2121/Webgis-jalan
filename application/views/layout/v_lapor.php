@@ -28,7 +28,7 @@
                       <thead class="bg-success text-white">
                         <tr>
                           <th>No.</th>
-                          <th>Tanggal Lapor</th>
+                          <th>Nama & Tanggal Lapor</th>
                           <th>Alamat</th>
                           <th>Tanggal Kejadian</th>
                           <th>Jam</th>
