@@ -158,14 +158,17 @@
                     foreach ($countkatrawan as $item){
                         $jur=$item->kecamatan;
                         $nama_status .= "'$jur'". ", ";
-                        // status rawan/kecamatan
-                        $jum_rawan = $item->total_rawan;
-                        $jum2 .= "$jum_rawan". ", ";
+                        // // status rawan/kecamatan
+                        // $jum_rawan = $item->total_rawan;
+                        // $jum2 .= "$jum_rawan". ", ";
                     }
                     foreach ($countkataman as $item){
                         // status bukan rawan/kecamatan
                         $jum_aman = $item->total_aman;
                         $jum3 .= "$jum_aman". ", ";
+                        // status rawan/kecamatan
+                        $jum_rawan = $item->total_rawan;
+                        $jum2 .= "$jum_rawan". ", ";
                     }
                     ?>
                     <script>
