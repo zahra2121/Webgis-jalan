@@ -258,6 +258,21 @@
                             // Set More Options 
                         };
 
+                        var dataFour = {
+                            label: "Proses Data ",
+                            borderColor: 'rgb(0,128,0)',
+                            backgroundColor: 'transparent',
+                            pointBorderColor: 'green',
+                            pointBackgroundColor: 'rgb(0,128,0)',
+                            pointRadius: 5,
+                            pointHoverRadius: 10,
+                            pointHitRadius: 30,
+                            pointBorderWidth: 2,
+                            pointStyle: 'rectRounded',
+                            data: [<?php echo $jum4; ?>],
+                            // Set More Options 
+                        };
+
                         // var barChart = new Chart(ctx, {
                         // type: 'bar',
                         // data: {
@@ -269,7 +284,7 @@
 
                         var speedData = {
                             labels: [<?php echo $nama_status; ?>],
-                            datasets: [dataSecond, dataThird]
+                            datasets: [dataSecond, dataThird, dataFour]
                         };
                         var lineChart = new Chart(ctx, {
                             type: 'line',
