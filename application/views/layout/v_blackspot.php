@@ -36,10 +36,10 @@
 
                             var dataFirst = {
                               label: "Nilai AEK ",
-                              borderColor: 'rgba(0,0,255,1)',
+                              borderColor: ['rgba(0,0,255,1)'],
                               backgroundColor: 'transparent',
                               pointBorderColor: 'blue',
-                              pointBackgroundColor: 'rgba(0,0,255,1)',
+                              pointBackgroundColor:  ['rgba(0,0,255,1)'],
                               pointRadius: 5,
                               pointHoverRadius: 10,
                               pointHitRadius: 30,
@@ -55,7 +55,7 @@
                               borderColor: ['rgb(255,165,0)'],
                               backgroundColor: 'transparent',
                               pointBorderColor: 'orange',
-                              pointBackgroundColor: 'rgb(255,165,0)',
+                              pointBackgroundColor: ['rgb(255,165,0)'],
                               pointRadius: 5,
                               pointHoverRadius: 10,
                               pointHitRadius: 30,
@@ -67,10 +67,10 @@
 
                             var dataThird = {
                               label: "Nilai UCL ",
-                              borderColor: 'rgb(0,128,0)',
+                              borderColor: ['rgb(0,128,0)'],
                               backgroundColor: 'transparent',
                               pointBorderColor: 'green',
-                              pointBackgroundColor: 'rgb(0,128,0)',
+                              pointBackgroundColor: ['rgb(0,128,0)'],
                               pointRadius: 5,
                               pointHoverRadius: 10,
                               pointHitRadius: 30,

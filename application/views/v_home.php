@@ -233,7 +233,7 @@
                             borderColor: ['rgb(255,0,0)'],
                             backgroundColor: 'transparent',
                             pointBorderColor: 'red',
-                            pointBackgroundColor: 'rgb(255,0,0)',
+                            pointBackgroundColor: ['rgb(255,0,0)'],
                             pointRadius: 5,
                             pointHoverRadius: 10,
                             pointHitRadius: 30,
@@ -245,10 +245,10 @@
 
                         var dataThird = {
                             label: "Daerah Bukan Rawan ",
-                            borderColor: 'rgb(255,165,0)',
+                            borderColor: ['rgb(255,165,0)'],
                             backgroundColor: 'transparent',
                             pointBorderColor: 'orange',
-                            pointBackgroundColor: 'rgb(255,165,0)',
+                            pointBackgroundColor: ['rgb(255,165,0)'],
                             pointRadius: 5,
                             pointHoverRadius: 10,
                             pointHitRadius: 30,
@@ -260,10 +260,10 @@
 
                         var dataFour = {
                             label: "Proses Data ",
-                            borderColor: 'rgb(0,128,0)',
+                            borderColor: ['rgb(0,128,0)'],
                             backgroundColor: 'transparent',
                             pointBorderColor: 'green',
-                            pointBackgroundColor: 'rgb(0,128,0)',
+                            pointBackgroundColor: ['rgb(0,128,0)'],
                             pointRadius: 5,
                             pointHoverRadius: 10,
                             pointHitRadius: 30,
@@ -273,23 +273,23 @@
                             // Set More Options 
                         };
 
-                        var barChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: {
-                            labels: [<?php echo $status; ?>],
-                            datasets: [densityData],
-                        },
-                        options: chartOptions
-                        });
-
-                        // var speedData = {
-                        //     labels: [<?php echo $nama_status; ?>],
-                        //     datasets: [dataSecond, dataThird, dataFour]
-                        // };
-                        // var lineChart = new Chart(ctx, {
-                        //     type: 'line',
-                        //     data: speedData
+                        // var barChart = new Chart(ctx, {
+                        // type: 'bar',
+                        // data: {
+                        //     labels: [<?php echo $status; ?>],
+                        //     datasets: [densityData],
+                        // },
+                        // options: chartOptions
                         // });
+
+                        var speedData = {
+                            labels: [<?php echo $nama_status; ?>],
+                            datasets: [dataSecond, dataThird, dataFour]
+                        };
+                        var lineChart = new Chart(ctx, {
+                            type: 'line',
+                            data: speedData
+                        });
                     
                     </script>
                     </div>
