@@ -168,7 +168,7 @@
 
                         // status bukan rawan/kecamatan
                         $jum_rawan= $item->total_rawan;
-                        $jum3 .= "$jum_rawan". ", ";
+                        $jum2 .= "$jum_rawan". ", ";
                     }
                     ?>
                     <script>
