@@ -146,29 +146,29 @@
                     $jumlah=null;
                     $jum2 = null;
                     $jum3 = null;
+                    $jum4 = null;
 
-                    foreach ($countkec as $value){
-                        $jur=$value->kecamatan;
-                        $nama_status .= "'$jur'". ", ";
-                        $jum= $value->total_data;
-                        $jumlah .= "$jum". ", ";
-                    }
-                    
-                    // foreach ($countkatrawan as $item){
-                    //     $jurm=$item->kecamatan;
-                    //     $status .= "'$jurm'". ", ";
-                    //     // status rawan/kecamatan
-                    //     $jum_status= $item->tot_rawan;
-                    //     $jum2 .= "$jum_status". ", ";
+                    // foreach ($countkec as $value){
+                    //     $jur=$value->kecamatan;
+                    //     $nama_status .= "'$jur'". ", ";
+                    //     $jum= $value->total_data;
+                    //     $jumlah .= "$jum". ", ";
                     // }
-                    foreach ($countkataman as $item){
+                    
+                    foreach ($countkat as $item){
+                        $jur=$item->kecamatan;
+                        $nama_status .= "'$jur'". ", ";
+                        // status rawan/kecamatan
+                        $jum_rawan = $item->total_rawan;
+                        $jum2 .= "$jum_rawan". ", ";
+                        
                         // status bukan rawan/kecamatan
-                        $jum_aman= $item->total_aman;
+                        $jum_aman = $item->total_aman;
                         $jum3 .= "$jum_aman". ", ";
 
-                        // status bukan rawan/kecamatan
-                        $jum_rawan= $item->total_rawan;
-                        $jum2 .= "$jum_rawan". ", ";
+                        // status proses/kecamatan
+                        $jum_proses = $item->total_proses;
+                        $jum4 .= "$jum_proses". ", ";
                     }
                     ?>
                     <script>
