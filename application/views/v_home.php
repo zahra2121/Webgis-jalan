@@ -258,7 +258,7 @@
                             // Set More Options 
                         };
 
-                        var dataFour = {
+                        var dataFirst = {
                             label: "Proses Data ",
                             borderColor: ['rgb(0,128,0)'],
                             backgroundColor: 'transparent',
@@ -284,7 +284,7 @@
 
                         var speedData = {
                             labels: [<?php echo $nama_status; ?>],
-                            datasets: [dataSecond, dataThird, dataFour]
+                            datasets: [dataFirst, dataSecond, dataThird]
                         };
                         var lineChart = new Chart(ctx, {
                             type: 'line',
