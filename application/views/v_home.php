@@ -266,7 +266,7 @@
                         var lineChart = new Chart(ctx, {
                         type: 'line',
                         data: {
-                            labels: [<?php echo $nama_status; ?>],
+                            labels: [<?php echo $status; ?>],
                             datasets: [dataSecond, dataThird],
                         }
                         });
