@@ -49,7 +49,7 @@
                             ?>
                         <Tr>
                             <Td><?Php echo $Count?></Td>
-                            <Td><?Php echo date('d-m-Y, H:i', strtotime($Row->tanggal_isi)) ?></Td>
+                            <Td><?Php echo $Row->nama. "<br>"; echo date('d-m-Y, H:i', strtotime($Row->tanggal_isi)) ?></Td>
                             <Td><?Php echo $Row->alamat ?></Td>
                             <Td>
                                 <?php
