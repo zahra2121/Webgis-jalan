@@ -154,17 +154,21 @@
                         $jumlah .= "$jum". ", ";
                     }
                     
-                    foreach ($countkatrawan as $item){
-                        $jurm=$item->kecamatan;
-                        $status .= "'$jurm'". ", ";
-                        // status rawan/kecamatan
-                        $jum_status= $item->tot_rawan;
-                        $jum2 .= "$jum_status". ", ";
-                    }
+                    // foreach ($countkatrawan as $item){
+                    //     $jurm=$item->kecamatan;
+                    //     $status .= "'$jurm'". ", ";
+                    //     // status rawan/kecamatan
+                    //     $jum_status= $item->tot_rawan;
+                    //     $jum2 .= "$jum_status". ", ";
+                    // }
                     foreach ($countkataman as $item){
                         // status bukan rawan/kecamatan
-                        $jum_aman= $item->tot_aman;
+                        $jum_aman= $item->total_aman;
                         $jum3 .= "$jum_aman". ", ";
+
+                        // status bukan rawan/kecamatan
+                        $jum_rawan= $item->total_rawan;
+                        $jum3 .= "$jum_rawan". ", ";
                     }
                     ?>
                     <script>
