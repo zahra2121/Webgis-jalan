@@ -155,8 +155,8 @@
                     }
                     
                     foreach ($countkatrawan as $item){
-                        $jur=$item->kecamatan;
-                        $status .= "'$jur'". ", ";
+                        $jurm=$item->kecamatan;
+                        $status .= "'$jurm'". ", ";
                         // status rawan/kecamatan
                         $jum_status= $item->tot_rawan;
                         $jum2 .= "$jum_status". ", ";
