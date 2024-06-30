@@ -158,17 +158,14 @@
                     foreach ($countkatrawan as $item){
                         $jur=$item->kecamatan;
                         $nama_status .= "'$jur'". ", ";
-                        // // status rawan/kecamatan
-                        // $jum_rawan = $item->total_rawan;
-                        // $jum2 .= "$jum_rawan". ", ";
+                        // status rawan/kecamatan
+                        $jum_rawan = $item->total_rawan;
+                        $jum2 .= "$jum_rawan". ", ";
                     }
                     foreach ($countkataman as $item){
                         // status bukan rawan/kecamatan
                         $jum_aman = $item->total_aman;
                         $jum3 .= "$jum_aman". ", ";
-                        // status rawan/kecamatan
-                        $jum_rawan = $item->total_rawan;
-                        $jum2 .= "$jum_rawan". ", ";
                     }
                     ?>
                     <script>
@@ -258,23 +255,23 @@
                             // Set More Options 
                         };
 
-                        // var barChart = new Chart(ctx, {
-                        // type: 'bar',
-                        // data: {
-                        //     labels: [<?php echo $status; ?>],
-                        //     datasets: [densityData],
-                        // },
-                        // options: chartOptions
-                        // });
-
-                        var speedData = {
-                            labels: [<?php echo $nama_status; ?>],
-                            datasets: [dataSecond, dataThird]
-                        };
-                        var lineChart = new Chart(ctx, {
-                            type: 'line',
-                            data: speedData
+                        var barChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: [<?php echo $status; ?>],
+                            datasets: [densityData],
+                        },
+                        options: chartOptions
                         });
+
+                        // var speedData = {
+                        //     labels: [<?php echo $nama_status; ?>],
+                        //     datasets: [dataSecond, dataThird]
+                        // };
+                        // var lineChart = new Chart(ctx, {
+                        //     type: 'line',
+                        //     data: speedData
+                        // });
                     
                     </script>
                     </div>
