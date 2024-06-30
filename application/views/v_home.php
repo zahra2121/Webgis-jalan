@@ -230,7 +230,7 @@
                             backgroundColor: 'transparent',
                             pointBorderColor: 'red',
                             pointBackgroundColor: 'rgb(255,0,0)',
-                            pointRadius: 3,
+                            pointRadius: 5,
                             pointHoverRadius: 10,
                             pointHitRadius: 30,
                             pointBorderWidth: 2,
@@ -245,7 +245,7 @@
                             backgroundColor: 'transparent',
                             pointBorderColor: 'orange',
                             pointBackgroundColor: 'rgb(255,165,0)',
-                            pointRadius: 3,
+                            pointRadius: 5,
                             pointHoverRadius: 10,
                             pointHitRadius: 30,
                             pointBorderWidth: 2,
@@ -263,14 +263,15 @@
                         // options: chartOptions
                         // });
 
+                        var speedData = {
+                            labels: [<?php echo $nama_status; ?>],
+                            datasets: [dataSecond, dataThird]
+                        };
                         var lineChart = new Chart(ctx, {
-                        type: 'line',
-                        data: {
-                            labels: [<?php echo $status; ?>],
-                            datasets: [dataSecond, dataThird],
-                        }
+                            type: 'line',
+                            data: speedData
                         });
-                        
+                    
                     </script>
                     </div>
                 </div>
