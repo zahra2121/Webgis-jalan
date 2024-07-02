@@ -182,10 +182,10 @@ class M_dataset extends CI_model
     }
 
     public function getdetaillapor($data) {
-        $this->db->select('lapor.*, user.*');
+        $this->db->select('lapor.*, user.*, user.iduser, user.nama');
         $this->db->from('lapor');
         $this->db->where('lapor.idlapor', $data);
-        $this->db->join('user', 'lapor.idlapor = user.iduser');
+        $this->db->join('user', 'lapor.iduser = user.iduser');
         
         $query=$this->db->get();
         return $query->row(); 
