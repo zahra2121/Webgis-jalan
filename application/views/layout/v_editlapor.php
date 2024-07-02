@@ -32,7 +32,8 @@
                     </div>
                   </form>
 
-                  <h4 class="fw-bolder text-secondary">Tanggal Lapor <?Php echo date('d-m-Y, H:i', strtotime($detaillapor->tanggal_isi)) ?></h4><br>
+                  <p class="fw-bolder text-secondary"><b>TANGGAL LAPOR : </b><?Php echo date('d-m-Y, H:i', strtotime($detaillapor->tanggal_isi)) ?></p>
+                  <p class="fw-bolder text-secondary"><b>PENGIRIM : </b><?php echo $detaillapor->nama ?></p><br>
                   <table class="table" id="dataTable" width="100%" cellspacing="0">
                       <thead class="bg-success text-white">
                         <tr>
@@ -43,7 +44,6 @@
                           <th>Link Maps</th>
                           <th>Data Foto</th>
                           <th>Status Lapor</th>
-                          <th>Pengirim</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -125,7 +125,6 @@
                               ?>
                           </td>
                         </tr>
-                        <td><?php echo $detaillapor->nama ?></td> 
                       </tbody>
                   </table>
 
