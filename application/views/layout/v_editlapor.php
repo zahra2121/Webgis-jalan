@@ -32,8 +32,8 @@
                     </div>
                   </form>
 
-                  <p class="fw-bolder text-secondary"><b>TANGGAL LAPOR : </b><?Php echo date('d-m-Y, H:i', strtotime($detaillapor->tanggal_isi)) ?></p>
-                  <p class="fw-bolder text-secondary"><b>PENGIRIM : </b><?php echo $detaillapor->nama ?></p><br>
+                  <p class="card-description"><b>TANGGAL LAPOR : </b><?Php echo date('d-m-Y, H:i', strtotime($detaillapor->tanggal_isi)) ?></p>
+                  <p class="card-description"><b>PENGIRIM : </b><?php echo $detaillapor->nama ?></p><br>
                   <table class="table" id="dataTable" width="100%" cellspacing="0">
                       <thead class="bg-success text-white">
                         <tr>
