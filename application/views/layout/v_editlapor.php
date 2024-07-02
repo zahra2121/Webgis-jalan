@@ -56,12 +56,12 @@
                           ?>
                         <tr>
                           <Td><?Php echo $Count?></Td>
-                          <Td><?Php echo "<b>". $Row->nama. "</b><br>"; echo date('d-m-Y, H:i', strtotime($Row->tanggal_isi)) ?></Td>
-                          <Td><?Php echo $Row->alamat ?></Td>
+                          <Td><?Php echo date('d-m-Y, H:i', strtotime($detaillapor->tanggal_isi)) ?></Td>
+                          <Td><?Php echo $detaillapor->alamat ?></Td>
                           <Td>
                               <?php
-                              echo date('d ', strtotime($Row->tgl_kejadian));
-                              $month = date('F', strtotime($Row->tgl_kejadian));
+                              echo date('d ', strtotime($detaillapor->tgl_kejadian));
+                              $month = date('F', strtotime($detaillapor->tgl_kejadian));
                                 switch ($month) {
                                   case 'January':
                                     echo "Januari ";
@@ -99,21 +99,21 @@
                                     default:
                                       echo "Desember ";
                                   }
-                                  echo date(' Y', strtotime($Row->tgl_kejadian));  
+                                  echo date(' Y', strtotime($detaillapor->tgl_kejadian));  
                                   ?>
                           </Td>
-                          <Td><?Php echo date('H:i', strtotime($Row->jam)) ?></Td>
-                          <Td><?Php echo "LR : ". $Row->luka_ringan. "<br>";
-                            echo "LB : ". $Row->luka_berat. "<br>";
-                            echo "M  : " . $Row->meninggal. "<br>" ;
-                            echo "R  : " . $Row->rugi. "<br>" ;
+                          <Td><?Php echo date('H:i', strtotime($detaillapor->jam)) ?></Td>
+                          <Td><?Php echo "LR : ". $detaillapor->luka_ringan. "<br>";
+                            echo "LB : ". $detaillapor->luka_berat. "<br>";
+                            echo "M  : " . $detaillapor->meninggal. "<br>" ;
+                            echo "R  : " . $detaillapor->rugi. "<br>" ;
                           ?></Td>
                           <Td>
-                            <a href="<?Php echo $Row->link_maps ?>"><?Php echo $Row->link_maps ?></a>
+                            <a href="<?Php echo $detaillapor->link_maps ?>"><?Php echo $detaillapor->link_maps ?></a>
                           </Td>
                           <Td>
                             <?php
-                              $image = $Row->foto;
+                              $image = $detaillapor->foto;
                               if($image == null){
                                   echo $img = "No Photo";
                               } else {
@@ -123,10 +123,10 @@
                           </Td>
                           <td>
                               <?php 
-                                  if($Row->status_lapor == '0'){
+                                  if($detaillapor->status_lapor == '0'){
                                     echo "<label class='badge badge-danger' name='0'>DITOLAK</label>";
                                   }
-                                  elseif($Row->status_lapor == '1'){
+                                  elseif($detaillapor->status_lapor == '1'){
                                     echo "<label class='badge badge-success' name='1'>DITERIMA</label>";
                                   }else{
                                     echo "<label class='badge badge-warning' name='2'>DIPROSES</label>";
@@ -137,6 +137,9 @@
                         <?Php } ?>  
                       </tbody>
                   </table>
+
+                  <a href="<?= base_url('index.php/home/lapor/')?>"><button type="button" class="btn btn-warning btn-rounded btn-fw">Back</button></a>
+                  <button type="submit" class="btn btn-primary btn-rounded btn-fw">Verifikasi</button>
               </div>
             </div>
         </div>
