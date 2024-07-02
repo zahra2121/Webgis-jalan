@@ -32,7 +32,7 @@
                     </div>
                     <div class="row">
                       <div class="col-md-6">
-                        <div class="form-group row">
+                        <div class="row">
                           <label class="col-sm-3 col-form-label">Alamat Lengkap</label>
                           <div class="col-sm-9">
                             <input type="text" value="<?= $lapor->alamat ?>" name="alamat" class="form-control" placeholder="Alamat Lengkap" />
@@ -117,7 +117,7 @@
                     </div>
                     <br><br>
                     <a href="<?= base_url() ?>index.php/home/lapor"><button type="button" class="btn btn-warning btn-rounded btn-fw">Back</button></a>
-                    <a><button type="submit" class="btn btn-primary btn-rounded btn-fw text-white">Update</button></a>
+                    <a><button type="submit" class="btn btn-primary btn-rounded btn-fw text-white">Verifikasi</button></a>
 
                   </form>
                 </div>
