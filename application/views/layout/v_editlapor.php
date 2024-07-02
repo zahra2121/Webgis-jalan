@@ -32,11 +32,10 @@
                     </div>
                   </form>
 
-
+                  <h4 class="fw-bolder text-secondary">Tanggal Lapor <?Php echo date('d-m-Y, H:i', strtotime($detaillapor->tanggal_isi)) ?></h4><br>
                   <table class="table" id="dataTable" width="100%" cellspacing="0">
                       <thead class="bg-success text-white">
                         <tr>
-                          <th>Tanggal Lapor</th>
                           <th>Alamat</th>
                           <th>Tanggal Kejadian</th>
                           <th>Jam</th>
@@ -49,7 +48,6 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <Td><?Php echo date('d-m-Y, H:i', strtotime($detaillapor->tanggal_isi)) ?></Td>
                           <Td><?Php echo $detaillapor->alamat ?></Td>
                           <Td>
                               <?php
