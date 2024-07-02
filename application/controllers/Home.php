@@ -217,32 +217,36 @@ class Home extends CI_Controller {
     }
 
     public function detaillapor($data){
-        $data = array(
-            'title' => 'detaillapor',
-            'detaillapor' => $this->M_dataset->getdetaillapor($data),
-            'isi' => 'layout/v_editlapor'
-        );
-        $this->load->view('layout/v_wrapper', $data, FALSE);
-
-        //form akan diisi
-        $data = array(
-            'idlapor' => $data,
-            'iduser' => $this->input->post('iduser'),
-            'nama' => $this->input->post('nama'),
-            'tgl_kejadian' => $this->input->post('tgl_kejadian'),
-            'jam' => $this->input->post('jam'),
-            'alamat' => $this->input->post('alamat'),
-            'kecamatan' => $this->input->post('kecamatan'),
-            'luka_ringan' => $this->input->post('luka_ringan'),
-            'luka_berat' => $this->input->post('luka_berat'),
-            'rugi' => $this->input->post('rugi'),
-            'meninggal' => $this->input->post('meninggal'),
-            'status_lapor' => $this->input->post('status_lapor'),
-        ); 
-        $this->M_dataset->update_lapor($data);
-        $this->session->set_flashdata('pesan', 'Data Laporan Berhasil di Perbaharui !!');
+        if($this->form_validation->run() == FALSE) {
+            //jika validasi gagal atau tidak lolos validasi
+            $data = array(
+                'title' => 'editlapor',
+                'detaillapor' => $this->M_dataset->getdetaillapor($data),
+                'isi' => 'layout/v_editlapor'
+            );
+            $this->load->view('layout/v_wrapper', $data, FALSE);
+        } 
+        else{
+            //form akan diisi
+            $data = array(
+                'idlapor' => $data,
+                'iduser' => $this->input->post('iduser'),
+                'nama' => $this->input->post('nama'),
+                'tgl_kejadian' => $this->input->post('tgl_kejadian'),
+                'jam' => $this->input->post('jam'),
+                'alamat' => $this->input->post('alamat'),
+                'kecamatan' => $this->input->post('kecamatan'),
+                'luka_ringan' => $this->input->post('luka_ringan'),
+                'luka_berat' => $this->input->post('luka_berat'),
+                'rugi' => $this->input->post('rugi'),
+                'meninggal' => $this->input->post('meninggal'),
+                'status_lapor' => $this->input->post('status_lapor'),
+            );
+            $this->M_dataset->update_lapor($data);
+            $this->session->set_flashdata('pesan', 'Data Laporan Berhasil di Perbaharui !!');
             
-        redirect('home/lapor');
+            redirect('home/lapor');
+        }
            
 	}
 
