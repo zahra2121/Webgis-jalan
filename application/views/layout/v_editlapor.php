@@ -32,8 +32,8 @@
                     </div>
                   </form>
 
-                  <p class="card-description"><b>TANGGAL LAPOR : </b><?Php echo date('d-m-Y, H:i', strtotime($detaillapor->tanggal_isi)) ?></p>
-                  <p class="card-description"><b>PENGIRIM : </b><?php echo $detaillapor->nama ?></p><br>
+                  <p class="card-description"><b>Tanggal Lapor : </b><?Php echo date('d-m-Y', strtotime($detaillapor->tanggal_isi)) ?></p>
+                  <p class="card-description"><b>Jam Lapor : </b><?php echo date('H:i', strtotime($detaillapor->tanggal_isi)) ?></p><br>
                   <table class="table" id="dataTable" width="100%" cellspacing="0">
                       <thead class="bg-success text-white">
                         <tr>
@@ -43,7 +43,7 @@
                           <th>Jumlah Korban</th>
                           <th>Link Maps</th>
                           <th>Data Foto</th>
-                          <th>Status Lapor</th>
+                          <th>Pengirim</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -112,18 +112,7 @@
                               <img src='<?=base_url()?>assets/user_lapor/<?=$image;?>' style='width:130px; height:130px; border-radius: 5px; -moz-border-radius: 20px;' class="zoomable">
                             <?php } ?>
                           </Td>
-                          <td>
-                              <?php 
-                                  if($detaillapor->status_lapor == '0'){
-                                    echo "<label class='badge badge-danger' name='0'>DITOLAK</label>";
-                                  }
-                                  elseif($detaillapor->status_lapor == '1'){
-                                    echo "<label class='badge badge-success' name='1'>DITERIMA</label>";
-                                  }else{
-                                    echo "<label class='badge badge-warning' name='2'>DIPROSES</label>";
-                                  }
-                              ?>
-                          </td>
+                          <Td><?Php echo $detaillapor->nama ?></Td>
                         </tr>
                       </tbody>
                   </table>
