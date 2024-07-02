@@ -134,30 +134,30 @@ class Home extends CI_Controller {
 
     public function edit_lapor($data){
         //validasi form
-        $this->form_validation->set_rules('tgl_kejadian', 'Tanggal Kejadian', 'required', [
-            'required' => '%s Wajib Diisi'
-        ]);
-        $this->form_validation->set_rules('jam', 'Waktu Kejadian', 'required', [
-            'required' => '%s Wajib Diisi'
-        ]);
-        $this->form_validation->set_rules('kecamatan', 'Kecamatan', 'required', [
-            'required' => '%s Wajib Diisi'
-        ]);
-        $this->form_validation->set_rules('alamat', 'Alamat', 'required', [
-            'required' => '%s Wajib Diisi'
-        ]);
-        $this->form_validation->set_rules('luka_ringan', 'Jumlah Luka Ringan', 'required', [
-            'required' => '%s Wajib Diisi'
-        ]);
-        $this->form_validation->set_rules('luka_berat', 'Jumlah Luka Berat', 'required', [
-            'required' => '%s Wajib Diisi'
-        ]);
-        $this->form_validation->set_rules('meninggal', 'Jumlah Meninggal', 'required', [
-            'required' => '%s Wajib Diisi'
-        ]);
-        $this->form_validation->set_rules('rugi', 'Jumlah Kerugian Materil', 'required', [
-            'required' => '%s Wajib Diisi'
-        ]);
+        // $this->form_validation->set_rules('tgl_kejadian', 'Tanggal Kejadian', 'required', [
+        //     'required' => '%s Wajib Diisi'
+        // ]);
+        // $this->form_validation->set_rules('jam', 'Waktu Kejadian', 'required', [
+        //     'required' => '%s Wajib Diisi'
+        // ]);
+        // $this->form_validation->set_rules('kecamatan', 'Kecamatan', 'required', [
+        //     'required' => '%s Wajib Diisi'
+        // ]);
+        // $this->form_validation->set_rules('alamat', 'Alamat', 'required', [
+        //     'required' => '%s Wajib Diisi'
+        // ]);
+        // $this->form_validation->set_rules('luka_ringan', 'Jumlah Luka Ringan', 'required', [
+        //     'required' => '%s Wajib Diisi'
+        // ]);
+        // $this->form_validation->set_rules('luka_berat', 'Jumlah Luka Berat', 'required', [
+        //     'required' => '%s Wajib Diisi'
+        // ]);
+        // $this->form_validation->set_rules('meninggal', 'Jumlah Meninggal', 'required', [
+        //     'required' => '%s Wajib Diisi'
+        // ]);
+        // $this->form_validation->set_rules('rugi', 'Jumlah Kerugian Materil', 'required', [
+        //     'required' => '%s Wajib Diisi'
+        // ]);
         // $this->form_validation->set_rules('link_maps', 'Link Maps', 'required', [
         //     'required' => '%s Wajib Diisi'
         // ]);
@@ -170,6 +170,7 @@ class Home extends CI_Controller {
             $data = array(
                 'title' => 'editlapor',
                 'lapor' => $this->M_dataset->detail_lapor($data),
+                'detaillapor' => $this->M_dataset->getdetaillapor($data),
                 'isi' => 'layout/v_editlapor'
             );
             $this->load->view('layout/v_wrapper', $data, FALSE);
@@ -178,7 +179,8 @@ class Home extends CI_Controller {
             //form akan diisi
             $data = array(
                 'idlapor' => $data,
-                //'iduser' => $this->session->userdata('iduser'),
+                'iduser' => $this->input->post('iduser'),
+                'nama' => $this->input->post('nama'),
                 'tgl_kejadian' => $this->input->post('tgl_kejadian'),
                 'jam' => $this->input->post('jam'),
                 'alamat' => $this->input->post('alamat'),
@@ -213,6 +215,32 @@ class Home extends CI_Controller {
             
         redirect('home/lapor');
     }
+
+    public function detaillapor($data){
+        $data = array(
+            'title' => 'detaillapor',
+            'detaillapor' => $this->M_dataset->getdetaillapor($data),
+            'isi' => 'layout/v_editlapor'
+        );
+        $this->load->view('layout/v_wrapper', $data, FALSE);
+
+        //form akan diisi
+        $data = array(
+            'idlapor' => $data,
+            'iduser' => $this->input->post('iduser'),
+            'nama' => $this->input->post('nama'),
+            'tgl_kejadian' => $this->input->post('tgl_kejadian'),
+            'jam' => $this->input->post('jam'),
+            'alamat' => $this->input->post('alamat'),
+            'kecamatan' => $this->input->post('kecamatan'),
+            'luka_ringan' => $this->input->post('luka_ringan'),
+            'luka_berat' => $this->input->post('luka_berat'),
+            'rugi' => $this->input->post('rugi'),
+            'meninggal' => $this->input->post('meninggal'),
+            'status_lapor' => $this->input->post('status_lapor'),
+        ); 
+           
+	}
 
 
     // BLACKSPOT

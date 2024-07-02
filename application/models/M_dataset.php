@@ -181,6 +181,16 @@ class M_dataset extends CI_model
         return $query->row(); 
     }
 
+    public function getdetaillapor($data) {
+        $this->db->select('lapor.*, user.*');
+        $this->db->from('lapor');
+        $this->db->where('lapor.idlapor', $data);
+        $this->db->join('user', 'lapor.idlapor = user.iduser');
+        
+        $query=$this->db->get();
+        return $query->row(); 
+    }
+
     public function getkasus() {
         $this->db->select('kasus.id, kasus.idkasus');
         $this->db->from('kasus');
