@@ -30,7 +30,6 @@
                         </div>
                       </div>
                     </div>
-                  </form>
 
                   <p class="card-description"><b>Tanggal Lapor : </b><?Php echo date('d-m-Y', strtotime($detaillapor->tanggal_isi)) ?></p>
                   <p class="card-description"><b>Jam Lapor : </b><?php echo date('H:i', strtotime($detaillapor->tanggal_isi)) ?></p><br>
@@ -117,8 +116,9 @@
                       </tbody>
                   </table>
 
-                  <a href="<?= base_url('index.php/home/lapor/')?>"><button type="button" class="btn btn-warning btn-rounded btn-fw">Back</button></a>
+                  <a href="<?= base_url('index.php/home/lapor')?>"><button type="button" class="btn btn-warning btn-rounded btn-fw">Back</button></a>
                   <button type="submit" class="btn btn-primary btn-rounded btn-fw">Verifikasi</button>
+                </form>
               </div>
             </div>
         </div>
