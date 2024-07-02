@@ -36,11 +36,11 @@
                   <table class="table" id="dataTable" width="100%" cellspacing="0">
                       <thead class="bg-success text-white">
                         <tr>
-                          <th>No.</th>
                           <th>Tanggal Lapor</th>
                           <th>Alamat</th>
                           <th>Tanggal Kejadian</th>
                           <th>Jam</th>
+                          <th>Jumlah Korban</th>
                           <th>Link Maps</th>
                           <th>Data Foto</th>
                           <th>Status Lapor</th>
@@ -48,14 +48,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                          <?Php
-                            $jumlah = 0;
-                            $Count = 0;
-                            foreach ($detaillapor as $Row) {
-                                $Count = $Count + 1;
-                          ?>
                         <tr>
-                          <Td><?Php echo $Count?></Td>
                           <Td><?Php echo date('d-m-Y, H:i', strtotime($detaillapor->tanggal_isi)) ?></Td>
                           <Td><?Php echo $detaillapor->alamat ?></Td>
                           <Td>
@@ -134,7 +127,7 @@
                               ?>
                           </td>
                         </tr>
-                        <?Php } ?>  
+                        <td><?php echo $detaillapor->nama ?></td> 
                       </tbody>
                   </table>
 
