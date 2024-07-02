@@ -118,7 +118,7 @@
 
                   <a href="<?= base_url('index.php/home/lapor')?>"><button type="button" class="btn btn-warning btn-rounded btn-fw">Back</button></a>
                   <button type="submit" class="btn btn-primary btn-rounded btn-fw">Verifikasi</button>
-                </form>
+                  </form>
               </div>
             </div>
         </div>
