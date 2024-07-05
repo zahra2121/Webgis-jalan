@@ -134,9 +134,9 @@ class Home extends CI_Controller {
 
     public function edit_lapor($data){
     //     //validasi form
-    //     // $this->form_validation->set_rules('tgl_kejadian', 'Tanggal Kejadian', 'required', [
-    //     //     'required' => '%s Wajib Diisi'
-    //     // ]);
+            $this->form_validation->set_rules('status_lapor', 'Status lapor', 'required', [
+                'required' => '%s Wajib Diisi'
+            ]);
     //     // $this->form_validation->set_rules('jam', 'Waktu Kejadian', 'required', [
     //     //     'required' => '%s Wajib Diisi'
     //     // ]);
@@ -169,7 +169,7 @@ class Home extends CI_Controller {
             //jika validasi gagal atau tidak lolos validasi
             $data = array(
                 'title' => 'editlapor',
-                'lapor' => $this->M_dataset->detail_lapor($data),
+                //'lapor' => $this->M_dataset->detail_lapor($data),
                 'editlapor' => $this->M_dataset->getdetaillapor($data),
                 'isi' => 'layout/v_editlapor'
             );
