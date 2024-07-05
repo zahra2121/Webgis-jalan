@@ -22,17 +22,17 @@
                   <div class="col-sm-4">
                     <select class="form-control" name="status_lapor">
                       <option value="" >- Pilih -</option>
-                      <option value="0" <?= $editlapor->status_lapor == 0 ? 'selected' : ''?>>DITOLAK</option>
-                      <option value="1" <?= $editlapor->status_lapor == 1 ? 'selected' : ''?>>DITERIMA</option>
-                      <option value="2" <?= $editlapor->status_lapor == 2 ? 'selected' : ''?>>DIPROSES</option>
+                      <option value="0" <?= $lapor->status_lapor == 0 ? 'selected' : ''?>>DITOLAK</option>
+                      <option value="1" <?= $lapor->status_lapor == 1 ? 'selected' : ''?>>DITERIMA</option>
+                      <option value="2" <?= $lapor->status_lapor == 2 ? 'selected' : ''?>>DIPROSES</option>
                     </select>
                   </div>
                 </div>
               </div>
             </div>
 
-          <p class="card-description"><b>Tanggal Lapor : </b><?Php echo date('d-m-Y', strtotime($editlapor->tanggal_isi)) ?></p>
-          <p class="card-description"><b>Jam Lapor : </b><?php echo date('H:i', strtotime($editlapor->tanggal_isi)) ?></p><br>
+          <p class="card-description"><b>Tanggal Lapor : </b><?Php echo date('d-m-Y', strtotime($lapor->tanggal_isi)) ?></p>
+          <p class="card-description"><b>Jam Lapor : </b><?php echo date('H:i', strtotime($lapor->tanggal_isi)) ?></p><br>
           <table class="table" id="dataTable" width="100%" cellspacing="0">
               <thead class="bg-success text-white">
                 <tr>
@@ -47,11 +47,11 @@
               </thead>
               <tbody>
                 <tr>
-                  <Td><?Php echo $editlapor->alamat ?></Td>
+                  <Td><?Php echo $lapor->alamat ?></Td>
                   <Td>
                       <?php
-                      echo date('d ', strtotime($editlapor->tgl_kejadian));
-                      $month = date('F', strtotime($editlapor->tgl_kejadian));
+                      echo date('d ', strtotime($lapor->tgl_kejadian));
+                      $month = date('F', strtotime($lapor->tgl_kejadian));
                         switch ($month) {
                           case 'January':
                             echo "Januari ";
@@ -89,21 +89,21 @@
                             default:
                               echo "Desember ";
                           }
-                          echo date(' Y', strtotime($editlapor->tgl_kejadian));  
+                          echo date(' Y', strtotime($lapor->tgl_kejadian));  
                           ?>
                   </Td>
-                  <Td><?Php echo date('H:i', strtotime($editlapor->jam)) ?></Td>
-                  <Td><?Php echo "LR : ". $editlapor->luka_ringan. "<br>";
-                    echo "LB : ". $editlapor->luka_berat. "<br>";
-                    echo "M  : " . $editlapor->meninggal. "<br>" ;
-                    echo "R  : " . $editlapor->rugi. "<br>" ;
+                  <Td><?Php echo date('H:i', strtotime($lapor->jam)) ?></Td>
+                  <Td><?Php echo "LR : ". $lapor->luka_ringan. "<br>";
+                    echo "LB : ". $lapor->luka_berat. "<br>";
+                    echo "M  : " . $lapor->meninggal. "<br>" ;
+                    echo "R  : " . $lapor->rugi. "<br>" ;
                   ?></Td>
                   <Td>
-                    <a href="<?Php echo $editlapor->link_maps ?>"><?Php echo $editlapor->link_maps ?></a>
+                    <a href="<?Php echo $lapor->link_maps ?>"><?Php echo $lapor->link_maps ?></a>
                   </Td>
                   <Td>
                     <?php
-                      $image = $editlapor->foto;
+                      $image = $lapor->foto;
                       if($image == null){
                           echo $img = "No Photo";
                       } else {

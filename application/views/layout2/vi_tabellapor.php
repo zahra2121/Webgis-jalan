@@ -47,7 +47,7 @@
                               $jumlah = 0;
                               $Count = 0;
                               
-                              foreach ($editlapor as $Row) {
+                              foreach ($lapor as $Row) {
                                 if($Row->iduser == $user){
                                   $Count = $Count + 1;
                             ?>
