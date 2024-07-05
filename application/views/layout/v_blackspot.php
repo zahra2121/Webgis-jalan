@@ -142,6 +142,7 @@
                               <th>Tahun</th>
                               <th>Kecamatan</th>
                               <th>Daerah Jalan</th>
+                              <th>Patokan Jalan</th>
                               <th>EAK</th>
                               <th>BKA</th>
                               <th>UCL</th>
@@ -184,6 +185,7 @@
                                    ", ". $value->pusat_long. ")"
                                   ?>
                                 </Td>
+                                <Td><?Php echo $value->patokan?></Td>
                                 <Td>
                                     <?Php
                                       $aek = jumlah_aek($value->m_aek, $value->lr_aek, $value->lb_aek, $value->r_aek);

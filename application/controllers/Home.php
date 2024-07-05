@@ -133,37 +133,10 @@ class Home extends CI_Controller {
 	}
 
     public function edit_lapor($data){
-    //     //validasi form
+         //validasi form
             $this->form_validation->set_rules('status_lapor', 'Status lapor', 'required', [
                 'required' => '%s Wajib Diisi'
             ]);
-    //     // $this->form_validation->set_rules('jam', 'Waktu Kejadian', 'required', [
-    //     //     'required' => '%s Wajib Diisi'
-    //     // ]);
-    //     // $this->form_validation->set_rules('kecamatan', 'Kecamatan', 'required', [
-    //     //     'required' => '%s Wajib Diisi'
-    //     // ]);
-    //     // $this->form_validation->set_rules('alamat', 'Alamat', 'required', [
-    //     //     'required' => '%s Wajib Diisi'
-    //     // ]);
-    //     // $this->form_validation->set_rules('luka_ringan', 'Jumlah Luka Ringan', 'required', [
-    //     //     'required' => '%s Wajib Diisi'
-    //     // ]);
-    //     // $this->form_validation->set_rules('luka_berat', 'Jumlah Luka Berat', 'required', [
-    //     //     'required' => '%s Wajib Diisi'
-    //     // ]);
-    //     // $this->form_validation->set_rules('meninggal', 'Jumlah Meninggal', 'required', [
-    //     //     'required' => '%s Wajib Diisi'
-    //     // ]);
-    //     // $this->form_validation->set_rules('rugi', 'Jumlah Kerugian Materil', 'required', [
-    //     //     'required' => '%s Wajib Diisi'
-    //     // ]);
-    //     // $this->form_validation->set_rules('link_maps', 'Link Maps', 'required', [
-    //     //     'required' => '%s Wajib Diisi'
-    //     // ]);
-    //     // $this->form_validation->set_rules('foto', 'Foto', 'required', [
-    //     //     'required' => '%s Wajib Diisi'
-    //     // ]);
 
         if($this->form_validation->run() == FALSE) {
             //jika validasi gagal atau tidak lolos validasi
@@ -312,6 +285,9 @@ class Home extends CI_Controller {
         $this->form_validation->set_rules('daerah_jalan', 'Daerah Jalan', 'required', [
             'required' => '%s Wajib Diisi'
         ]);
+        $this->form_validation->set_rules('patokan', 'Patokan Jalan', 'required', [
+            'required' => '%s Wajib Diisi'
+        ]);
         $this->form_validation->set_rules('pusat_lat', 'Titik Latitude', 'required', [
             'required' => '%s Wajib Diisi'
         ]);
@@ -334,6 +310,7 @@ class Home extends CI_Controller {
                 'kecamatan' => $this->input->post('kecamatan'),
                 'kabupaten' => $this->input->post('kabupaten'),
                 'daerah_jalan' => $this->input->post('daerah_jalan'),
+                'patokan' => $this->input->post('patokan'),
                 'pusat_lat' => $this->input->post('pusat_lat'),
                 'pusat_long' => $this->input->post('pusat_long'),
             );
@@ -432,6 +409,9 @@ class Home extends CI_Controller {
         $this->form_validation->set_rules('daerah_jalan', 'Daerah Jalan', 'required', [
             'required' => '%s Wajib Diisi'
         ]);
+        $this->form_validation->set_rules('patokan', 'Patokan Jalan', 'required', [
+            'required' => '%s Wajib Diisi'
+        ]);
         $this->form_validation->set_rules('pusat_lat', 'Titik Latitude', 'required', [
             'required' => '%s Wajib Diisi'
         ]);
@@ -456,6 +436,7 @@ class Home extends CI_Controller {
                 'kecamatan' => $this->input->post('kecamatan'),
                 'kabupaten' => $this->input->post('kabupaten'),
                 'daerah_jalan' => $this->input->post('daerah_jalan'),
+                'patokan' => $this->input->post('patokan'),
                 'pusat_lat' => $this->input->post('pusat_lat'),
                 'pusat_long' => $this->input->post('pusat_long'),
             
