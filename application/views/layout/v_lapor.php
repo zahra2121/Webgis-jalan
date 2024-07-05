@@ -44,7 +44,7 @@
                               $jumlah = 0;
                               $Count = 0;
                               $user = $this->session->userdata('iduser');
-                              foreach ($editlapor as $Row) {
+                              foreach ($edit_lapor as $Row) {
                                   $Count = $Count + 1;
                             ?>
                         <Tr>
