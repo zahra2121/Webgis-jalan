@@ -127,7 +127,7 @@
                                 ?>
                             </td>
                             <Td>
-                                <a href="<?= base_url('index.php/home/detaillapor/' . $Row->idlapor)?>"><button type="button" class="btn btn-warning">Verifikasi</button></a>
+                                <a href="<?= base_url('index.php/home/editlapor/' . $Row->idlapor)?>"><button type="button" class="btn btn-warning">Verifikasi</button></a>
                                 <input type="hidden" name="idlapor" value="<?=$Row->idlapor;?>">
                             </Td> 
                         </Tr> 
