@@ -216,11 +216,11 @@ class Home extends CI_Controller {
         redirect('home/lapor');
     }
 
-    public function detaillapor($data){
+    public function editlapor($data){
         if($this->form_validation->run() == FALSE) {
             //jika validasi gagal atau tidak lolos validasi
             $data = array(
-                'title' => 'detaillapor',
+                'title' => 'editlapor',
                 'detaillapor' => $this->M_dataset->getdetaillapor($data),
                 'isi' => 'layout/v_editlapor'
             );
