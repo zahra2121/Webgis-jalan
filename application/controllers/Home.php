@@ -170,7 +170,7 @@ class Home extends CI_Controller {
             $data = array(
                 'title' => 'editlapor',
                 'lapor' => $this->M_dataset->detail_lapor($data),
-                'edit_lapor' => $this->M_dataset->getdetaillapor($data),
+                'editlapor' => $this->M_dataset->getdetaillapor($data),
                 'isi' => 'layout/v_editlapor'
             );
             $this->load->view('layout/v_wrapper', $data, FALSE);
