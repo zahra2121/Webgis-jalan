@@ -243,7 +243,7 @@ class Home extends CI_Controller {
                 'status_lapor' => $this->input->post('status_lapor')
             );
             $this->M_dataset->update_lapor($data);
-            $this->session->set_flashdata('pesan', 'Data Laporan Berhasil di Perbaharui !!');
+            $this->session->set_flashdata('pesan', 'Data Lapor Berhasil di Perbaharui !!');
             
             redirect('home/lapor');
         }
