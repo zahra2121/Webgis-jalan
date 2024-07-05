@@ -180,7 +180,7 @@ class Home extends CI_Controller {
             $data = array(
                 'idlapor' => $data,
                 'iduser' => $this->input->post('iduser'),
-                'nama' => $this->input->post('nama'),
+               // 'nama' => $this->input->post('nama'),
                 'tgl_kejadian' => $this->input->post('tgl_kejadian'),
                 'jam' => $this->input->post('jam'),
                 'alamat' => $this->input->post('alamat'),
