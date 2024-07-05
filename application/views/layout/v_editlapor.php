@@ -1,4 +1,4 @@
-<<?php echo form_open('home/editlapor/' . $editlapor->idlapor)?>
+<<?php echo form_open('home/edit_lapor/' . $editlapor->idlapor)?>
 
 <div class="main-panel">
     <br><div class="container col-10 grid-margin">
@@ -117,8 +117,8 @@
           </table>
 
           <br>
-          <a href="<?= base_url() ?>index.php/home/daftar_user"><button type="button" class="btn btn-warning btn-rounded btn-fw">Back</button></a>
-          <a><button type="submit" class="btn btn-primary btn-rounded btn-fw text-white">Update</button></a>
+          <a href="<?= base_url() ?>index.php/home/lapor"><button type="button" class="btn btn-warning btn-rounded btn-fw">Back</button></a>
+          <a><button type="submit" class="btn btn-primary btn-rounded btn-fw text-white">Verifikasi</button></a>
           </form>
         </div>
       </div>
