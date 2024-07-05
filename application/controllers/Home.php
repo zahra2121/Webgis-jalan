@@ -194,7 +194,7 @@ class Home extends CI_Controller {
             $this->M_dataset->update_lapor($data);
             $this->session->set_flashdata('pesan', 'Data Laporan Berhasil di Perbaharui !!');
             
-            redirect('home/lapor');
+            redirect('home/blackspot');
         }
 	}
 
