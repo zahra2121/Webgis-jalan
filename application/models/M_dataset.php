@@ -186,9 +186,7 @@ class M_dataset extends CI_model
         $this->db->from('lapor');
         $this->db->where('lapor.idlapor', $data);
         $this->db->join('user', 'lapor.iduser = user.iduser');
-        
-        $query=$this->db->get();
-        return $query->row(); 
+        return $this->db->get()->row();
     }
 
     public function getkasus() {

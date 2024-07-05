@@ -221,7 +221,7 @@ class Home extends CI_Controller {
             //jika validasi gagal atau tidak lolos validasi
             $data = array(
                 'title' => 'editlapor',
-                'detaillapor' => $this->M_dataset->getdetaillapor($data),
+                'editlapor' => $this->M_dataset->getdetaillapor($data),
                 'isi' => 'layout/v_editlapor'
             );
             $this->load->view('layout/v_wrapper', $data, FALSE);
@@ -240,7 +240,7 @@ class Home extends CI_Controller {
                 'luka_berat' => $this->input->post('luka_berat'),
                 'rugi' => $this->input->post('rugi'),
                 'meninggal' => $this->input->post('meninggal'),
-                'status_lapor' => $this->input->post('status_lapor')
+                'status_lapor' => $this->input->post('status_lapor'),
             );
             $this->M_dataset->update_lapor($data);
             $this->session->set_flashdata('pesan', 'Data Lapor Berhasil di Perbaharui !!');
