@@ -31,7 +31,7 @@
               </div>
             </div>
 
-          <p class="card-description"><b>Tanggal Lapor : </b><?Php echo date('d-m-Y', strtotime($detaillapor->tanggal_isi)) ?></p>
+          <!-- <p class="card-description"><b>Tanggal Lapor : </b><?Php echo date('d-m-Y', strtotime($detaillapor->tanggal_isi)) ?></p>
           <p class="card-description"><b>Jam Lapor : </b><?php echo date('H:i', strtotime($detaillapor->tanggal_isi)) ?></p><br>
           <table class="table" id="dataTable" width="100%" cellspacing="0">
               <thead class="bg-success text-white">
@@ -114,11 +114,11 @@
                   <Td><?Php echo $detaillapor->nama ?></Td>
                 </tr>
               </tbody>
-          </table>
+          </table> -->
 
           <br>
-          <a href="<?= base_url('index.php/home/lapor')?>"><button type="button" class="btn btn-warning btn-rounded btn-fw">Back</button></a>
-            <button type="submit" class="btn btn-primary btn-rounded btn-fw">Update</button>
+            <a href="<?= base_url('index.php/home/lapor')?>"><button type="button" class="btn btn-warning btn-rounded btn-fw">Back</button></a>
+            <button type="submit" class="btn btn-primary btn-rounded btn-fw">Verifikasi</button>
           </form>
         </div>
       </div>
