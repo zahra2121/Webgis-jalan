@@ -1,4 +1,4 @@
-<<?php echo form_open('home/edit_lapor/' . $lapor->idlapor)?>
+<<?php echo form_open('home/edit_lapor/' . $editlapor->idlapor)?>
 
 <div class="main-panel">
     <br><div class="container col-10 grid-margin">
