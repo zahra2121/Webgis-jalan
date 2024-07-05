@@ -220,7 +220,7 @@ class Home extends CI_Controller {
         if($this->form_validation->run() == FALSE) {
             //jika validasi gagal atau tidak lolos validasi
             $data = array(
-                'title' => 'editlapor',
+                'title' => 'detaillapor',
                 'detaillapor' => $this->M_dataset->getdetaillapor($data),
                 'isi' => 'layout/v_editlapor'
             );
