@@ -36,7 +36,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Patokan Jalan</label>
                           <div class="col-sm-9">
-                            <input type="text" name="patokan" class="form-control" placeholder="patokan Jalan" />
+                            <input type="text" name="patokan" class="form-control" placeholder="Patokan Jalan" />
                           </div>
                         </div>
                         <div class="form-group row">
