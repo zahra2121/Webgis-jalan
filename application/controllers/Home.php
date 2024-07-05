@@ -169,7 +169,6 @@ class Home extends CI_Controller {
             //jika validasi gagal atau tidak lolos validasi
             $data = array(
                 'title' => 'editlapor',
-                //'lapor' => $this->M_dataset->detail_lapor($data),
                 'editlapor' => $this->M_dataset->getdetaillapor($data),
                 'isi' => 'layout/v_editlapor'
             );
@@ -184,7 +183,7 @@ class Home extends CI_Controller {
             $this->M_dataset->update_lapor($data);
             $this->session->set_flashdata('pesan', 'Data Laporan Berhasil di Perbaharui !!');
             
-            redirect('home/blackspot');
+            redirect('home/lapor');
         }
 	}
 

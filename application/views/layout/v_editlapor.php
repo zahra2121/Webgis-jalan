@@ -42,7 +42,7 @@
                   <th>Jumlah Korban</th>
                   <th>Link Maps</th>
                   <th>Data Foto</th>
-                  <!-- <th>Pengirim</th> -->
+                  <th>Pengirim</th>
                 </tr>
               </thead>
               <tbody>
@@ -111,7 +111,7 @@
                       <img src='<?=base_url()?>assets/user_lapor/<?=$image;?>' style='width:130px; height:130px; border-radius: 5px; -moz-border-radius: 20px;' class="zoomable">
                     <?php } ?>
                   </Td>
-                  <!-- <Td><?Php echo $editlapor->nama ?></Td> -->
+                  <Td><?Php echo $editlapor->nama ?></Td>
                 </tr>
               </tbody>
           </table>
