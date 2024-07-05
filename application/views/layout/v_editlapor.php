@@ -117,8 +117,8 @@
           </table>
 
           <br>
-            <a href="<?= base_url('index.php/home/lapor')?>"><button type="button" class="btn btn-warning btn-rounded btn-fw">Back</button></a>
-            <button type="submit" class="btn btn-primary btn-rounded btn-fw">Verifikasi</button>
+          <a href="<?= base_url() ?>index.php/home/daftar_user"><button type="button" class="btn btn-warning btn-rounded btn-fw">Back</button></a>
+          <a><button type="submit" class="btn btn-primary btn-rounded btn-fw text-white">Update</button></a>
           </form>
         </div>
       </div>
