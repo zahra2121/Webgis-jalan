@@ -38,10 +38,10 @@ class Laporfpdf extends CI_Controller {
         
         $pdf->Cell(10,7,'',0,1);
         $pdf->SetFont('Arial','',9);
-        $lapor = $this->db->get('lapor')->result();
+        $editlapor = $this->db->get('lapor')->result();
         $no=0;
     
-        foreach ($lapor as $data){
+        foreach ($editlapor as $data){
             $no++;
             //$jumlah = $data->luka_ringan + $data->luka_berat + $data->meninggal;
            
