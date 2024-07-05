@@ -111,14 +111,14 @@
                       <img src='<?=base_url()?>assets/user_lapor/<?=$image;?>' style='width:130px; height:130px; border-radius: 5px; -moz-border-radius: 20px;' class="zoomable">
                     <?php } ?>
                   </Td>
-                  <Td><?Php echo $lapor->nama ?></Td>
+                  <Td><?Php echo $editlapor->nama ?></Td>
                 </tr>
               </tbody>
           </table>
 
           <br>
           <a href="<?= base_url() ?>index.php/home/lapor"><button type="button" class="btn btn-warning btn-rounded btn-fw">Back</button></a>
-          <a><button type="submit" class="btn btn-primary btn-rounded btn-fw text-white">Verifikasi</button></a>
+          <button type="submit" class="btn btn-primary btn-rounded btn-fw text-white">Verifikasi</button>
           </form>
         </div>
       </div>
