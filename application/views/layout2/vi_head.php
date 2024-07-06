@@ -59,7 +59,7 @@
 
             function show_position(p)
             {
-                document.getElementById('current').innerHTML="latitude="+p.coords.latitude.toFixed(2)+" longitude="+p.coords.longitude.toFixed(2);
+                document.getElementById('current').innerHTML="latitude="+p.coords.latitude.toFixed(5)+" longitude="+p.coords.longitude.toFixed(5);
                 var pos=new google.maps.LatLng(p.coords.latitude,p.coords.longitude);
                 map.setCenter(pos);
                 map.setZoom(14);
