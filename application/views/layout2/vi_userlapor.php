@@ -110,7 +110,7 @@
                           <div class="col-sm-9">
                             <div id="title">Show Position In Map</div>
                             <div id="current">Initializing...</div>
-                            <div id="map" style="width:100%; height:350px"></div>
+                            <div id="map" style="width:320px; height:350px"></div>
 
                           </div>
                         </div>
