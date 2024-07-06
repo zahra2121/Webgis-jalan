@@ -65,13 +65,13 @@
                 map.setZoom(14);
 
                 var infowindow = new google.maps.InfoWindow({
-                    content: "<strong>yes</strong>"
+                    content: "<strong>Lokasi Sekarang</strong>"
                 });
 
                 var marker = new google.maps.Marker({
                     position: pos,
                     map: map,
-                    title:"You are here"
+                    title:"Anda Disini"
                 });
 
                 google.maps.event.addListener(marker, 'click', function() {
