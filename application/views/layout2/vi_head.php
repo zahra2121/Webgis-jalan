@@ -28,7 +28,7 @@
         <script src="<?php echo base_url()?>/assets/chart/Chart.js"></script>
 
         <!-- GPS OTOMATIS GOOGLE -->
-        <script src="assets/js/geo.js" type="text/javascript" charset="utf-8"></script>
+        <script src="<?php echo base_url()?>/assets/js/geo.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
         <script>
@@ -42,7 +42,7 @@
                     navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
                     mapTypeId: google.maps.MapTypeId.ROADMAP      
                     }	
-                map = new google.maps.Map(document.getElementById("map"), myOptions);
+                map = new google.maps.Map(document.getElementById("map_lokasi"), myOptions);
             }
             function initialize()
             {
