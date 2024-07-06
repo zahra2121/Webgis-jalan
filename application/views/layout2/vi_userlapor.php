@@ -108,10 +108,12 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Titik Lokasi Kejadian</label>
                           
-                          <div class="col-sm-9" onload="initialize_map();initialize()">
-                            <div id="title">Show Position In Map</div>
-                            <div id="current">Initializing...</div>
-                            <div id="map_lokasi" style="width:100%; height:350px"></div>
+                          <div class="col-sm-9">
+                            <body onload="initialize_map(); initialize()">
+                              <div id="title">Show Position In Map</div>
+                              <div id="current">Initializing...</div>
+                              <div id="map_lokasi" style="width:100%; height:350px"></div>
+                            </body>
 
                           </div>
                         </div>
