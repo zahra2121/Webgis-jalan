@@ -121,7 +121,9 @@
                                     zoom: 15,
                                     layers: [peta5],
                                 });
+                              </script>
 
+                              <script>
                                 if(geo_position_js.init()){
                                     geo_position_js.getCurrentPosition(success_callback,error_callback,{enableHighAccuracy:true});
                                 }
