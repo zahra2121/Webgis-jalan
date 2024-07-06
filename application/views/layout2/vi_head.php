@@ -71,7 +71,7 @@
                 var marker = new google.maps.Marker({
                     position: pos,
                     map: map,
-                    title:"Anda Disini"
+                    title:"Anda"
                 });
 
                 google.maps.event.addListener(marker, 'click', function() {
