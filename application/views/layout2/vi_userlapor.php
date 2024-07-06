@@ -107,10 +107,10 @@
                       <div class="col-md-10">
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Titik Lokasi Kejadian</label>
-                          <div class="col-sm-9">
+                          <div class="col-sm-9" onload="initialize_map();initialize()">
                             <div id="title">Show Position In Map</div>
                             <div id="current">Initializing...</div>
-                            <div id="map" style="width:320px; height:350px"></div>
+                            <div id="map" style="width:100%; height:350px"></div>
 
                           </div>
                         </div>
