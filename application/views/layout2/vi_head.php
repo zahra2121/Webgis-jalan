@@ -27,6 +27,10 @@
 
         <script src="<?php echo base_url()?>/assets/chart/Chart.js"></script>
        
+        <script src="<?php echo base_url()?>/assets/js/geo.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+
         <!-- Custom styles for this page -->
         <link href="<?= base_url() ?>template3/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
         
