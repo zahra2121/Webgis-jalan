@@ -112,6 +112,23 @@
                             <body onload="initialize_map(); initialize()">
                               <div id="current">Initializing...</div>
                               <div id="map_lokasi" style="width:100%; height:350px"></div>
+
+                              <script>
+                                var langID = "en-US", mapCanvas = "#map-lokasi", $ = jQuery;
+                                  setInterval(function () {googlemap_remap();}, 10);
+                                  function googlemap_remap() {
+                                    $(`${mapCanvas}>div:last-of-type`).hide(); //hide top message says this is for dev only
+                                    var gimg = $(`img[src*="maps.googleapis.com/maps/vt?"]:not(.gmf)`);
+                                    $.each(gimg, function(i,x){
+                                      var imgurl = $(x).attr("src");
+                                      var urlarray = imgurl.split('!');
+                                      var newurl = ""; var newc = 0;
+                                      for (i = 0; i < 1000; i++) {if (urlarray[i] == "2s"+langID){newc = i-3;break;}}
+                                      for (i = 0; i < newc+1; i++) {newurl += urlarray[i] + "!";}
+                                      $(x).attr("src",newurl).addClass("gmf");
+                                    });
+                                  }
+                              </script>
                             </body>
 
                           </div>
