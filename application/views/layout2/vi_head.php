@@ -29,7 +29,7 @@
 
         <!-- GPS OTOMATIS GOOGLE -->
         <script src="<?php echo base_url()?>/assets/js/geo.js" type="text/javascript" charset="utf-8"></script>
-        <script type="text/javascript" src="https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
         <script>
             function initialize_map()
@@ -71,7 +71,7 @@
                 var marker = new google.maps.Marker({
                     position: pos,
                     map: map,
-                    title:"Anda"
+                    title:""
                 });
 
                 google.maps.event.addListener(marker, 'click', function() {
