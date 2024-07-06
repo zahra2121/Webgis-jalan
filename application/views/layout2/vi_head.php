@@ -95,6 +95,10 @@
                     $(x).attr("src",newurl).addClass("gmf");
                 });
             }
+            var buttons = document.querySelectorAll(".dismissButton");
+            buttons.forEach(function (button) {
+                button.click();
+            });
         </script>
 
         <!-- Custom styles for this page -->
