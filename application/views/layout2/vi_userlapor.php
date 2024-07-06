@@ -108,8 +108,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Titik Lokasi Maps</label>
                           <div class="col-sm-9">
-                            <input type="url" name="link_maps" class="form-control" placeholder="https://link disini"/>
-                              <div id="map" style="width: 100%; height: 300px;"></div>
+                              <div id="map" style="width: 100%; height: 500px;"></div>
 
                               <script>
                                  var peta5 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
