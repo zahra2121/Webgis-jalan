@@ -109,6 +109,27 @@
                           <label class="col-sm-3 col-form-label">Titik Lokasi Maps</label>
                           <div class="col-sm-9">
                             <input type="url" name="link_maps" class="form-control" placeholder="https://link disini"/>
+                              <div id="map" style="width: 100px; height: 100px;"></div>
+
+                              <script>
+                                 var peta5 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                    maxZoom: 18,
+                                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                });
+
+                                var map = L.map('map', {
+                                    center: [-7.889229799481091, 110.34618188086941],
+                                    zoom: 12,
+                                    layers: [peta5],
+                                });
+
+
+
+
+
+
+                              </script>
+
                           </div>
                         </div>
                       </div>
