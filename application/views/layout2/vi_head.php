@@ -29,7 +29,7 @@
 
         <!-- GPS OTOMATIS GOOGLE -->
         <script src="<?php echo base_url()?>/assets/js/geo.js" type="text/javascript" charset="utf-8"></script>
-        <script type="text/javascript" src="https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFyZGFsaXVzIiwiYSI6ImNsZnVtbDdtZzAyYjMzdXRhdDN6djY5cWoifQ.Xqtyqa7hvGhQla2oAwpG_Q"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
         <script>
             function initialize_map()
@@ -42,7 +42,7 @@
                     navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
                     mapTypeId: google.maps.MapTypeId.ROADMAP      
                     }	
-                map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+                map = new google.maps.Map(document.getElementById("map"), myOptions);
             }
             function initialize()
             {
@@ -85,7 +85,7 @@
         <link href="<?= base_url() ?>template3/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
         
         <style>
-            #title {background-color:grey;padding:5px;}
+            #title {padding:5px;}
             #current {font-size:10pt;padding:5px;}
             ul {
                 display:grid;
