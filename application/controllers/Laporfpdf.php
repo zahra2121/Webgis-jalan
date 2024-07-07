@@ -50,8 +50,8 @@ class Laporfpdf extends CI_Controller {
             $pdf->Cell(170,6,$data->alamat,1,0);
             $pdf->Cell(20,6,$data->tgl_kejadian,1,0);
             $pdf->Cell(20,6,$data->jam,1,0,'C');
-            $pdf->Cell(80,6,$data->latitude,$data->longitude,1,0);
-            $pdf->Cell(60,6,$data->link_maps,$data->foto,1,1);
+            $pdf->Cell(80,6,$data->latitude. $data->longitude,1,0);
+            $pdf->Cell(60,6,$data->link_maps. $data->foto,1,1);
             
 	    }
         $pdf->Output();
