@@ -158,7 +158,7 @@
                     foreach ($countkec as $value){
                         $jur=$value->kecamatan;
                         $nama_status .= "'$jur'". ", ";
-                        $jum= $value->total_data;
+                        $jum= $value->total_idkasus;
                         $jumlah .= "$jum". ", ";
                     }
                     foreach ($countkec20 as $item){
@@ -217,7 +217,7 @@
                                 'rgba(90, 99, 132, 0.6)',
                                 'rgba(60, 99, 132, 0.6)',
                                 'rgba(30, 99, 132, 0.6)',
-                                'rgba(0, 99, 132, 0.6)'
+                                'rgba(0, 99, 132, 0.6)',
                             ],
                             borderColor: [
                                 'rgba(0, 99, 132, 1)',
@@ -237,7 +237,7 @@
                                 'rgba(90, 99, 132, 1)',
                                 'rgba(60, 99, 132, 1)',
                                 'rgba(30, 99, 132, 1)',
-                                'rgba(0, 99, 132, 1)'
+                                'rgba(0, 99, 132, 1)',
                                 
                             ],
                             borderWidth: 2,
