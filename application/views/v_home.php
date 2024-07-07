@@ -158,7 +158,7 @@
                     foreach ($countkec as $value){
                         $jur=$value->kecamatan;
                         $status .= "'$jur'". ", ";
-                        $jum= $value->total_idkasus;
+                        $jum= $value->total_data;
                         $jumlah .= "$jum". ", ";
                     }
                     foreach ($countkec20 as $item){
