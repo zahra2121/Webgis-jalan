@@ -76,68 +76,10 @@
         </section>
         
         <!-- GRAFIK ADMIN -->
-        <section class="col-lg-6 px-4 center grid-margin stretch-card" style="grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);">
-            <div class="card mx-2 px-4 center grid-margin stretch-card">
-                <div class="card-body"> 
-                    <center><h3 class="card-title mb-2 text-dark center">GRAFIK JUMLAH DATA KASUS KECELAKAAN BERDASARKAN TAHUN KEJADIAN</h3></center><br>
-                    <div style="grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);"><canvas id="myChart1"></canvas>
-                    <?php
-                    //Inisialisasi nilai variabel awal
-                    $nama_status= "";
-                    $jumlah=null;
-                    $kasus=null;
-                    foreach ($counttahun as $item){
-                        $jur=$item->tahun;
-                        $nama_status .= "'$jur'". ", ";
-                        $jum= $item->total_idkasus;
-                        $jumlah .= "$jum". ", ";
-                    }
-
-                    ?>
-                    <script>
-                        var ctx = document.getElementById('myChart1').getContext('2d');
-                        var chart = new Chart(ctx, {
-                            // The type of chart we want to create
-                            type: 'line',
-                            // The data for our dataset
-                            data: {
-                                labels: [<?php echo $nama_status; ?>],
-                                datasets: [{
-                                    label:'Jumlah Data (kasus)',
-                                    borderDash: [5, 5],
-                                    borderColor: ['rgb(255,165,0)'],
-                                    backgroundColor: 'transparent',
-                                    pointBorderColor: 'orange',
-                                    pointBackgroundColor: 'rgb(255,165,0)',
-                                    pointRadius: 5,
-                                    pointHoverRadius: 10,
-                                    pointHitRadius: 30,
-                                    pointBorderWidth: 2,
-                                    pointStyle: 'rectRounded',
-                                    data: [<?php echo $jumlah; ?>]
-                                }]
-                            },
-                            // Configuration options go here
-                            options: {
-                                scales: {
-                                    yAxes: [{
-                                        ticks: {
-                                            beginAtZero:true
-                                        }
-                                    }]
-                                }
-                            }
-                        });
-                    </script>
-                    </div>
-                </div>
-            </div>
-
-
             <div class="card mx-3 px-4 center grid-margin stretch-card">
                 <div class="card-body"> 
                     <center><h3 class="card-title mb-2 text-dark center">GRAFIK JUMLAH DATA KASUS KECELAKAAN BERDASARKAN KECAMATAN</h3></center><br>
-                    <div style="grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);"><canvas id="myChart"></canvas>
+                    <div style="width: 100%;"><canvas id="myChart"></canvas>
                     <?php
                     //Inisialisasi nilai variabel awal
                     $nama_status= "";
