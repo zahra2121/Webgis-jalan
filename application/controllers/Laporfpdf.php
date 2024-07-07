@@ -53,7 +53,7 @@ class Laporfpdf extends CI_Controller {
 
             $x = $pdf->GetX();
             $y = $pdf->GetY();
-            $pdf->MultiCell(80, 6, $data->link_maps . "\nLat: " . $data->latitude . ", Long: " . $data->longitude, 1);
+            $pdf->MultiCell(80, 7, $data->link_maps . "\nLat: " . $data->latitude . ", Long: " . $data->longitude, 1);
             $pdf->SetXY($x + 80, $y); // Adjust X based on MultiCell width
             $pdf->Cell(60,6,$data->foto,1,1);
             
