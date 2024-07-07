@@ -78,8 +78,8 @@
         <!-- GRAFIK ADMIN -->
             <div class="card mx-3 px-4 center grid-margin stretch-card">
                 <div class="card-body"> 
-                    <center><h3 class="card-title mb-2 text-dark center">GRAFIK JUMLAH DATA KASUS KECELAKAAN BERDASARKAN KECAMATAN DAN TAHUN KASUS</h3></center><br>
-                    <div style="width: 60%;"><canvas id="myChart"></canvas>
+                    <center><h3 class="card-title mb-2 text-dark center">GRAFIK JUMLAH DATA KASUS KECELAKAAN BERDASARKAN KECAMATAN DAN TAHUN KASUS</h3><br>
+                    <div style="width: 50%;"><canvas id="myChart"></canvas></center>
                     <?php
                     //Inisialisasi nilai variabel awal
                     $nama_status= "";
