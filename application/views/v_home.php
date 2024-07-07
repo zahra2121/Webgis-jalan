@@ -195,7 +195,7 @@
                               borderWidth: 2,
                               hoverBorderWidth: 0
                               data: [<?php echo $jumlah; ?>],
-                              lineTension: 0.3,
+                              //lineTension: 0.3,
                               // Set More Options 
                             };
                               
