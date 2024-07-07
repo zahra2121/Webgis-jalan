@@ -185,17 +185,17 @@
                               label: "Tahun 2020 ",
                               borderColor: ['rgba(0,0,255,1)'],
                               backgroundColor: ['rgba(0,0,255,0.6)'],
-                            //   pointBorderColor: 'blue',
-                            //   pointBackgroundColor:  ['rgba(0,0,255,1)'],
-                            //   pointRadius: 5,
-                            //   pointHoverRadius: 10,
-                            //   pointHitRadius: 30,
-                            //   pointBorderWidth: 2,
-                            //   pointStyle: 'rectRounded',
+                              pointBorderColor: 'blue',
+                              pointBackgroundColor:  ['rgba(0,0,255,1)'],
+                              pointRadius: 5,
+                              pointHoverRadius: 10,
+                              pointHitRadius: 30,
+                              pointBorderWidth: 2,
+                              pointStyle: 'rectRounded',
                               borderWidth: 2,
                               hoverBorderWidth: 0
                               data: [<?php echo $jumlah; ?>],
-                              //lineTension: 0.3,
+                              lineTension: 0.3,
                               // Set More Options 
                             };
                               
@@ -203,13 +203,13 @@
                               label: "Tahun 2021 ",
                               borderColor: ['rgba(255,165,0,1)'],
                               backgroundColor: ['rgba(255,165,0,0.6)'],
-                            //   pointBorderColor: 'orange',
-                            //   pointBackgroundColor: ['rgb(255,165,0)'],
-                            //   pointRadius: 5,
-                            //   pointHoverRadius: 10,
-                            //   pointHitRadius: 30,
-                            //   pointBorderWidth: 2,
-                            //   pointStyle: 'rectRounded',
+                              pointBorderColor: 'orange',
+                              pointBackgroundColor: ['rgb(255,165,0)'],
+                              pointRadius: 5,
+                              pointHoverRadius: 10,
+                              pointHitRadius: 30,
+                              pointBorderWidth: 2,
+                              pointStyle: 'rectRounded',
                               data: [<?php echo $jumlah21; ?>],
                               // Set More Options 
                             };
@@ -218,20 +218,50 @@
                               label: "Tahun 2022 ",
                               borderColor: ['rgba(0,128,0,1)'],
                               backgroundColor: ['rgba(0,128,0,0.6)'],
-                            //   pointBorderColor: 'green',
-                            //   pointBackgroundColor: ['rgb(0,128,0)'],
-                            //   pointRadius: 5,
-                            //   pointHoverRadius: 10,
-                            //   pointHitRadius: 30,
-                            //   pointBorderWidth: 2,
-                            //   pointStyle: 'rectRounded',
+                              pointBorderColor: 'green',
+                              pointBackgroundColor: ['rgb(0,128,0)'],
+                              pointRadius: 5,
+                              pointHoverRadius: 10,
+                              pointHitRadius: 30,
+                              pointBorderWidth: 2,
+                              pointStyle: 'rectRounded',
                               data: [<?php echo $jumlah22; ?>],
+                              // Set More Options 
+                            };
+
+                            var dataFour = {
+                              label: "Tahun 2023 ",
+                              borderColor: ['rgba(255,165,0,1)'],
+                              backgroundColor: ['rgba(255,165,0,0.6)'],
+                              pointBorderColor: 'orange',
+                              pointBackgroundColor: ['rgb(255,165,0)'],
+                              pointRadius: 5,
+                              pointHoverRadius: 10,
+                              pointHitRadius: 30,
+                              pointBorderWidth: 2,
+                              pointStyle: 'rectRounded',
+                              data: [<?php echo $jumlah23; ?>],
+                              // Set More Options 
+                            };
+
+                            var dataFive = {
+                              label: "Tahun 2024 ",
+                              borderColor: ['rgba(0,128,0,1)'],
+                              backgroundColor: ['rgba(0,128,0,0.6)'],
+                              pointBorderColor: 'green',
+                              pointBackgroundColor: ['rgb(0,128,0)'],
+                              pointRadius: 5,
+                              pointHoverRadius: 10,
+                              pointHitRadius: 30,
+                              pointBorderWidth: 2,
+                              pointStyle: 'rectRounded',
+                              data: [<?php echo $jumlah24; ?>],
                               // Set More Options 
                             };
                               
                             var speedData = {
                               labels: [<?php echo $nama_status; ?>],
-                              datasets: [dataFirst]
+                              datasets: [dataFirst, dataSecond, dataThird, dataFour, dataFive]
                             };
                             var chartOptions = {
                             scales: {
@@ -240,8 +270,8 @@
                                 }]
                             },
                             };
-                            var barChart = new Chart(ctx, {
-                              type: 'bar',
+                            var lineChart = new Chart(ctx, {
+                              type: 'line',
                               data: speedData,
                               options: chartOptions
                             });
