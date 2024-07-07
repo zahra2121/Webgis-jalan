@@ -30,6 +30,7 @@
         <!-- GPS OTOMATIS GOOGLE -->
         <script src="<?php echo base_url()?>/assets/js/geo.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
 
         <script>
             function initialize_map()
@@ -82,7 +83,7 @@
             }
 
             function getAddress(lat, lng) {
-                var geocoder = new google.maps.getCurrentPosition();
+                var geocoder = new google.maps.Geocoder();
                 var latlng = new google.maps.LatLng(lat, lng);
                 geocoder.geocode({ 'location': latlng }, function(results, status) {
                     if (status === 'OK') {
