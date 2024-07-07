@@ -101,7 +101,8 @@
                             </Td>
                             <Td><?Php echo date('H:i', strtotime($Row->jam)) ?></Td>
                             <Td>
-                              <a href="<?Php echo $Row->link_maps ?>"><?Php echo "Link Maps : ". $Row->link_maps ?></a>
+                            <?Php echo "Link Maps : ";?>
+                              <a href="<?Php echo $Row->link_maps ?>"><?Php echo $Row->link_maps ?></a>
                             <?Php echo "<br>";
                               echo "Lat : ". $Row->latitude. "<br>";
                               echo "Long  : " . $Row->longitude. "<br>" ;
