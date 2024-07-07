@@ -141,8 +141,8 @@
                     <?php
                     //Inisialisasi nilai variabel awal
 
-                    foreach ($counttahun as $item){
-                        $jur=$item->tahun;
+                    foreach ($countkec20 as $item){
+                        $jur=$item->kecamatan;
                         $nama_status .= "'$jur'". ", ";
                         $jum= $item->total_idkasus;
                         $jumlah .= "$jum". ", ";
