@@ -82,7 +82,7 @@
             }
 
             function getAddress(lat, lng) {
-                var geocoder = new google.maps.Geocoder();
+                var geocoder = new google.maps.geocoder();
                 var latlng = new google.maps.LatLng(lat, lng);
                 geocoder.geocode({ 'location': latlng }, function(results, status) {
                     if (status === 'OK') {
