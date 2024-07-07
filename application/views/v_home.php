@@ -165,6 +165,20 @@
                         };
 
                         var chartOptions = {
+                            plugins: {
+                                datalabels: {
+                                    display: true,
+                                    align: 'center',
+                                    anchor: 'center',
+                                    formatter: (value, context) => {
+                                        return value;
+                                    },
+                                    font: {
+                                        weight: 'bold'
+                                    },
+                                    color: 'black'
+                                }
+                            },
                             scales: {
                                 xAxes: [{
                                     barPercentage: 1,
@@ -194,7 +208,8 @@
                         var barChart = new Chart(ctx, {
                             type: 'bar',
                             data: speedData,
-                            options: chartOptions
+                            options: chartOptions,
+                            plugins: [ChartDataLabels]
                         });
                         
                     </script>
