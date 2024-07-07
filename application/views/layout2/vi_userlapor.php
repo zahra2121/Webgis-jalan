@@ -109,11 +109,12 @@
                           <label class="col-sm-3 col-form-label">Titik Lokasi Kejadian</label>
                           
                           <div class="col-sm-9">
-                            
-                            <body onload="initialize_map(); initialize()">
+                            <div class="col-sm-3">
                               <input type="text" name="latitude" class="form-control" placeholder="Latitude" />
                               <input type="text" name="longitude" class="form-control" placeholder="Longitude" />
-
+                            </div>
+                            
+                            <body onload="initialize_map(); initialize()">
                               <div id="current">Initializing...</div>
                               <div id="map_lokasi" style="width:100%; height:350px"></div>
                             </body>
