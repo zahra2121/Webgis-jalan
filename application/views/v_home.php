@@ -233,47 +233,61 @@
                         },
                         };
 
+                        var dataTahun = {
+                            label: 'Jumlah Data (kasus)',
+                            data: [<?php echo $jum4; ?>],
+                            backgroundColor: [
+                                'rgba(0, 99, 132, 0.6)'
+                            ],
+                            borderColor: [
+                                'rgba(0, 99, 132, 1)'
+                                
+                            ],
+                            borderWidth: 2,
+                            hoverBorderWidth: 0 
+                        };
+
                         var barChart = new Chart(ctx, {
                         type: 'bar',
                         data: {
-                            labels: [<?php echo $status; ?>],
-                            datasets: [densityData],
+                            labels: [<?php echo $status; echo $nama_tahun; ?>],
+                            datasets: [densityData, dataTahun],
                         },
                         options: chartOptions
                         });
 
-                        var chart = new Chart(ctx, {
-                            // The type of chart we want to create
-                            type: 'line',
-                            // The data for our dataset
-                            data: {
-                                labels: [<?php echo $nama_tahun; ?>],
-                                datasets: [{
-                                    label:'Jumlah Data (kasus)',
-                                    borderDash: [5, 5],
-                                    borderColor: ['rgb(255,165,0)'],
-                                    backgroundColor: 'transparent',
-                                    pointBorderColor: 'orange',
-                                    pointBackgroundColor: 'rgb(255,165,0)',
-                                    pointRadius: 5,
-                                    pointHoverRadius: 10,
-                                    pointHitRadius: 30,
-                                    pointBorderWidth: 2,
-                                    pointStyle: 'rectRounded',
-                                    data: [<?php echo $jum4; ?>]
-                                }]
-                            },
-                            // Configuration options go here
-                            options: {
-                                scales: {
-                                    yAxes: [{
-                                        ticks: {
-                                            beginAtZero:true
-                                        }
-                                    }]
-                                }
-                            }
-                        });
+                        // var chart = new Chart(ctx, {
+                        //     // The type of chart we want to create
+                        //     type: 'line',
+                        //     // The data for our dataset
+                        //     data: {
+                        //         labels: [<?php echo $nama_tahun; ?>],
+                        //         datasets: [{
+                        //             label:'Jumlah Data (kasus)',
+                        //             borderDash: [5, 5],
+                        //             borderColor: ['rgb(255,165,0)'],
+                        //             backgroundColor: 'transparent',
+                        //             pointBorderColor: 'orange',
+                        //             pointBackgroundColor: 'rgb(255,165,0)',
+                        //             pointRadius: 5,
+                        //             pointHoverRadius: 10,
+                        //             pointHitRadius: 30,
+                        //             pointBorderWidth: 2,
+                        //             pointStyle: 'rectRounded',
+                        //             data: [<?php echo $jum4; ?>]
+                        //         }]
+                        //     },
+                        //     // Configuration options go here
+                        //     options: {
+                        //         scales: {
+                        //             yAxes: [{
+                        //                 ticks: {
+                        //                     beginAtZero:true
+                        //                 }
+                        //             }]
+                        //         }
+                        //     }
+                        // });
                               
                         // var dataSecond = {
                         //     label: "Daerah Rawan ",
