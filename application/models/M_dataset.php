@@ -124,6 +124,56 @@ class M_dataset extends CI_model
         return $query->result();
     }
 
+    public function count_kec_20(){     
+        $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.idblack) as total_data, COUNT(blackspot.tahun) as total_tahun, COUNT(kasus.id) as total_idkasus');
+        $this->db->from('blackspot');
+        $this->db->join('kasus', 'blackspot.idblack = kasus.id');
+        $this->db->group_by('blackspot.kecamatan');
+        $this->db->where('blackspot.tahun = "2020"');
+        $query=$this->db->get();
+        return $query->result(); 
+    }
+
+    public function count_kec_21(){     
+        $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.idblack) as total_data, COUNT(blackspot.tahun) as total_tahun, COUNT(kasus.id) as total_idkasus');
+        $this->db->from('blackspot');
+        $this->db->join('kasus', 'blackspot.idblack = kasus.id');
+        $this->db->group_by('blackspot.kecamatan');
+        $this->db->where('blackspot.tahun = "2021"');
+        $query=$this->db->get();
+        return $query->result(); 
+    }
+
+    public function count_kec_22(){     
+        $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.idblack) as total_data, COUNT(blackspot.tahun) as total_tahun, COUNT(kasus.id) as total_idkasus');
+        $this->db->from('blackspot');
+        $this->db->join('kasus', 'blackspot.idblack = kasus.id');
+        $this->db->group_by('blackspot.kecamatan');
+        $this->db->where('blackspot.tahun = "2022"');
+        $query=$this->db->get();
+        return $query->result(); 
+    }
+
+    public function count_kec_23(){     
+        $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.idblack) as total_data, COUNT(blackspot.tahun) as total_tahun, COUNT(kasus.id) as total_idkasus');
+        $this->db->from('blackspot');
+        $this->db->join('kasus', 'blackspot.idblack = kasus.id');
+        $this->db->group_by('blackspot.kecamatan');
+        $this->db->where('blackspot.tahun = "2023"');
+        $query=$this->db->get();
+        return $query->result(); 
+    }
+
+    public function count_kec_24(){     
+        $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.idblack) as total_data, COUNT(blackspot.tahun) as total_tahun, COUNT(kasus.id) as total_idkasus');
+        $this->db->from('blackspot');
+        $this->db->join('kasus', 'blackspot.idblack = kasus.id');
+        $this->db->group_by('blackspot.kecamatan');
+        $this->db->where('blackspot.tahun = "2024"');
+        $query=$this->db->get();
+        return $query->result(); 
+    }
+
     public function tampil_kasus($data){
         $this->db->select('COUNT(kasus.idkasus) as total_kasus');
         $this->db->from('blackspot');

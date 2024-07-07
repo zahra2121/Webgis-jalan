@@ -24,9 +24,11 @@ class Home extends CI_Controller {
             'countproses' => $this->M_dataset->count_proses(),
             'counttahun' => $this->M_dataset->count_tahun(),
             'countkec' => $this->M_dataset->count_kecamatan(),
-            'countkatrawan' => $this->M_dataset->count_kat_status(),
-            'countkataman' => $this->M_dataset->count_kat_aman(),
-            'countkatproses' => $this->M_dataset->count_kat_proses(),
+            'countkec20' => $this->M_dataset->count_kec_20(),
+            'countkec21' => $this->M_dataset->count_kec_21(),
+            'countkec22' => $this->M_dataset->count_kec_22(),
+            'countkec23' => $this->M_dataset->count_kec_23(),
+            'countkec24' => $this->M_dataset->count_kec_24(),
             'isi' => 'v_home'
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);

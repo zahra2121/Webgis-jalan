@@ -142,39 +142,57 @@
                     //Inisialisasi nilai variabel awal
                    
                     $nama_status= "";
-                    $nama_tahun ="";
+                    $nama_20 ="";
+                    $nama_21 ="";
+                    $nama_22 ="";
+                    $nama_23 ="";
+                    $nama_24 ="";
                     $status= "";
                     $jumlah=null;
-                    $jum2 = null;
-                    $jum3 = null;
-                    $jum4 = null;
-
-                    foreach ($countkec as $item){
-                        $jurr=$item->tahun;
-                        $nama_tahun .= "'$jurr'". ", ";
-                        $jumtahun= $item->total_idkasus;
-                        $jum4 .= "$jumtahun". ", ";
-                    }
+                    $jum20 = null;
+                    $jum21 = null;
+                    $jum22 = null;
+                    $jum23 = null;
+                    $jum24 = null;
 
                     foreach ($countkec as $value){
                         $jur=$value->kecamatan;
                         $status .= "'$jur'". ", ";
-                        $jum= $value->total_tahun;
+                        $jum= $value->total_idkasus;
                         $jumlah .= "$jum". ", ";
                     }
+                    foreach ($countkec20 as $item){
+                        $jurr=$item->tahun;
+                        $nama_20 .= "'$jurr'". ", ";
+                        $jumtahun20= $item->total_tahun;
+                        $jum20 .= "$jumtahun20". ", ";
+                    }
+                    foreach ($countkec21 as $item){
+                        $jurr=$item->tahun;
+                        $nama_21 .= "'$jurr'". ", ";
+                        $jumtahun21= $item->total_tahun;
+                        $jum21 .= "$jumtahun21". ", ";
+                    }
+                    foreach ($countkec22 as $item){
+                        $jurr=$item->tahun;
+                        $nama_22 .= "'$jurr'". ", ";
+                        $jumtahun22= $item->total_tahun;
+                        $jum22 .= "$jumtahun22". ", ";
+                    }
+                    foreach ($countkec23 as $item){
+                        $jurr=$item->tahun;
+                        $nama_23 .= "'$jurr'". ", ";
+                        $jumtahun23= $item->total_tahun;
+                        $jum23 .= "$jumtahun23". ", ";
+                    }
+                    foreach ($countkec24 as $item){
+                        $jurr=$item->tahun;
+                        $nama_24 .= "'$jurr'". ", ";
+                        $jumtahun24= $item->total_tahun;
+                        $jum24 .= "$jumtahun24". ", ";
+                    }
                     
-                    foreach ($countkatrawan as $item){
-                        $jur=$item->kecamatan;
-                        $nama_status .= "'$jur'". ", ";
-                        // status rawan/kecamatan
-                        $jum_rawan = $item->total_rawan;
-                        $jum2 .= "$jum_rawan". ", ";
-                    }
-                    foreach ($countkataman as $item){
-                        // status bukan rawan/kecamatan
-                        $jum_aman = $item->total_aman;
-                        $jum3 .= "$jum_aman". ", ";
-                    }
+                   
                     ?>
                     <script>
                         var ctx = document.getElementById('myChart').getContext('2d');
@@ -233,14 +251,107 @@
                         },
                         };
 
-                        var dataTahun = {
-                            label: 'Tahun (kasus)',
-                            data: [<?php echo $jum4; ?>],
+                        var data20 = {
+                            label: 'Tahun 2020 ',
+                            data: [<?php echo $jum20; ?>],
                             backgroundColor: [
-                                'rgba(0, 99, 132, 0.6)'
+                                'rgba(0, 99, 132, 0.6)',
+                                'rgba(0, 99, 132, 0.6)',
+                                'rgba(0, 99, 132, 0.6)',
+                                'rgba(0, 99, 132, 0.6)',
+                                'rgba(0, 99, 132, 0.6)',
                             ],
                             borderColor: [
-                                'rgba(0, 99, 132, 1)'
+                                'rgba(0, 99, 132, 1)',
+                                'rgba(0, 99, 132, 1)',
+                                'rgba(0, 99, 132, 1)',
+                                'rgba(0, 99, 132, 1)',
+                                'rgba(0, 99, 132, 1)',
+                                
+                            ],
+                            borderWidth: 2,
+                            hoverBorderWidth: 0 
+                        };
+
+                        var data21 = {
+                            label: 'Tahun 2021 ',
+                            data: [<?php echo $jum21; ?>],
+                            backgroundColor: [
+                                'rgba(30, 99, 132, 0.6)',
+                                'rgba(30, 99, 132, 0.6)',
+                                'rgba(30, 99, 132, 0.6)',
+                                'rgba(30, 99, 132, 0.6)',
+                                'rgba(30, 99, 132, 0.6)',
+                            ],
+                            borderColor: [
+                                'rgba(30, 99, 132, 1)',
+                                'rgba(30, 99, 132, 1)',
+                                'rgba(30, 99, 132, 1)',
+                                'rgba(30, 99, 132, 1)',
+                                'rgba(30, 99, 132, 1)',
+                                
+                            ],
+                            borderWidth: 2,
+                            hoverBorderWidth: 0 
+                        };
+                        var data22 = {
+                            label: 'Tahun 2022 ',
+                            data: [<?php echo $jum22; ?>],
+                            backgroundColor: [
+                                'rgba(60, 99, 132, 0.6)',
+                                'rgba(60, 99, 132, 0.6)',
+                                'rgba(60, 99, 132, 0.6)',
+                                'rgba(60, 99, 132, 0.6)',
+                                'rgba(60, 99, 132, 0.6)',
+                            ],
+                            borderColor: [
+                                'rgba(60, 99, 132, 1)',
+                                'rgba(60, 99, 132, 1)',
+                                'rgba(60, 99, 132, 1)',
+                                'rgba(60, 99, 132, 1)',
+                                'rgba(60, 99, 132, 1)',
+                                
+                            ],
+                            borderWidth: 2,
+                            hoverBorderWidth: 0 
+                        };
+                        var data23 = {
+                            label: 'Tahun 2023 ',
+                            data: [<?php echo $jum23; ?>],
+                            backgroundColor: [
+                                'rgba(90, 99, 132, 0.6)',
+                                'rgba(90, 99, 132, 0.6)',
+                                'rgba(90, 99, 132, 0.6)',
+                                'rgba(90, 99, 132, 0.6)',
+                                'rgba(90, 99, 132, 0.6)',
+                            ],
+                            borderColor: [
+                                'rgba(90, 99, 132, 1)',
+                                'rgba(90, 99, 132, 1)',
+                                'rgba(90, 99, 132, 1)',
+                                'rgba(90, 99, 132, 1)',
+                                'rgba(90, 99, 132, 1)',
+                                
+                            ],
+                            borderWidth: 2,
+                            hoverBorderWidth: 0 
+                        };
+                        var data24 = {
+                            label: 'Tahun 2024 ',
+                            data: [<?php echo $jum24; ?>],
+                            backgroundColor: [
+                                'rgba(120, 99, 132, 0.6)',
+                                'rgba(120, 99, 132, 0.6)',
+                                'rgba(120, 99, 132, 0.6)',
+                                'rgba(120, 99, 132, 0.6)',
+                                'rgba(120, 99, 132, 0.6)',
+                            ],
+                            borderColor: [
+                                'rgba(120, 99, 132, 1)',
+                                'rgba(120, 99, 132, 1)',
+                                'rgba(120, 99, 132, 1)',
+                                'rgba(120, 99, 132, 1)',
+                                'rgba(120, 99, 132, 1)',
                                 
                             ],
                             borderWidth: 2,
@@ -251,7 +362,7 @@
                         type: 'bar',
                         data: {
                             labels: [<?php echo $status;?>],
-                            datasets: [densityData, dataTahun],
+                            datasets: [densityData, data20, data21, data22, data23, data24],
                         },
                         options: chartOptions
                         });
