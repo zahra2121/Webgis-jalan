@@ -210,7 +210,7 @@
                             type: 'bar',
                             data: speedData,
                             options: chartOptions,
-                            plugins: [datalabels] // Add this line
+                            plugins: [chartOptions] // Add this line
                         };
 
                         var barChart = new Chart(ctx, config);
