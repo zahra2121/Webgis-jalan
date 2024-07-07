@@ -236,7 +236,7 @@
                             var chartOptions = {
                             scales: {
                                 yAxes: [{
-                                barPercentage: 0.5
+                                barPercentage: 0.2
                                 }]
                             },
                             };
