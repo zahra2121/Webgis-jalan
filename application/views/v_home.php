@@ -149,7 +149,7 @@
                     $jum3 = null;
                     $jum4 = null;
 
-                    foreach ($counttahun as $item){
+                    foreach ($countkec as $item){
                         $jurr=$item->tahun;
                         $nama_tahun .= "'$jurr'". ", ";
                         $jumtahun= $item->total_idkasus;
@@ -159,7 +159,7 @@
                     foreach ($countkec as $value){
                         $jur=$value->kecamatan;
                         $status .= "'$jur'". ", ";
-                        $jum= $value->total_data;
+                        $jum= $value->total_idkasus;
                         $jumlah .= "$jum". ", ";
                     }
                     
@@ -247,7 +247,7 @@
                             type: 'line',
                             // The data for our dataset
                             data: {
-                                labels: [<?php echo $status; ?>],
+                                labels: [<?php echo $nama_tahun; ?>],
                                 datasets: [{
                                     label:'Jumlah Data (kasus)',
                                     borderDash: [5, 5],
