@@ -45,11 +45,11 @@ class Laporfpdf extends CI_Controller {
             $no++;
             //$jumlah = $data->luka_ringan + $data->luka_berat + $data->meninggal;
            
-            $pdf->Cell(10,6,$no,1,0, 'C');
-            $pdf->Cell(40,6,$data->tanggal_isi,1,0);
-            $pdf->Cell(170,6,$data->alamat,1,0);
-            $pdf->Cell(20,6,$data->tgl_kejadian,1,0);
-            $pdf->Cell(20,6,$data->jam,1,0,'C');
+            $pdf->Cell(10,6,$no,2,0, 'C');
+            $pdf->Cell(40,6,$data->tanggal_isi,2,0);
+            $pdf->Cell(170,6,$data->alamat,2,0);
+            $pdf->Cell(20,6,$data->tgl_kejadian,2,0);
+            $pdf->Cell(20,6,$data->jam,2,0,'C');
 
             $pdf->MultiCell(80,6,$data->link_maps . "\nLat: " . $data->latitude . ", Long: " . $data->longitude,1);
     
