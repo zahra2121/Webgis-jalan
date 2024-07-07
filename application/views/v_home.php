@@ -164,7 +164,7 @@
                     foreach ($countkec20 as $item){
                         $jurr=$item->tahun;
                         $nama_20 .= "'$jurr'". ", ";
-                        $jumtahun20= $item->total_tahun;
+                        $jumtahun20= $item->total_idkasus;
                         $jum20 .= "$jumtahun20". ", ";
                     }
                     foreach ($countkec21 as $item){
