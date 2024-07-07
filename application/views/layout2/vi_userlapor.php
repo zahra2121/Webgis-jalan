@@ -111,7 +111,8 @@
                           <div class="col-sm-9">
                             
                             <body onload="initialize_map(); initialize()">
-                              <input type="text" id="current" name="current" class="form-control" placeholder="Latitude" />
+                              <input type="text" name="latitude" class="form-control" placeholder="Latitude" />
+                              <input type="text" name="longitude" class="form-control" placeholder="Longitude" />
 
                               <div id="current">Initializing...</div>
                               <div id="map_lokasi" style="width:100%; height:350px"></div>
