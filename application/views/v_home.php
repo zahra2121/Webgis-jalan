@@ -168,26 +168,26 @@
                         $jum20 .= "$jumtahun20". ", ";
                     }
                     foreach ($countkec21 as $item){
-                        $jurr=$item->tahun;
-                        $nama_21 .= "'$jurr'". ", ";
+                        $jurr21=$item->tahun;
+                        $nama_21 .= "'$jurr21'". ", ";
                         $jumtahun21= $item->total_tahun;
                         $jum21 .= "$jumtahun21". ", ";
                     }
                     foreach ($countkec22 as $item){
-                        $jurr=$item->tahun;
-                        $nama_22 .= "'$jurr'". ", ";
+                        $jurr22=$item->tahun;
+                        $nama_22 .= "'$jurr22'". ", ";
                         $jumtahun22= $item->total_tahun;
                         $jum22 .= "$jumtahun22". ", ";
                     }
                     foreach ($countkec23 as $item){
-                        $jurr=$item->tahun;
-                        $nama_23 .= "'$jurr'". ", ";
+                        $jurr23=$item->tahun;
+                        $nama_23 .= "'$jurr23'". ", ";
                         $jumtahun23= $item->total_tahun;
                         $jum23 .= "$jumtahun23". ", ";
                     }
                     foreach ($countkec24 as $item){
-                        $jurr=$item->tahun;
-                        $nama_24 .= "'$jurr'". ", ";
+                        $jurr24=$item->tahun;
+                        $nama_24 .= "'$jurr24'". ", ";
                         $jumtahun24= $item->total_tahun;
                         $jum24 .= "$jumtahun24". ", ";
                     }
