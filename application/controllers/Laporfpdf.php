@@ -49,7 +49,7 @@ class Laporfpdf extends CI_Controller {
             $pdf->Cell(40,6,$data->tanggal_isi,1,0);
             $pdf->Cell(170,6,$data->alamat,1,0);
             $pdf->Cell(20,6,$data->tgl_kejadian,1,0);
-            $pdf->Cell(20,6,$data->jam,1,0,'C');
+            $pdf->MultiCell(20,6,$data->jam,1,0,'C');
 
             $pdf->MultiCell(80,6,$data->link_maps . "\nLat: " . $data->latitude . ", Long: " . $data->longitude,1);
     
