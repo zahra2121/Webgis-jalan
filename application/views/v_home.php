@@ -121,15 +121,15 @@
                             label: "Tahun 2020 ",
                             borderColor: ['rgba(0,0,255,1)'],
                             backgroundColor: 'transparent',
-                            pointBorderColor: 'blue',
-                            pointBackgroundColor:  ['rgba(0,0,255,1)'],
-                            pointRadius: 5,
-                            pointHoverRadius: 10,
-                            pointHitRadius: 30,
-                            pointBorderWidth: 2,
-                            pointStyle: 'rectRounded',
+                            // pointBorderColor: 'blue',
+                            // pointBackgroundColor:  ['rgba(0,0,255,1)'],
+                            // pointRadius: 5,
+                            // pointHoverRadius: 10,
+                            // pointHitRadius: 30,
+                            // pointBorderWidth: 2,
+                            // pointStyle: 'rectRounded',
                             data: [<?php echo $jumlah; ?>],
-                            lineTension: 0.3,
+                           // lineTension: 0.3,
                             // Set More Options 
                         };
                             
@@ -137,13 +137,13 @@
                             label: "Tahun 2021 ",
                             borderColor: ['rgb(255,165,0)'],
                             backgroundColor: 'transparent',
-                            pointBorderColor: 'orange',
-                            pointBackgroundColor: ['rgb(255,165,0)'],
-                            pointRadius: 5,
-                            pointHoverRadius: 10,
-                            pointHitRadius: 30,
-                            pointBorderWidth: 2,
-                            pointStyle: 'rectRounded',
+                            // pointBorderColor: 'orange',
+                            // pointBackgroundColor: ['rgb(255,165,0)'],
+                            // pointRadius: 5,
+                            // pointHoverRadius: 10,
+                            // pointHitRadius: 30,
+                            // pointBorderWidth: 2,
+                            // pointStyle: 'rectRounded',
                             data: [<?php echo $jumlah21; ?>],
                             // Set More Options 
                         };
@@ -152,13 +152,13 @@
                             label: "Tahun 2022 ",
                             borderColor: ['rgb(0,128,0)'],
                             backgroundColor: 'transparent',
-                            pointBorderColor: 'green',
-                            pointBackgroundColor: ['rgb(0,128,0)'],
-                            pointRadius: 5,
-                            pointHoverRadius: 10,
-                            pointHitRadius: 30,
-                            pointBorderWidth: 2,
-                            pointStyle: 'rectRounded',
+                            // pointBorderColor: 'green',
+                            // pointBackgroundColor: ['rgb(0,128,0)'],
+                            // pointRadius: 5,
+                            // pointHoverRadius: 10,
+                            // pointHitRadius: 30,
+                            // pointBorderWidth: 2,
+                            // pointStyle: 'rectRounded',
                             data: [<?php echo $jumlah22; ?>],
                             // Set More Options 
                         };
@@ -167,13 +167,13 @@
                             label: "Tahun 2023 ",
                             borderColor: ['rgb(255,165,0)'],
                             backgroundColor: 'transparent',
-                            pointBorderColor: 'red',
-                            pointBackgroundColor: ['rgb(255,165,0)'],
-                            pointRadius: 5,
-                            pointHoverRadius: 10,
-                            pointHitRadius: 30,
-                            pointBorderWidth: 2,
-                            pointStyle: 'rectRounded',
+                            // pointBorderColor: 'red',
+                            // pointBackgroundColor: ['rgb(255,165,0)'],
+                            // pointRadius: 5,
+                            // pointHoverRadius: 10,
+                            // pointHitRadius: 30,
+                            // pointBorderWidth: 2,
+                            // pointStyle: 'rectRounded',
                             data: [<?php echo $jumlah23; ?>],
                             // Set More Options 
                         };
@@ -182,24 +182,62 @@
                             label: "Tahun 2024 ",
                             borderColor: ['rgb(0,128,0)'],
                             backgroundColor: 'transparent',
-                            pointBorderColor: 'yellow',
-                            pointBackgroundColor: ['rgb(0,128,0)'],
-                            pointRadius: 5,
-                            pointHoverRadius: 10,
-                            pointHitRadius: 30,
-                            pointBorderWidth: 2,
-                            pointStyle: 'rectRounded',
+                            // pointBorderColor: 'yellow',
+                            // pointBackgroundColor: ['rgb(0,128,0)'],
+                            // pointRadius: 5,
+                            // pointHoverRadius: 10,
+                            // pointHitRadius: 30,
+                            // pointBorderWidth: 2,
+                            // pointStyle: 'rectRounded',
                             data: [<?php echo $jumlah24; ?>],
                             // Set More Options 
                         };
-                            
+
+
+                        var densityData = {
+                        label: 'Density of Planet (kg/m3)',
+                        data: [5427, 5243, 5514, 3933, 1326, 687, 1271, 1638],
+                        backgroundColor: 'rgba(0, 99, 132, 0.6)',
+                        borderColor: 'rgba(0, 99, 132, 1)',
+                        yAxisID: "y-axis-density"
+                        };
+                        var gravityData = {
+                        label: 'Gravity of Planet (m/s2)',
+                        data: [3.7, 8.9, 9.8, 3.7, 23.1, 9.0, 8.7, 11.0],
+                        backgroundColor: 'rgba(99, 132, 0, 0.6)',
+                        borderColor: 'rgba(99, 132, 0, 1)',
+                        yAxisID: "y-axis-gravity"
+                        };
+                        var planetData = {
+                        labels: ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"],
+                        datasets: [densityData, gravityData]
+                        };
+                        
+                        // var barChart = new Chart(densityCanvas, {
+                        // type: 'bar',
+                        // data: planetData,
+                        // options: chartOptions
+                        // });
+
+                        var chartOptions = {
+                            scales: {
+                                xAxes: [{
+                                barPercentage: 1,
+                                categoryPercentage: 0.6
+                                }],
+                                yAxes: [{
+                                barPercentage: 0.5
+                                }]
+                            }
+                        };   
                         var speedData = {
                             labels: [<?php echo $nama_status; ?>],
                             datasets: [dataFirst, dataSecond, dataThird, dataFour, dataFive]
                         };
-                        var lineChart = new Chart(ctx, {
-                            type: 'line',
-                            data: speedData
+                        var barChart = new Chart(ctx, {
+                            type: 'bar',
+                            data: speedData,
+                            options: chartOptions
                         });
                         
                     </script>
