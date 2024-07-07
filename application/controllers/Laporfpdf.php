@@ -36,7 +36,7 @@ class Laporfpdf extends CI_Controller {
         $pdf->Cell(80,7,'TITIK LOKASI (LAT,LONG)',1,0,'C');
         $pdf->Cell(60,7,'DOKUMENTASI',1,0,'C');
         
-        $pdf->Cell(10,6,'',0,1);
+        $pdf->Cell(10,7,'',0,1);
         $pdf->SetFont('Arial','',9);
         $lapor = $this->db->get('lapor')->result();
         $no=0;
@@ -45,11 +45,11 @@ class Laporfpdf extends CI_Controller {
             $no++;
             //$jumlah = $data->luka_ringan + $data->luka_berat + $data->meninggal;
            
-            $pdf->Cell(10,6,$no,1,0, 'C');
-            $pdf->Cell(40,6,$data->tanggal_isi,1,0);
-            $pdf->Cell(170,6,$data->alamat,1,0);
-            $pdf->Cell(20,6,$data->tgl_kejadian,1,0);
-            $pdf->Cell(20,6,$data->jam,1,0,'C');
+            $pdf->Cell(10,7,$no,1,0, 'C');
+            $pdf->Cell(40,7,$data->tanggal_isi,1,0);
+            $pdf->Cell(170,7,$data->alamat,1,0);
+            $pdf->Cell(20,7,$data->tgl_kejadian,1,0);
+            $pdf->Cell(20,7,$data->jam,1,0,'C');
 
             $x = $pdf->GetX();
             $y = $pdf->GetY();
