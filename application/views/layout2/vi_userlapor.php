@@ -113,6 +113,7 @@
                               <div class="row">
                                   <div class="col-sm-5">
                                     <input type="text" id="latitude" name="latitude" class="form-control" placeholder="Latitude" />
+                                    <div id="latitude"><input type="text" id="latitude" name="latitude" class="form-control" placeholder="Latitude" /></div>
                                   </div>&nbsp;
                                   <div class="col-sm-5">
                                     <input type="text" id="longitude" name="longitude" class="form-control" placeholder="Longitude" />
