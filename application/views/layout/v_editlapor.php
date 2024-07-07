@@ -100,10 +100,10 @@
                   ?></Td>
                   <Td>
                     <?Php echo "Link Maps : ";?>
-                      <a href="<?Php echo $Row->link_maps ?>"><?Php echo $Row->link_maps ?></a>
+                      <a href="<?Php echo $editlapor->link_maps ?>"><?Php echo $editlapor->link_maps ?></a>
                     <?Php echo "<br>";
-                      echo "Lat : ". $Row->latitude. "<br>";
-                      echo "Long  : " . $Row->longitude. "<br>" ;
+                      echo "Lat : ". $editlapor->latitude. "<br>";
+                      echo "Long  : " . $editlapor->longitude. "<br>" ;
                     ?>
                   </Td>
                   <Td>
