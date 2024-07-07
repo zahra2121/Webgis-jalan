@@ -37,7 +37,7 @@ class Laporfpdf extends CI_Controller {
         $pdf->Cell(60,7,'DOKUMENTASI',1,0,'C');
         
         $pdf->Cell(10,7,'',0,1);
-        $pdf->SetFont('Arial','',9);
+        $pdf->SetFont('Arial','',8);
         $lapor = $this->db->get('lapor')->result();
         $no=0;
     
@@ -55,7 +55,7 @@ class Laporfpdf extends CI_Controller {
     
             // Adjust the next cell's position since MultiCell moves to the next line
             $pdf->SetXY($pdf->GetX() + 340, $pdf->GetY() - 6); // Adjust X and Y as needed
-            $pdf->Cell(60,6,$data->foto,1,0);
+            $pdf->Cell(60,6,$data->foto,1,1);
             
 	    }
         $pdf->Output();
