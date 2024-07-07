@@ -203,13 +203,13 @@
                               label: "Tahun 2021 ",
                               borderColor: ['rgb(255,165,0)'],
                               backgroundColor: 'transparent',
-                              pointBorderColor: 'orange',
-                              pointBackgroundColor: ['rgb(255,165,0)'],
-                              pointRadius: 5,
-                              pointHoverRadius: 10,
-                              pointHitRadius: 30,
-                              pointBorderWidth: 2,
-                              pointStyle: 'rectRounded',
+                            //   pointBorderColor: 'orange',
+                            //   pointBackgroundColor: ['rgb(255,165,0)'],
+                            //   pointRadius: 5,
+                            //   pointHoverRadius: 10,
+                            //   pointHitRadius: 30,
+                            //   pointBorderWidth: 2,
+                            //   pointStyle: 'rectRounded',
                               data: [<?php echo $jumlah21; ?>],
                               // Set More Options 
                             };
@@ -218,13 +218,13 @@
                               label: "Tahun 2022 ",
                               borderColor: ['rgb(0,128,0)'],
                               backgroundColor: 'transparent',
-                              pointBorderColor: 'green',
-                              pointBackgroundColor: ['rgb(0,128,0)'],
-                              pointRadius: 5,
-                              pointHoverRadius: 10,
-                              pointHitRadius: 30,
-                              pointBorderWidth: 2,
-                              pointStyle: 'rectRounded',
+                            //   pointBorderColor: 'green',
+                            //   pointBackgroundColor: ['rgb(0,128,0)'],
+                            //   pointRadius: 5,
+                            //   pointHoverRadius: 10,
+                            //   pointHitRadius: 30,
+                            //   pointBorderWidth: 2,
+                            //   pointStyle: 'rectRounded',
                               data: [<?php echo $jumlah22; ?>],
                               // Set More Options 
                             };
@@ -233,9 +233,17 @@
                               labels: [<?php echo $nama_status; ?>],
                               datasets: [dataFirst, dataSecond, dataThird]
                             };
+                            var chartOptions = {
+                            scales: {
+                                yAxes: [{
+                                barPercentage: 0.5
+                                }]
+                            },
+                            };
                             var barChart = new Chart(ctx, {
                               type: 'bar',
-                              data: speedData
+                              data: speedData,
+                              options: chartOptions
                             });
                         
                     </script>
