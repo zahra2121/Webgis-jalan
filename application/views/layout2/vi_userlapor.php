@@ -110,6 +110,7 @@
                           
                           <div class="col-sm-9">
                             <body onload="initialize_map(); initialize()">
+                              <div id="current2">Initializing...</div>
                               <div id="current">Initializing...</div>
                               <div id="map_lokasi" style="width:100%; height:350px"></div>
                             </body>

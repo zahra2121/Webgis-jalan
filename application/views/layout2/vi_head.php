@@ -64,6 +64,8 @@
                 map.setCenter(pos);
                 map.setZoom(14);
 
+                getAddress(p.coords.latitude, p.coords.longitude);
+
                 var infowindow = new google.maps.InfoWindow({
                     content: "<strong>Lokasi Sekarang</strong>"
                 });
@@ -77,11 +79,30 @@
                 google.maps.event.addListener(marker, 'click', function() {
                 infowindow.open(map,marker);
                 });
+
+                function getAddress(lat, lng) {
+                    var geocoder = new google.maps.Geocoder();
+                    var latlng = new google.maps.LatLng(lat, lng);
+                    geocoder.geocode({ 'location': latlng }, function(results, status) {
+                        if (status === 'OK') {
+                        if (results[0]) {
+                            document.getElementById('current2').innerHTML +=
+                            "<br>Address = " + results[0].formatted_address;
+                        } else {
+                            document.getElementById('current2').innerHTML +=
+                            "<br>No results found";
+                        }
+                        } else {
+                        document.getElementById('current2').innerHTML +=
+                            "<br>Geocoder failed due to: " + status;
+                        }
+                    });
+                }
                 
             }
         </script>
         <script>
-            var langID = "en-US", mapCanvas = "#map-lokasi", $ = jQuery;
+            var langID = "en-US", mapCanvas = "#map_lokasi", $ = jQuery;
             setInterval(function () {googlemap_remap();}, 10);
             function googlemap_remap() {
                 $(`${mapCanvas}>div:last-of-type`).hide(); //hide top message says this is for dev only
@@ -107,6 +128,7 @@
         <style>
             #title {padding:5px;}
             #current {font-size:10pt;padding:5px;}
+            #current2 {font-size:10pt;padding:5px;}
             ul {
                 display:grid;
                 list-style-type:none;
