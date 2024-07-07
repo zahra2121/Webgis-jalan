@@ -137,7 +137,7 @@
             <div class="card mx-3 px-4 center grid-margin stretch-card">
                 <div class="card-body"> 
                     <center><h3 class="card-title mb-2 text-dark center">GRAFIK JUMLAH DATA KASUS KECELAKAAN BERDASARKAN KECAMATAN</h3></center><br>
-                    <div style="grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);"><canvas id="myChart"></canvas>
+                    <div style="grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);"><canvas id="myChart1"></canvas>
                     <?php
                     //Inisialisasi nilai variabel awal
                    
@@ -195,7 +195,7 @@
                    
                     ?>
                     <script>
-                        var ctx = document.getElementById('myChart').getContext('2d');
+                        var ctx = document.getElementById('myChart1').getContext('2d');
                         var densityData = {
                             label: 'Jumlah Data (kasus)',
                             data: [<?php echo $jumlah; ?>],
