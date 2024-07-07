@@ -168,7 +168,7 @@
                                     categoryPercentage: 1,
                                     scaleLabel: {
                                         display: true,
-                                        labelString: 'Kecamatan'
+                                        labelString: 'Daftar Kecamatan'
                                     }
                                 }],
                                 yAxes: [{
