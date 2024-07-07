@@ -475,8 +475,6 @@
                             }
                         }).addTo(map);
                         
-                        
-
                         // CIRCLE BLACK SPOT
                         <?php foreach ($blackspot as $value) {?>
                             var circle = L.circle([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
@@ -516,12 +514,135 @@
                                
                                 ?><br><br></h5>")
                             .addTo(map);
-                                
                         <?php }?>
-                        
-
                     </script>
                 </div>
             </div>
         </section> 
+
+        <!-- GRAFIK KECAMATAN -->
+        <section>
+        <div class="card mx-3 px-4 center grid-margin stretch-card">
+                <div class="card-body"> 
+                    <center><h3 class="card-title mb-2 text-dark center">GRAFIK JUMLAH DATA KASUS KECELAKAAN BERDASARKAN TAHUN KASUS DI SETIAP KECAMATAN DI KABUPATEN BANTUL</h3><br>
+                    <div style="width: 60%;"><canvas id="myChart"></canvas></center>
+                    <?php
+                    //Inisialisasi nilai variabel awal
+                    $nama_status= "";
+                    $jumlah=null;
+                    $jumlah20 = null;
+                    $jumlah21 = null;
+                    $jumlah22 = null;
+                    $jumlah23 = null;
+                    $jumlah24 = null;
+
+                    foreach ($countkec20 as $item){
+                        $jur=$item->kecamatan;
+                        $nama_status .= "'$jur'". ", ";
+                        $jum= $item->total_idkasus;
+                        $jumlah .= "$jum". ", ";
+                    }
+                    foreach ($countkec21 as $item){
+                        $jum21= $item->total_idkasus;
+                        $jumlah21 .= "$jum21". ", ";
+                    }
+                    foreach ($countkec22 as $item){
+                        $jum22= $item->total_idkasus;
+                        $jumlah22 .= "$jum22". ", ";
+                    }
+                    foreach ($countkec23 as $item){
+                        $jum23= $item->total_idkasus;
+                        $jumlah23 .= "$jum23". ", ";
+                    }
+                    foreach ($countkec24 as $item){
+                        $jum24= $item->total_idkasus;
+                        $jumlah24 .= "$jum24". ", ";
+                    }
+
+                    ?>
+                    <script>
+                        var ctx = document.getElementById('myChart').getContext('2d');
+
+                        var dataFirst = {
+                            label: "Tahun 2020 ",
+                            borderColor: ['rgba(0, 99, 132, 1)'],
+                            backgroundColor: 'rgba(0, 99, 132, 0.6)',
+                            data: [<?php echo $jumlah; ?>],
+                            yAxisID: "y-axis-score",
+                        };
+                            
+                        var dataSecond = {
+                            label: "Tahun 2021 ",
+                            borderColor: ['rgba(60, 99, 132, 1)'],
+                            backgroundColor: 'rgba(60, 99, 132, 0.6)',
+                            data: [<?php echo $jumlah21; ?>],
+                            yAxisID: "y-axis-score",
+                            // Set More Options 
+                        };
+
+                        var dataThird = {
+                            label: "Tahun 2022 ",
+                            borderColor: ['rgba(120, 99, 132, 1)'],
+                            backgroundColor: 'rgba(120, 99, 132, 0.6)',
+                            data: [<?php echo $jumlah22; ?>],
+                            yAxisID: "y-axis-score",
+                            // Set More Options 
+                        };
+
+                        var dataFour = {
+                            label: "Tahun 2023 ",
+                            borderColor: ['rgba(240, 99, 132, 1)'],
+                            backgroundColor: 'rgba(240, 99, 132, 0.6)',
+                            data: [<?php echo $jumlah23; ?>],
+                            yAxisID: "y-axis-score",
+                            // Set More Options 
+                        };
+
+                        var dataFive = {
+                            label: "Tahun 2024 ",
+                            borderColor: ['rgba(480, 99, 132, 1)'],
+                            backgroundColor: 'rgba(480, 99, 132, 0.6)',
+                            data: [<?php echo $jumlah24; ?>],
+                            yAxisID: "y-axis-score",
+                            // Set More Options 
+                        };
+
+                        var chartOptions = {
+                            scales: {
+                                xAxes: [{
+                                    barPercentage: 1,
+                                    categoryPercentage: 1,
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: 'Daftar Kecamatan'
+                                    }
+                                }],
+                                yAxes: [{
+                                    barPercentage: 1,
+                                    id: 'y-axis-score',
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: 'Jumlah Data'
+                                    },
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                            }
+                        };   
+                        var speedData = {
+                            labels: [<?php echo $nama_status; ?>],
+                            datasets: [dataFirst, dataSecond, dataThird, dataFour, dataFive]
+                        };
+                        var barChart = new Chart(ctx, {
+                            type: 'bar',
+                            data: speedData,
+                            options: chartOptions
+                        });
+                        
+                    </script>
+                    </div>
+                </div>
+            </div>
+        </section>
  
