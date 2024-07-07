@@ -27,7 +27,7 @@ class M_user extends CI_model
     }
 
     public function count_kasus(){
-        $this->db->select('blackspot.*, kasus.*, blackspot.idblack, blackspot.daerah_jalan, COUNT(kasus.id) as total_idkasus, COUNT(kasus.idkasus) as total_kasus, SUM(blackspot.aek) as total_aek, SUM(kasus.luka_ringan) as lr_aek, SUM(kasus.luka_berat) as lb_aek, SUM(kasus.meninggal) as m_aek, SUM(kasus.rugi) as r_aek');
+        $this->db->select('blackspot.*, kasus.*, blackspot.patokan, blackspot.idblack, blackspot.daerah_jalan, COUNT(kasus.id) as total_idkasus, COUNT(kasus.idkasus) as total_kasus, SUM(blackspot.aek) as total_aek, SUM(kasus.luka_ringan) as lr_aek, SUM(kasus.luka_berat) as lb_aek, SUM(kasus.meninggal) as m_aek, SUM(kasus.rugi) as r_aek');
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
         $query=$this->db->get();
