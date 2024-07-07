@@ -119,16 +119,16 @@
 
                         var dataFirst = {
                             label: "Tahun 2020 ",
-                            borderColor: ['rgba(0,0,255,1)'],
-                            backgroundColor: 'rgba(0,0,255,1)',
+                            borderColor: ['rgba(0, 99, 132, 1)'],
+                            backgroundColor: 'rgba(0, 99, 132, 0.6)',
                             data: [<?php echo $jumlah; ?>],
                             yAxisID: "y-axis-score",
                         };
                             
                         var dataSecond = {
                             label: "Tahun 2021 ",
-                            borderColor: ['rgb(255,165,0)'],
-                            backgroundColor: 'rgb(255,165,0)',
+                            borderColor: ['rgba(60, 99, 132, 1)'],
+                            backgroundColor: 'rgba(60, 99, 132, 0.6)',
                             data: [<?php echo $jumlah21; ?>],
                             yAxisID: "y-axis-score",
                             // Set More Options 
@@ -136,8 +136,8 @@
 
                         var dataThird = {
                             label: "Tahun 2022 ",
-                            borderColor: ['rgb(0,128,0)'],
-                            backgroundColor: 'rgb(0,128,0)',
+                            borderColor: ['rgba(90, 99, 132, 1)'],
+                            backgroundColor: 'rgba(90, 99, 132, 0.6)',
                             data: [<?php echo $jumlah22; ?>],
                             yAxisID: "y-axis-score",
                             // Set More Options 
@@ -145,8 +145,8 @@
 
                         var dataFour = {
                             label: "Tahun 2023 ",
-                            borderColor: ['rgb(255,165,0)'],
-                            backgroundColor: 'rgb(255,165,0)',
+                            borderColor: ['rgba(120, 99, 132, 1)'],
+                            backgroundColor: 'rgba(120, 99, 132, 0.6)',
                             data: [<?php echo $jumlah23; ?>],
                             yAxisID: "y-axis-score",
                             // Set More Options 
@@ -154,8 +154,8 @@
 
                         var dataFive = {
                             label: "Tahun 2024 ",
-                            borderColor: ['rgb(0,128,0)'],
-                            backgroundColor: 'rgb(0,128,0)',
+                            borderColor: ['rgba(240, 99, 132, 1)'],
+                            backgroundColor: 'rgba(240, 99, 132, 0.6)',
                             data: [<?php echo $jumlah24; ?>],
                             yAxisID: "y-axis-score",
                             // Set More Options 
