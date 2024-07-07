@@ -148,33 +148,33 @@
                     $nama_24 ="";
                     $status= "";
                     $jumlah=null;
-                    $jum20 = null;
-                    $jum21 = null;
-                    $jum22 = null;
-                    $jum23 = null;
-                    $jum24 = null;
+                    $jumlah20 = null;
+                    $jumlah21 = null;
+                    $jumlah22 = null;
+                    $jumlah23 = null;
+                    $jumlah24 = null;
 
                     foreach ($countkec20 as $item){
                         $jur=$item->kecamatan;
                         $nama_status .= "'$jur'". ", ";
                         $jum= $item->total_idkasus;
-                        $jum20 .= "$jum". ", ";
+                        $jumlah .= "$jum". ", ";
                     }
                     foreach ($countkec21 as $item){
-                        $jum= $item->total_idkasus;
-                        $jum21 .= "$jum". ", ";
+                        $jum21= $item->total_idkasus;
+                        $jumlah21 .= "$jum21". ", ";
                     }
                     foreach ($countkec22 as $item){
-                        $jum= $item->total_idkasus;
-                        $jum22 .= "$jum". ", ";
+                        $jum22= $item->total_idkasus;
+                        $jumlah22 .= "$jum22". ", ";
                     }
                     foreach ($countkec23 as $item){
-                        $jum= $item->total_idkasus;
-                        $jum23 .= "$jum". ", ";
+                        $jum23= $item->total_idkasus;
+                        $jumlah23 .= "$jum23". ", ";
                     }
                     foreach ($countkec24 as $item){
-                        $jum= $item->total_idkasus;
-                        $jum24 .= "$jum". ", ";
+                        $jum24= $item->total_idkasus;
+                        $jumlah24 .= "$jum24". ", ";
                     }
 
                     ?>
@@ -198,7 +198,7 @@
                                     pointHitRadius: 30,
                                     pointBorderWidth: 2,
                                     pointStyle: 'rectRounded',
-                                    data: [<?php echo $jum20; ?>]
+                                    data: [<?php echo $jumlah; ?>]
                                 }]
                             },
                             // Configuration options go here
@@ -213,8 +213,8 @@
                             }
                         });
                     </script>
-                    <script>
-                        var ctx = document.getElementById('myChart').getContext('2d');
+                    <!-- <script>
+                        //var ctx = document.getElementById('myChart').getContext('2d');
                         // var densityData = {
                         //     label: 'Jumlah Data (kasus)',
                         //     data: [<?php echo $jumlah; ?>],
@@ -386,7 +386,7 @@
                         options: chartOptions
                         });
 
-                    </script>
+                    </script> -->
 
                     </div>
                 </div>
