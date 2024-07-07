@@ -184,7 +184,7 @@
                         var dataFirst = {
                               label: "Tahun 2020 ",
                               borderColor: ['rgba(0,0,255,1)'],
-                              backgroundColor: transparent,
+                              backgroundColor: 'transparent',
                               pointBorderColor: 'blue',
                               pointBackgroundColor:  ['rgba(0,0,255,1)'],
                               pointRadius: 5,
@@ -202,7 +202,7 @@
                             var dataSecond = {
                               label: "Tahun 2021 ",
                               borderColor: ['rgba(255,165,0,1)'],
-                              backgroundColor: transparent,
+                              backgroundColor: 'transparent',
                               pointBorderColor: 'orange',
                               pointBackgroundColor: ['rgb(255,165,0)'],
                               pointRadius: 5,
@@ -217,7 +217,7 @@
                             var dataThird = {
                               label: "Tahun 2022 ",
                               borderColor: ['rgba(0,128,0,1)'],
-                              backgroundColor: transparent,
+                              backgroundColor: 'transparent',
                               pointBorderColor: 'green',
                               pointBackgroundColor: ['rgb(0,128,0)'],
                               pointRadius: 5,
@@ -232,7 +232,7 @@
                             var dataFour = {
                               label: "Tahun 2023 ",
                               borderColor: ['rgba(255,165,0,1)'],
-                              backgroundColor: transparent,
+                              backgroundColor: 'transparent',
                               pointBorderColor: 'orange',
                               pointBackgroundColor: ['rgb(255,165,0)'],
                               pointRadius: 5,
@@ -247,7 +247,7 @@
                             var dataFive = {
                               label: "Tahun 2024 ",
                               borderColor: ['rgba(0,128,0,1)'],
-                              backgroundColor: transparent,
+                              backgroundColor: 'transparent',
                               pointBorderColor: 'green',
                               pointBackgroundColor: ['rgb(0,128,0)'],
                               pointRadius: 5,
