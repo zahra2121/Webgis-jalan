@@ -198,7 +198,7 @@
                         var ctx = document.getElementById('myChart').getContext('2d');
                         var densityData = {
                             label: 'Jumlah Data (kasus)',
-                            data: [<?php echo $jumlah; ?>],
+                            data: [<?php echo $jum20; ?>],
                             backgroundColor: [
                                 'rgba(0, 99, 132, 0.6)',
                                 'rgba(30, 99, 132, 0.6)',
