@@ -61,7 +61,7 @@
             function show_position(p)
             {
                 document.getElementById('current').innerHTML="Latitude = "+p.coords.latitude.toFixed(5);
-                document.getElementById('current2').innerHTML="Longitude = "+p.coords.longitude.toFixed(5);
+                document.getElementById('current').innerHTML="Longitude = "+p.coords.longitude.toFixed(5);
                 var pos=new google.maps.LatLng(p.coords.latitude,p.coords.longitude);
                 map.setCenter(pos);
                 map.setZoom(14);
