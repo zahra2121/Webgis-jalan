@@ -362,7 +362,7 @@
                         type: 'bar',
                         data: {
                             labels: [<?php echo $nama_status;?>],
-                            datasets: [densityData],
+                            datasets: [data20],
                         },
                         options: chartOptions
                         });
