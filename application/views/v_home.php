@@ -234,7 +234,7 @@
                         };
 
                         var dataTahun = {
-                            label: 'Jumlah Data (kasus)',
+                            label: 'Tahun (kasus)',
                             data: [<?php echo $jum4; ?>],
                             backgroundColor: [
                                 'rgba(0, 99, 132, 0.6)'
