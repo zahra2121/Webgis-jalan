@@ -125,6 +125,7 @@ class User extends CI_Controller {
         $data = array(
             'idblack' => $data,
             'daerah_jalan' => $this->input->post('daerah_jalan'),
+            'patokan' => $this->input->post('patokan'),
             'tahun' => $this->input->post('tahun'),
             'kecamatan' => $this->input->post('kecamatan'),
             'kabupaten' => $this->input->post('kabupaten'),
