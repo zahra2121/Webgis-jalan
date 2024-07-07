@@ -50,7 +50,11 @@ class Laporfpdf extends CI_Controller {
             $pdf->Cell(170,6,$data->alamat,1,0);
             $pdf->Cell(20,6,$data->tgl_kejadian,1,0);
             $pdf->Cell(20,6,$data->jam,1,0,'C');
-            $pdf->Cell(80,6,$data->link_maps. "<br> Lat: ".$data->latitude.", Long: ". $data->longitude,1,0);
+
+            $pdf->MultiCell(80,6,$data->link_maps . "\nLat: " . $data->latitude . ", Long: " . $data->longitude,1);
+    
+            // Adjust the next cell's position since MultiCell moves to the next line
+            $pdf->SetXY($pdf->GetX() + 330, $pdf->GetY() - 6); // Adjust X and Y as needed
             $pdf->Cell(60,6,$data->foto,1,1);
             
 	    }
