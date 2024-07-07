@@ -120,7 +120,6 @@ class M_dataset extends CI_model
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
         $this->db->group_by('blackspot.kecamatan');
-        $this->db->group_by('blackspot.tahun');
         $query=$this->db->get();
         return $query->result();
     }

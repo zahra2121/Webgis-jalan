@@ -149,7 +149,7 @@
                     $jum3 = null;
                     $jum4 = null;
 
-                    foreach ($countkec as $item){
+                    foreach ($counttahun as $item){
                         $jurr=$item->tahun;
                         $nama_tahun .= "'$jurr'". ", ";
                         $jumtahun= $item->total_idkasus;
@@ -159,7 +159,7 @@
                     foreach ($countkec as $value){
                         $jur=$value->kecamatan;
                         $status .= "'$jur'". ", ";
-                        $jum= $value->total_idkasus;
+                        $jum= $value->total_tahun;
                         $jumlah .= "$jum". ", ";
                     }
                     
