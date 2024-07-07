@@ -269,7 +269,7 @@
                                 'rgba(0, 99, 132, 1)'
                                 
                             ],
-                            borderWidth: 2,
+                            borderWidth: 0.5,
                             hoverBorderWidth: 0 
                         };
 
@@ -291,7 +291,7 @@
                                 'rgba(30, 99, 132, 1)'
                                 
                             ],
-                            borderWidth: 2,
+                            borderWidth: 0.5,
                             hoverBorderWidth: 0 
                         };
                         var data22 = {
@@ -312,7 +312,7 @@
                                 'rgba(60, 99, 132, 1)'
                                 
                             ],
-                            borderWidth: 2,
+                            borderWidth: 0.5,
                             hoverBorderWidth: 0 
                         };
                         var data23 = {
@@ -333,7 +333,7 @@
                                 'rgba(90, 99, 132, 1)'
                                 
                             ],
-                            borderWidth: 2,
+                            borderWidth: 0.5,
                             hoverBorderWidth: 0 
                         };
                         var data24 = {
@@ -354,7 +354,7 @@
                                 'rgba(120, 99, 132, 1)'
                                 
                             ],
-                            borderWidth: 2,
+                            borderWidth: 0.5,
                             hoverBorderWidth: 0 
                         };
 
