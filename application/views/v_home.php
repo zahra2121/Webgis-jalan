@@ -178,42 +178,97 @@
                     }
 
                     ?>
-                    <!-- <script>
-                        var ctx = document.getElementById('myChart').getContext('2d');
-                        var chart = new Chart(ctx, {
-                            // The type of chart we want to create
-                            type: 'line',
-                            // The data for our dataset
-                            data: {
-                                labels: [<?php echo $nama_status; ?>],
-                                datasets: [{
-                                    label:'Tahun 2020 ',
-                                    borderDash: [5, 5],
-                                    borderColor: ['rgb(255,165,0)'],
-                                    backgroundColor: 'transparent',
-                                    pointBorderColor: 'orange',
-                                    pointBackgroundColor: 'rgb(255,165,0)',
-                                    pointRadius: 5,
-                                    pointHoverRadius: 10,
-                                    pointHitRadius: 30,
-                                    pointBorderWidth: 2,
-                                    pointStyle: 'rectRounded',
-                                    data: [<?php echo $jumlah; ?>]
-                                }]
-                            },
-                            // Configuration options go here
-                            options: {
-                                scales: {
-                                    yAxes: [{
-                                        ticks: {
-                                            beginAtZero:true
-                                        }
-                                    }]
-                                }
-                            }
-                        });
-                    </script> -->
                     <script>
+                        var ctx = document.getElementById('myChart').getContext('2d');
+
+                        var dataFirst = {
+                              label: "Tahun 2020 ",
+                              borderColor: ['rgba(0,0,255,1)'],
+                              backgroundColor: 'transparent',
+                              pointBorderColor: 'blue',
+                              pointBackgroundColor:  ['rgba(0,0,255,1)'],
+                              pointRadius: 5,
+                              pointHoverRadius: 10,
+                              pointHitRadius: 30,
+                              pointBorderWidth: 2,
+                              pointStyle: 'rectRounded',
+                              data: [<?php echo $jumlah; ?>],
+                              lineTension: 0.3,
+                              // Set More Options 
+                            };
+                              
+                            var dataSecond = {
+                              label: "Tahun 2021 ",
+                              borderColor: ['rgb(255,165,0)'],
+                              backgroundColor: 'transparent',
+                              pointBorderColor: 'orange',
+                              pointBackgroundColor: ['rgb(255,165,0)'],
+                              pointRadius: 5,
+                              pointHoverRadius: 10,
+                              pointHitRadius: 30,
+                              pointBorderWidth: 2,
+                              pointStyle: 'rectRounded',
+                              data: [<?php echo $jumlah21; ?>],
+                              // Set More Options 
+                            };
+
+                            var dataThird = {
+                              label: "Tahun 2022 ",
+                              borderColor: ['rgb(0,128,0)'],
+                              backgroundColor: 'transparent',
+                              pointBorderColor: 'green',
+                              pointBackgroundColor: ['rgb(0,128,0)'],
+                              pointRadius: 5,
+                              pointHoverRadius: 10,
+                              pointHitRadius: 30,
+                              pointBorderWidth: 2,
+                              pointStyle: 'rectRounded',
+                              data: [<?php echo $jumlah22; ?>],
+                              // Set More Options 
+                            };
+                              
+                            var speedData = {
+                              labels: [<?php echo $nama_status; ?>],
+                              datasets: [dataFirst, dataSecond, dataThird]
+                            };
+                            var lineChart = new Chart(ctx, {
+                              type: 'line',
+                              data: speedData
+                            });
+                        // var chart = new Chart(ctx, {
+                        //     // The type of chart we want to create
+                        //     type: 'line',
+                        //     // The data for our dataset
+                        //     data: {
+                        //         labels: [<?php echo $nama_status; ?>],
+                        //         datasets: [{
+                        //             label:'Tahun 2020 ',
+                        //             borderDash: [5, 5],
+                        //             borderColor: ['rgb(255,165,0)'],
+                        //             backgroundColor: 'transparent',
+                        //             pointBorderColor: 'orange',
+                        //             pointBackgroundColor: 'rgb(255,165,0)',
+                        //             pointRadius: 5,
+                        //             pointHoverRadius: 10,
+                        //             pointHitRadius: 30,
+                        //             pointBorderWidth: 2,
+                        //             pointStyle: 'rectRounded',
+                        //             data: [<?php echo $jumlah; ?>]
+                        //         }]
+                        //     },
+                        //     // Configuration options go here
+                        //     options: {
+                        //         scales: {
+                        //             yAxes: [{
+                        //                 ticks: {
+                        //                     beginAtZero:true
+                        //                 }
+                        //             }]
+                        //         }
+                        //     }
+                        // });
+                    </script>
+                    <!-- <script>
                         var ctx = document.getElementById('myChart').getContext('2d');
                         var densityData = {
                             label: 'Tahun 2020 ',
@@ -386,7 +441,7 @@
                         options: chartOptions
                         });
 
-                    </script>
+                    </script> -->
 
                     </div>
                 </div>
