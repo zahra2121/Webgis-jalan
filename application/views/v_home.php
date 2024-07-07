@@ -137,11 +137,55 @@
             <div class="card mx-3 px-4 center grid-margin stretch-card">
                 <div class="card-body"> 
                     <center><h3 class="card-title mb-2 text-dark center">GRAFIK JUMLAH DATA KASUS KECELAKAAN BERDASARKAN KECAMATAN</h3></center><br>
-                    <div style="grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);"><canvas id="myChart1"></canvas>
+                    <div style="grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);"><canvas id="myChart"></canvas>
                     <?php
                     //Inisialisasi nilai variabel awal
+
+                    foreach ($counttahun as $item){
+                        $jur=$item->tahun;
+                        $nama_status .= "'$jur'". ", ";
+                        $jum= $item->total_idkasus;
+                        $jumlah .= "$jum". ", ";
+                    }
+
+                    ?>
+                    <script>
+                        var ctx = document.getElementById('myChart').getContext('2d');
+                        var chart = new Chart(ctx, {
+                            // The type of chart we want to create
+                            type: 'line',
+                            // The data for our dataset
+                            data: {
+                                labels: [<?php echo $nama_status; ?>],
+                                datasets: [{
+                                    label:'Jumlah Data (kasus)',
+                                    borderDash: [5, 5],
+                                    borderColor: ['rgb(255,165,0)'],
+                                    backgroundColor: 'transparent',
+                                    pointBorderColor: 'orange',
+                                    pointBackgroundColor: 'rgb(255,165,0)',
+                                    pointRadius: 5,
+                                    pointHoverRadius: 10,
+                                    pointHitRadius: 30,
+                                    pointBorderWidth: 2,
+                                    pointStyle: 'rectRounded',
+                                    data: [<?php echo $jumlah; ?>]
+                                }]
+                            },
+                            // Configuration options go here
+                            options: {
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero:true
+                                        }
+                                    }]
+                                }
+                            }
+                        });
+                    </script>
                    
-                    $nama_status= "";
+                    <!-- $nama_status= "";
                     $nama_20 ="";
                     $nama_21 ="";
                     $nama_22 ="";
@@ -195,7 +239,7 @@
                    
                     ?>
                     <script>
-                        var ctx = document.getElementById('myChart1').getContext('2d');
+                        var ctx = document.getElementById('myChart2').getContext('2d');
                         var densityData = {
                             label: 'Jumlah Data (kasus)',
                             data: [<?php echo $jumlah; ?>],
@@ -439,7 +483,7 @@
                         //     data: speedData
                         // });
                     
-                    </script>
+                    </script> -->
                     </div>
                 </div>
             </div>
