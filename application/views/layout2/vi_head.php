@@ -81,21 +81,22 @@
                 });    
             }
 
-            function getAddress(lat, lng) {
+            function getAddress(p.coords.latitude, p.coords.longitude) {
                 var geocoder = new google.maps.Geocoder();
                 var latlng = new google.maps.LatLng(p.coords.latitude,p.coords.longitude);
                 geocoder.geocode({ 'location': latlng }, function(results, status) {
                     if (status === 'OK') {
-                    if (results[0]) {
+                        if (results[0]) {
+                            document.getElementById('current2').innerHTML +=
+                            "<br>Alamat = " + results[0].formatted_address;
+                        } else {
+                            document.getElementById('current2').innerHTML +=
+                            "<br>No results found";
+                        }
+                    } 
+                    else {
                         document.getElementById('current2').innerHTML +=
-                        "<br>Alamat = " + results[0].formatted_address;
-                    } else {
-                        document.getElementById('current2').innerHTML +=
-                        "<br>No results found";
-                    }
-                    } else {
-                    document.getElementById('current2').innerHTML +=
-                        "<br>Geocoder failed due to: " + status;
+                            "<br>Geocoder failed due to: " + status;
                     }
                 });
             }
