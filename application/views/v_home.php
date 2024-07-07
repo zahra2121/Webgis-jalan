@@ -247,7 +247,7 @@
                             type: 'line',
                             // The data for our dataset
                             data: {
-                                labels: [<?php echo $nama_tahun; ?>],
+                                labels: [<?php echo $status; ?>],
                                 datasets: [{
                                     label:'Jumlah Data (kasus)',
                                     borderDash: [5, 5],
