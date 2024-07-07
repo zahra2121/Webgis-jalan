@@ -161,12 +161,12 @@
                         $jum= $item->total_idkasus;
                         $jumlah .= "$jum". ", ";
                     }
-                    // foreach ($countkec20 as $item){
-                    //     $jurr=$item->tahun;
-                    //     $nama_20 .= "'$jurr'". ", ";
-                    //     $jumtahun20= $item->total_idkasus;
-                    //     $jum20 .= "$jumtahun20". ", ";
-                    // }
+                    foreach ($countkec20 as $item){
+                        $jurr=$item->tahun;
+                        $nama_20 .= "'$jurr'". ", ";
+                        $jumtahun20= $item->total_idkasus;
+                        $jum20 .= "$jumtahun20". ", ";
+                    }
                     // foreach ($countkec21 as $item){
                     //     $jurr21=$item->tahun;
                     //     $nama_21 .= "'$jurr21'". ", ";
@@ -251,27 +251,27 @@
                         },
                         };
 
-                        // var data20 = {
-                        //     label: 'Tahun 2020 ',
-                        //     data: [<?php echo $jum20; ?>],
-                        //     backgroundColor: [
-                        //         'rgba(0, 99, 132, 0.6)',
-                        //         'rgba(0, 99, 132, 0.6)',
-                        //         'rgba(0, 99, 132, 0.6)',
-                        //         'rgba(0, 99, 132, 0.6)',
-                        //         'rgba(0, 99, 132, 0.6)'
-                        //     ],
-                        //     borderColor: [
-                        //         'rgba(0, 99, 132, 1)',
-                        //         'rgba(0, 99, 132, 1)',
-                        //         'rgba(0, 99, 132, 1)',
-                        //         'rgba(0, 99, 132, 1)',
-                        //         'rgba(0, 99, 132, 1)'
+                        var data20 = {
+                            label: 'Tahun 2020 ',
+                            data: [<?php echo $jum20; ?>],
+                            backgroundColor: [
+                                'rgba(0, 99, 132, 0.6)',
+                                'rgba(0, 99, 132, 0.6)',
+                                'rgba(0, 99, 132, 0.6)',
+                                'rgba(0, 99, 132, 0.6)',
+                                'rgba(0, 99, 132, 0.6)'
+                            ],
+                            borderColor: [
+                                'rgba(0, 99, 132, 1)',
+                                'rgba(0, 99, 132, 1)',
+                                'rgba(0, 99, 132, 1)',
+                                'rgba(0, 99, 132, 1)',
+                                'rgba(0, 99, 132, 1)'
                                 
-                        //     ],
-                        //     borderWidth: 0.5,
-                        //     hoverBorderWidth: 0 
-                        // };
+                            ],
+                            borderWidth: 0.5,
+                            hoverBorderWidth: 0 
+                        };
 
                         // var data21 = {
                         //     label: 'Tahun 2021 ',
@@ -362,7 +362,7 @@
                         type: 'bar',
                         data: {
                             labels: [<?php echo $nama_status; ?>],
-                            datasets: [densityData]
+                            datasets: [data20]
                         },
                         options: chartOptions
                         });
