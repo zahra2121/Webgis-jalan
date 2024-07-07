@@ -142,11 +142,19 @@
                     //Inisialisasi nilai variabel awal
                    
                     $nama_status= "";
+                    $nama_tahun ="";
                     $status= "";
                     $jumlah=null;
                     $jum2 = null;
                     $jum3 = null;
                     $jum4 = null;
+
+                    foreach ($counttahun as $item){
+                        $jurr=$item->tahun;
+                        $nama_tahun .= "'$jurr'". ", ";
+                        $jumtahun= $item->total_idkasus;
+                        $jum4 .= "$jumtahun". ", ";
+                    }
 
                     foreach ($countkec as $value){
                         $jur=$value->kecamatan;
@@ -224,36 +232,6 @@
                             }]
                         },
                         };
-                              
-                        var dataSecond = {
-                            label: "Daerah Rawan ",
-                            borderColor: ['rgb(255,0,0)'],
-                            backgroundColor: 'transparent',
-                            pointBorderColor: 'red',
-                            pointBackgroundColor: ['rgb(255,0,0)'],
-                            pointRadius: 5,
-                            pointHoverRadius: 10,
-                            pointHitRadius: 30,
-                            pointBorderWidth: 2,
-                            pointStyle: 'rectRounded',
-                            data: [<?php echo $jum2; ?>],
-                            // Set More Options 
-                        };
-
-                        var dataThird = {
-                            label: "Daerah Bukan Rawan ",
-                            borderColor: ['rgb(255,165,0)'],
-                            backgroundColor: 'transparent',
-                            pointBorderColor: 'orange',
-                            pointBackgroundColor: ['rgb(255,165,0)'],
-                            pointRadius: 5,
-                            pointHoverRadius: 10,
-                            pointHitRadius: 30,
-                            pointBorderWidth: 2,
-                            pointStyle: 'rectRounded',
-                            data: [<?php echo $jum3; ?>],
-                            // Set More Options 
-                        };
 
                         var barChart = new Chart(ctx, {
                         type: 'bar',
@@ -263,6 +241,69 @@
                         },
                         options: chartOptions
                         });
+
+                        var chart = new Chart(ctx, {
+                            // The type of chart we want to create
+                            type: 'line',
+                            // The data for our dataset
+                            data: {
+                                labels: [<?php echo $nama_tahun; ?>],
+                                datasets: [{
+                                    label:'Jumlah Data (kasus)',
+                                    borderDash: [5, 5],
+                                    borderColor: ['rgb(255,165,0)'],
+                                    backgroundColor: 'transparent',
+                                    pointBorderColor: 'orange',
+                                    pointBackgroundColor: 'rgb(255,165,0)',
+                                    pointRadius: 5,
+                                    pointHoverRadius: 10,
+                                    pointHitRadius: 30,
+                                    pointBorderWidth: 2,
+                                    pointStyle: 'rectRounded',
+                                    data: [<?php echo $jum4; ?>]
+                                }]
+                            },
+                            // Configuration options go here
+                            options: {
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero:true
+                                        }
+                                    }]
+                                }
+                            }
+                        });
+                              
+                        // var dataSecond = {
+                        //     label: "Daerah Rawan ",
+                        //     borderColor: ['rgb(255,0,0)'],
+                        //     backgroundColor: 'transparent',
+                        //     pointBorderColor: 'red',
+                        //     pointBackgroundColor: ['rgb(255,0,0)'],
+                        //     pointRadius: 5,
+                        //     pointHoverRadius: 10,
+                        //     pointHitRadius: 30,
+                        //     pointBorderWidth: 2,
+                        //     pointStyle: 'rectRounded',
+                        //     data: [<?php echo $jum2; ?>],
+                        //     // Set More Options 
+                        // };
+
+                        // var dataThird = {
+                        //     label: "Daerah Bukan Rawan ",
+                        //     borderColor: ['rgb(255,165,0)'],
+                        //     backgroundColor: 'transparent',
+                        //     pointBorderColor: 'orange',
+                        //     pointBackgroundColor: ['rgb(255,165,0)'],
+                        //     pointRadius: 5,
+                        //     pointHoverRadius: 10,
+                        //     pointHitRadius: 30,
+                        //     pointBorderWidth: 2,
+                        //     pointStyle: 'rectRounded',
+                        //     data: [<?php echo $jum3; ?>],
+                        //     // Set More Options 
+                        // };
 
                         // var speedData = {
                         //     labels: [<?php echo $nama_status; ?>],
