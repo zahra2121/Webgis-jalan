@@ -272,8 +272,7 @@
                             };
                             var lineChart = new Chart(ctx, {
                               type: 'line',
-                              data: speedData,
-                              options: chartOptions
+                              data: speedData
                             });
                         
                     </script>
