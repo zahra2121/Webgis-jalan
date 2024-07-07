@@ -251,112 +251,112 @@
                         },
                         };
 
-                        var data20 = {
-                            label: 'Tahun 2020 ',
-                            data: [<?php echo $jum20; ?>],
-                            backgroundColor: [
-                                'rgba(0, 99, 132, 0.6)',
-                                'rgba(0, 99, 132, 0.6)',
-                                'rgba(0, 99, 132, 0.6)',
-                                'rgba(0, 99, 132, 0.6)',
-                                'rgba(0, 99, 132, 0.6)'
-                            ],
-                            borderColor: [
-                                'rgba(0, 99, 132, 1)',
-                                'rgba(0, 99, 132, 1)',
-                                'rgba(0, 99, 132, 1)',
-                                'rgba(0, 99, 132, 1)',
-                                'rgba(0, 99, 132, 1)'
+                        // var data20 = {
+                        //     label: 'Tahun 2020 ',
+                        //     data: [<?php echo $jum20; ?>],
+                        //     backgroundColor: [
+                        //         'rgba(0, 99, 132, 0.6)',
+                        //         'rgba(0, 99, 132, 0.6)',
+                        //         'rgba(0, 99, 132, 0.6)',
+                        //         'rgba(0, 99, 132, 0.6)',
+                        //         'rgba(0, 99, 132, 0.6)'
+                        //     ],
+                        //     borderColor: [
+                        //         'rgba(0, 99, 132, 1)',
+                        //         'rgba(0, 99, 132, 1)',
+                        //         'rgba(0, 99, 132, 1)',
+                        //         'rgba(0, 99, 132, 1)',
+                        //         'rgba(0, 99, 132, 1)'
                                 
-                            ],
-                            borderWidth: 0.5,
-                            hoverBorderWidth: 0 
-                        };
+                        //     ],
+                        //     borderWidth: 0.5,
+                        //     hoverBorderWidth: 0 
+                        // };
 
-                        var data21 = {
-                            label: 'Tahun 2021 ',
-                            data: [<?php echo $jum21; ?>],
-                            backgroundColor: [
-                                'rgba(30, 99, 132, 0.6)',
-                                'rgba(30, 99, 132, 0.6)',
-                                'rgba(30, 99, 132, 0.6)',
-                                'rgba(30, 99, 132, 0.6)',
-                                'rgba(30, 99, 132, 0.6)'
-                            ],
-                            borderColor: [
-                                'rgba(30, 99, 132, 1)',
-                                'rgba(30, 99, 132, 1)',
-                                'rgba(30, 99, 132, 1)',
-                                'rgba(30, 99, 132, 1)',
-                                'rgba(30, 99, 132, 1)'
+                        // var data21 = {
+                        //     label: 'Tahun 2021 ',
+                        //     data: [<?php echo $jum21; ?>],
+                        //     backgroundColor: [
+                        //         'rgba(30, 99, 132, 0.6)',
+                        //         'rgba(30, 99, 132, 0.6)',
+                        //         'rgba(30, 99, 132, 0.6)',
+                        //         'rgba(30, 99, 132, 0.6)',
+                        //         'rgba(30, 99, 132, 0.6)'
+                        //     ],
+                        //     borderColor: [
+                        //         'rgba(30, 99, 132, 1)',
+                        //         'rgba(30, 99, 132, 1)',
+                        //         'rgba(30, 99, 132, 1)',
+                        //         'rgba(30, 99, 132, 1)',
+                        //         'rgba(30, 99, 132, 1)'
                                 
-                            ],
-                            borderWidth: 0.5,
-                            hoverBorderWidth: 0 
-                        };
-                        var data22 = {
-                            label: 'Tahun 2022 ',
-                            data: [<?php echo $jum22; ?>],
-                            backgroundColor: [
-                                'rgba(60, 99, 132, 0.6)',
-                                'rgba(60, 99, 132, 0.6)',
-                                'rgba(60, 99, 132, 0.6)',
-                                'rgba(60, 99, 132, 0.6)',
-                                'rgba(60, 99, 132, 0.6)'
-                            ],
-                            borderColor: [
-                                'rgba(60, 99, 132, 1)',
-                                'rgba(60, 99, 132, 1)',
-                                'rgba(60, 99, 132, 1)',
-                                'rgba(60, 99, 132, 1)',
-                                'rgba(60, 99, 132, 1)'
+                        //     ],
+                        //     borderWidth: 0.5,
+                        //     hoverBorderWidth: 0 
+                        // };
+                        // var data22 = {
+                        //     label: 'Tahun 2022 ',
+                        //     data: [<?php echo $jum22; ?>],
+                        //     backgroundColor: [
+                        //         'rgba(60, 99, 132, 0.6)',
+                        //         'rgba(60, 99, 132, 0.6)',
+                        //         'rgba(60, 99, 132, 0.6)',
+                        //         'rgba(60, 99, 132, 0.6)',
+                        //         'rgba(60, 99, 132, 0.6)'
+                        //     ],
+                        //     borderColor: [
+                        //         'rgba(60, 99, 132, 1)',
+                        //         'rgba(60, 99, 132, 1)',
+                        //         'rgba(60, 99, 132, 1)',
+                        //         'rgba(60, 99, 132, 1)',
+                        //         'rgba(60, 99, 132, 1)'
                                 
-                            ],
-                            borderWidth: 0.5,
-                            hoverBorderWidth: 0 
-                        };
-                        var data23 = {
-                            label: 'Tahun 2023 ',
-                            data: [<?php echo $jum23; ?>],
-                            backgroundColor: [
-                                'rgba(90, 99, 132, 0.6)',
-                                'rgba(90, 99, 132, 0.6)',
-                                'rgba(90, 99, 132, 0.6)',
-                                'rgba(90, 99, 132, 0.6)',
-                                'rgba(90, 99, 132, 0.6)'
-                            ],
-                            borderColor: [
-                                'rgba(90, 99, 132, 1)',
-                                'rgba(90, 99, 132, 1)',
-                                'rgba(90, 99, 132, 1)',
-                                'rgba(90, 99, 132, 1)',
-                                'rgba(90, 99, 132, 1)'
+                        //     ],
+                        //     borderWidth: 0.5,
+                        //     hoverBorderWidth: 0 
+                        // };
+                        // var data23 = {
+                        //     label: 'Tahun 2023 ',
+                        //     data: [<?php echo $jum23; ?>],
+                        //     backgroundColor: [
+                        //         'rgba(90, 99, 132, 0.6)',
+                        //         'rgba(90, 99, 132, 0.6)',
+                        //         'rgba(90, 99, 132, 0.6)',
+                        //         'rgba(90, 99, 132, 0.6)',
+                        //         'rgba(90, 99, 132, 0.6)'
+                        //     ],
+                        //     borderColor: [
+                        //         'rgba(90, 99, 132, 1)',
+                        //         'rgba(90, 99, 132, 1)',
+                        //         'rgba(90, 99, 132, 1)',
+                        //         'rgba(90, 99, 132, 1)',
+                        //         'rgba(90, 99, 132, 1)'
                                 
-                            ],
-                            borderWidth: 0.5,
-                            hoverBorderWidth: 0 
-                        };
-                        var data24 = {
-                            label: 'Tahun 2024 ',
-                            data: [<?php echo $jum24; ?>],
-                            backgroundColor: [
-                                'rgba(120, 99, 132, 0.6)',
-                                'rgba(120, 99, 132, 0.6)',
-                                'rgba(120, 99, 132, 0.6)',
-                                'rgba(120, 99, 132, 0.6)',
-                                'rgba(120, 99, 132, 0.6)'
-                            ],
-                            borderColor: [
-                                'rgba(120, 99, 132, 1)',
-                                'rgba(120, 99, 132, 1)',
-                                'rgba(120, 99, 132, 1)',
-                                'rgba(120, 99, 132, 1)',
-                                'rgba(120, 99, 132, 1)'
+                        //     ],
+                        //     borderWidth: 0.5,
+                        //     hoverBorderWidth: 0 
+                        // };
+                        // var data24 = {
+                        //     label: 'Tahun 2024 ',
+                        //     data: [<?php echo $jum24; ?>],
+                        //     backgroundColor: [
+                        //         'rgba(120, 99, 132, 0.6)',
+                        //         'rgba(120, 99, 132, 0.6)',
+                        //         'rgba(120, 99, 132, 0.6)',
+                        //         'rgba(120, 99, 132, 0.6)',
+                        //         'rgba(120, 99, 132, 0.6)'
+                        //     ],
+                        //     borderColor: [
+                        //         'rgba(120, 99, 132, 1)',
+                        //         'rgba(120, 99, 132, 1)',
+                        //         'rgba(120, 99, 132, 1)',
+                        //         'rgba(120, 99, 132, 1)',
+                        //         'rgba(120, 99, 132, 1)'
                                 
-                            ],
-                            borderWidth: 0.5,
-                            hoverBorderWidth: 0 
-                        };
+                        //     ],
+                        //     borderWidth: 0.5,
+                        //     hoverBorderWidth: 0 
+                        // };
 
                         var barChart = new Chart(ctx, {
                         type: 'bar',
