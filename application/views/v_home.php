@@ -157,7 +157,7 @@
 
                     foreach ($countkec as $item){
                         $jur=$item->kecamatan;
-                        $status .= "'$jur'". ", ";
+                        $nama_status .= "'$jur'". ", ";
                         $jum= $item->total_idkasus;
                         $jumlah .= "$jum". ", ";
                     }
@@ -362,7 +362,7 @@
                         type: 'bar',
                         data: {
                             labels: [<?php echo $status;?>],
-                            datasets: [densityData],
+                            datasets: [densityData]
                         },
                         options: chartOptions
                         });
