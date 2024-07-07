@@ -36,7 +36,7 @@ class Laporfpdf extends CI_Controller {
         $pdf->Cell(80,7,'TITIK LOKASI (LAT,LONG)',1,0,'C');
         $pdf->Cell(60,7,'DOKUMENTASI',1,0,'C');
         
-        $pdf->Cell(10,10,'',0,1);
+        $pdf->Cell(10,7,'',0,1);
         $pdf->SetFont('Arial','',9);
         $lapor = $this->db->get('lapor')->result();
         $no=0;
@@ -51,10 +51,10 @@ class Laporfpdf extends CI_Controller {
             $pdf->Cell(20,6,$data->tgl_kejadian,1,0);
             $pdf->Cell(20,6,$data->jam,1,0,'C');
 
-            $pdf->MultiCell(80,7,$data->link_maps . "\nLat: " . $data->latitude . ", Long: " . $data->longitude,1);
-    
-            // Adjust the next cell's position since MultiCell moves to the next line
-            $pdf->SetXY($pdf->GetX() + 340, $pdf->GetY() - 6); // Adjust X and Y as needed
+            $x = $pdf->GetX();
+            $y = $pdf->GetY();
+            $pdf->MultiCell(80, 6, $data->link_maps . "\nLat: " . $data->latitude . ", Long: " . $data->longitude, 1);
+            $pdf->SetXY($x + 80, $y); // Adjust X based on MultiCell width
             $pdf->Cell(60,6,$data->foto,1,1);
             
 	    }
