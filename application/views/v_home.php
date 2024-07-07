@@ -222,8 +222,8 @@
                         var chartOptions = {
                             scales: {
                                 xAxes: [{
-                                barPercentage: 1,
-                                categoryPercentage: 0.6
+                                barPercentage: 0.5,
+                                categoryPercentage: 0.5
                                 }],
                                 yAxes: [{
                                 barPercentage: 0.5
