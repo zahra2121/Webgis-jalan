@@ -78,27 +78,26 @@
 
                 google.maps.event.addListener(marker, 'click', function() {
                 infowindow.open(map,marker);
-                });
+                });    
+            }
 
-                function getAddress(lat, lng) {
-                    var geocoder = new google.maps.Geocoder();
-                    var latlng = new google.maps.LatLng(lat, lng);
-                    geocoder.geocode({ 'location': latlng }, function(results, status) {
-                        if (status === 'OK') {
-                        if (results[0]) {
-                            document.getElementById('current2').innerHTML +=
-                            "<br>Address = " + results[0].formatted_address;
-                        } else {
-                            document.getElementById('current2').innerHTML +=
-                            "<br>No results found";
-                        }
-                        } else {
+            function getAddress(lat, lng) {
+                var geocoder = new google.maps.Geocoder();
+                var latlng = new google.maps.LatLng(p.coords.latitude,p.coords.longitude);
+                geocoder.geocode({ 'location': latlng }, function(results, status) {
+                    if (status === 'OK') {
+                    if (results[0]) {
                         document.getElementById('current2').innerHTML +=
-                            "<br>Geocoder failed due to: " + status;
-                        }
-                    });
-                }
-                
+                        "<br>Alamat = " + results[0].formatted_address;
+                    } else {
+                        document.getElementById('current2').innerHTML +=
+                        "<br>No results found";
+                    }
+                    } else {
+                    document.getElementById('current2').innerHTML +=
+                        "<br>Geocoder failed due to: " + status;
+                    }
+                });
             }
         </script>
         <script>
