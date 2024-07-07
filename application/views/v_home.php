@@ -157,7 +157,7 @@
 
                     foreach ($countkec as $value){
                         $jur=$value->kecamatan;
-                        $status .= "'$jur'". ", ";
+                        $nama_status .= "'$jur'". ", ";
                         $jum= $value->total_data;
                         $jumlah .= "$jum". ", ";
                     }
@@ -198,7 +198,7 @@
                         var ctx = document.getElementById('myChart').getContext('2d');
                         var densityData = {
                             label: 'Jumlah Data (kasus)',
-                            data: [<?php echo $jum20; ?>],
+                            data: [<?php echo $jumlah; ?>],
                             backgroundColor: [
                                 'rgba(0, 99, 132, 0.6)',
                                 'rgba(30, 99, 132, 0.6)',
@@ -361,7 +361,7 @@
                         var barChart = new Chart(ctx, {
                         type: 'bar',
                         data: {
-                            labels: [<?php echo $status;?>],
+                            labels: [<?php echo $nama_status;?>],
                             datasets: [densityData],
                         },
                         options: chartOptions
