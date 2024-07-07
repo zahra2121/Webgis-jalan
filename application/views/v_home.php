@@ -362,7 +362,7 @@
                         type: 'bar',
                         data: {
                             labels: [<?php echo $status;?>],
-                            datasets: [densityData, data20, data21, data22, data23, data24],
+                            datasets: [densityData, data20],
                         },
                         options: chartOptions
                         });
