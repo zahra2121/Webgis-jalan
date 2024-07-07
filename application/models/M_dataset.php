@@ -129,7 +129,7 @@ class M_dataset extends CI_model
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
         $this->db->group_by('blackspot.kecamatan');
-        $this->db->where('blackspot.tahun = "2020"');
+        $this->db->where('blackspot.tahun = 2020');
         $query=$this->db->get();
         return $query->result(); 
     }
