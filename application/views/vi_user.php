@@ -501,7 +501,7 @@
                                         }
                                     ?>
                             })
-                            .bindPopup("<h5><b> Daerah Jalan <br><br><?= $value->daerah_jalan?></b><br><br> Patokan Jalan : <?= $value->patokan?><br> Riwayat kasus : <?= $value->total_idkasus?><br> Kasus terdahulu : <?= $value->tanggal?><br><br> Status Jalan : <?php
+                            .bindPopup("<h5><b> <?=$value->tanggal?> <br><br><?= $value->daerah_jalan?></b><br><br> Riwayat kasus : <?= $value->total_idkasus?><br><br> Status Jalan : <?php
                                     if($value->status == '0' and $value->aek > $value->bca){
                                         echo "<label class='badge bg-danger text-white' name='$value->status' id='$value->status'>DAERAH RAWAN</label>";
                                     }
