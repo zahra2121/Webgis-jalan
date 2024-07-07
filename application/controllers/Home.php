@@ -59,9 +59,15 @@ class Home extends CI_Controller {
         $this->form_validation->set_rules('rugi', 'Jumlah Kerugian Materil', 'required', [
             'required' => '%s Wajib Diisi'
         ]);
-        $this->form_validation->set_rules('link_maps', 'Link Maps', 'required', [
+        $this->form_validation->set_rules('latitude', 'Latitude', 'required', [
             'required' => '%s Wajib Diisi'
         ]);
+        $this->form_validation->set_rules('longitude', 'Longitude', 'required', [
+            'required' => '%s Wajib Diisi'
+        ]);
+        // $this->form_validation->set_rules('link_maps', 'Link Maps', 'required', [
+        //     'required' => '%s Wajib Diisi'
+        // ]);
         // $this->form_validation->set_rules('foto', 'Foto', 'required', [
         //     'required' => '%s Wajib Diisi'
         // ]);
@@ -113,7 +119,9 @@ class Home extends CI_Controller {
                         'luka_berat' => $this->input->post('luka_berat'),
                         'rugi' => $this->input->post('rugi'),
                         'meninggal' => $this->input->post('meninggal'),
-                        'link_maps' => $this->input->post('link_maps'),
+                        'latitude' => $this->input->post('latitude'),
+                        'longitude' => $this->input->post('longitude'),
+                        // 'link_maps' => $this->input->post('link_maps'),
                         //'foto' => $this->input->post('foto'),
                         'foto' => $uploaded_data['file_name'],
                     );
@@ -202,6 +210,8 @@ class Home extends CI_Controller {
                 'luka_berat' => $this->input->post('luka_berat'),
                 'rugi' => $this->input->post('rugi'),
                 'meninggal' => $this->input->post('meninggal'),
+                'latitude' => $this->input->post('latitude'),
+                'longitude' => $this->input->post('longitude'),
                 'status_lapor' => $this->input->post('status_lapor'),
             );
             $this->M_dataset->update_lapor($data);
