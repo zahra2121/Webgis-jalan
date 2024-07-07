@@ -20,6 +20,11 @@ class User extends CI_Controller {
             'countproses' => $this->M_user->count_proses(),
             'allkecamatan' => $this->M_user->count_kecamatan(),
             'alltahun' => $this->M_user->count_tahun(),
+            'countkec20' => $this->M_dataset->count_kec_20(),
+            'countkec21' => $this->M_dataset->count_kec_21(),
+            'countkec22' => $this->M_dataset->count_kec_22(),
+            'countkec23' => $this->M_dataset->count_kec_23(),
+            'countkec24' => $this->M_dataset->count_kec_24(),
             'isi' => 'vi_user'
         );
         $this->load->view('layout2/vi_wrapper', $data, FALSE);
