@@ -121,30 +121,14 @@
                             label: "Tahun 2020 ",
                             borderColor: ['rgba(0,0,255,1)'],
                             backgroundColor: 'rgba(0,0,255,1)',
-                            // pointBorderColor: 'blue',
-                            // pointBackgroundColor:  ['rgba(0,0,255,1)'],
-                            // pointRadius: 5,
-                            // pointHoverRadius: 10,
-                            // pointHitRadius: 30,
-                            // pointBorderWidth: 2,
-                            // pointStyle: 'rectRounded',
                             data: [<?php echo $jumlah; ?>],
                             yAxisID: "y-axis-score",
-                           // lineTension: 0.3,
-                            // Set More Options 
                         };
                             
                         var dataSecond = {
                             label: "Tahun 2021 ",
                             borderColor: ['rgb(255,165,0)'],
                             backgroundColor: 'rgb(255,165,0)',
-                            // pointBorderColor: 'orange',
-                            // pointBackgroundColor: ['rgb(255,165,0)'],
-                            // pointRadius: 5,
-                            // pointHoverRadius: 10,
-                            // pointHitRadius: 30,
-                            // pointBorderWidth: 2,
-                            // pointStyle: 'rectRounded',
                             data: [<?php echo $jumlah21; ?>],
                             yAxisID: "y-axis-score",
                             // Set More Options 
@@ -154,13 +138,6 @@
                             label: "Tahun 2022 ",
                             borderColor: ['rgb(0,128,0)'],
                             backgroundColor: 'rgb(0,128,0)',
-                            // pointBorderColor: 'green',
-                            // pointBackgroundColor: ['rgb(0,128,0)'],
-                            // pointRadius: 5,
-                            // pointHoverRadius: 10,
-                            // pointHitRadius: 30,
-                            // pointBorderWidth: 2,
-                            // pointStyle: 'rectRounded',
                             data: [<?php echo $jumlah22; ?>],
                             yAxisID: "y-axis-score",
                             // Set More Options 
@@ -170,13 +147,6 @@
                             label: "Tahun 2023 ",
                             borderColor: ['rgb(255,165,0)'],
                             backgroundColor: 'rgb(255,165,0)',
-                            // pointBorderColor: 'red',
-                            // pointBackgroundColor: ['rgb(255,165,0)'],
-                            // pointRadius: 5,
-                            // pointHoverRadius: 10,
-                            // pointHitRadius: 30,
-                            // pointBorderWidth: 2,
-                            // pointStyle: 'rectRounded',
                             data: [<?php echo $jumlah23; ?>],
                             yAxisID: "y-axis-score",
                             // Set More Options 
@@ -186,48 +156,15 @@
                             label: "Tahun 2024 ",
                             borderColor: ['rgb(0,128,0)'],
                             backgroundColor: 'rgb(0,128,0)',
-                            // pointBorderColor: 'yellow',
-                            // pointBackgroundColor: ['rgb(0,128,0)'],
-                            // pointRadius: 5,
-                            // pointHoverRadius: 10,
-                            // pointHitRadius: 30,
-                            // pointBorderWidth: 2,
-                            // pointStyle: 'rectRounded',
                             data: [<?php echo $jumlah24; ?>],
                             yAxisID: "y-axis-score",
                             // Set More Options 
                         };
 
-
-                        var densityData = {
-                        label: 'Density of Planet (kg/m3)',
-                        data: [5427, 5243, 5514, 3933, 1326, 687, 1271, 1638],
-                        backgroundColor: 'rgba(0, 99, 132, 0.6)',
-                        borderColor: 'rgba(0, 99, 132, 1)',
-                        yAxisID: "y-axis-density"
-                        };
-                        var gravityData = {
-                        label: 'Gravity of Planet (m/s2)',
-                        data: [3.7, 8.9, 9.8, 3.7, 23.1, 9.0, 8.7, 11.0],
-                        backgroundColor: 'rgba(99, 132, 0, 0.6)',
-                        borderColor: 'rgba(99, 132, 0, 1)',
-                        yAxisID: "y-axis-score"
-                        };
-                        var planetData = {
-                        labels: ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"],
-                        datasets: [densityData, gravityData]
-                        };
-                        
-                        // var barChart = new Chart(densityCanvas, {
-                        // type: 'bar',
-                        // data: planetData,
-                        // options: chartOptions
-                        // });
-
                         var chartOptions = {
                             scales: {
                                 xAxes: [{
-                                barPercentage: 0.5,
+                                barPercentage: 1,
                                 categoryPercentage: 0.5
                                 }],
                                 yAxes: [{
@@ -247,181 +184,6 @@
                         });
                         
                     </script>
-                    <!-- <script>
-                        var ctx = document.getElementById('myChart').getContext('2d');
-                        var densityData = {
-                            label: 'Tahun 2020 ',
-                            data: [<?php echo $jumlah; ?>],
-                            backgroundColor: [
-                                'rgba(0, 99, 132, 0.6)',
-                                'rgba(30, 99, 132, 0.6)',
-                                'rgba(60, 99, 132, 0.6)',
-                                'rgba(90, 99, 132, 0.6)',
-                                'rgba(120, 99, 132, 0.6)',
-                                'rgba(150, 99, 132, 0.6)',
-                                'rgba(180, 99, 132, 0.6)',
-                                'rgba(210, 99, 132, 0.6)',
-                                'rgba(240, 99, 132, 0.6)',
-                                'rgba(240, 99, 132, 0.6)',
-                                'rgba(210, 99, 132, 0.6)',
-                                'rgba(180, 99, 132, 0.6)',
-                                'rgba(150, 99, 132, 0.6)',
-                                'rgba(120, 99, 132, 0.6)',
-                                'rgba(90, 99, 132, 0.6)',
-                                'rgba(60, 99, 132, 0.6)',
-                                'rgba(30, 99, 132, 0.6)',
-                                'rgba(0, 99, 132, 0.6)'
-                            ],
-                            borderColor: [
-                                'rgba(0, 99, 132, 1)',
-                                'rgba(30, 99, 132, 1)',
-                                'rgba(60, 99, 132, 1)',
-                                'rgba(90, 99, 132, 1)',
-                                'rgba(120, 99, 132, 1)',
-                                'rgba(150, 99, 132, 1)',
-                                'rgba(180, 99, 132, 1)',
-                                'rgba(210, 99, 132, 1)',
-                                'rgba(240, 99, 132, 1)',
-                                'rgba(240, 99, 132, 1)',
-                                'rgba(210, 99, 132, 1)',
-                                'rgba(180, 99, 132, 1)',
-                                'rgba(150, 99, 132, 1)',
-                                'rgba(120, 99, 132, 1)',
-                                'rgba(90, 99, 132, 1)',
-                                'rgba(60, 99, 132, 1)',
-                                'rgba(30, 99, 132, 1)',
-                                'rgba(0, 99, 132, 1)'
-                                
-                            ],
-                            borderWidth: 2,
-                            hoverBorderWidth: 0
-                        };
-                        var chartOptions = {
-                        scales: {
-                            yAxes: [{
-                            barPercentage: 0.5
-                            }]
-                        },
-                        };
-
-                        var data20 = {
-                            label: 'Tahun 2020 ',
-                            data: [<?php echo $jum20; ?>],
-                            backgroundColor: [
-                                'rgba(0, 99, 132, 0.6)',
-                                'rgba(0, 99, 132, 0.6)',
-                                'rgba(0, 99, 132, 0.6)',
-                                'rgba(0, 99, 132, 0.6)',
-                                'rgba(0, 99, 132, 0.6)'
-                            ],
-                            borderColor: [
-                                'rgba(0, 99, 132, 1)',
-                                'rgba(0, 99, 132, 1)',
-                                'rgba(0, 99, 132, 1)',
-                                'rgba(0, 99, 132, 1)',
-                                'rgba(0, 99, 132, 1)'
-                                
-                            ],
-                            borderWidth: 0.5,
-                            hoverBorderWidth: 0 
-                        };
-
-                        var data21 = {
-                            label: 'Tahun 2021 ',
-                            data: [<?php echo $jum21; ?>],
-                            backgroundColor: [
-                                'rgba(30, 99, 132, 0.6)',
-                                'rgba(30, 99, 132, 0.6)',
-                                'rgba(30, 99, 132, 0.6)',
-                                'rgba(30, 99, 132, 0.6)',
-                                'rgba(30, 99, 132, 0.6)'
-                            ],
-                            borderColor: [
-                                'rgba(30, 99, 132, 1)',
-                                'rgba(30, 99, 132, 1)',
-                                'rgba(30, 99, 132, 1)',
-                                'rgba(30, 99, 132, 1)',
-                                'rgba(30, 99, 132, 1)'
-                                
-                            ],
-                            borderWidth: 0.5,
-                            hoverBorderWidth: 0 
-                        };
-                        var data22 = {
-                            label: 'Tahun 2022 ',
-                            data: [<?php echo $jum22; ?>],
-                            backgroundColor: [
-                                'rgba(60, 99, 132, 0.6)',
-                                'rgba(60, 99, 132, 0.6)',
-                                'rgba(60, 99, 132, 0.6)',
-                                'rgba(60, 99, 132, 0.6)',
-                                'rgba(60, 99, 132, 0.6)'
-                            ],
-                            borderColor: [
-                                'rgba(60, 99, 132, 1)',
-                                'rgba(60, 99, 132, 1)',
-                                'rgba(60, 99, 132, 1)',
-                                'rgba(60, 99, 132, 1)',
-                                'rgba(60, 99, 132, 1)'
-                                
-                            ],
-                            borderWidth: 0.5,
-                            hoverBorderWidth: 0 
-                        };
-                        var data23 = {
-                            label: 'Tahun 2023 ',
-                            data: [<?php echo $jum23; ?>],
-                            backgroundColor: [
-                                'rgba(90, 99, 132, 0.6)',
-                                'rgba(90, 99, 132, 0.6)',
-                                'rgba(90, 99, 132, 0.6)',
-                                'rgba(90, 99, 132, 0.6)',
-                                'rgba(90, 99, 132, 0.6)'
-                            ],
-                            borderColor: [
-                                'rgba(90, 99, 132, 1)',
-                                'rgba(90, 99, 132, 1)',
-                                'rgba(90, 99, 132, 1)',
-                                'rgba(90, 99, 132, 1)',
-                                'rgba(90, 99, 132, 1)'
-                                
-                            ],
-                            borderWidth: 0.5,
-                            hoverBorderWidth: 0 
-                        };
-                        var data24 = {
-                            label: 'Tahun 2024 ',
-                            data: [<?php echo $jum24; ?>],
-                            backgroundColor: [
-                                'rgba(120, 99, 132, 0.6)',
-                                'rgba(120, 99, 132, 0.6)',
-                                'rgba(120, 99, 132, 0.6)',
-                                'rgba(120, 99, 132, 0.6)',
-                                'rgba(120, 99, 132, 0.6)'
-                            ],
-                            borderColor: [
-                                'rgba(120, 99, 132, 1)',
-                                'rgba(120, 99, 132, 1)',
-                                'rgba(120, 99, 132, 1)',
-                                'rgba(120, 99, 132, 1)',
-                                'rgba(120, 99, 132, 1)'
-                                
-                            ],
-                            borderWidth: 0.5,
-                            hoverBorderWidth: 0 
-                        };
-
-                        var barChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: {
-                            labels: [<?php echo $nama_status; ?>],
-                            datasets: [densityData]
-                        },
-                        options: chartOptions
-                        });
-
-                    </script> -->
-
                     </div>
                 </div>
             </div>
