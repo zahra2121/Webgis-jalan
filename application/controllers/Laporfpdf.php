@@ -55,7 +55,7 @@ class Laporfpdf extends CI_Controller {
     
             // Adjust the next cell's position since MultiCell moves to the next line
             $pdf->SetXY($pdf->GetX() + 340, $pdf->GetY() - 6); // Adjust X and Y as needed
-            $pdf->Cell(60,6,$data->foto,1,1);
+            $pdf->Cell(60,6,$data->foto,1,0);
             
 	    }
         $pdf->Output();
