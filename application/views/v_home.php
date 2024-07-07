@@ -361,7 +361,7 @@
                         var barChart = new Chart(ctx, {
                         type: 'bar',
                         data: {
-                            labels: [<?php echo $status;?>],
+                            labels: [<?php echo $nama_status; ?>],
                             datasets: [densityData]
                         },
                         options: chartOptions
