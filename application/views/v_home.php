@@ -323,7 +323,7 @@
 
                         var map = L.map('map', {
                             center: [-7.889229799481091, 110.34618188086941],
-                            zoom: 12,
+                            zoom: 15,
                             layers: [peta5],
                         });
 
