@@ -184,7 +184,7 @@
                         var dataFirst = {
                               label: "Tahun 2020 ",
                               borderColor: ['rgba(0,0,255,1)'],
-                              backgroundColor: 'transparent',
+                              backgroundColor: 'rgba(0,0,255,0.6)',
                             //   pointBorderColor: 'blue',
                             //   pointBackgroundColor:  ['rgba(0,0,255,1)'],
                             //   pointRadius: 5,
@@ -237,38 +237,7 @@
                               type: 'bar',
                               data: speedData
                             });
-                        // var chart = new Chart(ctx, {
-                        //     // The type of chart we want to create
-                        //     type: 'line',
-                        //     // The data for our dataset
-                        //     data: {
-                        //         labels: [<?php echo $nama_status; ?>],
-                        //         datasets: [{
-                        //             label:'Tahun 2020 ',
-                        //             borderDash: [5, 5],
-                        //             borderColor: ['rgb(255,165,0)'],
-                        //             backgroundColor: 'transparent',
-                        //             pointBorderColor: 'orange',
-                        //             pointBackgroundColor: 'rgb(255,165,0)',
-                        //             pointRadius: 5,
-                        //             pointHoverRadius: 10,
-                        //             pointHitRadius: 30,
-                        //             pointBorderWidth: 2,
-                        //             pointStyle: 'rectRounded',
-                        //             data: [<?php echo $jumlah; ?>]
-                        //         }]
-                        //     },
-                        //     // Configuration options go here
-                        //     options: {
-                        //         scales: {
-                        //             yAxes: [{
-                        //                 ticks: {
-                        //                     beginAtZero:true
-                        //                 }
-                        //             }]
-                        //         }
-                        //     }
-                        // });
+                        
                     </script>
                     <!-- <script>
                         var ctx = document.getElementById('myChart').getContext('2d');
