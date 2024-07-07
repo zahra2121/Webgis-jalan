@@ -166,12 +166,21 @@
                                 xAxes: [{
                                     barPercentage: 1,
                                     categoryPercentage: 1,
-                                    label: "Jumlah Data "
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: 'Kecamatan'
+                                    }
                                 }],
                                 yAxes: [{
                                     barPercentage: 1,
-                                    id: "y-axis-score",
-                                    label: "Kecamatan "
+                                    id: 'y-axis-score',
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: 'Jumlah Data'
+                                    },
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
                                 }]
                             }
                         };   
