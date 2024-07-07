@@ -164,12 +164,14 @@
                         var chartOptions = {
                             scales: {
                                 xAxes: [{
-                                barPercentage: 1,
-                                categoryPercentage: 0.5
+                                    barPercentage: 1,
+                                    categoryPercentage: 0.6,
+                                    label: "Jumlah Data "
                                 }],
                                 yAxes: [{
-                                barPercentage: 0.5,
-                                id: "y-axis-score"
+                                    barPercentage: 1,
+                                    id: "y-axis-score",
+                                    label: "Kecamatan "
                                 }]
                             }
                         };   
