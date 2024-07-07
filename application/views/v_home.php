@@ -212,14 +212,14 @@
                         //     plugins: [ChartDataLabels]
                         // });
 
-                        const config = {
+                        var config = {
                             type: 'bar',
                             data: speedData,
                             options: chartOptions,
                             plugins: [ChartDataLabels] // Add this line
                         };
 
-                        const barChart = new Chart(ctx, config);
+                        var barChart = new Chart(ctx, config);
                         
                     </script>
                     </div>
