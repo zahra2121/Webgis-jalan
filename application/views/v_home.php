@@ -168,8 +168,8 @@
                             plugins: {
                                 datalabels: {
                                     display: true,
-                                    align: 'center',
-                                    anchor: 'center',
+                                    align: 'end',
+                                    anchor: 'end',
                                     formatter: (value, context) => {
                                         return value;
                                     },
@@ -205,12 +205,6 @@
                             labels: [<?php echo $nama_status; ?>],
                             datasets: [dataFirst, dataSecond, dataThird, dataFour, dataFive]
                         };
-                        // var barChart = new Chart(ctx, {
-                        //     type: 'bar',
-                        //     data: speedData,
-                        //     options: chartOptions,
-                        //     plugins: [ChartDataLabels]
-                        // });
 
                         var config = {
                             type: 'bar',
