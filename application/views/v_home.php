@@ -231,7 +231,7 @@
                               
                             var speedData = {
                               labels: [<?php echo $nama_status; ?>],
-                              datasets: [dataFirst, dataSecond, dataThird]
+                              datasets: [dataFirst]
                             };
                             var chartOptions = {
                             scales: {
