@@ -122,6 +122,8 @@
                             label: "Tahun 2020 ",
                             borderColor: ['rgba(0, 99, 132, 1)'],
                             backgroundColor: 'rgba(0, 99, 132, 0.6)',
+                            pointBorderColor: 'blue',
+                            pointBorderWidth: 2,
                             data: [<?php echo $jumlah; ?>],
                             yAxisID: "y-axis-score",
                         };
