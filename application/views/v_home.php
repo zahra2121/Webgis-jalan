@@ -250,7 +250,7 @@
                         var barChart = new Chart(ctx, {
                         type: 'bar',
                         data: {
-                            labels: [<?php echo $status; echo $nama_tahun; ?>],
+                            labels: [<?php echo $status;?>],
                             datasets: [densityData, dataTahun],
                         },
                         options: chartOptions
