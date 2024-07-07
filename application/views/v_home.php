@@ -161,36 +161,36 @@
                         $jum= $value->total_idkasus;
                         $jumlah .= "$jum". ", ";
                     }
-                    foreach ($countkec20 as $item){
-                        $jurr=$item->tahun;
-                        $nama_20 .= "'$jurr'". ", ";
-                        $jumtahun20= $item->total_idkasus;
-                        $jum20 .= "$jumtahun20". ", ";
-                    }
-                    foreach ($countkec21 as $item){
-                        $jurr21=$item->tahun;
-                        $nama_21 .= "'$jurr21'". ", ";
-                        $jumtahun21= $item->total_tahun;
-                        $jum21 .= "$jumtahun21". ", ";
-                    }
-                    foreach ($countkec22 as $item){
-                        $jurr22=$item->tahun;
-                        $nama_22 .= "'$jurr22'". ", ";
-                        $jumtahun22= $item->total_tahun;
-                        $jum22 .= "$jumtahun22". ", ";
-                    }
-                    foreach ($countkec23 as $item){
-                        $jurr23=$item->tahun;
-                        $nama_23 .= "'$jurr23'". ", ";
-                        $jumtahun23= $item->total_tahun;
-                        $jum23 .= "$jumtahun23". ", ";
-                    }
-                    foreach ($countkec24 as $item){
-                        $jurr24=$item->tahun;
-                        $nama_24 .= "'$jurr24'". ", ";
-                        $jumtahun24= $item->total_tahun;
-                        $jum24 .= "$jumtahun24". ", ";
-                    }
+                    // foreach ($countkec20 as $item){
+                    //     $jurr=$item->tahun;
+                    //     $nama_20 .= "'$jurr'". ", ";
+                    //     $jumtahun20= $item->total_idkasus;
+                    //     $jum20 .= "$jumtahun20". ", ";
+                    // }
+                    // foreach ($countkec21 as $item){
+                    //     $jurr21=$item->tahun;
+                    //     $nama_21 .= "'$jurr21'". ", ";
+                    //     $jumtahun21= $item->total_tahun;
+                    //     $jum21 .= "$jumtahun21". ", ";
+                    // }
+                    // foreach ($countkec22 as $item){
+                    //     $jurr22=$item->tahun;
+                    //     $nama_22 .= "'$jurr22'". ", ";
+                    //     $jumtahun22= $item->total_tahun;
+                    //     $jum22 .= "$jumtahun22". ", ";
+                    // }
+                    // foreach ($countkec23 as $item){
+                    //     $jurr23=$item->tahun;
+                    //     $nama_23 .= "'$jurr23'". ", ";
+                    //     $jumtahun23= $item->total_tahun;
+                    //     $jum23 .= "$jumtahun23". ", ";
+                    // }
+                    // foreach ($countkec24 as $item){
+                    //     $jurr24=$item->tahun;
+                    //     $nama_24 .= "'$jurr24'". ", ";
+                    //     $jumtahun24= $item->total_tahun;
+                    //     $jum24 .= "$jumtahun24". ", ";
+                    // }
                     
                    
                     ?>
@@ -217,7 +217,7 @@
                                 'rgba(90, 99, 132, 0.6)',
                                 'rgba(60, 99, 132, 0.6)',
                                 'rgba(30, 99, 132, 0.6)',
-                                'rgba(0, 99, 132, 0.6)',
+                                'rgba(0, 99, 132, 0.6)'
                             ],
                             borderColor: [
                                 'rgba(0, 99, 132, 1)',
@@ -237,7 +237,7 @@
                                 'rgba(90, 99, 132, 1)',
                                 'rgba(60, 99, 132, 1)',
                                 'rgba(30, 99, 132, 1)',
-                                'rgba(0, 99, 132, 1)',
+                                'rgba(0, 99, 132, 1)'
                                 
                             ],
                             borderWidth: 2,
@@ -362,7 +362,7 @@
                         type: 'bar',
                         data: {
                             labels: [<?php echo $nama_status;?>],
-                            datasets: [data20],
+                            datasets: [densityData],
                         },
                         options: chartOptions
                         });
