@@ -81,7 +81,7 @@
                 });    
             }
 
-            function getAddress(p.coords.latitude, p.coords.longitude) {
+            function getAddress(lat, lng) {
                 var geocoder = new google.maps.Geocoder();
                 var latlng = new google.maps.LatLng(p.coords.latitude,p.coords.longitude);
                 geocoder.geocode({ 'location': latlng }, function(results, status) {
