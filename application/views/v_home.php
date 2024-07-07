@@ -120,7 +120,7 @@
                         var dataFirst = {
                             label: "Tahun 2020 ",
                             borderColor: ['rgba(0,0,255,1)'],
-                            backgroundColor: 'transparent',
+                            backgroundColor: 'rgba(0,0,255,1)',
                             // pointBorderColor: 'blue',
                             // pointBackgroundColor:  ['rgba(0,0,255,1)'],
                             // pointRadius: 5,
@@ -129,6 +129,7 @@
                             // pointBorderWidth: 2,
                             // pointStyle: 'rectRounded',
                             data: [<?php echo $jumlah; ?>],
+                            yAxisID: "y-axis-score",
                            // lineTension: 0.3,
                             // Set More Options 
                         };
@@ -136,7 +137,7 @@
                         var dataSecond = {
                             label: "Tahun 2021 ",
                             borderColor: ['rgb(255,165,0)'],
-                            backgroundColor: 'transparent',
+                            backgroundColor: 'rgb(255,165,0)',
                             // pointBorderColor: 'orange',
                             // pointBackgroundColor: ['rgb(255,165,0)'],
                             // pointRadius: 5,
@@ -145,13 +146,14 @@
                             // pointBorderWidth: 2,
                             // pointStyle: 'rectRounded',
                             data: [<?php echo $jumlah21; ?>],
+                            yAxisID: "y-axis-score",
                             // Set More Options 
                         };
 
                         var dataThird = {
                             label: "Tahun 2022 ",
                             borderColor: ['rgb(0,128,0)'],
-                            backgroundColor: 'transparent',
+                            backgroundColor: 'rgb(0,128,0)',
                             // pointBorderColor: 'green',
                             // pointBackgroundColor: ['rgb(0,128,0)'],
                             // pointRadius: 5,
@@ -160,13 +162,14 @@
                             // pointBorderWidth: 2,
                             // pointStyle: 'rectRounded',
                             data: [<?php echo $jumlah22; ?>],
+                            yAxisID: "y-axis-score",
                             // Set More Options 
                         };
 
                         var dataFour = {
                             label: "Tahun 2023 ",
                             borderColor: ['rgb(255,165,0)'],
-                            backgroundColor: 'transparent',
+                            backgroundColor: 'rgb(255,165,0)',
                             // pointBorderColor: 'red',
                             // pointBackgroundColor: ['rgb(255,165,0)'],
                             // pointRadius: 5,
@@ -175,13 +178,14 @@
                             // pointBorderWidth: 2,
                             // pointStyle: 'rectRounded',
                             data: [<?php echo $jumlah23; ?>],
+                            yAxisID: "y-axis-score",
                             // Set More Options 
                         };
 
                         var dataFive = {
                             label: "Tahun 2024 ",
                             borderColor: ['rgb(0,128,0)'],
-                            backgroundColor: 'transparent',
+                            backgroundColor: 'rgb(0,128,0)',
                             // pointBorderColor: 'yellow',
                             // pointBackgroundColor: ['rgb(0,128,0)'],
                             // pointRadius: 5,
@@ -190,6 +194,7 @@
                             // pointBorderWidth: 2,
                             // pointStyle: 'rectRounded',
                             data: [<?php echo $jumlah24; ?>],
+                            yAxisID: "y-axis-score",
                             // Set More Options 
                         };
 
@@ -206,7 +211,7 @@
                         data: [3.7, 8.9, 9.8, 3.7, 23.1, 9.0, 8.7, 11.0],
                         backgroundColor: 'rgba(99, 132, 0, 0.6)',
                         borderColor: 'rgba(99, 132, 0, 1)',
-                        yAxisID: "y-axis-gravity"
+                        yAxisID: "y-axis-score"
                         };
                         var planetData = {
                         labels: ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"],
@@ -226,7 +231,8 @@
                                 categoryPercentage: 0.5
                                 }],
                                 yAxes: [{
-                                barPercentage: 0.5
+                                barPercentage: 0.5,
+                                id: "y-axis-score"
                                 }]
                             }
                         };   
