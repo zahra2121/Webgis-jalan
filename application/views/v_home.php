@@ -157,7 +157,7 @@
 
                     foreach ($countkec as $value){
                         $jur=$value->kecamatan;
-                        $nama_status .= "'$jur'". ", ";
+                        $status .= "'$jur'". ", ";
                         $jum= $value->total_idkasus;
                         $jumlah .= "$jum". ", ";
                     }
@@ -361,7 +361,7 @@
                         var barChart = new Chart(ctx, {
                         type: 'bar',
                         data: {
-                            labels: [<?php echo $nama_status;?>],
+                            labels: [<?php echo $status;?>],
                             datasets: [densityData],
                         },
                         options: chartOptions
