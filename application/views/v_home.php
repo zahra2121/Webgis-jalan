@@ -140,6 +140,19 @@
                     <div style="grid-template-columns: 50% 50%; grid-template-rows: repeat(2, auto);"><canvas id="myChart"></canvas>
                     <?php
                     //Inisialisasi nilai variabel awal
+                    $nama_status= "";
+                    $nama_20 ="";
+                    $nama_21 ="";
+                    $nama_22 ="";
+                    $nama_23 ="";
+                    $nama_24 ="";
+                    $status= "";
+                    $jumlah=null;
+                    $jum20 = null;
+                    $jum21 = null;
+                    $jum22 = null;
+                    $jum23 = null;
+                    $jum24 = null;
 
                     foreach ($countkec20 as $item){
                         $jur=$item->kecamatan;
