@@ -184,7 +184,7 @@
                         var dataFirst = {
                               label: "Tahun 2020 ",
                               borderColor: ['rgba(0,0,255,1)'],
-                              backgroundColor: 'rgba(0,0,255,0.6)',
+                              backgroundColor: ['rgba(0,0,255,0.6)'],
                             //   pointBorderColor: 'blue',
                             //   pointBackgroundColor:  ['rgba(0,0,255,1)'],
                             //   pointRadius: 5,
@@ -201,8 +201,8 @@
                               
                             var dataSecond = {
                               label: "Tahun 2021 ",
-                              borderColor: ['rgb(255,165,0)'],
-                              backgroundColor: 'transparent',
+                              borderColor: ['rgba(255,165,0,1)'],
+                              backgroundColor: ['rgba(255,165,0,0.6)'],
                             //   pointBorderColor: 'orange',
                             //   pointBackgroundColor: ['rgb(255,165,0)'],
                             //   pointRadius: 5,
@@ -216,8 +216,8 @@
 
                             var dataThird = {
                               label: "Tahun 2022 ",
-                              borderColor: ['rgb(0,128,0)'],
-                              backgroundColor: 'transparent',
+                              borderColor: ['rgba(0,128,0,1)'],
+                              backgroundColor: ['rgba(0,128,0,0.6)'],
                             //   pointBorderColor: 'green',
                             //   pointBackgroundColor: ['rgb(0,128,0)'],
                             //   pointRadius: 5,
