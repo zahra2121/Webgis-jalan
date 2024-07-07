@@ -231,8 +231,8 @@
                               labels: [<?php echo $nama_status; ?>],
                               datasets: [dataFirst, dataSecond, dataThird]
                             };
-                            var lineChart = new Chart(ctx, {
-                              type: 'line',
+                            var barChart = new Chart(ctx, {
+                              type: 'bar',
                               data: speedData
                             });
                         // var chart = new Chart(ctx, {
