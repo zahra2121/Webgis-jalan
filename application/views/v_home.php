@@ -155,10 +155,10 @@
                     $jum23 = null;
                     $jum24 = null;
 
-                    foreach ($countkec as $value){
-                        $jur=$value->kecamatan;
+                    foreach ($countkec as $item){
+                        $jur=$item->kecamatan;
                         $status .= "'$jur'". ", ";
-                        $jum= $value->total_idkasus;
+                        $jum= $item->total_idkasus;
                         $jumlah .= "$jum". ", ";
                     }
                     // foreach ($countkec20 as $item){
