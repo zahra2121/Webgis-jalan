@@ -158,11 +158,27 @@
                         $jur=$item->kecamatan;
                         $nama_status .= "'$jur'". ", ";
                         $jum= $item->total_idkasus;
-                        $jumlah .= "$jum". ", ";
+                        $jum20 .= "$jum". ", ";
+                    }
+                    foreach ($countkec21 as $item){
+                        $jum= $item->total_idkasus;
+                        $jum21 .= "$jum". ", ";
+                    }
+                    foreach ($countkec22 as $item){
+                        $jum= $item->total_idkasus;
+                        $jum22 .= "$jum". ", ";
+                    }
+                    foreach ($countkec23 as $item){
+                        $jum= $item->total_idkasus;
+                        $jum23 .= "$jum". ", ";
+                    }
+                    foreach ($countkec24 as $item){
+                        $jum= $item->total_idkasus;
+                        $jum24 .= "$jum". ", ";
                     }
 
                     ?>
-                    <script>
+                    <!-- <script>
                         var ctx = document.getElementById('myChart').getContext('2d');
                         var chart = new Chart(ctx, {
                             // The type of chart we want to create
@@ -171,7 +187,7 @@
                             data: {
                                 labels: [<?php echo $nama_status; ?>],
                                 datasets: [{
-                                    label:'Jumlah Data (kasus)',
+                                    label:'Tahun 2020 ',
                                     borderDash: [5, 5],
                                     borderColor: ['rgb(255,165,0)'],
                                     backgroundColor: 'transparent',
@@ -182,7 +198,7 @@
                                     pointHitRadius: 30,
                                     pointBorderWidth: 2,
                                     pointStyle: 'rectRounded',
-                                    data: [<?php echo $jumlah; ?>]
+                                    data: [<?php echo $jum20; ?>]
                                 }]
                             },
                             // Configuration options go here
@@ -196,117 +212,63 @@
                                 }
                             }
                         });
-                    </script>
-                   
-                    <!-- $nama_status= "";
-                    $nama_20 ="";
-                    $nama_21 ="";
-                    $nama_22 ="";
-                    $nama_23 ="";
-                    $nama_24 ="";
-                    $status= "";
-                    $jumlah=null;
-                    $jum20 = null;
-                    $jum21 = null;
-                    $jum22 = null;
-                    $jum23 = null;
-                    $jum24 = null;
-
-                    foreach ($countkec as $item){
-                        $jur=$item->kecamatan;
-                        $nama_status .= "'$jur'". ", ";
-                        $jum= $item->total_idkasus;
-                        $jumlah .= "$jum". ", ";
-                    }
-                    foreach ($countkec20 as $item){
-                        $jurr=$item->tahun;
-                        $nama_20 .= "'$jurr'". ", ";
-                        $jumtahun20= $item->total_idkasus;
-                        $jum20 .= "$jumtahun20". ", ";
-                    }
-                    // foreach ($countkec21 as $item){
-                    //     $jurr21=$item->tahun;
-                    //     $nama_21 .= "'$jurr21'". ", ";
-                    //     $jumtahun21= $item->total_tahun;
-                    //     $jum21 .= "$jumtahun21". ", ";
-                    // }
-                    // foreach ($countkec22 as $item){
-                    //     $jurr22=$item->tahun;
-                    //     $nama_22 .= "'$jurr22'". ", ";
-                    //     $jumtahun22= $item->total_tahun;
-                    //     $jum22 .= "$jumtahun22". ", ";
-                    // }
-                    // foreach ($countkec23 as $item){
-                    //     $jurr23=$item->tahun;
-                    //     $nama_23 .= "'$jurr23'". ", ";
-                    //     $jumtahun23= $item->total_tahun;
-                    //     $jum23 .= "$jumtahun23". ", ";
-                    // }
-                    // foreach ($countkec24 as $item){
-                    //     $jurr24=$item->tahun;
-                    //     $nama_24 .= "'$jurr24'". ", ";
-                    //     $jumtahun24= $item->total_tahun;
-                    //     $jum24 .= "$jumtahun24". ", ";
-                    // }
-                    
-                   
-                    ?>
+                    </script> -->
                     <script>
-                        var ctx = document.getElementById('myChart2').getContext('2d');
-                        var densityData = {
-                            label: 'Jumlah Data (kasus)',
-                            data: [<?php echo $jumlah; ?>],
-                            backgroundColor: [
-                                'rgba(0, 99, 132, 0.6)',
-                                'rgba(30, 99, 132, 0.6)',
-                                'rgba(60, 99, 132, 0.6)',
-                                'rgba(90, 99, 132, 0.6)',
-                                'rgba(120, 99, 132, 0.6)',
-                                'rgba(150, 99, 132, 0.6)',
-                                'rgba(180, 99, 132, 0.6)',
-                                'rgba(210, 99, 132, 0.6)',
-                                'rgba(240, 99, 132, 0.6)',
-                                'rgba(240, 99, 132, 0.6)',
-                                'rgba(210, 99, 132, 0.6)',
-                                'rgba(180, 99, 132, 0.6)',
-                                'rgba(150, 99, 132, 0.6)',
-                                'rgba(120, 99, 132, 0.6)',
-                                'rgba(90, 99, 132, 0.6)',
-                                'rgba(60, 99, 132, 0.6)',
-                                'rgba(30, 99, 132, 0.6)',
-                                'rgba(0, 99, 132, 0.6)'
-                            ],
-                            borderColor: [
-                                'rgba(0, 99, 132, 1)',
-                                'rgba(30, 99, 132, 1)',
-                                'rgba(60, 99, 132, 1)',
-                                'rgba(90, 99, 132, 1)',
-                                'rgba(120, 99, 132, 1)',
-                                'rgba(150, 99, 132, 1)',
-                                'rgba(180, 99, 132, 1)',
-                                'rgba(210, 99, 132, 1)',
-                                'rgba(240, 99, 132, 1)',
-                                'rgba(240, 99, 132, 1)',
-                                'rgba(210, 99, 132, 1)',
-                                'rgba(180, 99, 132, 1)',
-                                'rgba(150, 99, 132, 1)',
-                                'rgba(120, 99, 132, 1)',
-                                'rgba(90, 99, 132, 1)',
-                                'rgba(60, 99, 132, 1)',
-                                'rgba(30, 99, 132, 1)',
-                                'rgba(0, 99, 132, 1)'
+                        var ctx = document.getElementById('myChart').getContext('2d');
+                        // var densityData = {
+                        //     label: 'Jumlah Data (kasus)',
+                        //     data: [<?php echo $jumlah; ?>],
+                        //     backgroundColor: [
+                        //         'rgba(0, 99, 132, 0.6)',
+                        //         'rgba(30, 99, 132, 0.6)',
+                        //         'rgba(60, 99, 132, 0.6)',
+                        //         'rgba(90, 99, 132, 0.6)',
+                        //         'rgba(120, 99, 132, 0.6)',
+                        //         'rgba(150, 99, 132, 0.6)',
+                        //         'rgba(180, 99, 132, 0.6)',
+                        //         'rgba(210, 99, 132, 0.6)',
+                        //         'rgba(240, 99, 132, 0.6)',
+                        //         'rgba(240, 99, 132, 0.6)',
+                        //         'rgba(210, 99, 132, 0.6)',
+                        //         'rgba(180, 99, 132, 0.6)',
+                        //         'rgba(150, 99, 132, 0.6)',
+                        //         'rgba(120, 99, 132, 0.6)',
+                        //         'rgba(90, 99, 132, 0.6)',
+                        //         'rgba(60, 99, 132, 0.6)',
+                        //         'rgba(30, 99, 132, 0.6)',
+                        //         'rgba(0, 99, 132, 0.6)'
+                        //     ],
+                        //     borderColor: [
+                        //         'rgba(0, 99, 132, 1)',
+                        //         'rgba(30, 99, 132, 1)',
+                        //         'rgba(60, 99, 132, 1)',
+                        //         'rgba(90, 99, 132, 1)',
+                        //         'rgba(120, 99, 132, 1)',
+                        //         'rgba(150, 99, 132, 1)',
+                        //         'rgba(180, 99, 132, 1)',
+                        //         'rgba(210, 99, 132, 1)',
+                        //         'rgba(240, 99, 132, 1)',
+                        //         'rgba(240, 99, 132, 1)',
+                        //         'rgba(210, 99, 132, 1)',
+                        //         'rgba(180, 99, 132, 1)',
+                        //         'rgba(150, 99, 132, 1)',
+                        //         'rgba(120, 99, 132, 1)',
+                        //         'rgba(90, 99, 132, 1)',
+                        //         'rgba(60, 99, 132, 1)',
+                        //         'rgba(30, 99, 132, 1)',
+                        //         'rgba(0, 99, 132, 1)'
                                 
-                            ],
-                            borderWidth: 2,
-                            hoverBorderWidth: 0
-                        };
-                        var chartOptions = {
-                        scales: {
-                            yAxes: [{
-                            barPercentage: 0.5
-                            }]
-                        },
-                        };
+                        //     ],
+                        //     borderWidth: 2,
+                        //     hoverBorderWidth: 0
+                        // };
+                        // var chartOptions = {
+                        // scales: {
+                        //     yAxes: [{
+                        //     barPercentage: 0.5
+                        //     }]
+                        // },
+                        // };
 
                         var data20 = {
                             label: 'Tahun 2020 ',
@@ -330,173 +292,102 @@
                             hoverBorderWidth: 0 
                         };
 
-                        // var data21 = {
-                        //     label: 'Tahun 2021 ',
-                        //     data: [<?php echo $jum21; ?>],
-                        //     backgroundColor: [
-                        //         'rgba(30, 99, 132, 0.6)',
-                        //         'rgba(30, 99, 132, 0.6)',
-                        //         'rgba(30, 99, 132, 0.6)',
-                        //         'rgba(30, 99, 132, 0.6)',
-                        //         'rgba(30, 99, 132, 0.6)'
-                        //     ],
-                        //     borderColor: [
-                        //         'rgba(30, 99, 132, 1)',
-                        //         'rgba(30, 99, 132, 1)',
-                        //         'rgba(30, 99, 132, 1)',
-                        //         'rgba(30, 99, 132, 1)',
-                        //         'rgba(30, 99, 132, 1)'
+                        var data21 = {
+                            label: 'Tahun 2021 ',
+                            data: [<?php echo $jum21; ?>],
+                            backgroundColor: [
+                                'rgba(30, 99, 132, 0.6)',
+                                'rgba(30, 99, 132, 0.6)',
+                                'rgba(30, 99, 132, 0.6)',
+                                'rgba(30, 99, 132, 0.6)',
+                                'rgba(30, 99, 132, 0.6)'
+                            ],
+                            borderColor: [
+                                'rgba(30, 99, 132, 1)',
+                                'rgba(30, 99, 132, 1)',
+                                'rgba(30, 99, 132, 1)',
+                                'rgba(30, 99, 132, 1)',
+                                'rgba(30, 99, 132, 1)'
                                 
-                        //     ],
-                        //     borderWidth: 0.5,
-                        //     hoverBorderWidth: 0 
-                        // };
-                        // var data22 = {
-                        //     label: 'Tahun 2022 ',
-                        //     data: [<?php echo $jum22; ?>],
-                        //     backgroundColor: [
-                        //         'rgba(60, 99, 132, 0.6)',
-                        //         'rgba(60, 99, 132, 0.6)',
-                        //         'rgba(60, 99, 132, 0.6)',
-                        //         'rgba(60, 99, 132, 0.6)',
-                        //         'rgba(60, 99, 132, 0.6)'
-                        //     ],
-                        //     borderColor: [
-                        //         'rgba(60, 99, 132, 1)',
-                        //         'rgba(60, 99, 132, 1)',
-                        //         'rgba(60, 99, 132, 1)',
-                        //         'rgba(60, 99, 132, 1)',
-                        //         'rgba(60, 99, 132, 1)'
+                            ],
+                            borderWidth: 0.5,
+                            hoverBorderWidth: 0 
+                        };
+                        var data22 = {
+                            label: 'Tahun 2022 ',
+                            data: [<?php echo $jum22; ?>],
+                            backgroundColor: [
+                                'rgba(60, 99, 132, 0.6)',
+                                'rgba(60, 99, 132, 0.6)',
+                                'rgba(60, 99, 132, 0.6)',
+                                'rgba(60, 99, 132, 0.6)',
+                                'rgba(60, 99, 132, 0.6)'
+                            ],
+                            borderColor: [
+                                'rgba(60, 99, 132, 1)',
+                                'rgba(60, 99, 132, 1)',
+                                'rgba(60, 99, 132, 1)',
+                                'rgba(60, 99, 132, 1)',
+                                'rgba(60, 99, 132, 1)'
                                 
-                        //     ],
-                        //     borderWidth: 0.5,
-                        //     hoverBorderWidth: 0 
-                        // };
-                        // var data23 = {
-                        //     label: 'Tahun 2023 ',
-                        //     data: [<?php echo $jum23; ?>],
-                        //     backgroundColor: [
-                        //         'rgba(90, 99, 132, 0.6)',
-                        //         'rgba(90, 99, 132, 0.6)',
-                        //         'rgba(90, 99, 132, 0.6)',
-                        //         'rgba(90, 99, 132, 0.6)',
-                        //         'rgba(90, 99, 132, 0.6)'
-                        //     ],
-                        //     borderColor: [
-                        //         'rgba(90, 99, 132, 1)',
-                        //         'rgba(90, 99, 132, 1)',
-                        //         'rgba(90, 99, 132, 1)',
-                        //         'rgba(90, 99, 132, 1)',
-                        //         'rgba(90, 99, 132, 1)'
+                            ],
+                            borderWidth: 0.5,
+                            hoverBorderWidth: 0 
+                        };
+                        var data23 = {
+                            label: 'Tahun 2023 ',
+                            data: [<?php echo $jum23; ?>],
+                            backgroundColor: [
+                                'rgba(90, 99, 132, 0.6)',
+                                'rgba(90, 99, 132, 0.6)',
+                                'rgba(90, 99, 132, 0.6)',
+                                'rgba(90, 99, 132, 0.6)',
+                                'rgba(90, 99, 132, 0.6)'
+                            ],
+                            borderColor: [
+                                'rgba(90, 99, 132, 1)',
+                                'rgba(90, 99, 132, 1)',
+                                'rgba(90, 99, 132, 1)',
+                                'rgba(90, 99, 132, 1)',
+                                'rgba(90, 99, 132, 1)'
                                 
-                        //     ],
-                        //     borderWidth: 0.5,
-                        //     hoverBorderWidth: 0 
-                        // };
-                        // var data24 = {
-                        //     label: 'Tahun 2024 ',
-                        //     data: [<?php echo $jum24; ?>],
-                        //     backgroundColor: [
-                        //         'rgba(120, 99, 132, 0.6)',
-                        //         'rgba(120, 99, 132, 0.6)',
-                        //         'rgba(120, 99, 132, 0.6)',
-                        //         'rgba(120, 99, 132, 0.6)',
-                        //         'rgba(120, 99, 132, 0.6)'
-                        //     ],
-                        //     borderColor: [
-                        //         'rgba(120, 99, 132, 1)',
-                        //         'rgba(120, 99, 132, 1)',
-                        //         'rgba(120, 99, 132, 1)',
-                        //         'rgba(120, 99, 132, 1)',
-                        //         'rgba(120, 99, 132, 1)'
+                            ],
+                            borderWidth: 0.5,
+                            hoverBorderWidth: 0 
+                        };
+                        var data24 = {
+                            label: 'Tahun 2024 ',
+                            data: [<?php echo $jum24; ?>],
+                            backgroundColor: [
+                                'rgba(120, 99, 132, 0.6)',
+                                'rgba(120, 99, 132, 0.6)',
+                                'rgba(120, 99, 132, 0.6)',
+                                'rgba(120, 99, 132, 0.6)',
+                                'rgba(120, 99, 132, 0.6)'
+                            ],
+                            borderColor: [
+                                'rgba(120, 99, 132, 1)',
+                                'rgba(120, 99, 132, 1)',
+                                'rgba(120, 99, 132, 1)',
+                                'rgba(120, 99, 132, 1)',
+                                'rgba(120, 99, 132, 1)'
                                 
-                        //     ],
-                        //     borderWidth: 0.5,
-                        //     hoverBorderWidth: 0 
-                        // };
+                            ],
+                            borderWidth: 0.5,
+                            hoverBorderWidth: 0 
+                        };
 
                         var barChart = new Chart(ctx, {
                         type: 'bar',
                         data: {
                             labels: [<?php echo $nama_status; ?>],
-                            datasets: [data20]
+                            datasets: [data20, data21, data23, data24]
                         },
                         options: chartOptions
                         });
 
-                        // var chart = new Chart(ctx, {
-                        //     // The type of chart we want to create
-                        //     type: 'line',
-                        //     // The data for our dataset
-                        //     data: {
-                        //         labels: [<?php echo $nama_tahun; ?>],
-                        //         datasets: [{
-                        //             label:'Jumlah Data (kasus)',
-                        //             borderDash: [5, 5],
-                        //             borderColor: ['rgb(255,165,0)'],
-                        //             backgroundColor: 'transparent',
-                        //             pointBorderColor: 'orange',
-                        //             pointBackgroundColor: 'rgb(255,165,0)',
-                        //             pointRadius: 5,
-                        //             pointHoverRadius: 10,
-                        //             pointHitRadius: 30,
-                        //             pointBorderWidth: 2,
-                        //             pointStyle: 'rectRounded',
-                        //             data: [<?php echo $jum4; ?>]
-                        //         }]
-                        //     },
-                        //     // Configuration options go here
-                        //     options: {
-                        //         scales: {
-                        //             yAxes: [{
-                        //                 ticks: {
-                        //                     beginAtZero:true
-                        //                 }
-                        //             }]
-                        //         }
-                        //     }
-                        // });
-                              
-                        // var dataSecond = {
-                        //     label: "Daerah Rawan ",
-                        //     borderColor: ['rgb(255,0,0)'],
-                        //     backgroundColor: 'transparent',
-                        //     pointBorderColor: 'red',
-                        //     pointBackgroundColor: ['rgb(255,0,0)'],
-                        //     pointRadius: 5,
-                        //     pointHoverRadius: 10,
-                        //     pointHitRadius: 30,
-                        //     pointBorderWidth: 2,
-                        //     pointStyle: 'rectRounded',
-                        //     data: [<?php echo $jum2; ?>],
-                        //     // Set More Options 
-                        // };
+                    </script>
 
-                        // var dataThird = {
-                        //     label: "Daerah Bukan Rawan ",
-                        //     borderColor: ['rgb(255,165,0)'],
-                        //     backgroundColor: 'transparent',
-                        //     pointBorderColor: 'orange',
-                        //     pointBackgroundColor: ['rgb(255,165,0)'],
-                        //     pointRadius: 5,
-                        //     pointHoverRadius: 10,
-                        //     pointHitRadius: 30,
-                        //     pointBorderWidth: 2,
-                        //     pointStyle: 'rectRounded',
-                        //     data: [<?php echo $jum3; ?>],
-                        //     // Set More Options 
-                        // };
-
-                        // var speedData = {
-                        //     labels: [<?php echo $nama_status; ?>],
-                        //     datasets: [dataSecond, dataThird]
-                        // };
-                        // var lineChart = new Chart(ctx, {
-                        //     type: 'line',
-                        //     data: speedData
-                        // });
-                    
-                    </script> -->
                     </div>
                 </div>
             </div>
