@@ -40,7 +40,7 @@
                   <th>Tanggal Kejadian</th>
                   <th>Jam</th>
                   <th>Jumlah Korban</th>
-                  <th>Link Maps</th>
+                  <th>Titik Lokasi</th>
                   <th>Data Foto</th>
                   <th>Pengirim</th>
                 </tr>
@@ -99,7 +99,12 @@
                     echo "R  : " . $editlapor->rugi. "<br>" ;
                   ?></Td>
                   <Td>
-                    <a href="<?Php echo $editlapor->link_maps ?>"><?Php echo $editlapor->link_maps ?></a>
+                    <?Php echo "Link Maps : ";?>
+                      <a href="<?Php echo $Row->link_maps ?>"><?Php echo $Row->link_maps ?></a>
+                    <?Php echo "<br>";
+                      echo "Lat : ". $Row->latitude. "<br>";
+                      echo "Long  : " . $Row->longitude. "<br>" ;
+                    ?>
                   </Td>
                   <Td>
                     <?php

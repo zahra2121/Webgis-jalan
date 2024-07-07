@@ -36,7 +36,7 @@
                           <th>Alamat</th>
                           <th>Tanggal Kejadian</th>
                           <th>Jam</th>
-                          <th>Link Maps</th>
+                          <th>Titik Lokasi</th>
                           <th>Data Foto</th>
                           <th>Status Lapor</th>
                           <th>Pengirim</th>
@@ -101,12 +101,13 @@
                             </Td>
                             <Td><?Php echo date('H:i', strtotime($Row->jam)) ?></Td>
                             <Td>
-                            <?Php echo "Link Maps : ";?>
-                              <a href="<?Php echo $Row->link_maps ?>"><?Php echo $Row->link_maps ?></a>
-                            <?Php echo "<br>";
-                              echo "Lat : ". $Row->latitude. "<br>";
-                              echo "Long  : " . $Row->longitude. "<br>" ;
-                            ?></Td>
+                              <?Php echo "Link Maps : ";?>
+                                <a href="<?Php echo $Row->link_maps ?>"><?Php echo $Row->link_maps ?></a>
+                              <?Php echo "<br>";
+                                echo "Lat : ". $Row->latitude. "<br>";
+                                echo "Long  : " . $Row->longitude. "<br>" ;
+                              ?>
+                            </Td>
                             <Td>
                               <?php
                                 $image = $Row->foto;
