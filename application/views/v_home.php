@@ -205,12 +205,21 @@
                             labels: [<?php echo $nama_status; ?>],
                             datasets: [dataFirst, dataSecond, dataThird, dataFour, dataFive]
                         };
-                        var barChart = new Chart(ctx, {
+                        // var barChart = new Chart(ctx, {
+                        //     type: 'bar',
+                        //     data: speedData,
+                        //     options: chartOptions,
+                        //     plugins: [ChartDataLabels]
+                        // });
+
+                        const config = {
                             type: 'bar',
                             data: speedData,
                             options: chartOptions,
-                            plugins: [ChartDataLabels]
-                        });
+                            plugins: [ChartDataLabels] // Add this line
+                        };
+
+                        const barChart = new Chart(ctx, config);
                         
                     </script>
                     </div>
