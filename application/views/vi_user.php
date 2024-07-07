@@ -74,7 +74,6 @@
                     <center><div class="mx-2 px-4 py-4 my-2">
                         <p> 🔴 : <label class='badge bg-danger text-white' >DAERAH RAWAN</label><br>
                             🟡 : <label class='badge bg-warning text-dark'>BUKAN DAERAH RAWAN </label><br>
-                            🟢 : <label class='badge bg-success text-white'>PROSES DATA</label></p>
                     </div></center>
                     <br><br>
                     
@@ -486,14 +485,14 @@
                                             echo "color: 'red',
                                             fillColor: '#FF0000',
                                             fillOpacity: 0.7,
-                                            radius: 200";
+                                            radius: 150";
                                         }
                                         elseif($value->status == '1' and $value->aek < $value->bca){
                                             echo "color: 'yellow',
                                             fillColor: '#FFFF00',
                                             fillOpacity: 0.3,
                                             borderOpacity: 0.5,
-                                            radius: 200";
+                                            radius: 150";
                                         }
                                         elseif($value->status == '2' and $value->aek == 0){
                                             echo "color: 'green',
