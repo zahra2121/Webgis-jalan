@@ -84,9 +84,29 @@
                               labels: [<?php echo $nama_status; ?>],
                               datasets: [dataFirst, dataSecond, dataThird]
                             };
+                            var chartOptions = {
+                                scales: {
+                                    xAxes: [{
+                                        scaleLabel: {
+                                            display: true,
+                                            labelString: 'Daftar Titik Lokasi Blackspot Kecelakaan'
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        scaleLabel: {
+                                            display: true,
+                                            labelString: 'Jumlah Data'
+                                        },
+                                        ticks: {
+                                            beginAtZero: true
+                                        }
+                                    }]
+                                }
+                            };  
                             var lineChart = new Chart(ctx, {
                               type: 'line',
-                              data: speedData
+                              data: speedData,
+                              options: chartOptions
                             });
 
                         </script>
