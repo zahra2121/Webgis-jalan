@@ -34,6 +34,187 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYMpyDVmi2y43ZdkNmn4ojKmdPpvnUBEM"></script>
 
         <script>
+            function initialize_map()
+            {
+                var myOptions = {
+                    zoom: 4,
+                    mapTypeControl: true,
+                    mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+                    navigationControl: true,
+                    navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+                    mapTypeId: google.maps.MapTypeId.ROADMAP      
+                    }	
+                map = new google.maps.Map(document.getElementById("map_lokasi"), myOptions);
+            }
+            function initialize()
+            {
+                if(geo_position_js.init())
+                {
+                document.getElementById('current').innerHTML="Receiving...";
+                geo_position_js.getCurrentPosition(show_position,function(){document.getElementById('current').innerHTML="Couldn't get location"},{enableHighAccuracy:true});
+                }
+                else
+                {
+                document.getElementById('current').innerHTML="Functionality not available";
+                }
+            }
+
+            function show_position(p)
+            {
+                document.getElementById('current').innerHTML="Titik Latitude saat ini: <span class='badge badge-danger'>"+p.coords.latitude.toFixed(5)+"</span><br>Longitude saat ini: <span class='badge badge-danger'>"+p.coords.longitude.toFixed(5)+"</span>";
+
+                var pos=new google.maps.LatLng(p.coords.latitude,p.coords.longitude);
+                map.setCenter(pos);
+                map.setZoom(14);
+
+                getAddress(p.coords.latitude, p.coords.longitude);
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: "<strong>Lokasi Sekarang</strong>"
+                });
+
+                var marker = new google.maps.Marker({
+                    position: pos,
+                    map: map,
+                    title:""
+                });
+
+                google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map,marker);
+                });
+
+                var map = new google.maps.Map(document.getElementById('map_lokasi'), mapOptions);
+                var infoWindow = new google.maps.InfoWindow;
+
+                // // Mendapatkan lokasi GPS terkini
+                // if (navigator.geolocation) {
+                //     navigator.geolocation.getCurrentPosition(function(p) {
+                //         var pos = {
+                //         lat: p.coords.latitude,
+                //         lng: p.coords.longitude
+                //         };
+
+                //         infoWindow.setPosition(pos);
+                //         infoWindow.setContent('Lokasi Anda saat ini');
+                //         infoWindow.open(map);
+                //         map.setCenter(pos);
+                //         map.setZoom(14);
+
+                //         document.getElementById('current').innerHTML =
+                //         "Latitude = " + p.coords.latitude.toFixed(5) +
+                //         "<br>Longitude = " + p.coords.longitude.toFixed(5);
+
+                //         // Mendapatkan alamat dari koordinat
+                //         getAddress(p.coords.latitude, p.coords.longitude);
+                //     }, function() {
+                //         handleLocationError(true, infoWindow, map.getCenter());
+                //     });
+                // } else {
+                //     // Browser tidak mendukung Geolocation
+                //     handleLocationError(false, infoWindow, map.getCenter());
+                // }
+
+                // function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+                //     infoWindow.setPosition(pos);
+                //     infoWindow.setContent(browserHasGeolocation ?
+                //                             'Error: The Geolocation service failed.' :
+                //                             'Error: Your browser doesn\'t support geolocation.');
+                //     infoWindow.open(map);
+                // }
+
+                // function getAddress(lat, lng) {
+                //     var geocoder = new google.maps.Geocoder();
+                //     var latlng = new google.maps.LatLng(lat, lng);
+                //     geocoder.geocode({ 'location': latlng }, function(results, status) {
+                //         if (status === 'OK') {
+                //         if (results[0]) {
+                //             document.getElementById('lokasi').innerHTML +=
+                //             "<br>Address = " + results[0].formatted_address;
+                //         } else {
+                //             document.getElementById('lokasi').innerHTML +=
+                //             "<br>No results found";
+                //         }
+                //         } else {
+                //         console.error('Geocoder failed due to: ' + status);
+                //         document.getElementById('lokasi').innerHTML +=
+                //             "<br>Geocoder failed due to: " + status;
+                //         }
+                //     });
+                // }
+
+            }
+            
+
+            // function tampilLokasi(p) {
+            //     //console.log(posisi);
+            //     var latitude 	= p.coords.latitude;
+            //     var longitude 	= p.coords.longitude;
+            //     $.ajax({
+            //     type 	: 'POST',
+            //     url		: 'vi_lokasi.php',
+            //     data 	: 'latitude='+latitude+'&longitude='+longitude,
+            //     success	: function (e) {
+            //         if (e) {
+            //         $('lokasi').html(e);
+            //         }else{
+            //         $('lokasi').html('Tidak Tersedia');
+            //         }
+            //     }
+            //     })
+            // }
+
+            function getAddress(lat, lng) {
+                var geocoder = new google.maps.Geocoder();
+                var pos = new google.maps.LatLng(lat, lng);
+                geocoder.geocode({ 'location': pos }, function(results, status) {
+                    if (status === 'OK') {
+                        if (results[0]) {
+                            document.getElementById('lokasi').innerHTML +=
+                            "<br>Lokasi Anda saat ini: " + results[0].formatted_address;
+                        } else {
+                            document.getElementById('lokasi').innerHTML +=
+                            "<br>No results found";
+                        }
+                    } 
+                    else {
+                        console.error('Geocoder failed due to: ' + status);
+                        document.getElementById('lokasi').innerHTML +=
+                            "<br>Geocoder failed due to: " + status;
+                    }
+                });
+
+                // $(document).ready(function() {
+                //     navigator.geolocation.getCurrentPosition(function (pos) {
+                //         tampilLokasi(pos);
+                //     }, function (e) {
+                //         alert('Geolocation Tidak Mendukung Pada Browser Anda');
+                //     }, {
+                //         enableHighAccuracy: true
+                //     });
+                // });
+            }
+ 
+            // var langID = "en-US", mapCanvas = "#map_lokasi", $ = jQuery;
+            // setInterval(function () {googlemap_remap();}, 10);
+            // function googlemap_remap() {
+            //     $(`${mapCanvas}>div:last-of-type`).hide(); //hide top message says this is for dev only
+            //     var gimg = $(`img[src*="maps.googleapis.com/maps/vt?"]:not(.gmf)`);
+            //     $.each(gimg, function(i,x){
+            //         var imgurl = $(x).attr("src");
+            //         var urlarray = imgurl.split('!');
+            //         var newurl = ""; var newc = 0;
+            //         for (i = 0; i < 1000; i++) {if (urlarray[i] == "2s"+langID){newc = i-3;break;}}
+            //         for (i = 0; i < newc+1; i++) {newurl += urlarray[i] + "!";}
+            //         $(x).attr("src",newurl).addClass("gmf");
+            //     });
+            // }
+            // var buttons = document.querySelectorAll(".dismissButton");
+            // buttons.forEach(function (button) {
+            //     button.click();
+            // });
+        </script>
+
+        <script>
             function initMap() {
                 var mapOptions = {
                     zoom: 14,
@@ -57,7 +238,7 @@
                 if (navigator.geolocation) {
                     navigator.geolocation.getCurrentPosition(function(position) {
 
-                        document.getElementById('current').innerHTML="Titik Latitude saat ini: <span class='badge badge-danger'>"+position.coords.latitude+"</span><br>Longitude saat ini: <span class='badge badge-danger'>"+position.coords.longitude+"</span>";
+                        document.getElementById('current').innerHTML="Titik Latitude saat ini: <span class='badge badge-danger'>"+p.coords.latitude.toFixed(5)+"</span><br>Longitude saat ini: <span class='badge badge-danger'>"+p.coords.longitude.toFixed(5)+"</span>";
 
                         var pos=new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
                         map.setCenter(pos);
