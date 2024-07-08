@@ -34,7 +34,7 @@
                     </div>
                     <p class="card-description">Data Korban Kecelakaan</p>
                     <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-md-4">
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Luka Ringan</label>
                           <div class="col-sm-9">
@@ -42,7 +42,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-md-4">
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Luka Berat</label>
                           <div class="col-sm-9">
@@ -50,7 +50,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-md-4">
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Meninggal Dunia</label>
                           <div class="col-sm-9">
@@ -58,7 +58,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-md-4">
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Kerugian Materil</label>
                           <div class="col-sm-9">
