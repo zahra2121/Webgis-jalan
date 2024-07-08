@@ -36,7 +36,7 @@
                     <div class="row">
                       <div class="col-md-4">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Luka Ringan</label>
+                          <label class="col-sm-4 col-form-label">Luka Ringan</label>
                           <div class="col-sm-9">
                             <input type="number" name="luka_ringan" class="form-control" placeholder="Jumlah"/>
                           </div>
@@ -44,7 +44,7 @@
                       </div>
                       <div class="col-md-4">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Luka Berat</label>
+                          <label class="col-sm-4 col-form-label">Luka Berat</label>
                           <div class="col-sm-9">
                             <input type="number" name="luka_berat" class="form-control" placeholder="Jumlah" />
                           </div>
@@ -52,7 +52,7 @@
                       </div>
                       <div class="col-md-4">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Meninggal Dunia</label>
+                          <label class="col-sm-4 col-form-label">Meninggal Dunia</label>
                           <div class="col-sm-9">
                             <input type="number" name="meninggal" class="form-control" placeholder="Jumlah" />
                           </div>
@@ -60,7 +60,7 @@
                       </div>
                       <div class="col-md-4">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Kerugian Materil</label>
+                          <label class="col-sm-4 col-form-label">Kerugian Materil</label>
                           <div class="col-sm-9">
                             <input type="number" name="rugi" class="form-control" placeholder="Jumlah" />
                           </div>
