@@ -187,8 +187,8 @@
 
                         var dataFive = {
                             label: "Tahun 2024 ",
-                            borderColor: ['rgba(220, 20, 60, 1)'],
-                            backgroundColor: 'rgba(220, 20, 60, 1)',
+                            borderColor: ['rgba(200, 20, 60, 1)'],
+                            backgroundColor: 'rgba(200, 20, 60, 1)',
                             data: [<?php echo $jumlah24; ?>],
                             yAxisID: "y-axis-score",
                             // Set More Options 
