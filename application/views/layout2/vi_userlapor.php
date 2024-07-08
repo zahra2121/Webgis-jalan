@@ -123,21 +123,21 @@
                               <div id="current">Initializing...</div>
                               <div id="map_lokasi" style="width:100px; height:100px"></div>
 
-                              <script type="text/javascript">
+                              <!-- <script type="text/javascript">
                                 $(document).ready(function() {
-                                  navigator.geolocation.getCurrentPosition(function (p) {
-                                      tampilLokasi(p);
+                                  navigator.geolocation.getCurrentPosition(function (position) {
+                                      tampilLokasi(position);
                                   }, function (e) {
                                       alert('Geolocation Tidak Mendukung Pada Browser Anda');
                                   }, {
                                       enableHighAccuracy: true
                                   });
                                 });
-                                
-                                function tampilLokasi(p) {
+
+                                function tampilLokasi(posisi) {
                                   //console.log(posisi);
-                                  var latitude 	= p.coords.latitude;
-                                  var longitude 	= p.coords.longitude;
+                                  var latitude 	= posisi.coords.latitude;
+                                  var longitude 	= posisi.coords.longitude;
                                   $.ajax({
                                     type 	: 'POST',
                                     url		: 'vi_lokasi.php',
@@ -151,7 +151,7 @@
                                     }
                                   })
                                 }
-                              </script>
+                              </script> -->
 
                             </body>
 
