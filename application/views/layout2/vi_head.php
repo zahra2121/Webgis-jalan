@@ -42,7 +42,6 @@
                     navigationControl: true,
                     navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
                     mapTypeId: google.maps.MapTypeId.ROADMAP 
-                
                 };
 
                 var map = new google.maps.Map(document.getElementById('map_lokasi'), mapOptions);
@@ -57,24 +56,29 @@
                 // Mendapatkan lokasi GPS terkini
                 if (navigator.geolocation) {
                     navigator.geolocation.getCurrentPosition(function(position) {
-                        var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
-                        infoWindow.setPosition(pos);
-                        infoWindow.setContent('Lokasi Anda saat ini');
-                        infoWindow.open(map);
+                        document.getElementById('current').innerHTML="Titik Latitude saat ini: <span class='badge badge-danger'>"+p.coords.latitude.toFixed(5)+"</span><br>Longitude saat ini: <span class='badge badge-danger'>"+p.coords.longitude.toFixed(5)+"</span>";
+
+                        var pos=new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
                         map.setCenter(pos);
+                        map.setZoom(14);
 
-                        document.getElementById('current').innerHTML =
-                        "Latitude saat ini: " + position.coords.latitude +
-                        "<br>Longitude saat ini: " + position.coords.longitude;
-
-                        // Mendapatkan alamat dari koordinat
                         getAddress(position.coords.latitude, position.coords.longitude);
+
+                        var infowindow = new google.maps.InfoWindow({
+                            content: "<strong>Lokasi Sekarang</strong>"
+                        });
 
                         var marker = new google.maps.Marker({
                             position: pos,
                             map: map,
                             title:""
+                        });
+
+                        google.maps.event.addListener(marker, 'click', function() {
+                            infowindow.open(map,marker);
+                            infoWindow.setPosition(pos);
+                            infoWindow.setContent('Lokasi Anda saat ini');
                         });
 
                     }, function() {
