@@ -43,7 +43,7 @@
                     navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
                     mapTypeId: google.maps.MapTypeId.ROADMAP      
                     }	
-                map = new google.maps.Map(document.getElementById("map_lokasi"), myOptions);
+                var map = new google.maps.Map(document.getElementById("map_lokasi"), myOptions);
             }
             function initialize(){
                 if(geo_position_js.init())
