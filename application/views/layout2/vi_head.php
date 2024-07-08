@@ -86,8 +86,8 @@
                 infowindow.open(map,marker);
                 });
                 
-                $latitude 	= $_POST['latitude'];
-                $longitude	= $_POST['longitude'];
+                $latitude 	= POST['latitude'];
+                $longitude	= POST['longitude'];
 
                 if (!empty($latitude) && !empty($longitude)) {
 
