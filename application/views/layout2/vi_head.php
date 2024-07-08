@@ -95,25 +95,25 @@
                         enableHighAccuracy: true
                     });
                 });
-                
-                function tampilLokasi(p) {
-                    //console.log(posisi);
-                    var latitude 	= p.coords.latitude;
-                    var longitude 	= p.coords.longitude;
-                    $.ajax({
-                    type 	: 'POST',
-                    url		: 'vi_lokasi.php',
-                    data 	: 'latitude='+latitude+'&longitude='+longitude,
-                    success	: function (e) {
-                        if (e) {
-                        $('#lokasi').html(e);
-                        }else{
-                        $('#lokasi').html('Tidak Tersedia');
-                        }
-                    }
-                    })
-                }
 
+            }
+
+            function tampilLokasi(p) {
+                //console.log(posisi);
+                var latitude 	= p.coords.latitude;
+                var longitude 	= p.coords.longitude;
+                $.ajax({
+                type 	: 'POST',
+                url		: 'vi_lokasi.php',
+                data 	: 'latitude='+latitude+'&longitude='+longitude,
+                success	: function (e) {
+                    if (e) {
+                    $('#lokasi').html(e);
+                    }else{
+                    $('#lokasi').html('Tidak Tersedia');
+                    }
+                }
+                })
             }
 
             function getAddress(lat, lng) {
