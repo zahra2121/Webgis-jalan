@@ -184,7 +184,7 @@ class M_dataset extends CI_model
     }
 
     public function all_kasus(){
-        $this->db->select('kasus.*, blackspot.*, blackspot.daerah_jalan, blackspot.idblack');
+        $this->db->select('kasus.*, blackspot.*, blackspot.patokan, blackspot.daerah_jalan, blackspot.idblack');
         $this->db->from('kasus');
         $this->db->join('blackspot', 'kasus.id = blackspot.idblack');
         return $this->db->get()->result();
@@ -331,7 +331,7 @@ class M_dataset extends CI_model
     }
 
     public function detail_semua($data) {
-        $this->db->select('kasus.*, blackspot.idblack, blackspot.daerah_jalan');
+        $this->db->select('kasus.*, blackspot.idblack, blackspot.patokan, blackspot.daerah_jalan');
         $this->db->from('kasus');
         $this->db->where('idkasus', $data);
         $this->db->join('blackspot', 'blackspot.idblack = kasus.id');
