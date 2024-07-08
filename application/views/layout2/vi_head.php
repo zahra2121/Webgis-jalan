@@ -58,7 +58,7 @@
             }
 
             function show_position(p){
-                document.getElementById('current').innerHTML="Titik Latitude saat ini: <span class='badge badge-danger'>"+p.coords.latitude.toFixed(5)+"</span><br>Longitude saat ini: <span class='badge badge-danger'>"+p.coords.longitude.toFixed(5)+"</span>";
+                document.getElementById('current').innerHTML="Titik Latitude saat ini: <span class='badge badge-danger'>"+p.coords.latitude+"</span><br>Longitude saat ini: <span class='badge badge-danger'>"+p.coords.longitude+"</span>";
 
                 var pos=new google.maps.LatLng(p.coords.latitude,p.coords.longitude);
                 map.setCenter(pos);
@@ -104,92 +104,6 @@
                     });
                 }
             }         
-        </script>
-
-        <script>
-            function initMap() {
-                var mapOptions = {
-                    zoom: 14,
-                    mapTypeControl: true,
-                    mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
-                    navigationControl: true,
-                    navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
-                    mapTypeId: google.maps.MapTypeId.ROADMAP 
-                };
-
-                var map = new google.maps.Map(document.getElementById('map_lokasi'), mapOptions);
-                var infowindow = new google.maps.InfoWindow({
-                    content: "<strong>Lokasi Sekarang</strong>"
-                });
-
-                google.maps.event.addListener(marker, 'click', function() {
-                    infowindow.open(map,marker);
-                });
-
-                // Mendapatkan lokasi GPS terkini
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(function(position) {
-
-                        document.getElementById('current').innerHTML="Titik Latitude saat ini: <span class='badge badge-danger'>"+p.coords.latitude.toFixed(5)+"</span><br>Longitude saat ini: <span class='badge badge-danger'>"+p.coords.longitude.toFixed(5)+"</span>";
-
-                        var pos=new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-                        map.setCenter(pos);
-                        map.setZoom(14);
-
-                        getAddress(position.coords.latitude, position.coords.longitude);
-
-                        var infowindow = new google.maps.InfoWindow({
-                            content: "<strong>Lokasi Sekarang</strong>"
-                        });
-
-                        var marker = new google.maps.Marker({
-                            position: pos,
-                            map: map,
-                            title:""
-                        });
-
-                        google.maps.event.addListener(marker, 'click', function() {
-                            infowindow.open(map,marker);
-                            infoWindow.setPosition(pos);
-                            infoWindow.setContent('Lokasi Anda saat ini');
-                        });
-
-                    }, function() {
-                        handleLocationError(true, infoWindow, map.getCenter());
-                    });
-                } else {
-                    // Browser tidak mendukung Geolocation
-                    handleLocationError(false, infoWindow, map.getCenter());
-                }
-
-                function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-                    infoWindow.setPosition(pos);
-                    infoWindow.setContent(browserHasGeolocation ?
-                                            'Error: The Geolocation service failed.' :
-                                            'Error: Your browser doesn\'t support geolocation.');
-                    infoWindow.open(map);
-                }
-
-                function getAddress(lat, lng) {
-                    var geocoder = new google.maps.Geocoder();
-                    var latlng = new google.maps.LatLng(lat, lng);
-                    geocoder.geocode({ 'location': latlng }, function(results, status) {
-                        if (status === 'OK') {
-                        if (results[0]) {
-                            document.getElementById('lokasi').innerHTML +=
-                            "<br>Address = " + results[0].formatted_address;
-                        } else {
-                            document.getElementById('lokasi').innerHTML +=
-                            "<br>No results found";
-                        }
-                        } else {
-                        console.error('Geocoder failed due to: ' + status);
-                        document.getElementById('lokasi').innerHTML +=
-                            "<br>Geocoder failed due to: " + status;
-                        }
-                    });
-                }
-            }
         </script>
 
         <!-- Custom styles for this page -->
