@@ -92,7 +92,7 @@
                     }, function (e) {
                         alert('Geolocation Tidak Mendukung Pada Browser Anda');
                     }, {
-                        enableHighAccuracy: true;
+                        enableHighAccuracy: true
                     });
                 });
                 
