@@ -37,7 +37,6 @@
             function initMap() {
                 var mapOptions = {
                     zoom: 14,
-                    center: new google.maps.LatLng(0, 0),
                     mapTypeControl: true,
                     mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
                     navigationControl: true,
@@ -58,10 +57,7 @@
                 // Mendapatkan lokasi GPS terkini
                 if (navigator.geolocation) {
                     navigator.geolocation.getCurrentPosition(function(position) {
-                        var pos = {
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude
-                        };
+                        var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
                         infoWindow.setPosition(pos);
                         infoWindow.setContent('Lokasi Anda saat ini');
