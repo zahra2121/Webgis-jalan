@@ -165,7 +165,7 @@
             #title {padding:5px;}
             #current2 {font-size:10pt;padding:5px;}
             #current {font-size:10pt;padding:5px;}
-            #lokasi {font-size:10pt;padding:5px;}
+            #lokasi {font-size:10pt;padding:5px;color: palevioletred;}
             ul {
                 display:grid;
                 list-style-type:none;
