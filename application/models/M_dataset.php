@@ -139,7 +139,7 @@ class M_dataset extends CI_model
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
         $this->db->group_by('blackspot.kecamatan');
-        $this->db->where('blackspot.tahun = "2021"');
+        $this->db->where('blackspot.tahun = 2021');
         $query=$this->db->get();
         return $query->result(); 
     }
@@ -149,7 +149,7 @@ class M_dataset extends CI_model
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
         $this->db->group_by('blackspot.kecamatan');
-        $this->db->where('blackspot.tahun = "2022"');
+        $this->db->where('blackspot.tahun = 2022');
         $query=$this->db->get();
         return $query->result(); 
     }
@@ -159,7 +159,7 @@ class M_dataset extends CI_model
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
         $this->db->group_by('blackspot.kecamatan');
-        $this->db->where('blackspot.tahun = "2023"');
+        $this->db->where('blackspot.tahun = 2023');
         $query=$this->db->get();
         return $query->result(); 
     }
@@ -169,7 +169,7 @@ class M_dataset extends CI_model
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
         $this->db->group_by('blackspot.kecamatan');
-        $this->db->where('blackspot.tahun = "2024"');
+        $this->db->where('blackspot.tahun = 2024');
         $query=$this->db->get();
         return $query->result(); 
     }
