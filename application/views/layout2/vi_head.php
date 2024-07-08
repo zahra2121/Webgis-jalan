@@ -24,6 +24,7 @@
             crossorigin=""></script>
 
         <script src="leaflet.ajax.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
         <script src="<?php echo base_url()?>/assets/chart/Chart.js"></script>
 
@@ -133,7 +134,7 @@
         <style>
             #title {padding:5px;}
             #current {font-size:10pt;padding:5px;}
-            #current2 {font-size:10pt;padding:5px;}
+            #lokasi {font-size:10pt;padding:5px;}
             ul {
                 display:grid;
                 list-style-type:none;

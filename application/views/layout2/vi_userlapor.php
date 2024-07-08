@@ -121,6 +121,40 @@
                             
                               <div id="current">Initializing...</div>
                               <div id="map_lokasi" style="width:100%; height:350px"></div>
+
+
+                              <p>lokasi anda saat ini: <span id="lokasi"></span></p>
+
+                              <script type="text/javascript">
+                                $(document).ready(function() {
+                                  navigator.geolocation.getCurrentPosition(function (p) {
+                                      tampilLokasi(p);
+                                  }, function (e) {
+                                      alert('Geolocation Tidak Mendukung Pada Browser Anda');
+                                  }, {
+                                      enableHighAccuracy: true
+                                  });
+                                });
+                                
+                                function tampilLokasi(p) {
+                                  //console.log(posisi);
+                                  var latitude 	= p.coords.latitude;
+                                  var longitude 	= p.coords.longitude;
+                                  $.ajax({
+                                    type 	: 'POST',
+                                    url		: 'vi_head.php',
+                                    data 	: 'latitude='+latitude+'&longitude='+longitude,
+                                    success	: function (e) {
+                                      if (e) {
+                                        $('#lokasi').html(e);
+                                      }else{
+                                        $('#lokasi').html('Tidak Tersedia');
+                                      }
+                                    }
+                                  })
+                                }
+                              </script>
+
                             </body>
 
                           </div>
