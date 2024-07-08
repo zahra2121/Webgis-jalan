@@ -22,12 +22,6 @@
                             <input type="date" name="tgl_kejadian" class="form-control" placeholder="dd/mm/yyyy"/>
                           </div>
                         </div>
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Alamat Lengkap</label>
-                          <div class="col-sm-9">
-                            <input type="text" name="alamat" class="form-control" placeholder="Alamat Lengkap" />
-                          </div>
-                        </div>
                       </div>
                       <div class="col-md-5">
                         <div class="form-group row">
@@ -102,9 +96,15 @@
                         </div>
                       </div>
                     </div>
-                    <p class="card-description">Dokumentasi</p>
+                    <p class="card-description">Alamat Lokasi Kejadian</p>
                     <div class="row">
                       <div class="col-md-10">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Alamat Lengkap</label>
+                          <div class="col-sm-9">
+                            <input type="text" name="alamat" class="form-control" placeholder="Alamat Lengkap" />
+                          </div>
+                        </div>
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Titik Lokasi Kejadian</label>
                           
@@ -121,7 +121,7 @@
 
                               <div id="lokasi">Lokasi Anda saat ini: <span id="lokasi"></span></div>
                               <div id="current">Initializing...</div>
-                              <div id="map_lokasi" style="width:100%; height:350px"></div>
+                              <div id="map_lokasi" style="width:300px; height:350px"></div>
 
                               <!-- <script type="text/javascript">
                                 $(document).ready(function() {
