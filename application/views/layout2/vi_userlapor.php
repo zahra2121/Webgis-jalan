@@ -135,7 +135,7 @@
                                               document.execCommand('copy');
                                               document.body.removeChild(tempInput);
 
-                                              alert('Teks berhasil disalin ke clipboard!');
+                                              //alert('Teks berhasil disalin ke clipboard!');
                                           })
                                           .catch(error => {
                                               console.error('Error:', error);
