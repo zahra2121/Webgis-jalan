@@ -106,6 +106,31 @@
                           </div>
                         </div>
                         <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Kecamatan</label>
+                          <div class="col-md-6">
+                            <select class="form-control" name="kecamatan">
+                              <option value="" >- Pilih Kecamatan -</option>
+                              <option value="Bambanglipuro" >Bambanglipuro</option>
+                              <option value="Banguntapan" >Banguntapan</option>
+                              <option value="Bantul" >Bantul</option>
+                              <option value="Dlingo" >Dlingo</option>
+                              <option value="Imogiri" >Imogiri</option>
+                              <option value="Jetis" >Jetis</option>
+                              <option value="Kasihan" >Kasihan</option>
+                              <option value="Kretek" >Kretek</option>
+                              <option value="Pajangan" >Pajangan</option>
+                              <option value="Pandak" >Pandak</option>
+                              <option value="Piyungan" >Piyungan</option>
+                              <option value="Pleret" >Pleret</option>
+                              <option value="Pundong" >Pundong</option>
+                              <option value="Sanden" >Sanden</option>
+                              <option value="Sedayu" >Sedayu</option>
+                              <option value="Sewon" >Sewon</option>
+                              <option value="Sradakan" >Sradakan</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Titik Lokasi Kejadian</label>
                           
                           <div class="col-sm-9">
