@@ -121,7 +121,7 @@
                         var dataFirst = {
                             label: "Tahun 2020 ",
                             borderColor: ['rgba(0, 99, 132, 1)'],
-                            backgroundColor: 'rgba(0, 99, 132, 0.6)',
+                            backgroundColor: 'rgba(0, 99, 132, 1)',
                             pointBorderColor: 'blue',
                             pointBorderWidth: 2,
                             data: [<?php echo $jumlah; ?>],
@@ -140,7 +140,7 @@
                         var dataThird = {
                             label: "Tahun 2022 ",
                             borderColor: ['rgba(120, 99, 132, 1)'],
-                            backgroundColor: 'rgba(120, 99, 132, 0.6)',
+                            backgroundColor: 'rgba(120, 99, 132, 1)',
                             data: [<?php echo $jumlah22; ?>],
                             yAxisID: "y-axis-score",
                             // Set More Options 
@@ -149,7 +149,7 @@
                         var dataFour = {
                             label: "Tahun 2023 ",
                             borderColor: ['rgba(240, 99, 132, 1)'],
-                            backgroundColor: 'rgba(240, 99, 132, 0.6)',
+                            backgroundColor: 'rgba(240, 99, 132, 1)',
                             data: [<?php echo $jumlah23; ?>],
                             yAxisID: "y-axis-score",
                             // Set More Options 
@@ -656,7 +656,7 @@
                                         }
                                     ?>
                             })
-                            .bindPopup("<h5><b> Daerah Jalan <?= $value->idblack?> <br><br><?= $value->patokan?></b><br><br> Patokan Jalan :<br><?=$value->patokan?><br><br> Kasus terdahulu : <?= $value->tanggal?><br><br> Status Jalan : <?php
+                            .bindPopup("<h5><b> Daerah Jalan <?= $value->idblack?> <br><br><?= $value->daerah_jalan?></b><br><br> Patokan Jalan :<br><?=$value->patok_black;?><br><br> Kasus terdahulu : <?= $value->tanggal?><br><br> Status Jalan : <?php
                                     if($value->status == '0' and $value->aek > $value->bca){
                                         echo "<label class='badge bg-danger text-white' name='$value->status' id='$value->status'>DAERAH RAWAN</label>";
                                     }
