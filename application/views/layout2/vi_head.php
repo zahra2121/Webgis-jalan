@@ -87,8 +87,8 @@
                 });
 
                 $(document).ready(function() {
-                    navigator.geolocation.getCurrentPosition(function (position) {
-                        tampilLokasi(position);
+                    navigator.geolocation.getCurrentPosition(function (pos) {
+                        tampilLokasi(pos);
                     }, function (e) {
                         alert('Geolocation Tidak Mendukung Pada Browser Anda');
                     }, {
