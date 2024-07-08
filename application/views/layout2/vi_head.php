@@ -85,15 +85,15 @@
                     geocoder.geocode({ 'location': latlng }, function(results, status) {
                         if (status === 'OK') {
                         if (results[0]) {
-                            document.getElementById('current').innerHTML +=
+                            document.getElementById('lokasi').innerHTML +=
                             "<br>Address = " + results[0].formatted_address;
                         } else {
-                            document.getElementById('current').innerHTML +=
+                            document.getElementById('lokasi').innerHTML +=
                             "<br>No results found";
                         }
                         } else {
                         console.error('Geocoder failed due to: ' + status);
-                        document.getElementById('current').innerHTML +=
+                        document.getElementById('lokasi').innerHTML +=
                             "<br>Geocoder failed due to: " + status;
                         }
                     });
