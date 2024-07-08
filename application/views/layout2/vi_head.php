@@ -88,9 +88,9 @@
                     var pos = new google.maps.LatLng(lat, lng);
                     geocoder.geocode({ 'location': pos }, function(results, status) {
                         if (status === 'OK') {
-                            if (results[1]) {
+                            if (results[0]) {
                                 document.getElementById('lokasi').innerHTML +=
-                                "<br>Alamat: " + results[1].formatted_address;
+                                "<br>Alamat: " + results[0].formatted_address;
                             } else {
                                 document.getElementById('lokasi').innerHTML +=
                                 "<br>No results found";
