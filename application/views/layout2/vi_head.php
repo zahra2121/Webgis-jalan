@@ -70,7 +70,7 @@
                 map.setCenter(pos);
                 map.setZoom(14);
 
-                getAddress(p.coords.latitude, p.coords.longitude);
+                //getAddress(p.coords.latitude, p.coords.longitude);
 
                 var infowindow = new google.maps.InfoWindow({
                     content: "<strong>Lokasi Sekarang</strong>"
@@ -85,7 +85,7 @@
                 google.maps.event.addListener(marker, 'click', function() {
                 infowindow.open(map,marker);
                 });
-                
+
             }
 
             function getAddress(lat, lng) {
@@ -135,8 +135,8 @@
         
         <style>
             #title {padding:5px;}
-            #current {font-size:10pt;padding:5px;}
             #current2 {font-size:10pt;padding:5px;}
+            #current {font-size:10pt;padding:5px;}
             #lokasi {font-size:10pt;padding:5px;}
             ul {
                 display:grid;
