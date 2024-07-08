@@ -203,7 +203,7 @@
                         };   
                         var speedData = {
                             labels: [<?php echo $nama_status; ?>],
-                            datasets: [dataFirst, dataSecond, dataThird, dataFour, dataFive]
+                            datasets: [dataFive, dataFour, dataThird, dataSecond, dataFirst]
                         };
 
                         var config = {
