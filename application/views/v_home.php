@@ -124,12 +124,12 @@
                     foreach ($countkec20 as $item){
                         $jur=$item->kecamatan;
                         $nama_status .= "'$jur'". ", ";
-                        $jum= $q20;
-                        $jumlah .= "$jum". ", ";
+                        // $jum= $q20;
+                        // $jumlah .= "$jum". ", ";
                     }
                     foreach ($countkec21 as $item){
-                        $jum21= $q21;
-                        $jumlah21 .= "$jum21". ", ";
+                        // $jum21= $q21;
+                        // $jumlah21 .= "$jum21". ", ";
                     }
                     foreach ($countkec22 as $item){
                         $jum22= $q22;
@@ -143,6 +143,16 @@
                         $jum24= $q24;
                         $jumlah24 .= "$jum24". ", ";
                     }
+                    $jum= $q20;
+                    $jumlah .= "$jum". ", ";
+                    $jum21= $q21;
+                    $jumlah21 .= "$jum21". ", ";
+                    $jum22= $q22;
+                    $jumlah22 .= "$jum22". ", ";
+                    $jum23= $q23;
+                    $jumlah23 .= "$jum23". ", ";
+                    $jum24= $q24;
+                    $jumlah23 .= "$jum23". ", ";
 
                     ?>
                     <script>
