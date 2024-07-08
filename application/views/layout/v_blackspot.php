@@ -95,7 +95,7 @@
                                     yAxes: [{
                                         scaleLabel: {
                                             display: true,
-                                            labelString: 'Jumlah Data'
+                                            labelString: 'Skor Perhitungan Akhir'
                                         },
                                         ticks: {
                                             beginAtZero: true
