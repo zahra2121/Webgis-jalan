@@ -92,26 +92,26 @@
                     $q21 = "SELECT COUNT(kasus.idkasus) as total_idkasus
                             FROM blackspot 
                             JOIN kasus ON blackspot.idblack = kasus.id 
-                            WHERE blackspot.tahun = 2021
-                            GROUP BY blackspot.kecamatan, blackspot.tahun";
+                            WHERE blackspot.tahun = '2021'
+                            GROUP BY blackspot.kecamatan";
 
                     $q22 = "SELECT COUNT(kasus.idkasus) as total_idkasus
                             FROM blackspot 
                             JOIN kasus ON blackspot.idblack = kasus.id 
-                            WHERE blackspot.tahun = 2022
-                            GROUP BY blackspot.kecamatan, blackspot.tahun";
+                            WHERE blackspot.tahun = '2022'
+                            GROUP BY blackspot.kecamatan";
 
                     $q23 = "SELECT COUNT(kasus.idkasus) as total_idkasus
                             FROM blackspot 
                             JOIN kasus ON blackspot.idblack = kasus.id 
-                            WHERE blackspot.tahun = 2023
-                            GROUP BY blackspot.kecamatan, blackspot.tahun";
+                            WHERE blackspot.tahun = '2023'
+                            GROUP BY blackspot.kecamatan";
 
                     $q24 = "SELECT COUNT(kasus.idkasus) as total_idkasus
                             FROM blackspot 
                             JOIN kasus ON blackspot.idblack = kasus.id 
-                            WHERE blackspot.tahun = 2024
-                            GROUP BY blackspot.kecamatan, blackspot.tahun";   
+                            WHERE blackspot.tahun = '2024'
+                            GROUP BY blackspot.kecamatan";   
 
                     $nama_status= "";
                     $jumlah=null;
