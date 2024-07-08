@@ -123,7 +123,7 @@
                               <div id="map_lokasi" style="width:100%; height:350px"></div>
 
 
-                              <p>lokasi anda saat ini: <span id="lokasi"></span></p>
+                              <!-- <p>lokasi anda saat ini: <span id="lokasi"></span></p>
 
                               <script type="text/javascript">
                                 $(document).ready(function() {
@@ -153,7 +153,7 @@
                                     }
                                   })
                                 }
-                              </script>
+                              </script> -->
 
                             </body>
 
