@@ -18,7 +18,7 @@
                       <div class="col-md-6">
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Tanggal Kejadian</label>
-                          <div class="col-sm-9">
+                          <div class="col-sm-6">
                             <input type="date" name="tgl_kejadian" class="form-control" placeholder="dd/mm/yyyy"/>
                           </div>
                         </div>
@@ -26,7 +26,7 @@
                       <div class="col-md-5">
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Waktu</label>
-                          <div class="col-sm-9">
+                          <div class="col-sm-6">
                             <input type="time" name="jam" class="form-control" placeholder="jam/menit/detik"/>
                           </div>
                         </div>
