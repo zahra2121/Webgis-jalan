@@ -4,7 +4,7 @@
 
 	if (!empty($latitude) && !empty($longitude)) {
 
-		$gmap = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='.trim($latitude).','.$longitude.'&sensor=true';
+		$gmap = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='.trim($latitude).','.$longitude.'&sensor=false';
 		// curl
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $gmap);
