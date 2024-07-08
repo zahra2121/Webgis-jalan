@@ -119,7 +119,6 @@
                               <div id="current">Initializing...</div>
                               <div id="map_lokasi" style="width:100%; height:250px"></div>
 
-
                             </body>
 
                           </div>
