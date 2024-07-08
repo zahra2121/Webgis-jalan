@@ -87,39 +87,30 @@
                 infowindow.open(map,marker);
                 });
 
-                // $(document).ready(function() {
-                //     navigator.geolocation.getCurrentPosition(function (pos) {
-                //         tampilLokasi(pos);
-                //     }, function (e) {
-                //         alert('Geolocation Tidak Mendukung Pada Browser Anda');
-                //     }, {
-                //         enableHighAccuracy: true
-                //     });
-                // });
             }
 
-            // function tampilLokasi(p) {
-            //     //console.log(posisi);
-            //     var latitude 	= p.coords.latitude;
-            //     var longitude 	= p.coords.longitude;
-            //     $.ajax({
-            //     type 	: 'POST',
-            //     url		: 'vi_lokasi.php',
-            //     data 	: 'latitude='+p.coords.latitude+'&longitude='+p.coords.longitude,
-            //     success	: function (e) {
-            //         if (e) {
-            //         $('#lokasi').html(e);
-            //         }else{
-            //         $('#lokasi').html('Tidak Tersedia');
-            //         }
-            //     }
-            //     })
-            // }
+            function tampilLokasi(p) {
+                //console.log(posisi);
+                var latitude 	= p.coords.latitude;
+                var longitude 	= p.coords.longitude;
+                $.ajax({
+                type 	: 'POST',
+                url		: 'vi_lokasi.php',
+                data 	: 'latitude='+p.coords.latitude+'&longitude='+p.coords.longitude,
+                success	: function (e) {
+                    if (e) {
+                    $('#current2').html(e);
+                    }else{
+                    $('#current2').html('Tidak Tersedia');
+                    }
+                }
+                })
+            }
 
             function getAddress(lat, lng) {
                 var geocoder = new google.maps.Geocoder();
                 var latlng = new google.maps.LatLng(lat, lng);
-                geocoder.geocode({ 'current2': latlng }, function(results, status) {
+                geocoder.geocode({ 'location': latlng }, function(results, status) {
                     if (status === 'OK') {
                         if (results[0]) {
                             document.getElementById('current2').innerHTML +=
@@ -133,6 +124,16 @@
                         document.getElementById('current2').innerHTML +=
                             "<br>Geocoder failed due to: " + status;
                     }
+                });
+
+                $(document).ready(function() {
+                    navigator.geolocation.getCurrentPosition(function (latlng) {
+                        tampilLokasi(latlng);
+                    }, function (e) {
+                        alert('Geolocation Tidak Mendukung Pada Browser Anda');
+                    }, {
+                        enableHighAccuracy: true
+                    });
                 });
             }
  
