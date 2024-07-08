@@ -61,7 +61,7 @@
 
             function show_position(p)
             {
-                document.getElementById('current').innerHTML="Titik Latitude saat ini: <span class='badge badge-danger'>"+p.coords.latitude+"</span><br>Longitude saat ini: <span class='badge badge-danger'>"+p.coords.longitude+"</span>";
+                document.getElementById('current').innerHTML="Titik Latitude saat ini: <span class='badge badge-danger'>"+p.coords.latitude.toFixed(5)+"</span><br>Longitude saat ini: <span class='badge badge-danger'>"+p.coords.longitude.toFixed(5)+"</span>";
                 
                 document.getElementById('latitude').innerHTML=p.coords.latitude.toFixed(5);
                 document.getElementById('longitude').innerHTML=p.coords.longitude.toFixed(5);
