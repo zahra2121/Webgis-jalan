@@ -57,7 +57,7 @@
                 if (navigator.geolocation) {
                     navigator.geolocation.getCurrentPosition(function(position) {
 
-                        document.getElementById('current').innerHTML="Titik Latitude saat ini: <span class='badge badge-danger'>"+p.coords.latitude.toFixed(5)+"</span><br>Longitude saat ini: <span class='badge badge-danger'>"+p.coords.longitude.toFixed(5)+"</span>";
+                        document.getElementById('current').innerHTML="Titik Latitude saat ini: <span class='badge badge-danger'>"+position.coords.latitude+"</span><br>Longitude saat ini: <span class='badge badge-danger'>"+position.coords.longitude+"</span>";
 
                         var pos=new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
                         map.setCenter(pos);
