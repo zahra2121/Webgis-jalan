@@ -37,11 +37,13 @@
             function initMap() {
                 var mapOptions = {
                     zoom: 14,
+                    center: new google.maps.LatLng(0, 0),
                     mapTypeControl: true,
                     mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
                     navigationControl: true,
                     navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
                     mapTypeId: google.maps.MapTypeId.ROADMAP 
+                
                 };
 
                 var map = new google.maps.Map(document.getElementById('map_lokasi'), mapOptions);
