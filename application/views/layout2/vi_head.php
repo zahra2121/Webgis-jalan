@@ -95,7 +95,7 @@
                 $.ajax({
                 type 	: 'POST',
                 url		: 'vi_lokasi.php',
-                data 	: 'latitude='+p.coords.latitude+'&longitude='+p.coords.longitude,
+                data 	: 'latitude='+latitude+'&longitude='+longitude,
                 success	: function (e) {
                     if (e) {
                     $('lokasi').html(e);
@@ -108,8 +108,8 @@
 
             function getAddress(lat, lng) {
                 var geocoder = new google.maps.Geocoder();
-                var latlng = new google.maps.LatLng(lat, lng);
-                geocoder.geocode({ 'location': latlng }, function(results, status) {
+                var pos = new google.maps.LatLng(lat, lng);
+                geocoder.geocode({ 'location': pos }, function(results, status) {
                     if (status === 'OK') {
                         if (results[0]) {
                             document.getElementById('lokasi').innerHTML +=
@@ -126,8 +126,8 @@
                 });
 
                 $(document).ready(function() {
-                    navigator.geolocation.getCurrentPosition(function (latlng) {
-                        tampilLokasi(latlng);
+                    navigator.geolocation.getCurrentPosition(function (pos) {
+                        tampilLokasi(pos);
                     }, function (e) {
                         alert('Geolocation Tidak Mendukung Pada Browser Anda');
                     }, {
