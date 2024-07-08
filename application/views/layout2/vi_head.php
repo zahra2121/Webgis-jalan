@@ -73,7 +73,7 @@
                 getAddress(p.coords.latitude, p.coords.longitude);
 
                 var infowindow = new google.maps.InfoWindow({
-                    content: "<strong>Lokasi Sekarang</strong>"
+                    content: "<strong>Lokasi Sekarang</strong>";
                 });
 
                 var marker = new google.maps.Marker({
