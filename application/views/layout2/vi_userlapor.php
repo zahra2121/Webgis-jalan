@@ -119,30 +119,6 @@
                               <div id="current">Initializing...</div>
                               <div id="map_lokasi" style="width:300px; height:200px"></div>
 
-                              <button id="copyButton">Salin Teks</button>
-
-                              <script>
-                                  document.getElementById('copyButton').addEventListener('click', function() {
-                                      // Menggunakan AJAX untuk mendapatkan teks dari server
-                                      fetch('<?= site_url('Copy/get_text'); ?>')
-                                          .then(response => response.json())
-                                          .then(data => {
-                                              // Membuat elemen textarea sementara untuk menyalin teks
-                                              var tempInput = document.createElement('textarea');
-                                              tempInput.value = data.text;
-                                              document.body.appendChild(tempInput);
-                                              tempInput.select();
-                                              document.execCommand('copy');
-                                              document.body.removeChild(tempInput);
-
-                                              //alert('Teks berhasil disalin ke clipboard!');
-                                          })
-                                          .catch(error => {
-                                              console.error('Error:', error);
-                                          });
-                                  });
-                              </script>
-
 
                             </body>
 
