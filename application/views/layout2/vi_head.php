@@ -36,7 +36,7 @@
         <script>
             function initMap() {
                 var mapOptions = {
-                    zoom: 4,
+                    zoom: 14,
                     mapTypeControl: true,
                     mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
                     navigationControl: true,
