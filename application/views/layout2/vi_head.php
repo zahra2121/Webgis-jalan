@@ -36,47 +36,63 @@
         <script>
             function initMap() {
                 var mapOptions = {
-                zoom: 14,
-                center: new google.maps.LatLng(0, 0),  // Pusat awal peta di ekuator
-                mapTypeId: google.maps.MapTypeId.ROADMAP
+                    zoom: 4,
+                    mapTypeControl: true,
+                    mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+                    navigationControl: true,
+                    navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+                    mapTypeId: google.maps.MapTypeId.ROADMAP 
                 };
 
                 var map = new google.maps.Map(document.getElementById('map_lokasi'), mapOptions);
-                var infoWindow = new google.maps.InfoWindow;
+                var infowindow = new google.maps.InfoWindow({
+                    content: "<strong>Lokasi Sekarang</strong>"
+                });
+
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.open(map,marker);
+                });
 
                 // Mendapatkan lokasi GPS terkini
                 if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    var pos = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude
-                    };
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                        };
 
-                    infoWindow.setPosition(pos);
-                    infoWindow.setContent('Lokasi Anda saat ini');
-                    infoWindow.open(map);
-                    map.setCenter(pos);
+                        infoWindow.setPosition(pos);
+                        infoWindow.setContent('Lokasi Anda saat ini');
+                        infoWindow.open(map);
+                        map.setCenter(pos);
 
-                    document.getElementById('current').innerHTML =
-                    "Latitude = " + position.coords.latitude.toFixed(5) +
-                    "<br>Longitude = " + position.coords.longitude.toFixed(5);
+                        document.getElementById('current').innerHTML =
+                        "Latitude saat ini: " + position.coords.latitude +
+                        "<br>Longitude saat ini: " + position.coords.longitude;
 
-                    // Mendapatkan alamat dari koordinat
-                    getAddress(position.coords.latitude, position.coords.longitude);
-                }, function() {
-                    handleLocationError(true, infoWindow, map.getCenter());
-                });
+                        // Mendapatkan alamat dari koordinat
+                        getAddress(position.coords.latitude, position.coords.longitude);
+
+                        var marker = new google.maps.Marker({
+                            position: pos,
+                            map: map,
+                            title:""
+                        });
+
+                    }, function() {
+                        handleLocationError(true, infoWindow, map.getCenter());
+                    });
                 } else {
-                // Browser tidak mendukung Geolocation
-                handleLocationError(false, infoWindow, map.getCenter());
+                    // Browser tidak mendukung Geolocation
+                    handleLocationError(false, infoWindow, map.getCenter());
                 }
 
                 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-                infoWindow.setPosition(pos);
-                infoWindow.setContent(browserHasGeolocation ?
-                                        'Error: The Geolocation service failed.' :
-                                        'Error: Your browser doesn\'t support geolocation.');
-                infoWindow.open(map);
+                    infoWindow.setPosition(pos);
+                    infoWindow.setContent(browserHasGeolocation ?
+                                            'Error: The Geolocation service failed.' :
+                                            'Error: Your browser doesn\'t support geolocation.');
+                    infoWindow.open(map);
                 }
 
                 function getAddress(lat, lng) {
@@ -99,7 +115,7 @@
                     });
                 }
             }
-    </script>
+        </script>
 
         <!-- Custom styles for this page -->
         <link href="<?= base_url() ?>template3/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
