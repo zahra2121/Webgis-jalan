@@ -119,40 +119,9 @@
                                   </div>
                               </div>
 
-                              <div><p>Lokasi anda saat ini: </p><span id="lokasi"></span></div>
                               <div id="current2">Initializing...</div>
                               <div id="current">Initializing...</div>
                               <div id="map_lokasi" style="width:100px; height:100px"></div>
-
-                              <script type="text/javascript">
-                                $(document).ready(function() {
-                                  navigator.geolocation.getCurrentPosition(function (p) {
-                                      tampilLokasi(p);
-                                  }, function (e) {
-                                      alert('Geolocation Tidak Mendukung Pada Browser Anda');
-                                  }, {
-                                      enableHighAccuracy: true
-                                  });
-                                });
-                                
-                                function tampilLokasi(p) {
-                                  //console.log(posisi);
-                                  var latitude 	= p.coords.latitude;
-                                  var longitude 	= p.coords.longitude;
-                                  $.ajax({
-                                    type 	: 'POST',
-                                    url		: 'vi_head.php',
-                                    data 	: 'latitude='+latitude+'&longitude='+longitude,
-                                    success	: function (e) {
-                                      if (e) {
-                                        $('#lokasi').html(e);
-                                      }else{
-                                        $('#lokasi').html('Tidak Tersedia');
-                                      }
-                                    }
-                                  })
-                                }
-                              </script>
 
                             </body>
 
