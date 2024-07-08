@@ -61,7 +61,7 @@
 
             function show_position(p)
             {
-                document.getElementById('current').innerHTML="Lokasi Latitude Sekarang = "+p.coords.latitude.toFixed(5)+"<br>Longitude Sekarang = "+p.coords.longitude.toFixed(5);
+                document.getElementById('current').innerHTML="Lokasi Latitude Sekarang = "+p.coords.latitude+"<br>Longitude Sekarang = "+p.coords.longitude;
                 
                 document.getElementById('latitude').innerHTML=p.coords.latitude.toFixed(5);
                 document.getElementById('longitude').innerHTML=p.coords.longitude.toFixed(5);
@@ -89,9 +89,9 @@
                 $latitude 	= p.coords.latitude;
                 $longitude	= p.coords.longitude;
 
-                if (!empty($latitude) && !empty($longitude)) {
+                if (!empty(p.coords.latitude) && !empty(p.coords.longiude)) {
 
-                    $gmap = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='.trim($latitude).','.$longitude.'&sensor=false';
+                    $gmap = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='.trim(p.coords.latitude).','.p.coords.longitude.'&sensor=false';
                     // curl
                     $ch = curl_init();
                     curl_setopt($ch, CURLOPT_URL, $gmap);
