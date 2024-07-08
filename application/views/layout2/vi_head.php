@@ -38,9 +38,9 @@
                 var myOptions = {
                     zoom: 14,
                     mapTypeControl: true,
-                    // mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
-                    // navigationControl: true,
-                    // navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+                    mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+                    navigationControl: true,
+                    navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
                     mapTypeId: google.maps.MapTypeId.ROADMAP      
                     }	
                 var map = new google.maps.Map(document.getElementById("map_lokasi"), myOptions);
