@@ -116,7 +116,6 @@
                               </div>
 
                               <div id="lokasi">Lokasi Anda saat ini: <span id="lokasi"></span></div>
-                              <div id="lokasi">Initializing...</div>
                               <div id="current">Initializing...</div>
                               <div id="map_lokasi" style="width:300px; height:200px"></div>
 
