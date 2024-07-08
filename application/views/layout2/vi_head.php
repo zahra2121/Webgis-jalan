@@ -61,7 +61,7 @@
 
             function show_position(p)
             {
-                document.getElementById('current').innerHTML="Titik Latitude saat ini: <span class='badge badge-danger'>"+p.coords.latitude.toFixed(5)+"</span><br>Longitude saat ini: <span class='badge badge-danger'>"+p.coords.longitude.toFixed(5)+"</span>";
+                //document.getElementById('current').innerHTML="Titik Latitude saat ini: <span class='badge badge-danger'>"+p.coords.latitude.toFixed(5)+"</span><br>Longitude saat ini: <span class='badge badge-danger'>"+p.coords.longitude.toFixed(5)+"</span>";
 
                 // var pos=new google.maps.LatLng(p.coords.latitude,p.coords.longitude);
                 // map.setCenter(pos);
@@ -98,6 +98,7 @@
                         infoWindow.setContent('Lokasi Anda saat ini');
                         infoWindow.open(map);
                         map.setCenter(pos);
+                        map.setZoom(14);
 
                         document.getElementById('current').innerHTML =
                         "Latitude = " + p.coords.latitude.toFixed(5) +
