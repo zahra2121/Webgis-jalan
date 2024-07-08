@@ -117,38 +117,7 @@
 
                               <div id="lokasi">Lokasi Anda saat ini: <span id="lokasi"></span></div>
                               <div id="current">Initializing...</div>
-                              <div id="map_lokasi" style="width:300px; height:350px"></div>
-
-                              <!-- <script type="text/javascript">
-                                $(document).ready(function() {
-                                  navigator.geolocation.getCurrentPosition(function (position) {
-                                      tampilLokasi(position);
-                                  }, function (e) {
-                                      alert('Geolocation Tidak Mendukung Pada Browser Anda');
-                                  }, {
-                                      enableHighAccuracy: true
-                                  });
-                                });
-
-                                function tampilLokasi(posisi) {
-                                  //console.log(posisi);
-                                  var latitude 	= posisi.coords.latitude;
-                                  var longitude 	= posisi.coords.longitude;
-                                  $.ajax({
-                                    type 	: 'POST',
-                                    url		: 'vi_lokasi.php',
-                                    data 	: 'latitude='+latitude+'&longitude='+longitude,
-                                    success	: function (e) {
-                                      if (e) {
-                                        $('#lokasi').html(e);
-                                      }else{
-                                        $('#lokasi').html('Tidak Tersedia');
-                                      }
-                                    }
-                                  })
-                                }
-                              </script> -->
-
+                              <div id="map_lokasi" style="width:300px; height:200px"></div>
                             </body>
 
                           </div>
