@@ -123,7 +123,7 @@
                     if (status === 'OK') {
                         if (results[0]) {
                             document.getElementById('current2').innerHTML +=
-                            "<br>Alamat = " + results[0].formatted_address;
+                            "<br>Lokasi Anda saat ini: " + results[0].formatted_address;
                         } else {
                             document.getElementById('current2').innerHTML +=
                             "<br>No results found";
