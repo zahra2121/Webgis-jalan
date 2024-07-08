@@ -128,8 +128,8 @@ class M_dataset extends CI_model
         $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.idblack) as total_data, COUNT(blackspot.tahun) as total_tahun, COUNT(kasus.idkasus) as total_idkasus');
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
-        $this->db->group_by('blackspot.kecamatan');
         $this->db->where('blackspot.tahun = 2020');
+        $this->db->group_by('blackspot.kecamatan');
         $query=$this->db->get();
         return $query->result(); 
     }
@@ -138,8 +138,8 @@ class M_dataset extends CI_model
         $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.idblack) as total_data, COUNT(blackspot.tahun) as total_tahun, COUNT(kasus.idkasus) as total_idkasus');
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
-        $this->db->group_by('blackspot.kecamatan');
         $this->db->where('blackspot.tahun = 2021');
+        $this->db->group_by('blackspot.kecamatan');
         $query=$this->db->get();
         return $query->result(); 
     }
@@ -148,8 +148,8 @@ class M_dataset extends CI_model
         $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.idblack) as total_data, COUNT(blackspot.tahun) as total_tahun, COUNT(kasus.idkasus) as total_idkasus');
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
-        $this->db->group_by('blackspot.kecamatan');
         $this->db->where('blackspot.tahun = 2022');
+        $this->db->group_by('blackspot.kecamatan');
         $query=$this->db->get();
         return $query->result(); 
     }
@@ -158,8 +158,8 @@ class M_dataset extends CI_model
         $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.idblack) as total_data, COUNT(blackspot.tahun) as total_tahun, COUNT(kasus.idkasus) as total_idkasus');
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
-        $this->db->group_by('blackspot.kecamatan');
         $this->db->where('blackspot.tahun = 2023');
+        $this->db->group_by('blackspot.kecamatan');
         $query=$this->db->get();
         return $query->result(); 
     }
@@ -168,8 +168,8 @@ class M_dataset extends CI_model
         $this->db->select('blackspot.*, kasus.*, COUNT(blackspot.idblack) as total_data, COUNT(blackspot.tahun) as total_tahun, COUNT(kasus.idkasus) as total_idkasus');
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
-        $this->db->group_by('blackspot.kecamatan');
         $this->db->where('blackspot.tahun = 2024');
+        $this->db->group_by('blackspot.kecamatan');
         $query=$this->db->get();
         return $query->result(); 
     }
