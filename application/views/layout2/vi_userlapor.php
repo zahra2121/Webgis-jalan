@@ -78,7 +78,7 @@
                         </div>
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Kecamatan</label>
-                          <div class="col-md-5">
+                          <div class="col-sm-5">
                             <select class="form-control" name="kecamatan">
                               <option value="" >- Pilih Kecamatan -</option>
                               <option value="Bambanglipuro" >Bambanglipuro</option>
