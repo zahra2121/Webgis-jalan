@@ -87,29 +87,15 @@
                 infowindow.open(map,marker);
                 });
 
-                $(document).ready(function() {
-                    navigator.geolocation.getCurrentPosition(function (pos) {
-                        tampilLokasi(pos);
-                    }, function (e) {
-                        alert('Geolocation Tidak Mendukung Pada Browser Anda');
-                    }, {
-                        enableHighAccuracy: true
-                    });
-                });
-
-                // Tambahkan geocoding untuk mendapatkan alamat
-                var geocoder = new google.maps.Geocoder();
-                geocoder.geocode({ 'location': pos }, function(results, status) {
-                    if (status === 'OK') {
-                        if (results[0]) {
-                            document.getElementById('lokasi').innerHTML = results[0].formatted_address;
-                        } else {
-                            document.getElementById('lokasi').innerHTML = 'Alamat tidak ditemukan';
-                        }
-                    } else {
-                        document.getElementById('lokasi').innerHTML = 'Geocoder gagal karena: ' + status;
-                    }
-                });
+                // $(document).ready(function() {
+                //     navigator.geolocation.getCurrentPosition(function (pos) {
+                //         tampilLokasi(pos);
+                //     }, function (e) {
+                //         alert('Geolocation Tidak Mendukung Pada Browser Anda');
+                //     }, {
+                //         enableHighAccuracy: true
+                //     });
+                // });
             }
 
             function tampilLokasi(p) {
