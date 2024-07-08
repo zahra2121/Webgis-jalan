@@ -86,8 +86,8 @@
                     $q20 = "SELECT COUNT(kasus.idkasus) as total_idkasus
                             FROM blackspot 
                             JOIN kasus ON blackspot.idblack = kasus.id 
-                            WHERE blackspot.tahun = 2020
-                            GROUP BY blackspot.kecamatan, blackspot.tahun";
+                            WHERE blackspot.tahun = '2020'
+                            GROUP BY blackspot.kecamatan";
 
                     $q21 = "SELECT COUNT(kasus.idkasus) as total_idkasus
                             FROM blackspot 
