@@ -30,8 +30,8 @@
 
         <!-- GPS OTOMATIS GOOGLE -->
         <script src="<?php echo base_url()?>/assets/js/geo.js" type="text/javascript" charset="utf-8"></script>
-        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-        <script src="http://maps.googleapis.com/maps/api/js"></script>
+        <!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script src="http://maps.googleapis.com/maps/api/js"></script> -->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYMpyDVmi2y43ZdkNmn4ojKmdPpvnUBEMY&libraries=places"></script>
 
         <script>
@@ -71,7 +71,7 @@
                 map.setCenter(pos);
                 map.setZoom(14);
 
-                //getAddress(p.coords.latitude, p.coords.longitude);
+                getAddress(p.coords.latitude, p.coords.longitude);
 
                 var infowindow = new google.maps.InfoWindow({
                     content: "<strong>Lokasi Sekarang</strong>"
