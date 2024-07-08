@@ -109,7 +109,7 @@
             function getAddress(lat, lng) {
                 var geocoder = new google.maps.Geocoder();
                 var latlng = new google.maps.LatLng(lat, lng);
-                geocoder.geocode({ 'location': pos }, function(results, status) {
+                geocoder.geocode({ 'location': latlng }, function(results, status) {
                     if (status === 'OK') {
                         if (results[0]) {
                             document.getElementById('lokasi').innerHTML +=
@@ -136,8 +136,6 @@
                 });
             }
  
-        </script>
-        <script>
             var langID = "en-US", mapCanvas = "#map_lokasi", $ = jQuery;
             setInterval(function () {googlemap_remap();}, 10);
             function googlemap_remap() {
