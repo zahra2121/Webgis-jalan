@@ -83,35 +83,35 @@
                     <div style="width: 60%;"><canvas id="myChart"></canvas></center>
                     <?php
                     //Inisialisasi nilai variabel awal
-                    $q20 = "SELECT COUNT(kasus.idkasus) as total_idkasus
-                            FROM blackspot 
-                            JOIN kasus ON blackspot.idblack = kasus.id 
-                            WHERE blackspot.tahun = '2020'
-                            GROUP BY blackspot.kecamatan";
+                    // $q20 = "SELECT COUNT(kasus.idkasus) as total_idkasus
+                    //         FROM blackspot 
+                    //         JOIN kasus ON blackspot.idblack = kasus.id 
+                    //         WHERE blackspot.tahun = 2020
+                    //         GROUP BY blackspot.kecamatan, blackspot.tahun";
 
-                    $q21 = "SELECT COUNT(kasus.idkasus) as total_idkasus
-                            FROM blackspot 
-                            JOIN kasus ON blackspot.idblack = kasus.id 
-                            WHERE blackspot.tahun = '2021'
-                            GROUP BY blackspot.kecamatan";
+                    // $q21 = "SELECT COUNT(kasus.idkasus) as total_idkasus
+                    //         FROM blackspot 
+                    //         JOIN kasus ON blackspot.idblack = kasus.id 
+                    //         WHERE blackspot.tahun = 2021
+                    //         GROUP BY blackspot.kecamatan, blackspot.tahun";
 
-                    $q22 = "SELECT COUNT(kasus.idkasus) as total_idkasus
-                            FROM blackspot 
-                            JOIN kasus ON blackspot.idblack = kasus.id 
-                            WHERE blackspot.tahun = '2022'
-                            GROUP BY blackspot.kecamatan";
+                    // $q22 = "SELECT COUNT(kasus.idkasus) as total_idkasus
+                    //         FROM blackspot 
+                    //         JOIN kasus ON blackspot.idblack = kasus.id 
+                    //         WHERE blackspot.tahun = 2022
+                    //         GROUP BY blackspot.kecamatan, blackspot.tahun";
 
-                    $q23 = "SELECT COUNT(kasus.idkasus) as total_idkasus
-                            FROM blackspot 
-                            JOIN kasus ON blackspot.idblack = kasus.id 
-                            WHERE blackspot.tahun = '2023'
-                            GROUP BY blackspot.kecamatan";
+                    // $q23 = "SELECT COUNT(kasus.idkasus) as total_idkasus
+                    //         FROM blackspot 
+                    //         JOIN kasus ON blackspot.idblack = kasus.id 
+                    //         WHERE blackspot.tahun = 2023
+                    //         GROUP BY blackspot.kecamatan, blackspot.tahun";
 
-                    $q24 = "SELECT COUNT(kasus.idkasus) as total_idkasus
-                            FROM blackspot 
-                            JOIN kasus ON blackspot.idblack = kasus.id 
-                            WHERE blackspot.tahun = '2024'
-                            GROUP BY blackspot.kecamatan";   
+                    // $q24 = "SELECT COUNT(kasus.idkasus) as total_idkasus
+                    //         FROM blackspot 
+                    //         JOIN kasus ON blackspot.idblack = kasus.id 
+                    //         WHERE blackspot.tahun = 2024
+                    //         GROUP BY blackspot.kecamatan, blackspot.tahun";   
 
                     $nama_status= "";
                     $jumlah=null;
@@ -124,35 +124,25 @@
                     foreach ($countkec20 as $item){
                         $jur=$item->kecamatan;
                         $nama_status .= "'$jur'". ", ";
-                        // $jum= $q20;
-                        // $jumlah .= "$jum". ", ";
+                        $jum= $item->total_idkasus;
+                        $jumlah .= "$jum". ", ";
                     }
                     foreach ($countkec21 as $item){
-                        // $jum21= $q21;
-                        // $jumlah21 .= "$jum21". ", ";
+                        $jum21= $item->total_idkasus;
+                        $jumlah21 .= "$jum21". ", ";
                     }
                     foreach ($countkec22 as $item){
-                        $jum22= $q22;
+                        $jum22= $item->total_idkasus;
                         $jumlah22 .= "$jum22". ", ";
                     }
                     foreach ($countkec23 as $item){
-                        $jum23= $q23;
+                        $jum23= $item->total_idkasus;
                         $jumlah23 .= "$jum23". ", ";
                     }
                     foreach ($countkec24 as $item){
-                        $jum24= $q24;
+                        $jum24= $item->total_idkasus;
                         $jumlah24 .= "$jum24". ", ";
                     }
-                    $jum= $q20;
-                    $jumlah .= "$jum". ", ";
-                    $jum21= $q21;
-                    $jumlah21 .= "$jum21". ", ";
-                    $jum22= $q22;
-                    $jumlah22 .= "$jum22". ", ";
-                    $jum23= $q23;
-                    $jumlah23 .= "$jum23". ", ";
-                    $jum24= $q24;
-                    $jumlah23 .= "$jum23". ", ";
 
                     ?>
                     <script>
