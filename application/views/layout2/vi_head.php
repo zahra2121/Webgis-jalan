@@ -200,30 +200,5 @@
                 box-shadow: none;
                 color: navy;
             }
-
-            #copyButton {
-                background-color: #4CAF50; /* Warna background hijau */
-                border: none; /* Menghilangkan border */
-                color: white; /* Warna teks putih */
-                padding: 15px 32px; /* Padding di dalam tombol */
-                text-align: center; /* Teks di tengah */
-                text-decoration: none; /* Menghilangkan underline */
-                display: inline-block; /* Tampilan inline-block */
-                font-size: 16px; /* Ukuran font */
-                margin: 4px 2px; /* Margin */
-                cursor: pointer; /* Pointer saat hover */
-                border-radius: 12px; /* Membuat border melengkung */
-                transition: background-color 0.3s ease; /* Animasi transisi saat background berubah */
-            }
-
-            #copyButton:hover {
-                background-color: #45a049; /* Warna background saat di-hover */
-            }
-
-            #copyButton:active {
-                background-color: #3e8e41; /* Warna background saat diklik */
-                box-shadow: 0 5px #666; /* Bayangan saat diklik */
-                transform: translateY(4px); /* Efek tekan ke bawah */
-            }
         </style>
     </head>
