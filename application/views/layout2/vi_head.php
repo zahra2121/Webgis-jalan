@@ -31,16 +31,16 @@
         <!-- GPS OTOMATIS GOOGLE -->
         <script src="<?php echo base_url()?>/assets/js/geo.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYMpyDVmi2y43ZdkNmn4ojKmdPpvnUBEM"></script> -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYMpyDVmi2y43ZdkNmn4ojKmdPpvnUBEM"></script>
 
         <script>
             function initialize_map(){
                 var myOptions = {
-                    zoom: 4,
+                    zoom: 14,
                     mapTypeControl: true,
-                    mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
-                    navigationControl: true,
-                    navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+                    // mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+                    // navigationControl: true,
+                    // navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
                     mapTypeId: google.maps.MapTypeId.ROADMAP      
                     }	
                 var map = new google.maps.Map(document.getElementById("map_lokasi"), myOptions);
