@@ -119,9 +119,9 @@
                                   </div>
                               </div>
 
-                              <div id="lokasi"><p>Lokasi anda saat ini: </p><span id="lokasi"></span></div>
+                              <div><p>Lokasi anda saat ini: </p><span id="lokasi"></span></div>
                               <div id="current">Initializing...</div>
-                              <div id="map_lokasi" style="width:300px; height:350px"></div>
+                              <div id="map_lokasi" style="width:100px; height:100px"></div>
 
                               <script type="text/javascript">
                                 $(document).ready(function() {
