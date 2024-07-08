@@ -105,7 +105,7 @@
                 $.ajax({
                 type 	: 'POST',
                 url		: 'vi_lokasi.php',
-                data 	: 'latitude='+latitude+'&longitude='+longitude,
+                data 	: 'latitude='+p.coords.latitude+'&longitude='+p.coords.longitude,
                 success	: function (e) {
                     if (e) {
                     $('#lokasi').html(e);
