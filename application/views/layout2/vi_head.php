@@ -90,7 +90,7 @@
                         if (status === 'OK') {
                             if (results[0]) {
                                 document.getElementById('lokasi').innerHTML +=
-                                "<br>Lokasi Anda saat ini: " + results[0].formatted_address;
+                                "<br>Alamat: " + results[0].formatted_address;
                             } else {
                                 document.getElementById('lokasi').innerHTML +=
                                 "<br>No results found";
