@@ -99,9 +99,9 @@
                 data 	: 'latitude='+p.coords.latitude+'&longitude='+p.coords.longitude,
                 success	: function (e) {
                     if (e) {
-                    $('#current2').html(e);
+                    $('current2').html(e);
                     }else{
-                    $('#current2').html('Tidak Tersedia');
+                    $('current2').html('Tidak Tersedia');
                     }
                 }
                 })
