@@ -118,11 +118,10 @@
                                     <input type="text" id="longitude" name="longitude" class="form-control" placeholder="Longitude" />
                                   </div>
                               </div>
-                            
-                              <div id="current">Initializing...</div>
-                              <div id="map_lokasi" style="width:100%; height:350px"></div>
 
                               <p>Lokasi anda saat ini: <span id="lokasi"></span></p>
+                              <div id="current">Initializing...</div>
+                              <div id="map_lokasi" style="width:300px; height:350px"></div>
 
                               <script type="text/javascript">
                                 $(document).ready(function() {
