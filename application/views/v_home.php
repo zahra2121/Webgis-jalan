@@ -120,8 +120,8 @@
 
                         var dataFirst = {
                             label: "Tahun 2020 ",
-                            borderColor: ['rgba(0, 99, 132, 1)'],
-                            backgroundColor: 'rgba(0, 99, 132, 1)',
+                            borderColor: ['rgba(154, 173, 208, 1)'],
+                            backgroundColor: 'rgba(154, 173, 208, 1)',
                             pointBorderColor: 'blue',
                             pointBorderWidth: 2,
                             data: [<?php echo $jumlah; ?>],
@@ -157,8 +157,8 @@
 
                         var dataFive = {
                             label: "Tahun 2024 ",
-                            borderColor: ['rgba(151, 27, 47, 1)'],
-                            backgroundColor: 'rgba(151, 27, 47, 1)',
+                            borderColor: ['rgba(120, 27, 47, 1)'],
+                            backgroundColor: 'rgba(120, 27, 47, 1)',
                             data: [<?php echo $jumlah24; ?>],
                             yAxisID: "y-axis-score",
                             // Set More Options 
