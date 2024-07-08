@@ -32,7 +32,7 @@
         <script src="<?php echo base_url()?>/assets/js/geo.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
         <script src="http://maps.googleapis.com/maps/api/js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key='AIzaSyCYMpyDVmi2y43ZdkNmn4ojKmdPpvnUBEM'&libraries=places"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key='KEY_API'&libraries=places"></script>
 
         <script>
             function initialize_map()
@@ -164,7 +164,7 @@
         
         <style>
             #title {padding:5px;}
-            #lokasi {font-size:10pt;padding:5px;}
+            #current2 {font-size:10pt;padding:5px;}
             #current {font-size:10pt;padding:5px;}
             #lokasi {font-size:10pt;padding:5px;color: palevioletred;}
             ul {
