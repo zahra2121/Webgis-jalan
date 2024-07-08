@@ -120,20 +120,21 @@
                         }
                     } 
                     else {
+                        console.error('Geocoder failed due to: ' + status);
                         document.getElementById('lokasi').innerHTML +=
                             "<br>Geocoder failed due to: " + status;
                     }
                 });
 
-                $(document).ready(function() {
-                    navigator.geolocation.getCurrentPosition(function (pos) {
-                        tampilLokasi(pos);
-                    }, function (e) {
-                        alert('Geolocation Tidak Mendukung Pada Browser Anda');
-                    }, {
-                        enableHighAccuracy: true
-                    });
-                });
+                // $(document).ready(function() {
+                //     navigator.geolocation.getCurrentPosition(function (pos) {
+                //         tampilLokasi(pos);
+                //     }, function (e) {
+                //         alert('Geolocation Tidak Mendukung Pada Browser Anda');
+                //     }, {
+                //         enableHighAccuracy: true
+                //     });
+                // });
             }
  
             var langID = "en-US", mapCanvas = "#map_lokasi", $ = jQuery;
