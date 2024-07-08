@@ -99,9 +99,9 @@
                 data 	: 'latitude='+p.coords.latitude+'&longitude='+p.coords.longitude,
                 success	: function (e) {
                     if (e) {
-                    $('current2').html(e);
+                    $('lokasi').html(e);
                     }else{
-                    $('current2').html('Tidak Tersedia');
+                    $('lokasi').html('Tidak Tersedia');
                     }
                 }
                 })
@@ -113,15 +113,15 @@
                 geocoder.geocode({ 'location': latlng }, function(results, status) {
                     if (status === 'OK') {
                         if (results[0]) {
-                            document.getElementById('current2').innerHTML +=
+                            document.getElementById('lokasi').innerHTML +=
                             "<br>Lokasi Anda saat ini: " + results[0].formatted_address;
                         } else {
-                            document.getElementById('current2').innerHTML +=
+                            document.getElementById('lokasi').innerHTML +=
                             "<br>No results found";
                         }
                     } 
                     else {
-                        document.getElementById('current2').innerHTML +=
+                        document.getElementById('lokasi').innerHTML +=
                             "<br>Geocoder failed due to: " + status;
                     }
                 });
@@ -164,7 +164,7 @@
         
         <style>
             #title {padding:5px;}
-            #current2 {font-size:10pt;padding:5px;}
+            #lokasi {font-size:10pt;padding:5px;}
             #current {font-size:10pt;padding:5px;}
             #lokasi {font-size:10pt;padding:5px;color: palevioletred;}
             ul {
