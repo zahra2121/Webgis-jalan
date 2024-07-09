@@ -489,7 +489,7 @@
                         }).addTo(map);
                         
                         // MARKER BLACK SPOT
-                        <?php foreach ($blackspot as $value) {?>
+                        <?php foreach ($countblack as $value) {?>
                             var marker = L.marker([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
                                     <?php
                                         if($value->status == '0' and $value->aek > $value->bca){
@@ -506,7 +506,7 @@
                                         }
                                     ?>
                             })
-                            .bindPopup("<h5><b> <?=$value->tanggal?> <br><br><?= $value->daerah_jalan?></b><br><?= "<br> Riwayat kasus :" .$value->total_idkasus?><br><br> Status Jalan : <?php
+                            .bindPopup("<h5><b> <?=$value->tahun?> <br><br><?= $value->daerah_jalan?></b><br><?= "<br> Riwayat kasus :" .$value->total_data?><br><br> Status Jalan : <?php
                                     if($value->status == '0' and $value->aek > $value->bca){
                                         echo "<label class='badge bg-danger text-white' name='$value->status' id='$value->status'>DAERAH RAWAN</label>";
                                     }
