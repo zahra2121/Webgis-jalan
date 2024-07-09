@@ -169,7 +169,7 @@
                         // Definisi custom icon
                         var LeafIcon = L.Icon.extend({
                             options: {
-                                iconSize:     [30, 30],
+                                iconSize:     [25, 25],
                                 iconAnchor:   [22, 22],
                                 popupAnchor:  [-3, -76]
                             }
