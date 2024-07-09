@@ -40,24 +40,22 @@
         <script>
             function initialize_map(){
                 var myOptions = {
-                    zoom: 4,
+                    zoom: 14,
                     mapTypeControl: true,
                     mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
                     navigationControl: true,
                     navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
                     mapTypeId: google.maps.MapTypeId.ROADMAP      
-                    }	
+                }	
                 var map = new google.maps.Map(document.getElementById("map_lokasi"), myOptions);
             }
             function initialize(){
-                if(geo_position_js.init())
-                {
-                document.getElementById('current').innerHTML="Receiving...";
-                geo_position_js.getCurrentPosition(show_position,function(){document.getElementById('current').innerHTML="Couldn't get location"},{enableHighAccuracy:true});
+                if(geo_position_js.init()){
+                    document.getElementById('current').innerHTML="Receiving...";
+                    geo_position_js.getCurrentPosition(show_position,function(){document.getElementById('current').innerHTML="Couldn't get location"},{enableHighAccuracy:true});
                 }
-                else
-                {
-                document.getElementById('current').innerHTML="Functionality not available";
+                else {
+                    document.getElementById('current').innerHTML="Functionality not available";
                 }
             }
 
@@ -66,7 +64,7 @@
 
                 var pos=new google.maps.LatLng(p.coords.latitude,p.coords.longitude);
                 map.setCenter(pos);
-               // map.setZoom(14);
+                map.setZoom(14);
 
                 getAddress(p.coords.latitude, p.coords.longitude);
 
@@ -84,8 +82,6 @@
                     infowindow.open(map,marker);
                 });
 
-               // var map = new google.maps.Map(document.getElementById('map_lokasi'), mapOptions);
-               // var infoWindow = new google.maps.InfoWindow;
 
                 function getAddress(lat, lng) {
                     var geocoder = new google.maps.Geocoder();
