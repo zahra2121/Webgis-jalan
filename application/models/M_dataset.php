@@ -34,7 +34,7 @@ class M_dataset extends CI_model
         $this->db->join('kasus', 'blackspot.idblack = kasus.id', 'left');
         $this->db->group_by('kasus.id');
         $query=$this->db->get();
-        return $query->row(); 
+        return $query->result(); 
     }
 
     public function count_kasus(){
