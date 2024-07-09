@@ -52,7 +52,7 @@
             <br>
                 <center><div class="col-md-10 col-sm-4 mx-auto">
                     <h4 class="fw-bolder text-secondary"> <?= $detail->daerah_jalan ?></h4>
-                    <h4 class="fw-bolder text-secondary"> <?= "(Patokan : ".$detail->patokan. ")" ?></h4>
+                    <h4 class="fw-bolder text-secondary text-warning"> <?= "(Patokan : ".$detail->patokan. ")" ?></h4>
                     <h4 class="fw-bolder text-secondary">Kecamatan <?= $detail->kecamatan ?>, Kabupaten <?= $detail->kabupaten?></h4><br>
                     <h3 class="fw-bolder text-danger">
                         <?php
