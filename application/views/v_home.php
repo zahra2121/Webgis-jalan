@@ -665,7 +665,28 @@
 
                         // CIRCLE BLACK SPOT
                         <?php foreach ($black as $value) {?>
-                            //L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map);
+                            var marker = L.marker([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
+                                    <?php
+                                        if($value->status == '0' and $value->aek > $value->bca){
+                                            "icon: redIcon";
+                                        }
+                                        elseif($value->status == '1' and $value->aek < $value->bca){
+                                            "icon: yellowIcon";
+                                        }
+                                    ?>
+                            })
+                            .bindPopup("<h5><b> <?=$value->tanggal?> <br><br>(<?= $value->idblack. ") " .$value->daerah_jalan?></b><br><br> Patokan :<br> <?= "<br> Riwayat kasus :" .$value->total_idkasus?><br><br> Status Jalan : <?php
+                                    if($value->status == '0' and $value->aek > $value->bca){
+                                        echo "<label class='badge bg-danger text-white' name='$value->status' id='$value->status'>DAERAH RAWAN</label>";
+                                    }
+                                    elseif($value->status == '1' and $value->aek < $value->bca){
+                                        echo "<label class='badge bg-warning text-dark' name='$value->status' id='$value->status'>BUKAN DAERAH RAWAN</label>";
+                                    }else{
+                                        echo "<label class='badge bg-success text-white' name='$value->status' id='$value->status'>PROSES DATA</label>";
+                                    }
+                               
+                                ?><br><br></h5>")
+                            .addTo(map);
 
                             var circle = L.circle([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
                                     <?php
@@ -675,7 +696,6 @@
                                             // fillOpacity: 0.7,
                                             // radius: 150,
                                             // title: 'Daerah Rawan'";
-                                            "icon: redIcon";
                                         }
                                         elseif($value->status == '1' and $value->aek < $value->bca){
                                             // echo "color: 'yellow',
@@ -683,7 +703,6 @@
                                             // fillOpacity: 0.3,
                                             // borderOpacity: 0.5,
                                             // radius: 150";
-                                            "icon: yellowIcon";
                                         }
                                         elseif($value->status == '2' and $value->aek == 0){
                                             echo "color: 'green',
