@@ -678,11 +678,11 @@
                                     <?php
                                         if($value->status == '0' and $value->aek > $value->bca){
                                             ?>icon: redIcon;
-                                            <?
+                                            <?php
                                         }
                                         elseif($value->status == '1' and $value->aek < $value->bca){
                                             ?>icon: yellowIcon;
-                                            <?
+                                            <?php
                                         }
                                     ?>
                             })
