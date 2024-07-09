@@ -688,7 +688,7 @@
                             //     ?><br><br></h5>")
                             // .addTo(map);
 
-                            var marker = L.circle([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
+                            var circle = L.circle([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
                                     <?php
                                         if($value->status == '0' and $value->aek > $value->bca){
                                             echo "color: 'red',
