@@ -29,12 +29,12 @@ class M_dataset extends CI_model
     }
 
     public function all_peta(){
-        $this->db->select('*, COUNT(blackspot.idblack) as total_data, COUNT(kasus.id) as total_idkasus');
-        $this->db->from('kasus');
-        $this->db->join('blackspot', 'blackspot.idblack = kasus.id', 'left');
+        $this->db->select('blackspot.*, kasus.*, kasus.tanggal, blackspot.patokan as patok_black, COUNT(blackspot.idblack) as total_data, COUNT(kasus.id) as total_idkasus');
+        $this->db->from('blackspot');
+        $this->db->join('kasus', 'blackspot.idblack = kasus.id', 'left');
         $this->db->group_by('kasus.id');
         $query=$this->db->get();
-        return $query->result(); 
+        return $query->row(); 
     }
 
     public function count_kasus(){
