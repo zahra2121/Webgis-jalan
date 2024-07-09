@@ -19,7 +19,7 @@
 							</div>
 						</div>
                         <?php }?>
-                        <?php foreach ($black as $key => $value) {?>
+                        <?php foreach ($counblack as $key => $value) {?>
                             <div class="col-lg-2 px-2 mx-3 py-1 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
@@ -674,7 +674,7 @@
                         }).addTo(map);
 
                         // MARKER BLACK SPOT
-                        <?php foreach ($countblack as $value) {?>
+                        <?php foreach ($black as $value) {?>
                             var marker = L.marker([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
                                     <?php
                                         if($value->status == '0' and $value->aek > $value->bca){
