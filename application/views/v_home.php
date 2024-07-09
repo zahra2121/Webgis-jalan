@@ -19,7 +19,7 @@
 							</div>
 						</div>
                         <?php }?>
-                        <?php foreach ($countblack as $key => $value) {?>
+                        <?php foreach ($black as $key => $value) {?>
                             <div class="col-lg-2 px-2 mx-3 py-1 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
