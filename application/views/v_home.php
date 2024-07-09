@@ -677,11 +677,11 @@
                             var marker = L.marker([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
                                     <?php
                                         if($value->status == '0' and $value->aek > $value->bca){
-                                            ?>icon: redIcon
+                                            ?>icon: redIcon;
                                             <?
                                         }
                                         elseif($value->status == '1' and $value->aek < $value->bca){
-                                            ?>icon: yellowIcon
+                                            ?>icon: yellowIcon;
                                             <?
                                         }
                                     ?>
@@ -706,7 +706,7 @@
                                             // fillColor: '#FF0000',
                                             // fillOpacity: 0.7,
                                             // radius: 150";
-                                            ?>icon: redIcon
+                                            ?>icon: redIcon;
                                             <?
                                         }
                                         elseif($value->status == '1' and $value->aek < $value->bca){
@@ -715,7 +715,7 @@
                                             // fillOpacity: 0.3,
                                             // borderOpacity: 0.5,
                                             // radius: 150";
-                                            ?>icon: yellowIconIcon
+                                            ?>icon: yellowIcon;
                                             <?
                                         }
                                         elseif($value->status == '2' and $value->aek == 0){
