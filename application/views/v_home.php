@@ -366,7 +366,7 @@
 
                         var map = L.map('map', {
                             center: [-7.889229799481091, 110.34618188086941],
-                            zoom: 13,
+                            zoom: 12,
                             layers: [peta5],
                         });
 
@@ -673,7 +673,7 @@
                             }
                         }).addTo(map);
 
-                        // CIRCLE BLACK SPOT
+                        // MARKER BLACK SPOT
                         <?php foreach ($black as $value) {?>
                             var marker = L.marker([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
                                     <?php
