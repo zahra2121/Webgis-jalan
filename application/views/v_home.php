@@ -688,14 +688,13 @@
                             //     ?><br><br></h5>")
                             // .addTo(map);
 
-                            var marker = L.marker([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
+                            var marker = L.circle([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
                                     <?php
                                         if($value->status == '0' and $value->aek > $value->bca){
                                             echo "color: 'red',
                                             fillColor: '#FF0000',
                                             fillOpacity: 0.7,
-                                            radius: 150,
-                                            title: 'Daerah Rawan'";
+                                            radius: 150";
                                         }
                                         elseif($value->status == '1' and $value->aek < $value->bca){
                                             echo "color: 'yellow',
