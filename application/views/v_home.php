@@ -682,8 +682,7 @@
                                             <?php
                                         }
                                         elseif($value->status == '1' and $value->aek < $value->bca){
-                                            ?>icon: yellowIcon,
-                                            labelString: $value->status
+                                            ?>icon: yellowIcon
                                             <?php
                                         }
                                         elseif($value->status == '2' and $value->aek == 0){
