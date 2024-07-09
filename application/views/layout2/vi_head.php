@@ -66,7 +66,7 @@
 
                 var pos=new google.maps.LatLng(p.coords.latitude,p.coords.longitude);
                 map.setCenter(pos);
-                map.setZoom(14);
+               // map.setZoom(14);
 
                 getAddress(p.coords.latitude, p.coords.longitude);
 
@@ -81,16 +81,16 @@
                 });
 
                 google.maps.event.addListener(marker, 'click', function() {
-                infowindow.open(map,marker);
+                    infowindow.open(map,marker);
                 });
 
-                var map = new google.maps.Map(document.getElementById('map_lokasi'), mapOptions);
-                var infoWindow = new google.maps.InfoWindow;
+               // var map = new google.maps.Map(document.getElementById('map_lokasi'), mapOptions);
+               // var infoWindow = new google.maps.InfoWindow;
 
                 function getAddress(lat, lng) {
                     var geocoder = new google.maps.Geocoder();
-                    var pos = new google.maps.LatLng(lat, lng);
-                    geocoder.geocode({ 'location': pos }, function(results, status) {
+                    var latlng = new google.maps.LatLng(lat, lng);
+                    geocoder.geocode({ 'location': latlng }, function(results, status) {
                         if (status === 'OK') {
                             if (results[0]) {
                                 document.getElementById('lokasi').innerHTML +=
