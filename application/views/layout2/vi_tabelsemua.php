@@ -40,7 +40,7 @@
                             <Td><?php echo $Count?></Td>
                             <Td><?Php echo $Row->tahun ?></Td>
                             <Td><?Php echo $Row->kecamatan ?></Td>
-                            <Td><?Php echo $Row->daerah_jalan ?></Td>
+                            <Td><?Php echo $Row->daerah_jalan. "<br> Patokan: ". $Row->patokan?></Td>
                             <Td>
                                 <?Php
                                   if($Row->status == '0' or $Row->aek > $Row->bca){
