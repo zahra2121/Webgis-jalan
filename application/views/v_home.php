@@ -700,17 +700,19 @@
                             var circle = L.circle([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
                                     <?php
                                         if($value->status == '0' and $value->aek > $value->bca){
-                                            echo "color: 'red',
-                                            fillColor: '#FF0000',
-                                            fillOpacity: 0.7,
-                                            radius: 150";
+                                            // echo "color: 'red',
+                                            // fillColor: '#FF0000',
+                                            // fillOpacity: 0.7,
+                                            // radius: 150";
+                                            'icon: redIcon';
                                         }
                                         elseif($value->status == '1' and $value->aek < $value->bca){
-                                            echo "color: 'yellow',
-                                            fillColor: '#FFFF00',
-                                            fillOpacity: 0.3,
-                                            borderOpacity: 0.5,
-                                            radius: 150";
+                                            // echo "color: 'yellow',
+                                            // fillColor: '#FFFF00',
+                                            // fillOpacity: 0.3,
+                                            // borderOpacity: 0.5,
+                                            // radius: 150";
+                                            'icon: yellowIcon';
                                         }
                                         elseif($value->status == '2' and $value->aek == 0){
                                             echo "color: 'green',
