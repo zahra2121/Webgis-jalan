@@ -351,8 +351,8 @@
                             attribution: 'Map data &copy; <a href="https://www.google.com/maps">Google Maps</a>'
                         });
 
-                        var yellowIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker2.png'});
-                        var redIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker1.png'});
+                        var yellowIcon = new LeafIcon({iconUrl: <?= base_url()?>'assets/marker2.png'});
+                        var redIcon = new LeafIcon({iconUrl: <?= base_url()?>'assets/marker1.png'});
 
                         var map = L.map('map', {
                             center: [-7.889229799481091, 110.34618188086941],
