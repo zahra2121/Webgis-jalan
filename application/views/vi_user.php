@@ -166,6 +166,19 @@
                             attribution: 'Map data &copy; <a href="https://www.google.com/maps">Google Maps</a>'
                         });
 
+                        // Definisi custom icon
+                        var LeafIcon = L.Icon.extend({
+                            options: {
+                                iconSize:     [30, 30],
+                                iconAnchor:   [22, 22],
+                                popupAnchor:  [-3, -76]
+                            }
+                        });
+
+                        var yellowIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker2.png'}),
+                            greenIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker3.png'}),
+                            redIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker1.png'});
+
                         var map = L.map('map', {
                             center: [-7.889229799481091, 110.34618188086941],
                             zoom: 12,
