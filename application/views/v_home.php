@@ -682,7 +682,8 @@
                                             <?php
                                         }
                                         elseif($value->status == '1' and $value->aek < $value->bca){
-                                            ?>icon: yellowIcon
+                                            ?>icon: yellowIcon,
+                                            labelString: $value->status
                                             <?php
                                         }
                                         elseif($value->status == '2' and $value->aek == 0){
@@ -691,7 +692,7 @@
                                         }
                                     ?>
                             })
-                            .bindPopup("<h5><b> <?= $value->tanggal ."<br><br>" .$value->daerah_jalan ."</b><br><br> Patokan: " .$peta->patok ."<br><br> Riwayat kasus: " .$value->total_idkasus?><br><br> Status Jalan: <?php
+                            .bindPopup("<h5><b> <?= $value->tanggal ."<br><br>" .$value->daerah_jalan ."</b><br><br> Patokan: " ."<br><br> Riwayat kasus: " .$value->total_idkasus?><br><br> Status Jalan: <?php
                                     if($value->status == '0' and $value->aek > $value->bca){
                                         echo "<label class='badge bg-danger text-white' name='$value->status' id='$value->status'>DAERAH RAWAN</label>";
                                     }
