@@ -361,7 +361,7 @@
                         });
 
                         var yellowIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker2.png'}),
-                            greenIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker3.png'}),
+                            prosesIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker3.png'}),
                             redIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker1.png'});
 
                         var map = L.map('map', {
@@ -686,7 +686,7 @@
                                             <?php
                                         }
                                         elseif($value->status == '2' and $value->aek == 0){
-                                            ?>icon: greenIcon
+                                            ?>icon: prosesIcon
                                             <?php
                                         }
                                     ?>
