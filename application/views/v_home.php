@@ -351,6 +351,9 @@
                             attribution: 'Map data &copy; <a href="https://www.google.com/maps">Google Maps</a>'
                         });
 
+                        var yellowIcon = new LeafIcon({iconUrl: 'assets/marker2.png'}),
+                            redIcon = new LeafIcon({iconUrl: 'assets/marker1.png'});
+
                         var map = L.map('map', {
                             center: [-7.889229799481091, 110.34618188086941],
                             zoom: 13,
@@ -662,21 +665,25 @@
 
                         // CIRCLE BLACK SPOT
                         <?php foreach ($black as $value) {?>
+                            //L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map);
+
                             var circle = L.circle([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
                                     <?php
                                         if($value->status == '0' and $value->aek > $value->bca){
-                                            echo "color: 'red',
-                                            fillColor: '#FF0000',
-                                            fillOpacity: 0.7,
-                                            radius: 150,
-                                            title: 'Daerah Rawan'";
+                                            // echo "color: 'red',
+                                            // fillColor: '#FF0000',
+                                            // fillOpacity: 0.7,
+                                            // radius: 150,
+                                            // title: 'Daerah Rawan'";
+                                            "icon: redIcon";
                                         }
                                         elseif($value->status == '1' and $value->aek < $value->bca){
-                                            echo "color: 'yellow',
-                                            fillColor: '#FFFF00',
-                                            fillOpacity: 0.3,
-                                            borderOpacity: 0.5,
-                                            radius: 150";
+                                            // echo "color: 'yellow',
+                                            // fillColor: '#FFFF00',
+                                            // fillOpacity: 0.3,
+                                            // borderOpacity: 0.5,
+                                            // radius: 150";
+                                            "icon: yellowIcon";
                                         }
                                         elseif($value->status == '2' and $value->aek == 0){
                                             echo "color: 'green',
