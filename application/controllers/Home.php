@@ -17,6 +17,7 @@ class Home extends CI_Controller {
         $data = array(
             'title' => 'home',
             'black' => $this->M_dataset->all_black(),
+            'peta' => $this->M_dataset->all_peta(),
             'countkasus' => $this->M_dataset->count_kasus(),
             'countblack' => $this->M_dataset->count_black(),
             'countrawan' => $this->M_dataset->count_status(),

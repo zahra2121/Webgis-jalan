@@ -28,6 +28,15 @@ class M_dataset extends CI_model
         return $query->result(); 
     }
 
+    public function all_peta(){
+        $this->db->select('blackspot.*, kasus.*, kasus.tanggal, blackspot.patokan, blackspot.tahun, COUNT(blackspot.idblack) as total_data, COUNT(kasus.id) as total_idkasus');
+        $this->db->from('blackspot');
+        $this->db->join('kasus', 'blackspot.idblack = kasus.id', 'left');
+        $this->db->group_by('kasus.id');
+        $query=$this->db->get();
+        return $query->result(); 
+    }
+
     public function count_kasus(){
         $this->db->select('blackspot.*, kasus.*, blackspot.idblack, blackspot.daerah_jalan, COUNT(kasus.id) as total_idkasus, COUNT(kasus.idkasus) as total_kasus, SUM(blackspot.aek) as total_aek, SUM(kasus.luka_ringan) as lr_aek, SUM(kasus.luka_berat) as lb_aek, SUM(kasus.meninggal) as m_aek, SUM(kasus.rugi) as r_aek');
         $this->db->from('blackspot');
