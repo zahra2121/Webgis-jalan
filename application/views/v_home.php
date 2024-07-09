@@ -668,7 +668,8 @@
                                             echo "color: 'red',
                                             fillColor: '#FF0000',
                                             fillOpacity: 0.7,
-                                            radius: 150";
+                                            radius: 150,
+                                            title: 'Daerah Rawan'";
                                         }
                                         elseif($value->status == '1' and $value->aek < $value->bca){
                                             echo "color: 'yellow',
