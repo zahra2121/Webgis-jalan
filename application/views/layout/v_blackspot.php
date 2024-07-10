@@ -18,7 +18,7 @@
                         $jum3=null;
                        
                         foreach ($counting as $item){
-                            $jur=$item->idblack;
+                            $jur=$item->patokan;
                             $nama_status .= "'$jur'". ", ";
                             // AEK
                             $jum_aek= $item->aek;
