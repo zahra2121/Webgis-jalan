@@ -91,7 +91,7 @@
                                     xAxes: [{
                                         scaleLabel: {
                                             display: true,
-                                            labelString: 'Daftar Titik Lokasi Blackspot Kecelakaan'
+                                            labelString: 'Titik Lokasi Blackspot Kecelakaan Lalu Lintas'
                                         }
                                     }],
                                     yAxes: [{
