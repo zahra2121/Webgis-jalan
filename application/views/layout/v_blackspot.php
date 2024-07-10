@@ -96,14 +96,14 @@
                                         scaleLabel: {
                                             display: true,
                                             labelString: 'Titik Lokasi Blackspot Kecelakaan Lalu Lintas'
-                                        },
-                                        ticks: {
-                                            callback: function(labels) {
-                                                var maxLength = 10; // Tentukan panjang maksimum label
-                                                var label = this.getLabelForValue(labels);
-                                                return label.length > maxLength ? label.substring(0, maxLength) + '...' : label;
-                                            }
                                         }
+                                        // ticks: {
+                                        //     callback: function(labels) {
+                                        //         var maxLength = 10; // Tentukan panjang maksimum label
+                                        //         var label = this.getLabelForValue(labels);
+                                        //         return label.length > maxLength ? label.substring(0, maxLength) + '...' : label;
+                                        //     }
+                                        // }
                                     }],
                                     yAxes: [{
                                         scaleLabel: {
