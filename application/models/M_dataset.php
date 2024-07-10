@@ -10,6 +10,7 @@ class M_dataset extends CI_model
         $this->db->select('*');
         $this->db->from('lapor');
         $this->db->join('user', 'lapor.iduser = user.iduser', 'left');
+        $this->db->order_by('tanggal_isi', 'DESC');
         return $this->db->get()->result();
     }
 
@@ -24,7 +25,7 @@ class M_dataset extends CI_model
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id', 'left');
         $this->db->group_by('kasus.id');
-        $this->db->order_by('tahun', 'DESC');
+        //$this->db->order_by('tahun', 'DESC');
         $query=$this->db->get();
         return $query->result(); 
     }
