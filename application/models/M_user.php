@@ -183,6 +183,7 @@ class M_user extends CI_model
         $this->simple_login->cek_login();
         $this->db->select('*');
         $this->db->from('lapor');
+        $this->db->order_by('tanggal_isi', 'DESC');
         return $this->db->get()->result();
     }
 
@@ -195,6 +196,7 @@ class M_user extends CI_model
     public function get_all_kasus(){
         $this->db->select('*');
         $this->db->from('kasus');
+        $this->db->order_by('tanggal', 'DESC');
         return $this->db->get()->result();
     }
 
