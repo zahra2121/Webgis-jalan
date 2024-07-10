@@ -98,9 +98,9 @@
                                             labelString: 'Titik Lokasi Blackspot Kecelakaan Lalu Lintas'
                                         },
                                         ticks: {
-                                            callback: function(value, index, values) {
+                                            callback: function(labels) {
                                                 var maxLength = 10; // Tentukan panjang maksimum label
-                                                var label = this.getLabelForValue(value);
+                                                var label = this.getLabelForValue(labels);
                                                 return label.length > maxLength ? label.substring(0, maxLength) + '...' : label;
                                             }
                                         }
