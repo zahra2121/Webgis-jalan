@@ -19,7 +19,7 @@
                         $Count=0;
                        
                         foreach ($counting as $item){
-                            $jur=$Count++;
+                            $jur=$item->patokan;
                             $nama_status .= "'$jur'". ", ";
                             // AEK
                             $jum_aek= $item->aek;
@@ -30,6 +30,7 @@
                             // UCL
                             $jum_ucl= $item->ucl;
                             $jum3 .= "$jum_ucl". ", ";
+                            $Count++;
                         }
                         ?>
                         <script>
