@@ -32,7 +32,7 @@ class M_dataset extends CI_model
         $this->db->select('blackspot.*, kasus.*, kasus.tanggal, blackspot.patokan, COUNT(blackspot.idblack) as total_data, COUNT(kasus.id) as total_idkasus');
         $this->db->from('kasus');
         $this->db->join('blackspot', 'kasus.id = blackspot.idblack', 'left');
-        $this->db->group_by('kasus.idkasus');
+        //$this->db->group_by('kasus.idkasus');
         $query=$this->db->get();
         return $query->result(); 
     }
