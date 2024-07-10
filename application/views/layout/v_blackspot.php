@@ -83,11 +83,11 @@
                             };
                               
                             var speedData = {
-                              labels: nama_status.map(function(label) {
-                                  var maxLength = 10; // Tentukan panjang maksimum label
-                                  return label.length > maxLength ? label.substring(0, maxLength) + '...' : label;
-                              })
-                              [<?php echo $nama_status; ?>],
+                              // labels: nama_status.map(function(label) {
+                              //     var maxLength = 10; // Tentukan panjang maksimum label
+                              //     return label.length > maxLength ? label.substring(0, maxLength) + '...' : label;
+                              // })
+                              labels: [<?php echo $nama_status; ?>],
                               datasets: [dataFirst, dataSecond, dataThird]
                             };
                             var chartOptions = {
