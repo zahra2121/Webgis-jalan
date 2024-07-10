@@ -16,9 +16,10 @@
                         $jum=null;
                         $jum2=null;
                         $jum3=null;
+                        $Count=0;
                        
                         foreach ($counting as $item){
-                            $jur=$item->patokan;
+                            $jur=$Count++;
                             $nama_status .= "'$jur'". ", ";
                             // AEK
                             $jum_aek= $item->aek;
