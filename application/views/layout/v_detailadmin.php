@@ -142,7 +142,7 @@
                     }
                 ?>
             }).addTo(map)
-            .bindPopup("<h5><b> Daerah Jalan<br><br><?= $detailadmin->daerah_jalan?></b><br><br> Latitude : <?= $detailadmin->pusat_lat?><br><br> Longitude : <?= $detailadmin->pusat_long?><br><br></h5>");
+            .bindPopup("<h5><b> Daerah Jalan<br><br><?= $detailadmin->patokan?></b><br><br> Latitude : <?= $detailadmin->pusat_lat?><br><br> Longitude : <?= $detailadmin->pusat_long?><br><br></h5>");
             
             vpup = L.popup()
             .setLatLng([<?= $detailadmin->pusat_lat ?>, <?= $detailadmin->pusat_long ?>]);
