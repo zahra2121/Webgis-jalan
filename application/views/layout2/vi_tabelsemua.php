@@ -23,7 +23,7 @@
                       <thead class="bg-dark text-white">
                         <tr>
                           <th>No.</th>
-                          <th>Tahun</th>
+                          <th>Tanggal & Waktu</th>
                           <th>Kecamatan</th>
                           <th>Alamat</th>
                           <th>Status Area</th>
@@ -38,7 +38,51 @@
                             ?>
                         <Tr>
                             <Td><?php echo $Count?></Td>
-                            <Td><?Php echo $Row->tahun ?></Td>
+                            <Td>
+                                <?php
+                                echo date('d ', strtotime($Row->tanggal));
+                                $month = date('F', strtotime($Row->tanggal));
+                                  switch ($month) {
+                                    case 'January':
+                                      echo "Januari ";
+                                      break;
+                                    case 'February':
+                                      echo "Februari ";
+                                      break;
+                                    case 'March':
+                                      echo "Maret ";
+                                      break;
+                                    case 'April':
+                                      echo "April ";
+                                      break;
+                                    case 'May':
+                                      echo "Mei ";
+                                      break;
+                                    case 'June':
+                                      echo "Juni ";
+                                      break;
+                                    case 'July':
+                                      echo "Juli ";
+                                      break;
+                                    case 'August':
+                                      echo "Agustus ";
+                                      break;
+                                    case 'September':
+                                      echo "September ";
+                                      break;
+                                    case 'October':
+                                      echo "Oktober ";
+                                      break;
+                                    case 'November':
+                                      echo "November ";
+                                      break;
+                                    default:
+                                      echo "Desember ";
+                                  }
+                                  echo date(' Y', strtotime($Row->tanggal));
+                                  echo "<br> Pukul ". date('H:i', strtotime($Row->jam))
+                                  ?>
+                            </Td>
                             <Td><?Php echo $Row->kecamatan ?></Td>
                             <Td><?Php echo $Row->daerah_jalan. "<br><br><b> Patokan: </b>". $Row->patokan?></Td>
                             <Td>
