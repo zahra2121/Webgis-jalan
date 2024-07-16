@@ -123,22 +123,16 @@
             var circle = L.circle([<?= $detailadmin->pusat_lat ?>, <?=$detailadmin->pusat_long ?>], {
                 <?php
                     if($detailadmin->status == '0' and $detailadmin->aek > $detailadmin->bca){
-                        echo "color: 'red',
-                        fillColor: '#FF0000',
-                        fillOpacity: 0.3,
-                        radius: 30";
+                        ?>icon: redIcon
+                        <?php
                     }
                     elseif($detailadmin->status == '1' and $detailadmin->aek < $detailadmin->bca){
-                        echo "color: 'yellow',
-                        fillColor: '#FFFF00',
-                        fillOpacity: 0.3,
-                        radius: 30";
+                        ?>icon: yellowIcon
+                        <?php
                     }
                     elseif($detailadmin->status == '2' and $detailadmin->aek == 0){
-                        echo "color: 'green',
-                        fillColor: '#008000',
-                        fillOpacity: 0.3,
-                        radius: 30";
+                        ?>icon: prosesIcon
+                        <?php
                     }
                 ?>
             }).addTo(map)
