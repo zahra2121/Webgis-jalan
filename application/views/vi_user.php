@@ -489,7 +489,7 @@
                         }).addTo(map);
                         
                         // MARKER BLACK SPOT
-                        <?php foreach ($blackspot as $value) {?>
+                        <?php foreach ($detail as $value) {?>
                             var marker = L.marker([<?= $value->pusat_lat ?>, <?=$value->pusat_long ?>], {
                                     <?php
                                         if($value->status == '0' and $value->aek > $value->bca){
