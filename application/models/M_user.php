@@ -137,7 +137,7 @@ class M_user extends CI_model
 
     public function kasus_black(){
         $this->db->select('*');
-        $this->db->order_by('blackspot.tanggal', 'DESC');
+        $this->db->order_by('kasus.tanggal', 'DESC');
         $this->db->from('blackspot');
         $this->db->join('kasus', 'blackspot.idblack = kasus.id');
         return $this->db->get()->result();
