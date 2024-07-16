@@ -105,6 +105,19 @@
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             });
 
+             // Definisi custom icon
+             var LeafIcon = L.Icon.extend({
+                options: {
+                    iconSize:     [25, 25],
+                    iconAnchor:   [22, 22],
+                    popupAnchor:  [-3, -76]
+                }
+            });
+
+            var yellowIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker2.png'}),
+                prosesIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker3.png'}),
+                redIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker1.png'});
+
             var map = L.map('map', {
                 center: [<?= $detailadmin->pusat_lat ?>, <?= $detailadmin->pusat_long ?>],
                 zoom: 18,
