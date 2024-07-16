@@ -106,19 +106,6 @@
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             });
 
-             // Definisi custom icon
-             var LeafIcon = L.Icon.extend({
-                options: {
-                    iconSize:     [25, 25],
-                    iconAnchor:   [22, 22],
-                    popupAnchor:  [-3, -76]
-                }
-            });
-
-            var yellowIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker2.png'}),
-                prosesIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker3.png'}),
-                redIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker1.png'});
-
             var map = L.map('map', {
                 center: [<?= $detail->pusat_lat ?>, <?= $detail->pusat_long ?>],
                 zoom: 18,
@@ -137,16 +124,22 @@
             var circle = L.circle([<?= $detail->pusat_lat ?>, <?=$detail->pusat_long ?>], {
                 <?php
                     if($detail->status == '0' and $detail->aek > $detail->bca){
-                        ?>icon: redIcon
-                        <?php
+                        echo "color: 'red',
+                        fillColor: '#FF0000',
+                        fillOpacity: 0.3,
+                        radius: 25";
                     }
                     elseif($detail->status == '1' and $detail->aek < $detail->bca){
-                        ?>icon: yellowIcon
-                        <?php
+                        echo "color: 'yellow',
+                        fillColor: '#FFFF00',
+                        fillOpacity: 0.3,
+                        radius: 25";
                     }
                     elseif($detail->status == '2' and $detail->aek == 0){
-                        ?>icon: prosesIcon
-                        <?php
+                        echo "color: 'green',
+                        fillColor: '#008000',
+                        fillOpacity: 0.3,
+                        radius: 25";
                     }
                 ?>
             }).addTo(map)

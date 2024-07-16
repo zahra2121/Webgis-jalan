@@ -105,19 +105,6 @@
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             });
 
-             // Definisi custom icon
-             var LeafIcon = L.Icon.extend({
-                options: {
-                    iconSize:     [25, 25],
-                    iconAnchor:   [22, 22],
-                    popupAnchor:  [-3, -76]
-                }
-            });
-
-            var yellowIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker2.png'}),
-                prosesIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker3.png'}),
-                redIcon = new LeafIcon({iconUrl: '<?= base_url()?>assets/marker1.png'});
-
             var map = L.map('map', {
                 center: [<?= $detailadmin->pusat_lat ?>, <?= $detailadmin->pusat_long ?>],
                 zoom: 18,
@@ -136,16 +123,22 @@
             var circle = L.circle([<?= $detailadmin->pusat_lat ?>, <?=$detailadmin->pusat_long ?>], {
                 <?php
                     if($detailadmin->status == '0' and $detailadmin->aek > $detailadmin->bca){
-                        ?>icon: redIcon
-                        <?php
+                        echo "color: 'red',
+                        fillColor: '#FF0000',
+                        fillOpacity: 0.3,
+                        radius: 25";
                     }
                     elseif($detailadmin->status == '1' and $detailadmin->aek < $detailadmin->bca){
-                        ?>icon: yellowIcon
-                        <?php
+                        echo "color: 'yellow',
+                        fillColor: '#FFFF00',
+                        fillOpacity: 0.3,
+                        radius: 25";
                     }
                     elseif($detailadmin->status == '2' and $detailadmin->aek == 0){
-                        ?>icon: prosesIcon
-                        <?php
+                        echo "color: 'green',
+                        fillColor: '#008000',
+                        fillOpacity: 0.3,
+                        radius: 25";
                     }
                 ?>
             }).addTo(map)
